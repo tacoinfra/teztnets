@@ -19,7 +19,7 @@ mainnet_params = flatten_params(requests.get("https://mainnet.ecadinfra.com/chai
 
 ghostnet_params = flatten_params(requests.get("https://ghostnet.tezos.marigold.dev/chains/main/blocks/head/context/constants").json())
 
-nairobinet_params = flatten_params(requests.get("https://rpc.nairobinet.teztnets.xyz/chains/main/blocks/head/context/constants").json())
+nairobinet_params = flatten_params(requests.get("https://rpc.nairobinet.teztnets.com/chains/main/blocks/head/context/constants").json())
 
 print("Param,oxfordnet,nairobinet,ghostnet,mainnet")
 for param in params.keys():

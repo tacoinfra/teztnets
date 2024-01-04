@@ -345,7 +345,7 @@ accounts:
     is_bootstrap_baker_account: false
     type: public
   faucet:
-    # faucet on teztnets.xyz platform
+    # faucet on teztnets.com platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
     key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
     bootstrap_balance: "200000000000000"

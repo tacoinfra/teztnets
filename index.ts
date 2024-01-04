@@ -54,7 +54,7 @@ new gcp.storage.BucketIAMMember("publicRead", {
 
 
 // Define your domain name and a suitable name for the managed zone
-const domainName = "teztnets.xyz";
+const domainName = "teztnets.com";
 const managedZoneName = "teztnets-zone";
 
 // Create a managed DNS zone
@@ -160,8 +160,8 @@ const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
     chainName: "ghostnet",
-    rpcFqdn: "rpc.ghostnet.teztnets.xyz",
-    p2pFqdn: "ghostnet.teztnets.xyz",
+    rpcFqdn: "rpc.ghostnet.teztnets.com",
+    p2pFqdn: "ghostnet.teztnets.com",
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
     chartRepoVersion: "6.25.0",
@@ -258,7 +258,7 @@ function getNetworks(chains: TezosChain[]): object {
 
   chains.forEach(function(chain) {
     const bootstrapPeers: string[] = Object.assign([], chain.params.bootstrapPeers) // clone
-    bootstrapPeers.splice(0, 0, `${chain.name}.teztnets.xyz`)
+    bootstrapPeers.splice(0, 0, `${chain.name}.teztnets.com`)
 
     // genesis_pubkey is the public key associated with the $TEZOS_OXHEAD_BAKING_KEY private key in github secrets
     // TODO: generate it dynamically based on privkey
@@ -287,7 +287,7 @@ function getNetworks(chains: TezosChain[]): object {
     }
     if ("dal_config" in network) {
       network["dal_config"]["bootstrap_peers"] = [
-        `dal.${chain.name}.teztnets.xyz:11732`,
+        `dal.${chain.name}.teztnets.com:11732`,
       ]
     }
 
@@ -301,10 +301,10 @@ function getTeztnets(chains: TezosChain[]): object {
   const teztnets: { [name: string]: { [name: string]: Object } } = {}
 
   chains.forEach(function(chain) {
-    let faucetUrl = `https://faucet.${chain.name}.teztnets.xyz`
+    let faucetUrl = `https://faucet.${chain.name}.teztnets.com`
     teztnets[chain.name] = {
       chain_name: chain.tezosHelmValues["node_config_network"]["chain_name"],
-      network_url: `https://teztnets.xyz/${chain.name}`,
+      network_url: `https://teztnets.com/${chain.name}`,
       human_name: chain.params.humanName,
       description: chain.params.description,
       docker_build: chain.getDockerBuild(),
@@ -334,7 +334,7 @@ function getTeztnets(chains: TezosChain[]): object {
 const ghostnetNetwork = {
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   default_bootstrap_peers: [
-    "ghostnet.teztnets.xyz",
+    "ghostnet.teztnets.com",
     "ghostnet.boot.ecadinfra.com",
     "ghostnet.stakenow.de:9733",
   ],
@@ -385,7 +385,7 @@ const ghostnetTeztnet = {
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   description: "Ghostnet is the long-running testnet for Tezos.",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
-  faucet_url: "https://faucet.ghostnet.teztnets.xyz",
+  faucet_url: "https://faucet.ghostnet.teztnets.com",
   git_ref: ghostnetRollingVersion,
   human_name: "Ghostnet",
   indexers: [
@@ -400,10 +400,10 @@ const ghostnetTeztnet = {
   ],
   last_baking_daemon: lastBakingDaemonMainnetGhostnet,
   masked_from_main_page: false,
-  network_url: "https://teztnets.xyz/ghostnet",
-  rpc_url: "https://rpc.ghostnet.teztnets.xyz",
+  network_url: "https://teztnets.com/ghostnet",
+  rpc_url: "https://rpc.ghostnet.teztnets.com",
   rpc_urls: [
-    "https://rpc.ghostnet.teztnets.xyz",
+    "https://rpc.ghostnet.teztnets.com",
     "https://ghostnet.ecadinfra.com",
     "https://ghostnet.tezos.marigold.dev",
   ],
@@ -447,9 +447,9 @@ export const teztnets = {
 deployStatusPage(provider, {
   networks: networks,
   teztnets: teztnets,
-  statusPageFqdn: "status.teztnets.xyz",
+  statusPageFqdn: "status.teztnets.com",
   chartRepoVersion: "6.25.0"
 });
 deployMetricsPage(provider, {
-  metricsPageFqdn: "metrics.teztnets.xyz",
+  metricsPageFqdn: "metrics.teztnets.com",
 });

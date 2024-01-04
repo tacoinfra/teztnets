@@ -179,7 +179,7 @@ node_config_network:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
     timestamp: "2022-07-28T15:00:00Z"
     # NEW: the hash is deterministically generated from chain_name
-    # check https://teztnets.xyz/kathmandunet for its value
+    # check https://teztnets.com/kathmandunet for its value
   user_activated_upgrades:
     - level: 8192
       replacement_protocol: PtKathmankSpLLDALzWw7CGD2j2MtyveTwboEYokqUCP4a1LxMg

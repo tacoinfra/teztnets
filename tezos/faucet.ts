@@ -85,7 +85,7 @@ export class TezosFaucet extends pulumi.ComponentResource {
       )
     }
 
-    const teztnetsDomain = `${name}.teztnets.xyz`
+    const teztnetsDomain = `${name}.teztnets.com`
     const faucetDomain = `faucet.${teztnetsDomain}`
     this.tezosFaucetHelmValues.googleCaptchaSecretKey =
       params.faucetRecaptchaSecretKey
