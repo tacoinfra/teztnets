@@ -243,7 +243,6 @@ nodes:
       - baker
       - accuser
       - vdf
-    readiness_probe: false
     storage_size: 160Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
