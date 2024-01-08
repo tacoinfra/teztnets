@@ -1,3 +1,5 @@
+# DEPRECATED - new repo at https://github.com/tacoinfra/teztnets
+
 # Teztnets
 
 Infrastructure-as-code repo to activate and bootstrap Tezos testnets in a repeatable, automated way.
