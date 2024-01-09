@@ -25,8 +25,8 @@ const private_teztnets_baking_key = cfg.requireSecret(
   "tf-teztnets-baking-key"
 )
 
-
-const stackRef = new pulumi.StackReference(`tacoinfra/tf-teztnets-infra/prod`)
+const stackname = cfg.require("infra_stack")
+const stackRef = new pulumi.StackReference(stackname)
 
 const kubeconfig = stackRef.requireOutput("kubeconfig")
 
