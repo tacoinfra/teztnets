@@ -48,6 +48,7 @@ jobs:
           sed -i 's/teztnets.com/teztnets.xyz/g' teztnets_xyz_page/website/_config.yml
           sed -i 's/teztnets.com/teztnets.xyz/g' teztnets_xyz_page/website/_includes/header.html
           sed -i 's/teztnets.com/teztnets.xyz/g' teztnets_xyz_page/website/index.markdown
+          sed -i 's/<\/span>/ is moving to <a href="https:\/\/teztnets.com\/"><strong>teztnets.com<\/strong><\/a><\/span>/' teztnets_xyz_page/website/_includes/footer.html
       - name: Generate release artifacts for teztnets.xyz
         run: |
           python teztnets_xyz_page/release.py
