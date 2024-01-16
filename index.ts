@@ -123,7 +123,7 @@ const dailynet_chain = new TezosChain(
     helmValuesFile: "networks/dailynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    //chartRepoVersion: "6.25.0", // point to a release of tezos-k8s. This should be the default state.
+    //chartRepoVersion: "7.0.6", // point to a release of tezos-k8s. This should be the default state.
   },
   provider
 )
@@ -137,7 +137,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     //chartPath: "networks/dailynet/tezos-k8s",
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -157,7 +157,7 @@ const weeklynet_chain = new TezosChain(
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    //chartRepoVersion: "6.25.0", // point to a release of tezos-k8s. This should be the default state.
+    //chartRepoVersion: "7.0.6", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [],
   },
   provider
@@ -171,7 +171,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -191,7 +191,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
     rollingPvcSize: "50Gi",
     archivePvcSize: "750Gi"
 
@@ -207,7 +207,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -232,7 +232,7 @@ const nairobinet_chain = new TezosChain(
         url: "https://nairobi.tzstats.com",
       },
     ],
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -245,7 +245,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -262,7 +262,7 @@ const oxfordnet_chain = new TezosChain(
     rpcUrls: [],
     indexers: [
     ],
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -275,7 +275,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.6",
   },
   provider
 )
@@ -475,7 +475,7 @@ deployStatusPage(provider, {
   networks: networks,
   teztnets: teztnets,
   statusPageFqdn: `status.${domainNameCom}`,
-  chartRepoVersion: "6.25.0"
+  chartRepoVersion: "7.0.6"
 });
 deployMetricsPage(provider, {
   metricsPageFqdn: `metrics.${domainNameCom}`,

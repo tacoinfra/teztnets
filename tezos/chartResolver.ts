@@ -28,7 +28,7 @@ export function getChartParams(params: any, chartName: string): object {
     }
     chartParams = {
       fetchOpts: {
-        repo: "https://oxheadalpha.github.io/tezos-helm-charts"
+        repo: "https://tacoinfra.github.io/tezos-helm-charts"
       },
       chart: _chartName,
       version: params.chartRepoVersion
