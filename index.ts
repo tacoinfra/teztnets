@@ -295,7 +295,7 @@ const janet_chain = new TezosChain(
     rpcUrls: [],
     indexers: [
     ],
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -308,7 +308,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "6.25.0",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
