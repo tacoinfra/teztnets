@@ -1,5 +1,3 @@
-tezos_k8s_images:
-  utils: ghcr.io/oxheadalpha/tezos-k8s-utils:bake_remotely
 node_config_network:
   activation_account_name: teztnetsbaker
   genesis:

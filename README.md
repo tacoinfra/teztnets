@@ -8,9 +8,9 @@ See [teztnets.com](https://teztnets.com) for the list of active Teztnets.
 
 ### Based on tezos-k8s
 
-[tezos-k8s](https://github.com/oxheadalpha/tezos-k8s) is a framework to deploy Tezos nodes or chains using Kubernetes and Helm.
+[tezos-k8s](https://github.com/tacoinfra/tezos-k8s) is a framework to deploy Tezos nodes or chains using Kubernetes and Helm.
 
-See the [tezos-k8s documentation](https://github.com/oxheadalpha/tezos-k8s/blob/master/README.md)
+See the [tezos-k8s documentation](https://tezos-k8s.io).
 
 ### Faucet support
 
@@ -18,7 +18,7 @@ We support the beacon-compatible Tezos Faucet.
 
 ### Injection of contracts at genesis
 
-A [collection of raw Michelson contracts](https://github.com/oxheadalpha/teztnets/tree/main/bootstrap_contracts) can be optionally deployed in any Teztnet at genesis.
+A [collection of raw Michelson contracts](https://github.com/tacoinfra/teztnets/tree/main/bootstrap_contracts) can be optionally deployed in any Teztnet at genesis.
 
 ### Injection of Smart Rollups at genesis
 
@@ -65,19 +65,12 @@ The Helm chart values.yaml lets you customize your chain in many ways:
 
 Look in any Teztnet directory's values.yaml file in [`/networks`](/networks) for reference as to how to configure your own Teztnet.
 
-The [default Helm values.yaml](https://github.com/oxheadalpha/tezos-k8s/blob/master/charts/tezos/values.yaml) has details on every possible way to customize your teztnet.
+The [default Helm values.yaml](https://github.com/tacoinfra/tezos-k8s/blob/master/charts/tezos/values.yaml) has details on every possible way to customize your teztnet.
 
 ## Teztnets.com website
 
 The website is created with Jekyll from Markdown files generated from Jinja templates based on Pulumi outputs.
 
-To build the website locally, from the top-level dir of the repo:
+To build the website locally, from the top-level dir of the repo, run [`local_web_serve.sh`](https://github.com/tacoinfra/teztnets/blob/main/local_web_serve.sh).
 
-1. run `pulumi stack output networks > networks.json`
-1. run `pulumi stack output teztnets > teztnets.json`
-1. run `python teztnets_xyz_page/release.py`
-1. `cd target/release`
-1. run `bundle install`
-1. run `bundle exec jekyll serve`
-
-The website will be rendered on `localhost:4000`.
+You need Ruby and Bundle installed. The website will be rendered on `localhost:4000`.

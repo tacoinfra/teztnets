@@ -251,6 +251,9 @@ full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
 archive_tarball_url: null
+snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
+snapshot_metadata_network_name: oxfordnet
+
 images:
   octez: tezos/tezos:v19.0-rc1
 
