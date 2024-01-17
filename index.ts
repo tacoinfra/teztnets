@@ -108,6 +108,39 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 });
 
 // chains
+const dailynet_chain = new TezosChain(
+  {
+    category: periodicCategory,
+    humanName: "Dailynet",
+    description:
+      "A testnet that restarts every day launched from tezos/tezos master branch and protocol alpha.",
+    schedule: "0 0 * * *",
+    activationBucket: activationBucket,
+    bootstrapContracts: [
+      "evm_bridge.json",
+      "exchanger.json",
+    ],
+    helmValuesFile: "networks/dailynet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    //chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+    chartRepoVersion: "7.0.9", // point to a release of tezos-k8s. This should be the default state.
+  },
+  provider
+)
+new TezosFaucet(
+  dailynet_chain.name,
+  {
+    humanName: "Dailynet",
+    namespace: dailynet_chain.namespace,
+    helmValuesFile: "networks/dailynet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    //chartPath: "networks/dailynet/tezos-k8s",
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
 
 const weeklynet_chain = new TezosChain(
   {
@@ -158,7 +191,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "7.0.8",
+    chartRepoVersion: "7.0.9",
     rollingPvcSize: "50Gi",
     archivePvcSize: "750Gi"
 
@@ -368,7 +401,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -434,7 +467,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
