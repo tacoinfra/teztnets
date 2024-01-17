@@ -108,39 +108,6 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 });
 
 // chains
-const dailynet_chain = new TezosChain(
-  {
-    category: periodicCategory,
-    humanName: "Dailynet",
-    description:
-      "A testnet that restarts every day launched from tezos/tezos master branch and protocol alpha.",
-    schedule: "0 0 * * *",
-    activationBucket: activationBucket,
-    bootstrapContracts: [
-      "evm_bridge.json",
-      "exchanger.json",
-    ],
-    helmValuesFile: "networks/dailynet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    //chartRepoVersion: "7.0.6", // point to a release of tezos-k8s. This should be the default state.
-  },
-  provider
-)
-new TezosFaucet(
-  dailynet_chain.name,
-  {
-    humanName: "Dailynet",
-    namespace: dailynet_chain.namespace,
-    helmValuesFile: "networks/dailynet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    //chartPath: "networks/dailynet/tezos-k8s",
-    chartRepoVersion: "7.0.6",
-  },
-  provider
-)
 
 const weeklynet_chain = new TezosChain(
   {
@@ -156,8 +123,8 @@ const weeklynet_chain = new TezosChain(
     ],
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    //chartRepoVersion: "7.0.6", // point to a release of tezos-k8s. This should be the default state.
+    //chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+    chartRepoVersion: "7.0.9", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [],
   },
   provider
@@ -171,7 +138,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -191,7 +158,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.8",
     rollingPvcSize: "50Gi",
     archivePvcSize: "750Gi"
 
@@ -207,7 +174,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -232,7 +199,7 @@ const nairobinet_chain = new TezosChain(
         url: "https://nairobi.tzstats.com",
       },
     ],
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -245,7 +212,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -262,7 +229,7 @@ const oxfordnet_chain = new TezosChain(
     rpcUrls: [],
     indexers: [
     ],
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -275,7 +242,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.6",
+    chartRepoVersion: "7.0.9",
   },
   provider
 )
@@ -401,7 +368,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getNetworks([weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -467,7 +434,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getTeztnets([weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
@@ -475,7 +442,7 @@ deployStatusPage(provider, {
   networks: networks,
   teztnets: teztnets,
   statusPageFqdn: `status.${domainNameCom}`,
-  chartRepoVersion: "7.0.6"
+  chartRepoVersion: "7.0.9"
 });
 deployMetricsPage(provider, {
   metricsPageFqdn: `metrics.${domainNameCom}`,
