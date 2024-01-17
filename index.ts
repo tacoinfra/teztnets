@@ -280,6 +280,40 @@ new TezosFaucet(
   provider
 )
 
+
+// Janet - test network
+//
+const janet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Janet",
+    description: "Test Chain for the Janet test network",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/janet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: ["janet.tzinit.net"],
+    rpcUrls: [],
+    indexers: [
+    ],
+    chartRepoVersion: "6.25.0",
+  },
+  provider
+)
+new TezosFaucet(
+  oxfordnet_chain.name,
+  {
+    namespace: janet_chain.namespace,
+    humanName: "Janet",
+    helmValuesFile: "networks/janet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "6.25.0",
+  },
+  provider
+)
+
+
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
 
@@ -401,7 +435,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain, janet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -467,7 +501,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain,janet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
