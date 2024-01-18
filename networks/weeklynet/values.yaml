@@ -177,7 +177,7 @@ smartRollupNodes:
         # sometimes evm proxy takes too long to initialize
         # because it depends on the rollup node which in turn
         # depends on the octez node to be available
-        'pulumi.com/skipAwait': true
+        'pulumi.com/skipAwait': 'true'
       ingress:
       # ingress details filled by pulumi
 dalNodes:

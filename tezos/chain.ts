@@ -4,7 +4,6 @@ import * as pulumi from "@pulumi/pulumi"
 import * as cronParser from "cron-parser"
 import * as fs from "fs"
 import * as YAML from "yaml"
-const mime = require("mime")
 import { getChartParams } from './chartResolver'
 import { TezosImageResolver } from "./imageResolver"
 
@@ -122,7 +121,7 @@ export class TezosChain extends pulumi.ComponentResource {
           bucket: params.activationBucket.name,
           name: contractFullName,
           source: new pulumi.asset.FileAsset(`bootstrap_contracts/${contractFile}`),
-          contentType: mime.getType(contractFile) || undefined,
+          contentType: "application/json",
         });
 
         // Push the URL to the helm values

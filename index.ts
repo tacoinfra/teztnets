@@ -288,7 +288,6 @@ function getNetworks(chains: TezosChain[]): object {
     bootstrapPeers.splice(0, 0, `${chain.name}.${domainNameCom}`)
 
     // genesis_pubkey is the public key associated with the $TEZOS_OXHEAD_BAKING_KEY private key in github secrets
-    // TODO: generate it dynamically based on privkey
     let genesisPubkey = getPublicKeyFromPrivateKey(chain.params.bakingPrivateKey)
     const network = Object.assign(
       {},
