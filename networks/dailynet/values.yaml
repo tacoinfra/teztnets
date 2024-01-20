@@ -41,12 +41,20 @@ activation:
     global_limit_of_staking_over_baking: 5
     edge_of_staking_over_delegation: 2
     adaptive_rewards_params:
-      issuance_ratio_min:
-        numerator: "1"
-        denominator: "200"
-      issuance_ratio_max:
+      issuance_ratio_initial_min:
+        numerator: "45"
+        denominator: "1000"
+      issuance_ratio_initial_max:
+        numerator: "55"
+        denominator: "1000"
+      issuance_ratio_final_min:
+        numerator: "25"
+        denominator: "10000"
+      issuance_ratio_final_max:
         numerator: "1"
         denominator: "10"
+      initial_period: 3
+      transition_period: 3
       max_bonus: "50000000000000"
       growth_rate:
         numerator: "1"
@@ -93,6 +101,7 @@ activation:
     vdf_difficulty: '10000000'
     dal_parametric:
       feature_enable: true
+      incentives_enable: true
       number_of_slots: 16
       number_of_shards: 512
       attestation_lag: 3
