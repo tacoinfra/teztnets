@@ -181,7 +181,7 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "v18.1";
+const ghostnetRollingVersion = "v19.0";
 const ghostnetArchiveVersion = "v18.1";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
@@ -275,6 +275,23 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+
+const janet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Janet",
+    description: "Test Chain for the Janet test",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/janet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [
+    ],
     chartRepoVersion: "7.0.9",
   },
   provider
@@ -400,7 +417,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain, janet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -466,7 +483,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain, janet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
