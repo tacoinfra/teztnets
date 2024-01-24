@@ -296,6 +296,19 @@ const janet_chain = new TezosChain(
   },
   provider
 )
+new TezosFaucet(
+  janet_chain.name,
+  {
+    namespace: janet_chain.namespace,
+    humanName: "Janet",
+    helmValuesFile: "networks/janet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
 
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
@@ -483,7 +496,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain, janet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
