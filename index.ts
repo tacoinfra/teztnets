@@ -182,7 +182,7 @@ new TezosFaucet(
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
 const ghostnetRollingVersion = "v19.0";
-const ghostnetArchiveVersion = "v18.1";
+const ghostnetArchiveVersion = "v19.0";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -496,7 +496,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, nairobinet_chain, oxfordnet_chain, janet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
