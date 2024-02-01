@@ -14,7 +14,7 @@ We have three kind of testnets:
 * **protocol testnets** are deployed each time a new protocol is injected (2 months before mainnet activation). Their goal is to test protocols before they get rolled into mainnet. Any team building on Tezos should test their products on these networks,
 * **periodic testnets** are bleeding edge networks that restart on a cadence from the development branch. The primary users of these testnets are protocol, library and indexer teams.
 
-Teztnets is powered by [tezos-k8s](https://tezos-k8s.xyz), a collection of helm charts for Tezos. It is deployed with [Pulumi](https://pulumi.com).
+Teztnets is powered by [tezos-k8s](https://tezos-k8s.io), a collection of helm charts for Tezos. It is deployed with [Pulumi](https://pulumi.com).
 
 The [Teztnets Status page](https://status.teztnets.com) is powered by [Pyrometer](https://gitlab.com/tezos-kiln/pyrometer), a Tezos monitoring tool.
 
