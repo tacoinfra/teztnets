@@ -53,18 +53,6 @@ new gcp.storage.BucketIAMMember("publicRead", {
 });
 
 
-// Define your domain name and a suitable name for the managed zone
-const domainName = "teztnets.xyz";
-const managedZoneName = "teztnets-zone";
-
-// Create a managed DNS zone
-const dnsZone = new gcp.dns.ManagedZone(managedZoneName, {
-  name: managedZoneName,
-  dnsName: domainName + ".",
-  description: "Managed zone for " + domainName,
-});
-
-
 // Define another domain name and a suitable name for the managed zone
 const domainNameCom = "teztnets.com";
 const managedZoneNameCom = "teztnetscom-zone";
@@ -78,20 +66,6 @@ const dnsZoneCom = new gcp.dns.ManagedZone(managedZoneNameCom, {
 
 
 // GitHub Pages IP addresses
-
-// Create A records for each GitHub Pages IP
-new gcp.dns.RecordSet("teztnetsSiteRecord", {
-  name: domainName + ".",
-  managedZone: dnsZone.name,
-  type: "A",
-  ttl: 300,
-  rrdatas: [
-    "185.199.108.153",
-    "185.199.109.153",
-    "185.199.110.153",
-    "185.199.111.153",
-  ]
-});
 
 // Create A records for each GitHub Pages IP
 new gcp.dns.RecordSet("teztnetsComSiteRecord", {
@@ -510,7 +484,7 @@ deployMetricsPage(provider, {
   metricsPageFqdn: `metrics.${domainNameCom}`,
 });
 
-// Redirects .com to .xyz
+// Redirects .xyz to .com
 
 function createDomainRedirectIngress(srcDomain: string, destDomain: string): k8s.networking.v1.Ingress {
   return new k8s.networking.v1.Ingress(`ingress-redirect-${srcDomain}`, {
@@ -535,7 +509,20 @@ function createDomainRedirectIngress(srcDomain: string, destDomain: string): k8s
   }, { provider });
 }
 
-createDomainRedirectIngress("faucet.ghostnet.teztnets.xyz", "faucet.ghostnet.teztnets.com");
-createDomainRedirectIngress("faucet.oxfordnet.teztnets.xyz", "faucet.oxfordnet.teztnets.com");
-createDomainRedirectIngress("faucet.nairobinet.teztnets.xyz", "faucet.nairobinet.teztnets.com");
-createDomainRedirectIngress("status.teztnets.xyz", "status.teztnets.com");
+// createDomainRedirectIngress("faucet.ghostnet.teztnets.xyz", "faucet.ghostnet.teztnets.com");
+// createDomainRedirectIngress("faucet.oxfordnet.teztnets.xyz", "faucet.oxfordnet.teztnets.com");
+// createDomainRedirectIngress("faucet.nairobinet.teztnets.xyz", "faucet.nairobinet.teztnets.com");
+// createDomainRedirectIngress("status.teztnets.xyz", "status.teztnets.com");
+
+// Define your domain name and a suitable name for the managed zone
+const domainName = "teztnets.xyz";
+const managedZoneName = "teztnets-zone";
+
+// Create a managed DNS zone
+const dnsZone = new gcp.dns.ManagedZone(managedZoneName, {
+  name: managedZoneName,
+  dnsName: domainName + ".",
+  description: "Managed zone for " + domainName,
+});
+
+createDomainRedirectIngress("teztnets.xyz", "teztnets.com");

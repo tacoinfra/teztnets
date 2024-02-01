@@ -25,7 +25,6 @@ export interface TezosParameters {
 
 const gcpRegion = "us-central1";
 const domainName = 'teztnets.com';
-const domainNameXyz = 'teztnets.xyz';
 
 /**
  * Deploy a tezos-k8s topology in a k8s cluster.
@@ -185,56 +184,6 @@ export class TezosChain extends pulumi.ComponentResource {
             {
               hosts: [rpcDomain],
               secretName: `${rpcDomain}-secret`,
-            },
-          ],
-        },
-      },
-      { provider, parent: this }
-    )
-    // RPC Ingress
-    const rpcDomainCom = `rpc.${name}.${domainNameXyz}`
-
-    const rpcIngNameCom = `${rpcDomainCom}-ingress`
-    new k8s.networking.v1.Ingress(
-      rpcIngNameCom,
-      {
-        metadata: {
-          namespace: this.namespace.metadata.name,
-          name: rpcIngNameCom,
-          annotations: {
-            "kubernetes.io/ingress.class": "nginx",
-            "cert-manager.io/cluster-issuer": "letsencrypt-prod",
-            "nginx.ingress.kubernetes.io/enable-cors": "true",
-            "nginx.ingress.kubernetes.io/cors-allow-origin": "*",
-          },
-          labels: { app: "tezos-node" },
-        },
-        spec: {
-          rules: [
-            {
-              host: rpcDomainCom,
-              http: {
-                paths: [
-                  {
-                    path: "/",
-                    pathType: "Prefix",
-                    backend: {
-                      service: {
-                        name: "tezos-node-rpc",
-                        port: {
-                          name: "rpc",
-                        },
-                      },
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-          tls: [
-            {
-              hosts: [rpcDomainCom],
-              secretName: `${rpcDomainCom}-secret`,
             },
           ],
         },
@@ -408,32 +357,6 @@ export class TezosChain extends pulumi.ComponentResource {
       },
       { provider: provider }
     )
-    // temporary domain name for .xyz
-    new k8s.core.v1.Service(
-      `${name}-p2p-lb-com`,
-      {
-        metadata: {
-          namespace: this.namespace.metadata.name,
-          name: `${name}-teztnetscom`,
-          annotations: {
-            "external-dns.alpha.kubernetes.io/hostname": `${name}.${domainNameXyz}`,
-          },
-        },
-        spec: {
-          ports: [
-            {
-              port: 9732,
-              targetPort: 9732,
-              protocol: "TCP",
-            },
-          ],
-          selector: { node_class: "tezos-baking-node" },
-          type: "LoadBalancer",
-        },
-      },
-      { provider: provider }
-    )
-    // end temporary domain name for .com
   }
 
   getDockerBuild(): string {
