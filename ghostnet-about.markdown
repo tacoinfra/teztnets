@@ -78,12 +78,12 @@ octez-client register key mykey as delegate
 
 You may now launch the baker process.
 ```bash=3
-octez-baker-PtNairob run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
+octez-baker-Proxford run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
 ```
 
 You may run the accuser as well:
 ```bash=3
-octez-accuser-PtNairob run
+octez-accuser-Proxford run
 ```
 
 Note that you need a minimum amount of tez to get baking rights. If you are not a bootstrap baker, it will take you several cycles to start baking.
