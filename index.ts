@@ -409,7 +409,7 @@ export const networks = {
 }
 
 // We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "PtNairob"
+const lastBakingDaemonMainnetGhostnet = "Proxford"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
