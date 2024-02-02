@@ -97,7 +97,7 @@ const dailynet_chain = new TezosChain(
     helmValuesFile: "networks/dailynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     //chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.0.9", // point to a release of tezos-k8s. This should be the default state.
+    chartRepoVersion: "7.1.0", // point to a release of tezos-k8s. This should be the default state.
   },
   provider
 )
@@ -206,7 +206,7 @@ const nairobinet_chain = new TezosChain(
         url: "https://nairobi.tzstats.com",
       },
     ],
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.1.0",
   },
   provider
 )
