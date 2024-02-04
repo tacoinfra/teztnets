@@ -8,11 +8,11 @@ A testnet that restarts every day launched from tezos/tezos master branch and pr
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.dailynet-2024-02-03.teztnets.com](https://rpc.dailynet-2024-02-03.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [Dailynet faucet](https://faucet.dailynet-2024-02-03.teztnets.com) |
-| Full network name | `TEZOS-DAILYNET-2024-02-03T00:00:00.000Z` |
+| Public RPC endpoints | [https://rpc.dailynet-2024-02-04.teztnets.com](https://rpc.dailynet-2024-02-04.teztnets.com/chains/main/chain_id)<br/> |
+| Faucet | [Dailynet faucet](https://faucet.dailynet-2024-02-04.teztnets.com) |
+| Full network name | `TEZOS-DAILYNET-2024-02-04T00:00:00.000Z` |
 | Tezos docker build | [tezos/tezos:master_28a3de7f_20240202201109](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_28a3de7f_20240202201109) |
-| Activated on | 2024-02-03T00:00:00.000Z |
+| Activated on | 2024-02-04T00:00:00.000Z |
 
 
 
@@ -53,7 +53,7 @@ export PATH=$HOME/tezos:$PATH
 Run the following commands:
 
 ```
-octez-node config init --network https://teztnets.com/dailynet-2024-02-03
+octez-node config init --network https://teztnets.com/dailynet-2024-02-04
 
 octez-node run --rpc-addr 127.0.0.1:8732
 ```
@@ -69,8 +69,8 @@ This is not to be confused with [Etherlink](https://docs.etherlink.com/get-start
 
 | | |
 |-------|---------------------|
-| EVM RPC URL | [`https://evm.dailynet-2024-02-03.teztnets.com`](https://evm.dailynet-2024-02-03.teztnets.com) |
-| Bare Rollup RPC URL | [`https://evm-rollup-node.dailynet-2024-02-03.teztnets.com`](https://evm-rollup-node.dailynet-2024-02-03.teztnets.com/global/block/head) |
+| EVM RPC URL | [`https://evm.dailynet-2024-02-04.teztnets.com`](https://evm.dailynet-2024-02-04.teztnets.com) |
+| Bare Rollup RPC URL | [`https://evm-rollup-node.dailynet-2024-02-04.teztnets.com`](https://evm-rollup-node.dailynet-2024-02-04.teztnets.com/global/block/head) |
 
 
 
@@ -84,8 +84,8 @@ The DAL nodes are accessible with the following endpoints:
 
 | | RPC | P2P Endpoint |
 |------------|---------|--------------|
-| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.dailynet-2024-02-03.teztnets.com/p2p/gossipsub/scores) | `dal.dailynet-2024-02-03.teztnets.com:11732` |
-| DAL Teztnets Attester | [Link](https://dal-attester-rpc.dailynet-2024-02-03.teztnets.com/p2p/gossipsub/scores) | `dal1.dailynet-2024-02-03.teztnets.com:11732` |
+| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.dailynet-2024-02-04.teztnets.com/p2p/gossipsub/scores) | `dal.dailynet-2024-02-04.teztnets.com:11732` |
+| DAL Teztnets Attester | [Link](https://dal-attester-rpc.dailynet-2024-02-04.teztnets.com/p2p/gossipsub/scores) | `dal1.dailynet-2024-02-04.teztnets.com:11732` |
 
 
 For more info, read this [blog post from Nomadic Labs](https://research-development.nomadic-labs.com/data-availability-layer-tezos.html).
