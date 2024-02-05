@@ -334,7 +334,7 @@ accounts:
     key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
     type: public
     is_bootstrap_baker_account: false
-    bootstrap_balance: "100000000000000"
+    bootstrap_balance: "1000000000000"
   marigold:
     # tz1eKKAsasRiyUGSnPD5YPu7zfEBcx9LDREQ
     # cyril.bourdet.pro@gmail.com
