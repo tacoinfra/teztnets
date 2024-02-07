@@ -13,7 +13,7 @@ Test Chain for the Oxford Protocol Proposal
 | Full network name | `TEZOS_OXFORDNET_2023-12-07T15:00:00Z` |
 | Tezos docker build | [tezos/tezos:v19.0](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=v19.0) |
 | Activated on | 2023-12-07T15:00:00Z |
-
+| Block Explorers | [TzKT](https://oxfordnet.tzkt.io) |
 
 
 Oxfordnet has 8 second blocks (twice faster than mainnet).
