@@ -235,6 +235,10 @@ const oxfordnet_chain = new TezosChain(
     bootstrapPeers: ["oxfordnet.tzinit.net"],
     rpcUrls: [],
     indexers: [
+      {
+        name: "TzKT",
+        url: "https://oxfordnet.tzkt.io",
+      },
     ],
     chartRepoVersion: "7.0.9",
   },
