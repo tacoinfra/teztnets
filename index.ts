@@ -186,44 +186,6 @@ new TezosFaucet(
   provider
 )
 
-const nairobinet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Nairobinet",
-    description: "Test Chain for the Nairobi Protocol Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/nairobinet/values.yaml",
-    bakingPrivateKey: private_oxhead_baking_key,
-    bootstrapPeers: ["nairobinet.boot.ecadinfra.com", "nairobinet.tzboot.net"],
-    rpcUrls: ["https://nairobinet.ecadinfra.com"],
-    indexers: [
-      {
-        name: "TzKT",
-        url: "https://nairobinet.tzkt.io",
-      },
-      {
-        name: "TzStats",
-        url: "https://nairobi.tzstats.com",
-      },
-    ],
-    chartRepoVersion: "7.1.0",
-  },
-  provider
-)
-new TezosFaucet(
-  nairobinet_chain.name,
-  {
-    namespace: nairobinet_chain.namespace,
-    humanName: "Nairobinet",
-    helmValuesFile: "networks/nairobinet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
 const oxfordnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -485,7 +447,6 @@ function createDomainRedirectIngress(srcDomain: string, destDomain: string): k8s
 
 // createDomainRedirectIngress("faucet.ghostnet.teztnets.xyz", "faucet.ghostnet.teztnets.com");
 // createDomainRedirectIngress("faucet.oxfordnet.teztnets.xyz", "faucet.oxfordnet.teztnets.com");
-// createDomainRedirectIngress("faucet.nairobinet.teztnets.xyz", "faucet.nairobinet.teztnets.com");
 // createDomainRedirectIngress("status.teztnets.xyz", "status.teztnets.com");
 
 // Define your domain name and a suitable name for the managed zone
