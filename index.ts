@@ -130,8 +130,8 @@ const weeklynet_chain = new TezosChain(
     ],
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    //chartRepoVersion: "7.0.9", // point to a release of tezos-k8s. This should be the default state.
+    //chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+    chartRepoVersion: "7.1.1", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [],
   },
   provider

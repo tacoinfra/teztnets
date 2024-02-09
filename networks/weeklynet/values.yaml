@@ -234,9 +234,6 @@ archive_tarball_url: null
 snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 
 images: {}
-tezos_k8s_images:
-  utils: ghcr.io/tacoinfra/tezos-k8s-utils:nicolasochem-evm_batcher_accounts
-tezos_k8s_images_pull_policy: Always
 
 serviceMonitor:
   enabled: true
