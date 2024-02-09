@@ -111,7 +111,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     //chartPath: "networks/dailynet/tezos-k8s",
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.1.1",
   },
   provider
 )
