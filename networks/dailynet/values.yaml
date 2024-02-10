@@ -25,10 +25,8 @@ protocols:
 activation:
   protocol_hash: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
   protocol_parameters:
-    preserved_cycles: 3
     blocks_per_cycle: 128
     blocks_per_commitment: 16
-#    blocks_per_stake_snapshot: 64
     cycles_per_voting_period: 1
     hard_gas_limit_per_operation: '1040000'
     hard_gas_limit_per_block: '5200000'
@@ -111,7 +109,6 @@ activation:
       slot_size: 16384
       redundancy_factor: 16
       page_size: 4096
-#      blocks_per_epoch: 32
     smart_rollup_private_enable: true
     smart_rollup_riscv_pvm_enable: true
     smart_rollup_origination_size: 6314
