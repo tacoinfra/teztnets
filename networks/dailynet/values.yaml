@@ -188,7 +188,14 @@ nodes:
 
 smartRollupNodes:
   evm:
-    operator_account: teztnetsbaker
+    operators:
+      operating: teztnetsbaker
+      cementing: teztnetsbaker
+      executing_outbox: teztnetsbaker
+      batching1: evm-rollup-batcher-1
+      batching2: evm-rollup-batcher-2
+      batching3: evm-rollup-batcher-3
+      batching4: evm-rollup-batcher-4
     rollup_address: sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf
     ingress:
       # ingress details filled by pulumi
@@ -297,19 +304,25 @@ accounts:
     key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
     bootstrap_balance: "200000000000000"
     is_bootstrap_baker_account: false
-  # SCORU test accounts
-  # Contact: Yann Regis-Gianas
-  scoru_rollup_operator:
-    key: edpktnY9kXbEW1HjqDbQ4AG3hYkNunxHiRsZe72gEaHxddxNBtjG7B
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
-  scoru_enduser:
-    key: edpkuet91oSH1Q9i4nGJRDjdsF9W7XcAteqLQe1VqSjtMHRtDpCVFp
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
   # DAL Rich account
   # Contact: Francois Thire at Nomadic
   dal_rich_account:
     key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
     bootstrap_balance: "1000000000000"
     is_bootstrap_baker_account: false
+  evm-rollup-batcher-1:
+    key: edsk3ioP9xYzM1USEXsph8z2CPxxHEc85HWDRwwMeiJdMAFaMNHMWL
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
+  evm-rollup-batcher-2:
+    key: edsk3YEZnguwHGtsDjHdHr8EenSybKyJqh9P1xnba6VWN6n5yP5hoz
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
+  evm-rollup-batcher-3:
+    key: edsk366GyDzqJSyiZJmmexM7YubJ77rEKqcYKzRtQocKHXU2kyqcLb
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
+  evm-rollup-batcher-4:
+    key: edsk4DKhPabyQUDfCqTRXrKucXWdkHKnYM3NYFNS2XmyCQhu9xdprZ
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
