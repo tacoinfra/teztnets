@@ -1,3 +1,5 @@
+tezos_k8s_images_pull_policy: Always
+
 signers:
   tezos-signer-0:
     sign_for_accounts:
@@ -181,7 +183,7 @@ nodes:
       - baker
       - accuser
       - vdf
-    readiness_probe: false
+    bootstrapped_readiness_probe: false
     storage_size: 15Gi
   # Overwrite default values.yaml tezos-node
   rolling-node: null
