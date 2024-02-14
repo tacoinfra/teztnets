@@ -11,7 +11,7 @@ Ghostnet is the long-running testnet for Tezos.
 | Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/>[https://ghostnet.ecadinfra.com](https://ghostnet.ecadinfra.com/chains/main/chain_id)<br/>[https://ghostnet.tezos.marigold.dev](https://ghostnet.tezos.marigold.dev/chains/main/chain_id)<br/> |
 | Faucet | [Ghostnet faucet](https://faucet.ghostnet.teztnets.com) |
 | Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
-| Tezos docker build | [tezos/tezos:v19.0](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=v19.0) |
+| Tezos docker build | [tezos/tezos:v19.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=v19.1) |
 | Activated on | 2022-01-25T15:00:00Z |
 | Block Explorers | [TzKT](https://ghostnet.tzkt.io) - [TzStats](https://ghost.tzstats.com) |
 
@@ -23,7 +23,7 @@ Ghostnet is the long-running testnet for Tezos.
 ⚠️  If you already have an existing Tezos installation, do not forget to backup and delete your `~/.tezos-node` and `~/.tezos-client`.
 
 
-#### Download and install Tezos version v19.0
+#### Download and install Tezos version v19.1
 
 Follow instructions from the [Tezos documentation](https://tezos.gitlab.io/introduction/howtoget.html#installing-binaries).
 
@@ -33,7 +33,7 @@ Follow instructions from the [Tezos documentation](https://tezos.gitlab.io/intro
 To join Ghostnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:v19.0
+docker run -it --entrypoint=/bin/sh tezos/tezos:v19.1
 ```
 
 #### Alternative: Build the software
@@ -44,7 +44,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:v19.0
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout v19.0
+git checkout v19.1
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)

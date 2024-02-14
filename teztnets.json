@@ -39,9 +39,9 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:v19.0",
+    "docker_build": "tezos/tezos:v19.1",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "v19.0",
+    "git_ref": "v19.1",
     "human_name": "Ghostnet",
     "indexers": [
       {
@@ -68,8 +68,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:v19.0",
-    "git_ref": "v19.0",
+    "docker_build": "tezos/tezos:v19.1",
+    "git_ref": "v19.1",
     "human_name": "Mainnet",
     "indexers": [
       {
