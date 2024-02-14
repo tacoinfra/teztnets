@@ -94,10 +94,10 @@
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_OXFORDNET_2023-12-07T15:00:00Z",
     "description": "Test Chain for the Oxford Protocol Proposal",
-    "docker_build": "tezos/tezos:v19.0",
+    "docker_build": "tezos/tezos:v19.1",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.oxfordnet.teztnets.com",
-    "git_ref": "v19.0",
+    "git_ref": "v19.1",
     "human_name": "Oxfordnet",
     "indexers": [
       {
