@@ -131,7 +131,8 @@ const weeklynet_chain = new TezosChain(
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     //chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.1.1", // point to a release of tezos-k8s. This should be the default state.
+    chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+    //chartRepoVersion: "7.1.1", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [],
   },
   provider
@@ -155,8 +156,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "v19.0";
-const ghostnetArchiveVersion = "v19.0";
+const ghostnetRollingVersion = "v19.1";
+const ghostnetArchiveVersion = "v19.1";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {

@@ -1,3 +1,5 @@
+tezos_k8s_images_pull_policy: Always
+
 node_config_network:
   activation_account_name: teztnetsbaker
   genesis:
@@ -161,7 +163,7 @@ nodes:
       - baker
       - accuser
       - vdf
-    readiness_probe: false
+    bootstrapped_readiness_probe: false
     storage_size: 50Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
@@ -337,7 +339,7 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   mathias:
-    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu                                                               
+    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
     key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
     type: public
     is_bootstrap_baker_account: false
