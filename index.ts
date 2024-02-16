@@ -96,8 +96,8 @@ const dailynet_chain = new TezosChain(
     ],
     helmValuesFile: "networks/dailynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    // chartRepoVersion: "7.1.1", // point to a release of tezos-k8s. This should be the default state.
+    // chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+    chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
   },
   provider
 )
@@ -111,7 +111,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     //chartPath: "networks/dailynet/tezos-k8s",
-    chartRepoVersion: "7.1.1",
+    chartRepoVersion: "7.1.2",
   },
   provider
 )
@@ -130,9 +130,8 @@ const weeklynet_chain = new TezosChain(
     ],
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    //chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartPath: "networks/dailynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    //chartRepoVersion: "7.1.1", // point to a release of tezos-k8s. This should be the default state.
+    // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+    chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [],
   },
   provider
@@ -146,7 +145,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.1.2",
   },
   provider
 )

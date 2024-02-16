@@ -1,5 +1,3 @@
-tezos_k8s_images_pull_policy: Always
-
 node_config_network:
   activation_account_name: teztnetsbaker
   genesis:
