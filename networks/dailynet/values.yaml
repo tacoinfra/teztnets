@@ -39,7 +39,9 @@ activation:
     adaptive_issuance_activation_vote_enable: false
     autostaking_enable: true
     adaptive_issuance_force_activation: true
-    ns_enable: false
+    ns_enable: true
+    max_slashing_per_block: 50
+    max_slashing_threshold: 1
     global_limit_of_staking_over_baking: 5
     edge_of_staking_over_delegation: 2
     adaptive_rewards_params:
