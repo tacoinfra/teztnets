@@ -442,10 +442,6 @@ function createDomainRedirectIngress(srcDomain: string, destDomain: string): k8s
   }, { provider });
 }
 
-// createDomainRedirectIngress("faucet.ghostnet.teztnets.xyz", "faucet.ghostnet.teztnets.com");
-// createDomainRedirectIngress("faucet.oxfordnet.teztnets.xyz", "faucet.oxfordnet.teztnets.com");
-// createDomainRedirectIngress("status.teztnets.xyz", "status.teztnets.com");
-
 // Define your domain name and a suitable name for the managed zone
 const domainName = "teztnets.xyz";
 const managedZoneName = "teztnets-zone";
