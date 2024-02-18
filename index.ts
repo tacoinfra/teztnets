@@ -18,9 +18,6 @@ const faucetRecaptchaSiteKey = cfg.requireSecret("faucet-recaptcha-site-key")
 const faucetRecaptchaSecretKey = cfg.requireSecret(
   "faucet-recaptcha-secret-key"
 )
-const private_oxhead_baking_key = cfg.requireSecret(
-  "private-teztnets-baking-key"
-)
 const private_teztnets_baking_key = cfg.requireSecret(
   "tf-teztnets-baking-key"
 )
