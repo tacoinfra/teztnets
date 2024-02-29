@@ -1,0 +1,385 @@
+node_config_network:
+  activation_account_name: teztnetsbaker
+  genesis:
+    protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
+  user_activated_upgrades:
+    - level: 512
+      replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
+  dal_config:
+    activated: true
+    use_mock_srs_for_testing:
+      redundancy_factor: 16
+      page_size: 4096
+      slot_size: 65536
+      number_of_shards: 2048
+
+activation:
+  protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
+  protocol_parameters:
+    preserved_cycles: 3
+    blocks_per_cycle: 128
+    blocks_per_commitment: 16
+    blocks_per_stake_snapshot: 64
+    cycles_per_voting_period: 1
+    hard_gas_limit_per_operation: '1040000'
+    hard_gas_limit_per_block: '5200000'
+    proof_of_work_threshold: '-1'
+    minimal_stake: '6000000000'
+    minimal_frozen_stake: '600000000'
+    adaptive_issuance_launch_ema_threshold: 10000000
+    adaptive_issuance_activation_vote_enable: true
+    autostaking_enable: true
+    global_limit_of_staking_over_baking: 5
+    edge_of_staking_over_delegation: 2
+    adaptive_rewards_params:
+      issuance_ratio_min:
+        numerator: "1"
+        denominator: "200"
+      issuance_ratio_max:
+        numerator: "1"
+        denominator: "10"
+      max_bonus: "50000000000000"
+      growth_rate:
+        numerator: "1"
+        denominator: "100"
+      center_dz:
+        numerator: "1"
+        denominator: "2"
+      radius_dz:
+        numerator: "1"
+        denominator: "50"
+    issuance_weights:
+      base_total_issued_per_minute: "85007812"
+      baking_reward_fixed_portion_weight: 5120
+      baking_reward_bonus_weight: 5120
+      attesting_reward_weight: 10240
+      liquidity_baking_subsidy_weight: 1280
+      vdf_revelation_tip_weight: 1
+      seed_nonce_revelation_tip_weight: 1
+    hard_storage_limit_per_operation: '60000'
+    origination_size: 257
+    cost_per_byte: '250'
+    quorum_max: 7000
+    quorum_min: 2000
+    min_proposal_quorum: 500
+    liquidity_baking_toggle_ema_threshold: 100000
+    max_operations_time_to_live: 120
+    minimal_block_delay: "7"
+    delay_increment_per_round: "7"
+    consensus_committee_size: 7000
+    consensus_threshold: 4667
+    minimal_participation_ratio:
+      numerator: 2
+      denominator: 3
+    limit_of_delegation_over_baking: 9
+    percentage_of_frozen_deposits_slashed_per_double_baking: 7
+    percentage_of_frozen_deposits_slashed_per_double_attestation: 50
+    cache_script_size: 100000000
+    cache_stake_distribution_cycles: 8
+    cache_sampler_state_cycles: 8
+    nonce_revelation_threshold: 32
+    vdf_difficulty: '10000000'
+    dal_parametric:
+      feature_enable: true
+      number_of_slots: 32
+      number_of_shards: 2048
+      attestation_lag: 4
+      attestation_threshold: 1
+      slot_size: 65536
+      redundancy_factor: 16
+      page_size: 4096
+      blocks_per_epoch: 1
+    smart_rollup_private_enable: true
+    smart_rollup_riscv_pvm_enable: true
+    smart_rollup_origination_size: 6314
+    smart_rollup_challenge_window_in_blocks: 40
+    smart_rollup_stake_amount: "32000000"
+    smart_rollup_commitment_period_in_blocks: 20
+    smart_rollup_max_lookahead_in_blocks: 30000
+    smart_rollup_max_active_outbox_levels: 20160
+    smart_rollup_max_outbox_messages_per_level: 100
+    smart_rollup_number_of_sections_in_dissection: 32
+    smart_rollup_timeout_period_in_blocks: 500
+    smart_rollup_max_number_of_cemented_commitments: 5
+    smart_rollup_max_number_of_parallel_games: 32
+    smart_rollup_arith_pvm_enable: true
+    smart_rollup_reveal_activation_level:
+      raw_data:
+        Blake2B: 0
+      metadata: 0
+      dal_page: 0
+      dal_parameters: 0
+    zk_rollup_enable: true
+    zk_rollup_origination_size: 4000
+    zk_rollup_min_pending_to_process: 10
+    zk_rollup_max_ticket_payload_size: 2048
+  bootstrap_parameters:
+    bootstrap_smart_rollups:
+    - address: "sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf"
+      pvm_kind: "wasm_2_0_0"
+      kernel: "fromfile#/usr/local/share/tezos/evm_kernel/evm_installer.wasm"
+      parameters_ty:
+        prim: pair
+        args:
+        - prim: pair
+          args:
+          - prim: bytes
+          - prim: ticket
+            args:
+            - prim: unit
+        - prim: pair
+          args:
+          - prim: nat
+          - prim: bytes
+
+nodes:
+  tezos-baking-node:
+    env:
+      all:
+        TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER: "Y"
+    instances:
+      - bake_using_accounts:
+          - teztnetsbaker
+        config:
+          shell:
+            history_mode: archive
+          rpc:
+            cors-headers: [ "content-type" ]
+            cors-origin: [ "*" ]
+          metrics_addr: ["0.0.0.0:9932"]
+        is_bootstrap_node: true
+        identity:
+          # hard-coded identity - saves 1-2 minutes on daily cron
+          peer_id: idqnaeAw4oGfUEnKrLH2fZYRQo4Ev1
+          public_key:
+            c988f65dfbc50ef61d8db84b89ea8df93643328bbd0524321582e39d33e32115
+          secret_key:
+            38ffcb4629db7152141824835bebf42f12d90933d68773d78002f86637500b62
+          proof_of_work_stamp: 3ee07208e41a0489299909c0bd3cac5c05b20a9acc4a3bc7
+    runs:
+      - octez_node
+      - baker
+      - accuser
+      - vdf
+    bootstrapped_readiness_probe: false
+    storage_size: 50Gi
+  # Overwrite default values.yaml rolling-node
+  rolling-node: null
+
+smartRollupNodes:
+  evm:
+    operators:
+      operating: teztnetsbaker
+      cementing: teztnetsbaker
+      executing_outbox: teztnetsbaker
+      batching1: evm-rollup-batcher-1
+      batching2: evm-rollup-batcher-2
+      batching3: evm-rollup-batcher-3
+      batching4: evm-rollup-batcher-4
+    rollup_address: sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf
+    ingress:
+      # ingress details filled by pulumi
+    evm_proxy:
+      annotations:
+        # sometimes evm proxy takes too long to initialize
+        # because it depends on the rollup node which in turn
+        # depends on the octez node to be available
+        'pulumi.com/skipAwait': 'true'
+      ingress:
+      # ingress details filled by pulumi
+dalNodes:
+  dal-bootstrap:
+    bootstrapProfile: true
+    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+    storageSize: 15Gi
+    ingress:
+    # ingress details filled up by pulumi
+    identity:
+      peer_id: "idtJh8bYedP2hKdRk6oCLX3SS2KuTM"
+      public_key:
+        "5a6cd66cbd2f69817fb2eb81e5dd2a9c4f88df950fc90a96a08fe3976724a063"
+      secret_key:
+          "42f716781cf80b2b7ad129ac56dfcb1b333f3021e49c6729199de8303c7152c9"
+      proof_of_work_stamp: "b7edd6ea938998f8f088b83b692baeddb49f5522f07572f9"
+  dal-dal1:
+    attest_using_accounts:
+      - teztnetsbaker
+    attesterProfiles: tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
+    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+    storageSize: 100Gi
+    ingress:
+    # ingress details filled up by pulumi
+    identity:
+      peer_id: "ids8gZ6Gu67e58DqPn2e9VyjasB1jo"
+      public_key:
+        "c4ea1f6dddfa43b87b6a37432c4c34e1c79baeed5ff165fee2a85ffafb819e5f"
+      secret_key:
+          "a67519da6166f97ca2dea6dc519f1a453d96e01348816d102fb9a7099ee08137"
+      proof_of_work_stamp: "c85a3aab8a1fc903e8c7e9bcd1714a890e22f160a96d9779"
+
+dal_deploy_slot_injector:
+  enabled: true
+  inject_using_account: teztnetsbaker
+  node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+  dal_node_rpc_url: http://dal-dal1:10732
+  slot_size: 65536
+
+bootstrap_peers: []
+
+full_snapshot_url: null
+  #rolling_snapshot_url: https://snapshots.us.tzinit.org/weeklynet/rolling
+rolling_snapshot_url: null
+rolling_tarball_url: null
+archive_tarball_url: null
+snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
+
+images: {}
+
+serviceMonitor:
+  enabled: true
+  labels:
+    # FIXME: reinstall prom-opreator chart so this name is predictable.
+    # Right now, it contains the random chart name.
+    release: monitoring-96695a88
+
+protocols:
+  - command: Proxford
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+  - command: alpha
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+      adaptive_issuance_vote: "on"
+accounts:
+  teztnetsbaker:
+    # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
+    bootstrap_balance: "1500000000000"
+    is_bootstrap_baker_account: true
+    type: secret
+    # key injected by pulumi
+    dal_node_rpc_url: http://dal-dal1:10732
+  tf_frankfurt1:
+    # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
+    key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_frankfurt2:
+    # tz1NDNCdR2REutVDQXRD791Yv8BQAt2NCMZD
+    key: edpktwQ93eJwcJUTkZYRKzDpMqNmY76av4xDmcYP6jTHKMHAvmwToi
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_frankfurt3:
+    # tz1SSe3hejo6tUX3jLvTEEy4VCdxYukqBdkT
+    key: edpkue21EdnYUyHU9WHHMGEHA7E1HdTNy8pTZ4QQYodns7NUMFk1Fe
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_frankfurt6:
+    # tz1cffp9Tn4BWGFB1WniufdTqNeU5S4DtBA4
+    key: edpkuiioYPwFA14hgSxnTFcS2enn2BqcMDkMrPVA3r7oZ86zGyphP3
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_frankfurt7:
+    # tz1NdcV4PLiFbWS3anRAJKCKxFJwqF1Z16GL
+    key: edpktsx1JxD7cgTBXrgM7B8xUHVQ6cpFEk4rSUAEcuBPzi5wjjf3hZ
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_gcp_oregon_1:
+    # tz1Q5yMydHkc2DHaP8GdWcz6YcuNu5wKWSa9
+    key: edpkuqgGiesSEaxJ2pUjNpHa46Lq7TiRJBqDCxBgdVisEQjPG1TdxQ
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_gcp_oregon_2:
+    # tz1Y5nRiviBMSxdr7ZY15c2Pz8SjaG5LXQqz
+    key: edpkuhYJo1ULyLnetjq5ct1GiEpjNVRTQzU324tHU1MNcdPKtRxSM3
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_gcp_oregon_3:
+    # tz1VXDXJKNZ6Vd8WGoSyrfEXNpManegYm7gd
+    key: edpkvFBNrMAmBiFhw7G3bypjnNQpMJ7trDyGnpMmyWWJLABpDHgxGV
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_gcp_zurich_1:
+    # tz1e4nXmvHK8TC8VbBg9KmD8So3BxzS4qUnN
+    key: edpktx15jbSycZMkDEmB9Yrnzf6YnUgSj6qzQv2MVPy2E27UFJUZDR
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_gcp_zurich_2:
+    # tz1htmXW41DdSVK8XoqYfCEcNqz3xb2Y4uWQ
+    key: edpku8RZHsqeuuuZS5P4ExwBbRP5P44bm7gZxBWBcERrTdSQvWzc1o
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  tf_gcp_zurich_3:
+    # tz1RWEVV83L9YYittWtz33iGQMkFEekcv3Ui
+    key: edpkvM1aKoDD5wJ3cYcaN4YbV2ihyP7yHtZJW7mqY8oxXNMNMww94y
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  ecadlabs:
+    # tz1ck3EJwzFpbLVmXVuEn5Ptwzc6Aj14mHSH
+    key: edpkvFUn1N79a7hGtVUF8AoQHf5q3A5g6xXtDcVTmna5wzHmgF1BfA
+    type: public
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "370000000000"
+  german:
+    #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  mathias:
+    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
+    key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  marigold:
+    # tz1eKKAsasRiyUGSnPD5YPu7zfEBcx9LDREQ
+    # cyril.bourdet.pro@gmail.com
+    key: edpkuUD5GNH7LYQySpZNQMt7mWWNAp5phxKrdXuehtBJaoFEp8ebhG
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
+  oxheadfree:
+    # an account with a lot of money in it
+    # tz1foxFdz2ieSj8P9YxKYBTEqYbgFXXEeiQY
+    key: edpkubSgCoMjB2a6vPWRNRHfGa6HUFfFyEUKoEQhWC8osnav8QzBdJ
+    bootstrap_balance: "5000000000000000"
+    is_bootstrap_baker_account: false
+    type: public
+  faucet:
+    # faucet on teztnets.xyz platform
+    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
+    bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
+  # DAL Rich account and baker
+  # Contact: Francois Thire at Nomadic
+  dal_rich_account:
+    key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
+    bootstrap_balance: "370000000000"
+    is_bootstrap_baker_account: false
+  evm-rollup-batcher-1:
+    key: edsk3ioP9xYzM1USEXsph8z2CPxxHEc85HWDRwwMeiJdMAFaMNHMWL
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
+  evm-rollup-batcher-2:
+    key: edsk3YEZnguwHGtsDjHdHr8EenSybKyJqh9P1xnba6VWN6n5yP5hoz
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
+  evm-rollup-batcher-3:
+    key: edsk366GyDzqJSyiZJmmexM7YubJ77rEKqcYKzRtQocKHXU2kyqcLb
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
+  evm-rollup-batcher-4:
+    key: edsk4DKhPabyQUDfCqTRXrKucXWdkHKnYM3NYFNS2XmyCQhu9xdprZ
+    is_bootstrap_baker_account: false
+    bootstrap_balance: '2000000000'
