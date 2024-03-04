@@ -22,6 +22,7 @@ Testnets deployed specifically to test new Tezos protocol proposals.
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
+| [Dalnetpre](/dalnetpre-about) | `2024-03-04` | [Faucet](https://faucet.dalnetpre.teztnets.com) |
 | [Oxfordnet](/oxfordnet-about) | `2023-12-07` | [Faucet](https://faucet.oxfordnet.teztnets.com) |
 
 
