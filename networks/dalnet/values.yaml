@@ -1,6 +1,6 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_DALNET_2024-03-04T15:00:00Z
+  chain_name: TEZOS_TESTDALNET_2024-03-04T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
     timestamp: "2024-03-04T15:00:00Z"
@@ -168,27 +168,27 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-smartRollupNodes:
-  evm:
-    operators:
-      operating: teztnetsbaker
-      cementing: teztnetsbaker
-      executing_outbox: teztnetsbaker
-      batching1: evm-rollup-batcher-1
-      batching2: evm-rollup-batcher-2
-      batching3: evm-rollup-batcher-3
-      batching4: evm-rollup-batcher-4
-    rollup_address: sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf
-    ingress:
-      # ingress details filled by pulumi
-    evm_proxy:
-      annotations:
-        # sometimes evm proxy takes too long to initialize
-        # because it depends on the rollup node which in turn
-        # depends on the octez node to be available
-        'pulumi.com/skipAwait': 'true'
-      ingress:
-      # ingress details filled by pulumi
+#smartRollupNodes:
+#  evm:
+#    operators:
+#      operating: teztnetsbaker
+#      cementing: teztnetsbaker
+#      executing_outbox: teztnetsbaker
+#      batching1: evm-rollup-batcher-1
+#      batching2: evm-rollup-batcher-2
+#      batching3: evm-rollup-batcher-3
+#      batching4: evm-rollup-batcher-4
+#    rollup_address: sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf
+#    ingress:
+#      # ingress details filled by pulumi
+#    evm_proxy:
+#      annotations:
+#        # sometimes evm proxy takes too long to initialize
+#        # because it depends on the rollup node which in turn
+#        # depends on the octez node to be available
+#        'pulumi.com/skipAwait': 'true'
+#      ingress:
+#      # ingress details filled by pulumi
 dalNodes:
   dal-bootstrap:
     bootstrapProfile: true
@@ -234,7 +234,8 @@ rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: null
 
-images: {}
+images:
+  octez: tezos/tezos:master
 
 serviceMonitor:
   enabled: true
