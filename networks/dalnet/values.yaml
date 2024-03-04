@@ -1,7 +1,9 @@
 node_config_network:
   activation_account_name: teztnetsbaker
+  chain_name: TEZOS_DALNET_2024-03-04T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
+    timestamp: "2024-03-04T15:00:00Z"
   user_activated_upgrades:
     - level: 512
       replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
@@ -227,11 +229,10 @@ dal_deploy_slot_injector:
 bootstrap_peers: []
 
 full_snapshot_url: null
-  #rolling_snapshot_url: https://snapshots.us.tzinit.org/weeklynet/rolling
 rolling_snapshot_url: null
 rolling_tarball_url: null
 archive_tarball_url: null
-snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
+snapshot_source: null
 
 images: {}
 
@@ -250,6 +251,7 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
+
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
@@ -261,66 +263,6 @@ accounts:
   tf_frankfurt1:
     # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
     key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_frankfurt2:
-    # tz1NDNCdR2REutVDQXRD791Yv8BQAt2NCMZD
-    key: edpktwQ93eJwcJUTkZYRKzDpMqNmY76av4xDmcYP6jTHKMHAvmwToi
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_frankfurt3:
-    # tz1SSe3hejo6tUX3jLvTEEy4VCdxYukqBdkT
-    key: edpkue21EdnYUyHU9WHHMGEHA7E1HdTNy8pTZ4QQYodns7NUMFk1Fe
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_frankfurt6:
-    # tz1cffp9Tn4BWGFB1WniufdTqNeU5S4DtBA4
-    key: edpkuiioYPwFA14hgSxnTFcS2enn2BqcMDkMrPVA3r7oZ86zGyphP3
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_frankfurt7:
-    # tz1NdcV4PLiFbWS3anRAJKCKxFJwqF1Z16GL
-    key: edpktsx1JxD7cgTBXrgM7B8xUHVQ6cpFEk4rSUAEcuBPzi5wjjf3hZ
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_oregon_1:
-    # tz1Q5yMydHkc2DHaP8GdWcz6YcuNu5wKWSa9
-    key: edpkuqgGiesSEaxJ2pUjNpHa46Lq7TiRJBqDCxBgdVisEQjPG1TdxQ
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_oregon_2:
-    # tz1Y5nRiviBMSxdr7ZY15c2Pz8SjaG5LXQqz
-    key: edpkuhYJo1ULyLnetjq5ct1GiEpjNVRTQzU324tHU1MNcdPKtRxSM3
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_oregon_3:
-    # tz1VXDXJKNZ6Vd8WGoSyrfEXNpManegYm7gd
-    key: edpkvFBNrMAmBiFhw7G3bypjnNQpMJ7trDyGnpMmyWWJLABpDHgxGV
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_zurich_1:
-    # tz1e4nXmvHK8TC8VbBg9KmD8So3BxzS4qUnN
-    key: edpktx15jbSycZMkDEmB9Yrnzf6YnUgSj6qzQv2MVPy2E27UFJUZDR
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_zurich_2:
-    # tz1htmXW41DdSVK8XoqYfCEcNqz3xb2Y4uWQ
-    key: edpku8RZHsqeuuuZS5P4ExwBbRP5P44bm7gZxBWBcERrTdSQvWzc1o
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_zurich_3:
-    # tz1RWEVV83L9YYittWtz33iGQMkFEekcv3Ui
-    key: edpkvM1aKoDD5wJ3cYcaN4YbV2ihyP7yHtZJW7mqY8oxXNMNMww94y
     type: public
     is_bootstrap_baker_account: true
     bootstrap_balance: "370000000000"
