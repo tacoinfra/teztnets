@@ -23,6 +23,7 @@ Testnets deployed specifically to test new Tezos protocol proposals.
 | | Activated on | Faucet |
 |-------|---------------------|--|
 | [Oxfordnet](/oxfordnet-about) | `2023-12-07` | [Faucet](https://faucet.oxfordnet.teztnets.com) |
+| [Predalnet](/predalnet-about) | `2024-03-04` | [Faucet](https://faucet.predalnet.teztnets.com) |
 
 
 
