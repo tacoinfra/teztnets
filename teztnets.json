@@ -116,7 +116,7 @@
     "activated_on": "2023-12-07"
   },
   "predalnet": {
-    "category": "Protocol Teztnets",
+    "category": "Feature Teztnets",
     "chain_name": "TEZOS_TESTDALNET_2024-03-04T15:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
