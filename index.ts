@@ -234,7 +234,7 @@ const dalnetpre_chain = new TezosChain(
   },
   provider
 )
-/*new TezosFaucet(
+new TezosFaucet(
   dalnetpre_chain.name,
   {
     namespace: dalnetpre_chain.namespace,
@@ -246,7 +246,7 @@ const dalnetpre_chain = new TezosChain(
     chartRepoVersion: "7.0.9",
   },
   provider
-)*/
+)
 
 // Dalnet Test network
 /* const dalnet_chain = new TezosChain(

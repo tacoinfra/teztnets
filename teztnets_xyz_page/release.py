@@ -30,6 +30,7 @@ category_desc = {
 nested_teztnets = {
     "Long-running Teztnets": {},
     "Protocol Teztnets": {},
+    "Feature Teztnets": {},
     "Periodic Teztnets": {},
 }
 
