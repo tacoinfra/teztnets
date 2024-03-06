@@ -218,10 +218,10 @@ new TezosFaucet(
 )
 
 // Dalnet Pre test
-/*const dalnetpre_chain = new TezosChain(
+const dalnetpre_chain = new TezosChain(
  {
    category: protocolCategory,
-    humanName: "Dalnetpre",
+    humanName: "Predalnet",
     description: "Test Chain for DAL",
     activationBucket: activationBucket,
     helmValuesFile: "networks/dalnet/values.yaml",
@@ -233,7 +233,7 @@ new TezosFaucet(
   },
   provider
 )
-new TezosFaucet(
+/*new TezosFaucet(
   dalnetpre_chain.name,
   {
     namespace: dalnetpre_chain.namespace,
@@ -397,8 +397,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-//  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, dalnetpre_chain]),
-  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, dalnetpre_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -464,7 +463,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, dalnetpre_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
