@@ -238,7 +238,7 @@ new TezosFaucet(
   dalnetpre_chain.name,
   {
     namespace: dalnetpre_chain.namespace,
-    humanName: "Dalnetpre",
+    humanName: "Predalnet",
     helmValuesFile: "networks/dalnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
