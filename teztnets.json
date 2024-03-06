@@ -35,38 +35,6 @@
     ],
     "activated_on": "2024-03-06"
   },
-  "dalnetpre": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_TESTDALNET_2024-03-04T15:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.dalnetpre.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.dalnetpre.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.dalnetpre.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.dalnetpre.teztnets.com"
-      }
-    },
-    "description": "Test Chain for DAL",
-    "docker_build": "tezos/tezos:master",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.dalnetpre.teztnets.com",
-    "git_ref": "master",
-    "human_name": "Dalnetpre",
-    "indexers": [],
-    "last_baking_daemon": "alpha",
-    "masked_from_main_page": false,
-    "network_url": "https://teztnets.com/dalnetpre",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.dalnetpre.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.dalnetpre.teztnets.com"
-    ],
-    "activated_on": "2024-03-04"
-  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
