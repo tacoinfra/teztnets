@@ -146,6 +146,7 @@ nodes:
           rpc:
             cors-headers: [ "content-type" ]
             cors-origin: [ "*" ]
+            max_active_rpc_connections: 1000
           metrics_addr: ["0.0.0.0:9932"]
         is_bootstrap_node: true
         identity:
