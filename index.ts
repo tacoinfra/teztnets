@@ -33,6 +33,7 @@ const provider = new k8s.Provider("do-k8s-provider", {
 
 const periodicCategory = "Periodic Teztnets"
 const protocolCategory = "Protocol Teztnets"
+const featureCategory = "Feature Teztnets"
 const longCategory = "Long-running Teztnets"
 
 // Create a GCP resource (Storage Bucket) for Bootstrap Smart Contracts
@@ -220,7 +221,7 @@ new TezosFaucet(
 // Dalnet Pre test
 const dalnetpre_chain = new TezosChain(
  {
-   category: protocolCategory,
+   category: featureCategory,
     humanName: "Predalnet",
     description: "Test Chain for DAL",
     activationBucket: activationBucket,
@@ -250,7 +251,7 @@ const dalnetpre_chain = new TezosChain(
 // Dalnet Test network
 /* const dalnet_chain = new TezosChain(
  {
-   category: protocolCategory,
+   category: featureCategory,
     humanName: "Dalnet",
     description: "Test Chain for DAL",
     activationBucket: activationBucket,
