@@ -117,7 +117,7 @@
   },
   "predalnet": {
     "category": "Feature Teztnets",
-    "chain_name": "TEZOS_TESTDALNET_2024-03-04T15:00:00Z",
+    "chain_name": "TEZOS_PREDALNET_2024-03-04T15:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",

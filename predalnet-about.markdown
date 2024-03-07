@@ -10,7 +10,7 @@ Test Chain for DAL
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.predalnet.teztnets.com](https://rpc.predalnet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Predalnet faucet](https://faucet.predalnet.teztnets.com) |
-| Full network name | `TEZOS_TESTDALNET_2024-03-04T15:00:00Z` |
+| Full network name | `TEZOS_PREDALNET_2024-03-04T15:00:00Z` |
 | Tezos docker build | [tezos/tezos:master](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master) |
 | Activated on | 2024-03-04T15:00:00Z |
 
