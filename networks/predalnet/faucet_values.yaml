@@ -4,14 +4,15 @@ images:
 
 config:
   application:
-    name: "Tezos Dalnet Faucet"
+    name: "Tezos Predalnet Faucet"
     googleCaptchaSiteKey: #filled in by pulumi
     backendUrl: # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet
   network:
-    name: predalnet
+    name: custom
     rpcUrl: # filled in by pulumi
     faucetAddress: tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    viewer: https://predalnet.tzstats.com
 
 # Value the server sets for the "Access-Control-Allow-Origin" header for CORS.
 authorizedHost: "" # filled in by pulumi

@@ -219,13 +219,13 @@ new TezosFaucet(
 )
 
 // Dalnet Pre test
-const dalnetpre_chain = new TezosChain(
- {
-   category: featureCategory,
+const predalnet_chain = new TezosChain(
+  {
+    category: featureCategory,
     humanName: "Predalnet",
     description: "Test Chain for DAL",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/dalnet/values.yaml",
+    helmValuesFile: "networks/predalnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: ["dalnet.tzinit.net"],
     rpcUrls: [],
@@ -235,11 +235,11 @@ const dalnetpre_chain = new TezosChain(
   provider
 )
 new TezosFaucet(
-  dalnetpre_chain.name,
+  predalnet_chain.name,
   {
-    namespace: dalnetpre_chain.namespace,
+    namespace: predalnet_chain.namespace,
     humanName: "Predalnet",
-    helmValuesFile: "networks/dalnet/faucet_values.yaml",
+    helmValuesFile: "networks/predalnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -398,7 +398,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, dalnetpre_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -464,7 +464,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, dalnetpre_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
