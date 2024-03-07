@@ -225,7 +225,7 @@ const predalnet_chain = new TezosChain(
     humanName: "Predalnet",
     description: "Test Chain for DAL",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/predalnet/values.yaml",
+    helmValuesFile: "networks/dalnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: ["dalnet.tzinit.net"],
     rpcUrls: [],
@@ -239,7 +239,7 @@ new TezosFaucet(
   {
     namespace: predalnet_chain.namespace,
     humanName: "Predalnet",
-    helmValuesFile: "networks/predalnet/faucet_values.yaml",
+    helmValuesFile: "networks/dalnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
