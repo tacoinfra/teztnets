@@ -1,6 +1,6 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_TESTDALNET_2024-03-04T15:00:00Z
+  chain_name: TEZOS_PREDALNET_2024-03-04T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
     timestamp: "2024-03-04T15:00:00Z"
