@@ -227,7 +227,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master
+  octez: tezos/tezos:master_2e473b9e_20240304144949
 
 serviceMonitor:
   enabled: true
