@@ -26,7 +26,7 @@ minTez: 1
 # The maximum Tez allowed per request.
 maxTez: 12000
 
-disableChallenges: false
+disableChallenges: true
 # Minimum number of challenges required for the minimum Tez request.
 minChallenges: 1
 # Maximum number of challenges required for the maximum Tez request.

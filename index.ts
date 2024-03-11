@@ -218,7 +218,7 @@ new TezosFaucet(
 )
 
 // Dalnet Pre test
-const predalnet_chain = new TezosChain(
+/*const predalnet_chain = new TezosChain(
   {
     category: featureCategory,
     humanName: "Predalnet",
@@ -246,7 +246,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // Dalnet Test network
 /* const dalnet_chain = new TezosChain(
  {
@@ -397,7 +397,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
+//  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -463,7 +464,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
+//  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
