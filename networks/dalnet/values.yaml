@@ -253,9 +253,9 @@ accounts:
     type: secret
     # key injected by pulumi
     dal_node_rpc_url: http://dal-dal1:10732
-  tf_frankfurt1:
-    # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
-    key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW
+  tf_dalbaker:
+    # tz3QqTVrbdaz2wbnMv5Te6vp2SobezmeQGF1
+    key: p2pk67kBioqocBRJDEgjncqLaMaP7N7TyfUucmJXHoWrXeyeCWfo1XK
     type: public
     is_bootstrap_baker_account: true
     bootstrap_balance: "370000000000"
