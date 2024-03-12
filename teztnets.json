@@ -131,10 +131,10 @@
       }
     },
     "description": "Test Chain for DAL",
-    "docker_build": "tezos/tezos:master",
+    "docker_build": "tezos/tezos:master_2e473b9e_20240304144949",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.predalnet.teztnets.com",
-    "git_ref": "master",
+    "git_ref": "2e473b9e",
     "human_name": "Predalnet",
     "indexers": [],
     "last_baking_daemon": "alpha",

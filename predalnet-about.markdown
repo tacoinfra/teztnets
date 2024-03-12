@@ -11,7 +11,7 @@ Test Chain for DAL
 | Public RPC endpoints | [https://rpc.predalnet.teztnets.com](https://rpc.predalnet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Predalnet faucet](https://faucet.predalnet.teztnets.com) |
 | Full network name | `TEZOS_PREDALNET_2024-03-11T15:00:00Z` |
-| Tezos docker build | [tezos/tezos:master](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master) |
+| Tezos docker build | [tezos/tezos:master_2e473b9e_20240304144949](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_2e473b9e_20240304144949) |
 | Activated on | 2024-03-11T15:00:00Z |
 
 
@@ -29,7 +29,7 @@ Test Chain for DAL
 To join Predalnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master
+docker run -it --entrypoint=/bin/sh tezos/tezos:master_2e473b9e_20240304144949
 ```
 
 #### Alternative: Build the software
@@ -40,7 +40,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout master
+git checkout 2e473b9e
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
