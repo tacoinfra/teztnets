@@ -343,12 +343,12 @@ accounts:
     type: public
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
-  marigold:
-    # tz1eKKAsasRiyUGSnPD5YPu7zfEBcx9LDREQ
-    # cyril.bourdet.pro@gmail.com
-    key: edpkuUD5GNH7LYQySpZNQMt7mWWNAp5phxKrdXuehtBJaoFEp8ebhG
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
+  #marigold:
+  #  # tz1eKKAsasRiyUGSnPD5YPu7zfEBcx9LDREQ
+  #  # cyril.bourdet.pro@gmail.com
+  #  key: edpkuUD5GNH7LYQySpZNQMt7mWWNAp5phxKrdXuehtBJaoFEp8ebhG
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
   oxheadfree:
     # an account with a lot of money in it
     # tz1foxFdz2ieSj8P9YxKYBTEqYbgFXXEeiQY
