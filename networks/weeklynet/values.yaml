@@ -265,12 +265,6 @@ accounts:
     type: public
     is_bootstrap_baker_account: true
     bootstrap_balance: "370000000000"
-  tf_frankfurt2:
-    # tz1NDNCdR2REutVDQXRD791Yv8BQAt2NCMZD
-    key: edpktwQ93eJwcJUTkZYRKzDpMqNmY76av4xDmcYP6jTHKMHAvmwToi
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
   tf_gcp_oregon_1:
     # tz1Q5yMydHkc2DHaP8GdWcz6YcuNu5wKWSa9
     key: edpkuqgGiesSEaxJ2pUjNpHa46Lq7TiRJBqDCxBgdVisEQjPG1TdxQ
