@@ -82,10 +82,12 @@ accounts:
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_PARISNET_2024-03-25:15:00:00Z
+  chain_name: TEZOS_PARISENET_2024-03-19T20:00:00Z
+#  chain_name: TEZOS_PARISNET_2024-03-25T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-03-25:00:00Z"
+    timestamp: "2024-03-19T20:00:00Z"
+#    timestamp: "2024-03-25T15:00:00Z"
 
 # activation:
 #   protocol_hash: PtNairobiyssHuh87hEhfVBGCVrK3WnS8Z2FT4ymB5tAa4r1nQf
@@ -207,7 +209,8 @@ snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 snapshot_metadata_network_name: parisnet
 
 images:
-  octez: tezos/tezos:v20.0rc1
+#  octez: tezos/tezos:v20.0rc1
+  octez: tezos/tezos:master
 
 protocols:
   - command: PtParisA
@@ -215,5 +218,5 @@ protocols:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
 
-bootstrap_peers:
-  - parisnet.tzinit.org
+bootstrap_peers: []
+#  - parisnet.tzinit.org

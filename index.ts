@@ -217,6 +217,40 @@ new TezosFaucet(
   provider
 )
 
+// Paris network
+const parisnet_chain = new TezosChain(
+  {
+    category: featureCategory,
+    humanName: "Pnet",
+//    humanName: "Parisnet",
+//    description: "Test Chain for Paris protocol",
+    description: "Test Chain for P protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/parisnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+//    bootstrapPeers: ["parisnet.tzinit.net"],
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+new TezosFaucet(
+  parisnet_chain.name,
+  {
+    namespace: parisnet_chain.namespace,
+    humanName: "Pnet",
+//    humanName: "PreParisnet",
+    helmValuesFile: "networks/parisnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+
 // Dalnet Pre test
 const predalnet_chain = new TezosChain(
   {
@@ -397,8 +431,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
-//  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain,parisnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -464,8 +497,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
-//  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
