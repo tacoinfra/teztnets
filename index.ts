@@ -218,7 +218,7 @@ new TezosFaucet(
 )
 
 // Paris network
-const parisnet_chain = new TezosChain(
+/*const parisnet_chain = new TezosChain(
   {
     category: featureCategory,
     humanName: "Pnet",
@@ -249,7 +249,7 @@ new TezosFaucet(
     chartRepoVersion: "7.1.2",
   },
   provider
-)
+)/*
 
 // Dalnet Pre test
 const predalnet_chain = new TezosChain(
@@ -431,7 +431,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain,parisnet_chain]),
+  ...getNetworks([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -497,7 +497,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnet_chain]),
+  ...getTeztnets([dailynet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
