@@ -221,10 +221,8 @@ new TezosFaucet(
 /*const parisnet_chain = new TezosChain(
   {
     category: featureCategory,
-    humanName: "Pnet",
-//    humanName: "Parisnet",
-//    description: "Test Chain for Paris protocol",
-    description: "Test Chain for P protocol",
+    humanName: "Parisnet",
+    description: "Test Chain for Paris protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/parisnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
@@ -240,8 +238,7 @@ new TezosFaucet(
   parisnet_chain.name,
   {
     namespace: parisnet_chain.namespace,
-    humanName: "Pnet",
-//    humanName: "PreParisnet",
+    humanName: "PreParisnet",
     helmValuesFile: "networks/parisnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
