@@ -115,6 +115,26 @@
     ],
     "activated_on": "2023-12-07"
   },
+  "pnet": {
+    "category": "Feature Teztnets",
+    "chain_name": "TEZOS_PARISENET_2024-03-19T20:00:00Z",
+    "description": "Test Chain for P protocol",
+    "docker_build": "tezos/tezos:master",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.pnet.teztnets.com",
+    "git_ref": "master",
+    "human_name": "Pnet",
+    "indexers": [],
+    "last_baking_daemon": "PtParisA",
+    "masked_from_main_page": false,
+    "network_url": "https://teztnets.com/pnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.pnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.pnet.teztnets.com"
+    ],
+    "activated_on": "2024-03-19"
+  },
   "predalnet": {
     "category": "Feature Teztnets",
     "chain_name": "TEZOS_PREDALNET_2024-03-11T15:00:00Z",
