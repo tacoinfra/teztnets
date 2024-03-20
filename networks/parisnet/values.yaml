@@ -4,9 +4,9 @@ accounts:
     bootstrap_balance: "9700000000000"
     is_bootstrap_baker_account: true
     # key injected by pulumi
-  standardtesting:
+  mkbaker:
     # tz1aLWKctRdXVvCjF5TSH1u3Co3iuWzfxHvF
-    # Standard Testing
+    # Michael Kernaghan
     key: edpkvRBvFS5wSvnojdEn9V7nAZyZdPEDqJD4qcVN85j6gBxnD9HhbM
     is_bootstrap_baker_account: true
     bootstrap_balance: "50000000000000000"
