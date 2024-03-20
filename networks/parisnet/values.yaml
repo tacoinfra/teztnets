@@ -64,11 +64,11 @@ accounts:
 #    key: edpktrpiJF24hcmJ22tfDaFWuFihZYbSgr15vFAGUmHThtnr37BZqX
 #    is_bootstrap_baker_account: true
 #    bootstrap_balance: "1000000000000"
-#  killian_d:
-#    # tz1gBnaS1n7LKqpaRnyBX5MSmamadXXfzNpt
-#    key: edpkv7AqKLxQXWa2tHcPbMnah1JbMUHohvmvgPS7nVaB7kdNnrg1XW
-#    is_bootstrap_baker_account: true
-#    bootstrap_balance: "1000000000000"
+   killian_d:
+     # tz1gBnaS1n7LKqpaRnyBX5MSmamadXXfzNpt
+     key: edpkv7AqKLxQXWa2tHcPbMnah1JbMUHohvmvgPS7nVaB7kdNnrg1XW
+     is_bootstrap_baker_account: true
+     bootstrap_balance: "1000000000000"
 #  albin:
 #    # tz1YtB3Hn6oghVk96vkpZt6PHrfbyRY1ciL3
 #    key: edpkuc4NCkkmTyLogcU32b7sU363J2jggs19EyBzhmms6JmjQZxEJo
