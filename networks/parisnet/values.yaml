@@ -217,6 +217,10 @@ images:
   octez: tezos/tezos:master
 
 protocols:
+  - command: Proxford
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+      adaptive_issuance_vote: "on"
   - command: PtParisA
     vote:
       liquidity_baking_toggle_vote: "pass"
