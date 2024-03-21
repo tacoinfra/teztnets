@@ -94,7 +94,7 @@ node_config_network:
     timestamp: "2024-03-26T15:00:00Z"
 
 # activation:
-#   protocol_hash: PtNairobiyssHuh87hEhfVBGCVrK3WnS8Z2FT4ymB5tAa4r1nQf
+#   protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
 #   protocol_parameters:
 #     adaptive_issuance_activation_vote_enable: false
 #     adaptive_issuance_launch_ema_threshold: 100000000
