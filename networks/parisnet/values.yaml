@@ -70,11 +70,11 @@ accounts:
 #    key: edpktrpiJF24hcmJ22tfDaFWuFihZYbSgr15vFAGUmHThtnr37BZqX
 #    is_bootstrap_baker_account: true
 #    bootstrap_balance: "1000000000000"
-   killian_d:
-     # tz1gBnaS1n7LKqpaRnyBX5MSmamadXXfzNpt
-     key: edpkv7AqKLxQXWa2tHcPbMnah1JbMUHohvmvgPS7nVaB7kdNnrg1XW
-     is_bootstrap_baker_account: true
-     bootstrap_balance: "1000000000000"
+  killian_d:
+    # tz1gBnaS1n7LKqpaRnyBX5MSmamadXXfzNpt
+    key: edpkv7AqKLxQXWa2tHcPbMnah1JbMUHohvmvgPS7nVaB7kdNnrg1XW
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
 #  albin:
 #    # tz1YtB3Hn6oghVk96vkpZt6PHrfbyRY1ciL3
 #    key: edpkuc4NCkkmTyLogcU32b7sU363J2jggs19EyBzhmms6JmjQZxEJo
@@ -90,8 +90,11 @@ node_config_network:
   activation_account_name: teztnetsbaker
   chain_name: TEZOS_PARISNET_2024-03-26T15:00:00Z
   genesis:
-    protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
+    protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P 
     timestamp: "2024-03-26T15:00:00Z"
+  user_activated_upgrades:
+    - level: 512
+      replacement_protocol: # XXX Oxford hash TBA
 
 # activation:
 #   protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
@@ -100,21 +103,21 @@ node_config_network:
 #     adaptive_issuance_launch_ema_threshold: 100000000
 #     adaptive_rewards_params:
 #       issuance_ratio_min:
-#          numerator: "1"
-#          enominator: "2000"
-#       issuance_ratio_max":
-#          numerator": "1"
-#          denominator": "20"
-#       max_bonus: "50000000000000"
+#          numerator: '1'
+#          enominator: '2000'
+#       issuance_ratio_max:
+#          numerator: '1'
+#          denominator: '20'
+#       max_bonus: '50000000000000'
 #       growth_rate:
-#          numerator": "1"
-#          denominator": "100"
+#          numerator: '245760' 
+#          denominator: '6144000'
 #       center_dz:
-#          numerator": "1"
-#          denominator": "2"
+#          numerator: '1'
+#          denominator: '2'
 #       radius_dz:
-#          numerator": "1"
-#          denominator": "50"
+#          numerator: '1'
+#          denominator: '50'
 #     autostaking_enable: true
 #     baking_reward_fixed_portion: '2666666'
 #     baking_reward_bonus_per_slot: '1143'
@@ -139,8 +142,8 @@ node_config_network:
 #       redundancy_factor: 16
 #       page_size: 4096
 #       blocks_per_epoch: 8 # XXX 1?? ZAYNAH TO CONFIRM CHANGE
-#     delay_increment_per_round: "3"
-#     double_baking_punishment: "640000000"
+#     delay_increment_per_round: '3'
+#     double_baking_punishment: '640000000'
 #     edge_of_staking_over_delegation: 2
 #     endorsing_reward_per_slot: '761'
 #     frozen_deposits_percentage: 10
@@ -149,20 +152,16 @@ node_config_network:
 #     hard_gas_limit_per_block: '2600000'
 #     issuance_weights:
 #       attesting_reward_weight: 10240
-#       base_total_issued_per_minute: "85007812"
+#       base_total_issued_per_minute: '85007812'
 #       baking_reward_fixed_portion_weight: 5120
 #       baking_reward_bonus_weight: 5120
 #       liquidity_baking_subsidy_weight: 1280
 #       seed_nonce_revelation_tip_weight: 1
 #       vdf_revelation_tip_weight: 1
 #     limit_of_delegation_over_baking: 9
-#     minimal_participation_ratio:
-#       denominator: 3
-#       numerator: 2
-#     minimal_stake: '6000000000'
 #     percentage_of_frozen_deposits_slashed_per_double_attestation: 50
 #     percentage_of_frozen_deposits_slashed_per_double_baking: 5
-#     preserved_cycles: 3
+#     preserved_cycles: 3 # XXX 5?? ZAYNAH TO CONFIRM CHANGE
 #     proof_of_work_threshold: '-1'
 #     proof_of_work_nonce_size: 8
 #     hard_storage_limit_per_operation: '60000'
@@ -178,12 +177,12 @@ node_config_network:
 #     max_slashing_period: 2
 #     min_proposal_quorum: 500
 #     michelson_maximum_type_size: 2001
-#     minimal_block_delay: "8"
-#     minimal_frozen_stake: 6000000000
+#     minimal_block_delay: '8'
+#     minimal_frozen_stake: '600000000' # XXX now string
 #     minimal_participation_ratio:
 #       numerator: 2
 #       denominator: 3
-#     minimal_stake: 6000000000
+#     minimal_stake: '6000000000' # XXX now string
 #     nonce_revelation_threshold: 512
 #     nonce_length: 32
 #     origination_size: 257
@@ -200,7 +199,7 @@ node_config_network:
 #     smart_rollup_max_lookahead_in_blocks: 30000
 #     smart_rollup_max_active_outbox_levels: 20160
 #     smart_rollup_max_number_of_cemented_commitments: 5
-#     smart_rollup_max_number_of_messages_per_level: 1000000
+#     smart_rollup_max_number_of_messages_per_level: '1000000' # XXX now string
 #     smart_rollup_max_number_of_parallel_games: 32
 #     smart_rollup_max_outbox_messages_per_level: 100
 #     smart_rollup_max_wrapped_proof_binary_size: 30000
@@ -215,14 +214,14 @@ node_config_network:
 #       dal_page: 2147483646
 #       dal_parameters: 2147483646
 #     smart_rollup_riscv_pvm_enable: false
-#     smart_rollup_stake_amount: "10000000000"
+#     smart_rollup_stake_amount: '10000000000'
 #     smart_rollup_timeout_period_in_blocks: 500
-#     testnet_dictator: "tz1Xf8zdT3DbAX9cHw3c3CXh79rc4nK4gCe8"
+#     testnet_dictator: tz1Xf8zdT3DbAX9cHw3c3CXh79rc4nK4gCe8 
 #     tx_rollup_enable: false
 #     tx_rollup_origination_size: 4000
 #     tx_rollup_hard_size_limit_per_inbox: 500000
 #     tx_rollup_hard_size_limit_per_message: 5000
-#     tx_rollup_commitment_bond: "10000000000"
+#     tx_rollup_commitment_bond: '10000000000'
 #     tx_rollup_finality_period: 40000
 #     tx_rollup_max_inboxes_count: 40100
 #     tx_rollup_withdraw_period: 40000
@@ -233,7 +232,7 @@ node_config_network:
 #     tx_rollup_max_ticket_payload_size: 2048
 #     tx_rollup_rejection_max_proof_size: 30000
 #     tx_rollup_sunset_level: 10000000
-#     vdf_difficulty: "10000000000"
+#     vdf_difficulty: '10000000000'
 #     zk_rollup_enable: false
 #     zk_rollup_origination_size: 4000
 #     zk_rollup_max_ticket_payload_size: 2048
