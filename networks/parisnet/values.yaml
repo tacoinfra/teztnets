@@ -136,12 +136,12 @@ node_config_network:
 #       feature_enable: false
 #       number_of_slots: 256
 #       number_of_shards: 2048
-#       attestation_lag: 1 # XXX 4? ZAYNAH TO CONFIRM CHANGE
+#       attestation_lag: 1 
 #       attestation_threshold: 50
 #       slot_size: 1048576
 #       redundancy_factor: 16
 #       page_size: 4096
-#       blocks_per_epoch: 8 # XXX 1?? ZAYNAH TO CONFIRM CHANGE
+#       blocks_per_epoch: 8 
 #     delay_increment_per_round: '3'
 #     double_baking_punishment: '640000000'
 #     edge_of_staking_over_delegation: 2
@@ -161,7 +161,7 @@ node_config_network:
 #     limit_of_delegation_over_baking: 9
 #     percentage_of_frozen_deposits_slashed_per_double_attestation: 50
 #     percentage_of_frozen_deposits_slashed_per_double_baking: 5
-#     preserved_cycles: 3 # XXX 5?? ZAYNAH TO CONFIRM CHANGE
+#     preserved_cycles: 5
 #     proof_of_work_threshold: '-1'
 #     proof_of_work_nonce_size: 8
 #     hard_storage_limit_per_operation: '60000'
@@ -178,11 +178,11 @@ node_config_network:
 #     min_proposal_quorum: 500
 #     michelson_maximum_type_size: 2001
 #     minimal_block_delay: '8'
-#     minimal_frozen_stake: '600000000' # XXX now string
+#     minimal_frozen_stake: '600000000' 
 #     minimal_participation_ratio:
 #       numerator: 2
 #       denominator: 3
-#     minimal_stake: '6000000000' # XXX now string
+#     minimal_stake: '6000000000' 
 #     nonce_revelation_threshold: 512
 #     nonce_length: 32
 #     origination_size: 257
@@ -199,7 +199,7 @@ node_config_network:
 #     smart_rollup_max_lookahead_in_blocks: 30000
 #     smart_rollup_max_active_outbox_levels: 20160
 #     smart_rollup_max_number_of_cemented_commitments: 5
-#     smart_rollup_max_number_of_messages_per_level: '1000000' # XXX now string
+#     smart_rollup_max_number_of_messages_per_level: 1000000 
 #     smart_rollup_max_number_of_parallel_games: 32
 #     smart_rollup_max_outbox_messages_per_level: 100
 #     smart_rollup_max_wrapped_proof_binary_size: 30000
