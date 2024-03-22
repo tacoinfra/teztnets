@@ -94,7 +94,7 @@ node_config_network:
     timestamp: "2024-03-26T15:00:00Z"
   user_activated_upgrades:
     - level: 512
-      replacement_protocol: # XXX Paris hash TBA
+      replacement_protocol: PtParisAaGGWiaegwuZTJ7ETnQKoqoHWJ3p6wNp7TcbAb7gLbMc
 
 # activation:
 #   protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
