@@ -228,7 +228,6 @@ dal_deploy_slot_injector:
 bootstrap_peers: []
 
 full_snapshot_url: null
-  #rolling_snapshot_url: https://snapshots.us.tzinit.org/weeklynet/rolling
 rolling_snapshot_url: null
 rolling_tarball_url: null
 archive_tarball_url: null
