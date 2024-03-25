@@ -193,7 +193,7 @@ const parisnet_chain = new TezosChain(
     humanName: "PreParisnet",
     description: "Test Chain for Paris protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/parisnet/values.yaml",
+    helmValuesFile: "networks/parisnet/values-temp.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
 //    bootstrapPeers: ["parisnet.tzinit.net"],
     bootstrapPeers: [],
