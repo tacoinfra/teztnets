@@ -187,7 +187,7 @@ new TezosFaucet(
 )
 
 // Paris network
-/*const parisnet_chain = new TezosChain(
+const parisnet_chain = new TezosChain(
   {
     category: featureCategory,
     humanName: "PreParisnet",
@@ -215,7 +215,7 @@ new TezosFaucet(
     chartRepoVersion: "7.1.2",
   },
   provider
-)*/
+)
 
 // Dalnet Pre test
 const predalnet_chain = new TezosChain(

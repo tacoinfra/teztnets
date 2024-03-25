@@ -138,7 +138,7 @@ activation:
        feature_enable: false
        number_of_slots: 256
        number_of_shards: 2048
-       attestation_lag: 1 
+       attestation_lag: 2 
        attestation_threshold: 50
        slot_size: 1048576
        redundancy_factor: 16
@@ -164,16 +164,16 @@ activation:
      limit_of_delegation_over_baking: 9
 #     liquidity_baking_subsidy: '666666'
      liquidity_baking_toggle_ema_threshold: 1000000000
-     max_allowed_global_constants_depth: 10000
-     max_anon_ops_per_block: 132
-     max_micheline_node_count: 50000
-     max_micheline_bytes_limit: 50000
-     max_operation_data_length: 32768
+#     max_allowed_global_constants_depth: 10000 # Paris
+#     max_anon_ops_per_block: 132 # Paris
+#     max_micheline_node_count: 50000 # Paris
+#     max_micheline_bytes_limit: 50000 # Paris
+#     max_operation_data_length: 32768 # Paris
      max_operations_time_to_live: 240
-     max_proposals_per_delegate: 20
+#     max_proposals_per_delegate: 20 # Paris
 #     max_slashing_period: 2
      min_proposal_quorum: 500
-     michelson_maximum_type_size: 2001
+#     michelson_maximum_type_size: 2001 # Paris
      minimal_block_delay: '8'
      minimal_frozen_stake: '600000000' 
      minimal_participation_ratio:
@@ -181,13 +181,13 @@ activation:
        denominator: 3
      minimal_stake: '6000000000' 
      nonce_revelation_threshold: 512
-     nonce_length: 32
+#     nonce_length: 32
      origination_size: 257
      percentage_of_frozen_deposits_slashed_per_double_attestation: 50
      percentage_of_frozen_deposits_slashed_per_double_baking: 5
      preserved_cycles: 5
      proof_of_work_threshold: '-1'
-     proof_of_work_nonce_size: 8
+#     proof_of_work_nonce_size: 8
      quorum_max: 7000
      quorum_min: 2000
 #     ratio_of_frozen_deposits_slashed_per_double_endorsement:
@@ -201,11 +201,11 @@ activation:
      smart_rollup_max_lookahead_in_blocks: 30000
      smart_rollup_max_active_outbox_levels: 20160
      smart_rollup_max_number_of_cemented_commitments: 5
-     smart_rollup_max_number_of_messages_per_level: 1000000 
+#     smart_rollup_max_number_of_messages_per_level: 1000000 
      smart_rollup_max_number_of_parallel_games: 32
      smart_rollup_max_outbox_messages_per_level: 100
-     smart_rollup_max_wrapped_proof_binary_size: 30000
-     smart_rollup_message_size_limit: 4096
+#     smart_rollup_max_wrapped_proof_binary_size: 30000
+#     smart_rollup_message_size_limit: 4096
      smart_rollup_number_of_sections_in_dissection: 32
      smart_rollup_origination_size: 6314
      smart_rollup_private_enable: true
