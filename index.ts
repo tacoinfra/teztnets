@@ -190,7 +190,7 @@ new TezosFaucet(
 /*const parisnet_chain = new TezosChain(
   {
     category: featureCategory,
-    humanName: "Parisnet",
+    humanName: "PreParisnet",
     description: "Test Chain for Paris protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/parisnet/values.yaml",

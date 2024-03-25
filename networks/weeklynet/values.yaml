@@ -225,8 +225,8 @@ dal_deploy_slot_injector:
   dal_node_rpc_url: http://dal-dal1:10732
   slot_size: 65536
 
-bootstrap_peers: []
-
+bootstrap_peers: 
+  - weeklynet.tzinit.org.
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
