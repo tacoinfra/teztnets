@@ -27,7 +27,7 @@ enableCaptcha: true
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 1000000
+maxTez: 40000
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.
