@@ -10,10 +10,10 @@ accounts:
     key: edpkvRBvFS5wSvnojdEn9V7nAZyZdPEDqJD4qcVN85j6gBxnD9HhbM
     is_bootstrap_baker_account: true
     bootstrap_balance: "100000000000"
-  oxheadfree:
-    # an account with a lot of money in it
-    # tz1foxFdz2ieSj8P9YxKYBTEqYbgFXXEeiQY
-    key: edpkubSgCoMjB2a6vPWRNRHfGa6HUFfFyEUKoEQhWC8osnav8QzBdJ
+  tfrichfund:
+    # an account that would allow Chris to retire if it was on mainnet
+    # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf 
+    key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
     bootstrap_balance: "50000000000000000"
     is_bootstrap_baker_account: false
   bakingbadfaucet:
