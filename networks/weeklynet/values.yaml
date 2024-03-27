@@ -7,11 +7,7 @@ node_config_network:
       replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
   dal_config:
     activated: true
-    use_mock_srs_for_testing:
-      redundancy_factor: 16
-      page_size: 4096
-      slot_size: 65536
-      number_of_shards: 2048
+    use_mock_srs_for_testing: true
 
 activation:
   protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
@@ -225,7 +221,7 @@ dal_deploy_slot_injector:
   dal_node_rpc_url: http://dal-dal1:10732
   slot_size: 65536
 
-bootstrap_peers: 
+bootstrap_peers:
   - weeklynet.tzinit.org.
 full_snapshot_url: null
 rolling_snapshot_url: null
