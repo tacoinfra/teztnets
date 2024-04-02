@@ -169,8 +169,7 @@ snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 snapshot_metadata_network_name: parisnet
 
 images:
-  octez: tezos/tezos:v20.0-rc1
-XXX
+  octez: tezos/tezos:octez-v20.0-beta1
 
 protocols:
   - command: Proxford
