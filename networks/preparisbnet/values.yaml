@@ -4,24 +4,12 @@ accounts:
     bootstrap_balance: "9700000000000"
     is_bootstrap_baker_account: true
     # key injected by pulumi
-  mkbaker:
-    # tz1aLWKctRdXVvCjF5TSH1u3Co3iuWzfxHvF
-    # Michael Kernaghan
-    key: edpkvRBvFS5wSvnojdEn9V7nAZyZdPEDqJD4qcVN85j6gBxnD9HhbM
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "100000000000"
   tfrichfund:
     # an account that would allow Chris to retire if it was on mainnet
     # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf 
     key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
     bootstrap_balance: "50000000000000000"
     is_bootstrap_baker_account: false
-  bakingbadfaucet:
-    # baking bad maintains a telegram faucet bot
-    # tz1KhnTgwoRRALBX6vRHRnydDGSBFsWtcJxc
-    key: edpkuFRauFAdhipQu9s4xmfNJWmtLxPKpoaoG41gYGq5AgUA43Vxqx
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "5000000000000000"
   tz1THUNA:
     # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
     # Romain's faucet
@@ -34,62 +22,16 @@ accounts:
     key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
     is_bootstrap_baker_account: false
     bootstrap_balance: "15000000000000"
-  tf:
-    # TF production-style baker
-    #
-    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
-    key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-    #
-    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
-    #key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
-    #
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  marco:
-    # Marco Schurtenberger
-    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  andrewk:
-    # tz1aKiShiJWeeTSGzuvYWhZPqvMShgrz9Qy4
-    key: edpkvSdrHag4FYzJMD3Zfr4s7xiLoX1MWWR7tQVFcs5Epvb9bnMTVQ
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  ecadlabs:
-    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
-    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  ecadlabs_2:
-    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
-    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  killian_d:
-    # tz1gBnaS1n7LKqpaRnyBX5MSmamadXXfzNpt
-    key: edpkv7AqKLxQXWa2tHcPbMnah1JbMUHohvmvgPS7nVaB7kdNnrg1XW
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  albin:
-    # tz1YtB3Hn6oghVk96vkpZt6PHrfbyRY1ciL3
-    key: edpkuc4NCkkmTyLogcU32b7sU363J2jggs19EyBzhmms6JmjQZxEJo
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  lthms:
-    # tz1WgKdbf7wc58nYLSiYXehtoWv3Z4Bswkf2
-    key: edpkvEtgKrQ3opAJvYsdYJQNqGZqNmnASCnKtLRsGRnEr8b61mQddG
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_PARISNET_2024-03-27T15:00:00Z
+  chain_name: TEZOS_PARIS_B_NET_2024-04-02T18:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P 
     timestamp: "2024-03-27T15:00:00Z"
   user_activated_upgrades:
     - level: 512
-      replacement_protocol: PtParisAaGGWiaegwuZTJ7ETnQKoqoHWJ3p6wNp7TcbAb7gLbMc
+      replacement_protocol: PtParisBbzdojdRxRn1JpVxLf5nezCv4cnTSFYdwXzwKASrXo16
 
 activation:
    protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
@@ -227,14 +169,14 @@ snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 snapshot_metadata_network_name: parisnet
 
 images:
-  octez: tezos/tezos:v20.0-rc1
+  octez: tezos/tezos:octez-v20.0-beta2
 
 protocols:
   - command: Proxford
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: PtParisA
+  - command: PtParisB
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"

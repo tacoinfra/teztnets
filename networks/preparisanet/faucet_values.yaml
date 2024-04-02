@@ -4,7 +4,7 @@ images:
 
 config:
   application:
-    name: "Tezos Parisnet Faucet"
+    name: "Tezos Parisnet A Faucet"
     googleCaptchaSiteKey: #filled in by pulumi
     backendUrl: # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet

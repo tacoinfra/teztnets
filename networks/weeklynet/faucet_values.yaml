@@ -24,10 +24,13 @@ backendRpcUrl: http://tezos-node-rpc:8732
 # If the backend requires CAPTCHA tokens to be submitted.
 enableCaptcha: true
 
+# Faucet won't dispense to an address if its balance exceeds this.
+maxBalance: 48000
+
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 1000000
+maxTez: 40000
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.
