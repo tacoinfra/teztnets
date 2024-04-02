@@ -31,7 +31,7 @@ node_config_network:
     timestamp: "2024-03-27T15:00:00Z"
   user_activated_upgrades:
     - level: 512
-      replacement_protocol: PtParisBbzdojdRxRn1JpVxLf5nezCv4cnTSFYdwXzwKASrXo16
+      replacement_protocol: PtParisBQscdCm6Cfow6ndeU6wKJyA3aV1j4D3gQBQMsTQyJCrz
 
 activation:
    protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH

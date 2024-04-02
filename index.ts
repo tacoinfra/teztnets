@@ -190,7 +190,6 @@ new TezosFaucet(
 )
 
 // Paris network
-/*
 const parisneta_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -249,7 +248,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // Paris network
 /*const parisnet_chain = new TezosChain(
