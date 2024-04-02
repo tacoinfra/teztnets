@@ -190,6 +190,67 @@ new TezosFaucet(
 )
 
 // Paris network
+const parisneta_chain = new TezosChain(
+  {
+    category: featureCategory,
+    humanName: "Preparisanet",
+    description: "Exploratory Chain for Paris A protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/preparisanet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+new TezosFaucet(
+  parisneta_chain.name,
+  {
+    namespace: parisneta_chain.namespace,
+    humanName: "Preparisanet",
+    helmValuesFile: "networks/preparisanet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+
+// Paris network
+const parisnetb_chain = new TezosChain(
+  {
+    category: featureCategory,
+    humanName: "Preparisbnet",
+    description: "Exploratory Chain for Paris B protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/preparisbnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+//    bootstrapPeers: ["parisnet.tzinit.net"],
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+new TezosFaucet(
+  parisnetb_chain.name,
+  {
+    namespace: parisnetb_chain.namespace,
+    humanName: "Preparisbnet",
+    helmValuesFile: "networks/preparisbnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+
+// Paris network
 /*const parisnet_chain = new TezosChain(
   {
     category: featureCategory,
