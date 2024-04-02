@@ -111,6 +111,46 @@
     ],
     "activated_on": "2024-03-11"
   },
+  "preparisanet": {
+    "category": "Feature Teztnets",
+    "chain_name": "TEZOS_PARIS_A_NET_2024-04-02T18:00:00Z",
+    "description": "Exploratory Chain for Paris A protocol",
+    "docker_build": "tezos/tezos:octez-v20.0-beta1",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.preparisanet.teztnets.com",
+    "git_ref": "octez-v20.0-beta1",
+    "human_name": "Preparisanet",
+    "indexers": [],
+    "last_baking_daemon": "PtParisA",
+    "masked_from_main_page": false,
+    "network_url": "https://teztnets.com/preparisanet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.preparisanet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.preparisanet.teztnets.com"
+    ],
+    "activated_on": "2024-03-27"
+  },
+  "preparisbnet": {
+    "category": "Feature Teztnets",
+    "chain_name": "TEZOS_PARIS_B_NET_2024-04-02T18:00:00Z",
+    "description": "Exploratory Chain for Paris B protocol",
+    "docker_build": "tezos/tezos:octez-v20.0-beta2",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.preparisbnet.teztnets.com",
+    "git_ref": "octez-v20.0-beta2",
+    "human_name": "Preparisbnet",
+    "indexers": [],
+    "last_baking_daemon": "PtParisB",
+    "masked_from_main_page": false,
+    "network_url": "https://teztnets.com/preparisbnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.preparisbnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.preparisbnet.teztnets.com"
+    ],
+    "activated_on": "2024-03-27"
+  },
   "weeklynet-2024-03-27": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-03-27T00:00:00.000Z",
