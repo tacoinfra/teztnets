@@ -33,8 +33,6 @@ Testnets deployed specifically to test specific Tezos features.
 | | Activated on | Faucet |
 |-------|---------------------|--|
 | [Predalnet](/predalnet-about) | `2024-03-11` | [Faucet](https://faucet.predalnet.teztnets.com) |
-| [Preparisanet](/preparisanet-about) | `2024-03-27` | [Faucet](https://faucet.preparisanet.teztnets.com) |
-| [Preparisbnet](/preparisbnet-about) | `2024-03-27` | [Faucet](https://faucet.preparisbnet.teztnets.com) |
 
 
 
