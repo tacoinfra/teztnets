@@ -193,7 +193,7 @@ new TezosFaucet(
 const parisneta_chain = new TezosChain(
   {
     category: featureCategory,
-    humanName: "Preparisanet",
+    humanName: "PreParisAnet",
     description: "Exploratory Chain for Paris A protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/preparisanet/values.yaml",
@@ -209,7 +209,7 @@ new TezosFaucet(
   parisneta_chain.name,
   {
     namespace: parisneta_chain.namespace,
-    humanName: "Preparisanet",
+    humanName: "PreParisAnet",
     helmValuesFile: "networks/preparisanet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
@@ -223,12 +223,11 @@ new TezosFaucet(
 const parisnetb_chain = new TezosChain(
   {
     category: featureCategory,
-    humanName: "Preparisbnet",
+    humanName: "PreParisBnet",
     description: "Exploratory Chain for Paris B protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/preparisbnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-//    bootstrapPeers: ["parisnet.tzinit.net"],
     bootstrapPeers: [],
     rpcUrls: [],
     indexers: [],
@@ -240,7 +239,7 @@ new TezosFaucet(
   parisnetb_chain.name,
   {
     namespace: parisnetb_chain.namespace,
-    humanName: "Preparisbnet",
+    humanName: "PreParisBnet",
     helmValuesFile: "networks/preparisbnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
@@ -461,7 +460,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisneta_chain, parisnetb_chain]),
+  ...getNetworks([weeklynet_chain, oxfordnet_chain, predalnet_chain]),
+//  ...getNetworks([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisneta_chain, parisnetb_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -527,7 +527,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisneta_chain, parisnetb_chain]),
+  ...getTeztnets([weeklynet_chain, oxfordnet_chain, predalnet_chain]),
+//  ...getTeztnets([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisneta_chain, parisnetb_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
