@@ -190,10 +190,11 @@ new TezosFaucet(
 )
 
 // Paris network
+/*
 const parisneta_chain = new TezosChain(
   {
-    category: featureCategory,
-    humanName: "PreParisAnet",
+    category: protocolCategory,
+    humanName: "ParisAnet",
     description: "Exploratory Chain for Paris A protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/preparisanet/values.yaml",
@@ -209,7 +210,7 @@ new TezosFaucet(
   parisneta_chain.name,
   {
     namespace: parisneta_chain.namespace,
-    humanName: "PreParisAnet",
+    humanName: "ParisAnet",
     helmValuesFile: "networks/preparisanet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
@@ -222,8 +223,8 @@ new TezosFaucet(
 // Paris network
 const parisnetb_chain = new TezosChain(
   {
-    category: featureCategory,
-    humanName: "PreParisBnet",
+    category: protocolCategory,
+    humanName: "ParisBnet",
     description: "Exploratory Chain for Paris B protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/preparisbnet/values.yaml",
@@ -239,7 +240,7 @@ new TezosFaucet(
   parisnetb_chain.name,
   {
     namespace: parisnetb_chain.namespace,
-    humanName: "PreParisBnet",
+    humanName: "ParisBnet",
     helmValuesFile: "networks/preparisbnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
@@ -248,6 +249,7 @@ new TezosFaucet(
   },
   provider
 )
+*/
 
 // Paris network
 /*const parisnet_chain = new TezosChain(
