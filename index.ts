@@ -189,7 +189,9 @@ new TezosFaucet(
   provider
 )
 
-// Paris network
+// Paris Exploratory networks
+//
+// Paris A
 const parisneta_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -219,7 +221,7 @@ new TezosFaucet(
   provider
 )
 
-// Paris network
+// Paris B
 const parisnetb_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -248,6 +250,8 @@ new TezosFaucet(
   },
   provider
 )
+
+// End of Paris Exploratory networks
 
 // Paris network
 /*const parisnet_chain = new TezosChain(
