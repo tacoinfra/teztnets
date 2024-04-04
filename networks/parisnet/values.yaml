@@ -80,6 +80,11 @@ accounts:
     key: edpkvEtgKrQ3opAJvYsdYJQNqGZqNmnASCnKtLRsGRnEr8b61mQddG
     is_bootstrap_baker_account: true
     bootstrap_balance: "1000000000000"
+  vincent_xtzmaster:
+    # tz1XMiZwHpHZ8a1AfwRWKfzLskJgZNyV8PHs
+    key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
 
 node_config_network:
   activation_account_name: teztnetsbaker
