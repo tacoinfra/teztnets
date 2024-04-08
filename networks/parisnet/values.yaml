@@ -4,12 +4,6 @@ accounts:
     bootstrap_balance: "9700000000000"
     is_bootstrap_baker_account: true
     # key injected by pulumi
-  mkbaker:
-    # tz1aLWKctRdXVvCjF5TSH1u3Co3iuWzfxHvF
-    # Michael Kernaghan
-    key: edpkvRBvFS5wSvnojdEn9V7nAZyZdPEDqJD4qcVN85j6gBxnD9HhbM
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "100000000000"
   tfrichfund:
     # an account that would allow Chris to retire if it was on mainnet
     # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
@@ -34,6 +28,18 @@ accounts:
     key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
     is_bootstrap_baker_account: false
     bootstrap_balance: "15000000000000"
+  mkbaker:
+    # tz1aLWKctRdXVvCjF5TSH1u3Co3iuWzfxHvF
+    # Michael Kernaghan
+    key: edpkvRBvFS5wSvnojdEn9V7nAZyZdPEDqJD4qcVN85j6gBxnD9HhbM
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "100000000000"
+  raphcaud:
+    # tz1V1Lu93CPgeN6AXM3Ba9oreAAxcJCoYNJN
+    # Raphael C
+    key: edpku9SHSvCK7jMkyJo3CMnBeMhB337uat9zoHiANvPzisjMthkzb8
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "100000000000"
   tf:
     # TF production-style baker
     #
