@@ -11,7 +11,7 @@ Exploratory Chain for Paris A protocol
 | Public RPC endpoints | [https://rpc.parisanet.teztnets.com](https://rpc.parisanet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [ParisAnet faucet](https://faucet.parisanet.teztnets.com) |
 | Full network name | `TEZOS_PARIS_A_NET_2024-04-02T18:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v20.0-beta1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.0-beta1) |
+| Tezos docker build | [tezos/tezos:octez-v20.0-beta1_67bd1513_20240405135005](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.0-beta1_67bd1513_20240405135005) |
 | Activated on | 2024-03-27T15:00:00Z |
 
 
@@ -29,7 +29,7 @@ Exploratory Chain for Paris A protocol
 To join ParisAnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.0-beta1
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.0-beta1_67bd1513_20240405135005
 ```
 
 #### Alternative: Build the software
@@ -40,7 +40,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.0-beta1
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v20.0-beta1
+git checkout octez-v20.0-beta1_67bd1513_20240405135005
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
