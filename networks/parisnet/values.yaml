@@ -34,6 +34,12 @@ accounts:
     key: edpkvE16Jw7ijHkUyPLkBR5sm7p7XxRxd1eThX3S8RCQCuEJwqPYsR
     is_bootstrap_baker_account: true
     bootstrap_balance: "100000000000"
+  german:
+    # tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    # German
+    key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "100000000000"
   raphcaud:
     # tz1V1Lu93CPgeN6AXM3Ba9oreAAxcJCoYNJN
     # Raphael C
