@@ -263,6 +263,7 @@ const parisnet_chain = new TezosChain(
     helmValuesFile: "networks/parisnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: ["parisnet.tzinit.net"],
+    network_stakes: yes,
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.1.2",
