@@ -1,5 +1,7 @@
 #!/bin/sh
 
+pip3 install jinja2
+
 for i in networks teztnets; do
 	pulumi stack output $i > $i.json
 done
