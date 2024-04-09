@@ -80,7 +80,7 @@
     "activated_on": "2023-12-07"
   },
   "parisanet": {
-    "category": "Protocol Teztnets",
+    "category": "Feature Teztnets",
     "chain_name": "TEZOS_PARIS_A_NET_2024-04-02T18:00:00Z",
     "description": "Exploratory Chain for Paris A protocol",
     "docker_build": "tezos/tezos:octez-v20.0-beta1_67bd1513_20240405135005",
@@ -100,7 +100,7 @@
     "activated_on": "2024-03-27"
   },
   "parisbnet": {
-    "category": "Protocol Teztnets",
+    "category": "Feature Teztnets",
     "chain_name": "TEZOS_PARIS_B_NET_2024-04-02T18:00:00Z",
     "description": "Exploratory Chain for Paris B protocol",
     "docker_build": "tezos/tezos:octez-v20.0-beta2_d2907625_20240405173623",
@@ -120,7 +120,7 @@
     "activated_on": "2024-03-27"
   },
   "parisnet": {
-    "category": "Feature Teztnets",
+    "category": "Protocol Teztnets",
     "chain_name": "TEZOS_PARISNET_2024-04-10T15:00:00Z",
     "description": "Test Chain for Paris protocol",
     "docker_build": "tezos/tezos:octez-v20.0-rc1",

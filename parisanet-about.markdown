@@ -63,27 +63,3 @@ octez-node run --rpc-addr 127.0.0.1:8732
 
 
 
-### Bake on the ParisAnet network
-
-To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.parisanet.teztnets.com).
-
-If you are not a bootstrap baker, you need to register your key as a delegate using your alias or `pkh`. For instance:
-```bash=2
-octez-client register key mykey as delegate
-```
-
-You may now launch the baker process.
-```bash=3
-octez-baker-PtParisA run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
-```
-
-You may run the accuser as well:
-```bash=3
-octez-accuser-PtParisA run
-```
-
-Note that you need a minimum amount of tez to get baking rights. If you are not a bootstrap baker, it will take you several cycles to start baking.
-
-> 💡 Now that you are baking, you are responsible for the network health. Please ensure that the baking processes will keep running in the background. You may want to use screen, tmux, nohup or systemd. Also make sure that the baking processes will restart when your machine restarts.
-
-
