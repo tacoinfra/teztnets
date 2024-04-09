@@ -72,10 +72,7 @@ If you are not a bootstrap baker, you need to register your key as a delegate us
 octez-client register key mykey as delegate
 ```
 
-If you have registered your key after AI has activated on the network, you will need to stake. For instance:
-```
-octez-client stake <amount> for mykey
-```	
+
 
 You may now launch the baker process.
 ```bash=3
