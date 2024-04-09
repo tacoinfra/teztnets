@@ -29,9 +29,9 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "15000000000000"
   mkbaker:
-    # tz1aLWKctRdXVvCjF5TSH1u3Co3iuWzfxHvF
+    # tz1PZY3tEWmXGasYeehXYqwXuw2Z3iZ6QDnA
     # Michael Kernaghan
-    key: edpkvRBvFS5wSvnojdEn9V7nAZyZdPEDqJD4qcVN85j6gBxnD9HhbM
+    key: edpkvE16Jw7ijHkUyPLkBR5sm7p7XxRxd1eThX3S8RCQCuEJwqPYsR
     is_bootstrap_baker_account: true
     bootstrap_balance: "100000000000"
   raphcaud:
