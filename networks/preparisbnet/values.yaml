@@ -172,10 +172,6 @@ images:
   octez: tezos/tezos:octez-v20.0-beta2_d2907625_20240405173623
 
 protocols:
-  - command: Proxford
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-      adaptive_issuance_vote: "on"
   - command: PtParisB
     vote:
       liquidity_baking_toggle_vote: "pass"
