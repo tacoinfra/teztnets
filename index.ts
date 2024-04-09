@@ -194,7 +194,7 @@ new TezosFaucet(
 // Paris A
 const parisneta_chain = new TezosChain(
   {
-    category: protocolCategory,
+    category: featureCategory,
     humanName: "ParisAnet",
     description: "Exploratory Chain for Paris A protocol",
     activationBucket: activationBucket,
@@ -224,7 +224,7 @@ new TezosFaucet(
 // Paris B
 const parisnetb_chain = new TezosChain(
   {
-    category: protocolCategory,
+    category: featureCategory,
     humanName: "ParisBnet",
     description: "Exploratory Chain for Paris B protocol",
     activationBucket: activationBucket,
@@ -256,7 +256,7 @@ new TezosFaucet(
 // Parisnet test network
 const parisnet_chain = new TezosChain(
   {
-    category: featureCategory,
+    category: protocolCategory,
     humanName: "Parisnet",
     description: "Test Chain for Paris protocol",
     activationBucket: activationBucket,
