@@ -1,7 +1,8 @@
 {
   "chain_name": "TEZOS_PARISNET_2024-04-10T15:00:00Z",
   "default_bootstrap_peers": [
-    "parisnet.teztnets.com"
+    "parisnet.teztnets.com",
+    "parisnet.tzinit.net"
   ],
   "genesis": {
     "block": "BMDrAR3GBCudiWaKrG9SaLdBsr5B7BaCCimbuFTj75xwKyiYSMo",
