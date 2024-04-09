@@ -253,14 +253,17 @@ new TezosFaucet(
 
 // End of Paris Exploratory networks
 
-// Paris network
-/*const parisnet_chain = new TezosChain(
+// Parisnet test network
+/*
+const parisnet_chain = new TezosChain(
   {
     category: featureCategory,
-    humanName: "Parisnet",
+    humanName: "ParisTestnet",
+//   humanName: "Parisnet",
     description: "Test Chain for Paris protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/parisnet/values.yaml",
+//    helmValuesFile: "networks/parisnet/values.yaml",
+    helmValuesFile: "networks/parisnet/tvalues.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
 //    bootstrapPeers: ["parisnet.tzinit.net"],
     bootstrapPeers: [],
@@ -274,7 +277,8 @@ new TezosFaucet(
   parisnet_chain.name,
   {
     namespace: parisnet_chain.namespace,
-    humanName: "Parisnet",
+    humanName: "ParisTestnet",
+//   humanName: "Parisnet",
     helmValuesFile: "networks/parisnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
