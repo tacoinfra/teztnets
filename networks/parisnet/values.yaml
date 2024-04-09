@@ -245,7 +245,7 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: PtParisA
+  - command: PtParisB
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
