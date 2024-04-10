@@ -269,7 +269,6 @@ const parisnet_chain = new TezosChain(
   },
   provider
 )
-/*
 new TezosFaucet(
   parisnet_chain.name,
   {
@@ -283,7 +282,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // Dalnet Pre test
 const predalnet_chain = new TezosChain(
