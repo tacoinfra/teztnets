@@ -97,6 +97,11 @@ accounts:
     key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
     is_bootstrap_baker_account: true
     bootstrap_balance: "1000000000000"
+  leotreasure:
+    # tz1YAVSJRXGxqu4DSPJKkJpbB4Dn3KgzER3F, Leo Treasure
+    key: edpkuiSD4sXuWYbNVYEdznoafszfLAX3tvYwnxYwrNCxvCaWrNUtzF
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
 
 node_config_network:
   activation_account_name: teztnetsbaker
