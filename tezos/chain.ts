@@ -21,6 +21,7 @@ export interface TezosParameters {
   readonly rpcUrls?: string[]
   readonly helmValuesFile: string
   readonly schedule?: string
+  readonly networkStakes?: boolean
 }
 
 const gcpRegion = "us-central1";

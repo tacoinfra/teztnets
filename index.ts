@@ -266,6 +266,7 @@ const parisnet_chain = new TezosChain(
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.1.2",
+    networkStakes: true,
   },
   provider
 )
@@ -407,6 +408,7 @@ function getTeztnets(chains: TezosChain[]): object {
       rpc_urls: chain.getRpcUrls(),
       masked_from_main_page: false,
       indexers: chain.params.indexers || [],
+      network_stakes: chain.params.networkStakes || false
     }
     if (Object.keys(chain.dalNodes).length > 0) {
       teztnets[chain.name].dal_nodes = chain.dalNodes;
