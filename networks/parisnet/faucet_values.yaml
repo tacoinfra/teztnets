@@ -12,7 +12,7 @@ config:
     name: custom
     rpcUrl: # filled in by pulumi
     faucetAddress: tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
-    viewer: https://parisnet.tzkt.io
+#    viewer: https://parisnet.tzkt.io
 
 # Value the server sets for the "Access-Control-Allow-Origin" header for CORS.
 authorizedHost: "" # filled in by pulumi
