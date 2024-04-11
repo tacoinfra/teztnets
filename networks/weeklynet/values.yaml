@@ -10,7 +10,7 @@ node_config_network:
     use_mock_srs_for_testing: true
 
 activation:
-  protocol_hash: ProxfordYmVfjWnRcgjWH36fW6PArwqykTFzotUxRs6gmTcZDuH
+  protocol_hash: PtParisBQscdCm6Cfow6ndeU6wKJyA3aV1j4D3gQBQMsTQyJCrz
   protocol_parameters:
     preserved_cycles: 3
     blocks_per_cycle: 128
