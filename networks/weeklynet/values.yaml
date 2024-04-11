@@ -11,22 +11,10 @@ node_config_network:
 
 activation:
   protocol_hash: PtParisBQscdCm6Cfow6ndeU6wKJyA3aV1j4D3gQBQMsTQyJCrz
-  protocol_parameters:
-    preserved_cycles: 3
-    blocks_per_cycle: 128
-    blocks_per_commitment: 16
-    blocks_per_stake_snapshot: 64
-    cycles_per_voting_period: 1
-    hard_gas_limit_per_operation: '1040000'
-    hard_gas_limit_per_block: '5200000'
-    proof_of_work_threshold: '-1'
-    minimal_stake: '6000000000'
-    minimal_frozen_stake: '600000000'
-    adaptive_issuance_launch_ema_threshold: 10000000
+  protocol_parameters:   
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: false  # XXX Really? Don't we want AI on Weeklynet?
     adaptive_issuance_launch_ema_threshold: 0
-    autostaking_enable: true
     adaptive_rewards_params:
       issuance_ratio_final_min: 
         numerator: 1
@@ -52,9 +40,11 @@ activation:
       radius_dz: 
         numerator: 1
         denominator: 50
+    autostaking_enable: true
     blocks_per_commitment: 16
     blocks_per_cycle: 128
     blocks_preservation_cycles: 1
+    blocks_per_stake_snapshot: 64
     cache_layout_size: 3
     cache_sampler_state_cycles: 8
     cache_script_size: 100000000
@@ -107,8 +97,6 @@ activation:
     michelson_maximum_type_size: 2001
     minimal_block_delay: "7"
     min_proposal_quorum: 500
-    min_proposal_quorum: 500
-    minimal_block_delay: 7
     minimal_frozen_stake: 600000000
     minimal_participation_ratio:
       numerator: 2
@@ -120,6 +108,7 @@ activation:
     origination_size: 257
     percentage_of_frozen_deposits_slashed_per_double_attestation: 5000
     percentage_of_frozen_deposits_slashed_per_double_baking: 700
+    preserved_cycles: 3
     proof_of_work_nonce_size: 8
     proof_of_work_threshold: -1
     quorum_max: 7000
