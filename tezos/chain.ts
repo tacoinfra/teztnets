@@ -83,11 +83,9 @@ export class TezosChain extends pulumi.ComponentResource {
     this.tezosHelmValues = YAML.parse(
       fs.readFileSync(this.params.helmValuesFile, "utf8")
     );
-    if (this.name == "nairobinet") {
-      this.tezosHelmValues["accounts"]["oxheadbaker"]["key"] = this.params.bakingPrivateKey
-    } else {
-      this.tezosHelmValues["accounts"]["teztnetsbaker"]["key"] = this.params.bakingPrivateKey
-    }
+   
+    this.tezosHelmValues["accounts"]["teztnetsbaker"]["key"] = this.params.bakingPrivateKey
+    
     if (this.params.schedule) {
       const deployDate = new Date(
         cronParser
@@ -100,11 +98,11 @@ export class TezosChain extends pulumi.ComponentResource {
         pulumi
           .output(imageResolver.getLatestTagAsync(deployDate))
           .apply((tag) => `${imageResolver.image}:${tag}`)
-      // this is a trick to change mondaynet's name when it needs to be respun.
+      // this is a trick to change Weeklynet's name when it needs to be respun.
       // if the chain has already launched but gets bricked because it can no longer upgrade from one proto to the next,
       // change the date below. It will start with a different chainId.
-      // This way, it won't mix with the existing mondaynet and will be able to sync.
-      // Otherwise, the old broken mondaynet will mix with the new one and you'll never be able to produce
+      // This way, it won't mix with the existing Weeklynet and will be able to sync.
+      // Otherwise, the old broken Weeklynet will mix with the new one and you'll never be able to produce
       // another genesis block.
       this.tezosHelmValues["node_config_network"]["chain_name"] =
         `TEZOS-${this.params.humanName.toUpperCase()}-${deployDate.toISOString()}`
