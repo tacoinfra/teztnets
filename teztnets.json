@@ -79,26 +79,6 @@
     ],
     "activated_on": "2023-12-07"
   },
-  "parisanet": {
-    "category": "Feature Teztnets",
-    "chain_name": "TEZOS_PARIS_A_NET_2024-04-02T18:00:00Z",
-    "description": "Exploratory Chain for Paris A protocol",
-    "docker_build": "tezos/tezos:octez-v20.0-beta1_67bd1513_20240405135005",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.parisanet.teztnets.com",
-    "git_ref": "octez-v20.0-beta1_67bd1513_20240405135005",
-    "human_name": "ParisAnet",
-    "indexers": [],
-    "last_baking_daemon": "PtParisA",
-    "masked_from_main_page": false,
-    "network_url": "https://teztnets.com/parisanet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.parisanet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.parisanet.teztnets.com"
-    ],
-    "activated_on": "2024-03-27"
-  },
   "parisbnet": {
     "category": "Feature Teztnets",
     "chain_name": "TEZOS_PARIS_B_NET_2024-04-02T18:00:00Z",
