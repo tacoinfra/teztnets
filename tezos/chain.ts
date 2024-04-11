@@ -107,6 +107,12 @@ export class TezosChain extends pulumi.ComponentResource {
       this.tezosHelmValues["node_config_network"]["chain_name"] =
         `TEZOS-${this.params.humanName.toUpperCase()}-${deployDate.toISOString()}`
       this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = deployDate.toISOString();
+
+      // XXX Hack to restart
+      this.tezosHelmValues["node_config_network"]["chain_name"] =
+        `TEZOS-${this.params.humanName.toUpperCase()}-2024-04-11T00:00:00Z`
+      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-04-11T00:00:00Z";
+
     }
 
     if (params.bootstrapContracts) {
