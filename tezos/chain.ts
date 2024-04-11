@@ -71,8 +71,8 @@ export class TezosChain extends pulumi.ComponentResource {
         `${params.humanName.toLowerCase()}-${
         deployDate.toISOString().split("T")[0]
         }`
-        // Hack
-        name = `${params.humanName.toLowerCase()}-2024-04-11`
+        // Hack - Don't use except in emergencies!
+        //name = `${params.humanName.toLowerCase()}-2024-04-11`
     } else {
       name = params.humanName.toLowerCase()
     }
@@ -113,8 +113,8 @@ export class TezosChain extends pulumi.ComponentResource {
       // This is the hack to restart Weeklynet
       //
       this.tezosHelmValues["node_config_network"]["chain_name"] =
-        `TEZOS-${this.params.humanName.toUpperCase()}-2024-04-11T00:00:00Z`
-      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-04-11T00:00:00Z";
+        `TEZOS-${this.params.humanName.toUpperCase()}-2024-04-11T15:00:00Z`
+      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-04-11T15:00:00Z";
 
     }
 
