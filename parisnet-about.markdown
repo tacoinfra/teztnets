@@ -32,6 +32,7 @@ To join Parisnet with docker, open a shell in the container:
 docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.0-rc1
 ```
 
+
 #### Alternative: Build the software
 
 ⚠️  If this is your first time installing Tezos, you may need to [install a few dependencies](https://tezos.gitlab.io/introduction/howtoget.html#setting-up-the-development-environment-from-scratch).
@@ -72,6 +73,11 @@ If you are not a bootstrap baker, you need to register your key as a delegate us
 octez-client register key mykey as delegate
 ```
 
+
+If you have registered your key after AI has activated on the network, you will need to stake. For instance:
+```
+octez-client stake <amount> for mykey
+```	
 
 
 You may now launch the baker process.

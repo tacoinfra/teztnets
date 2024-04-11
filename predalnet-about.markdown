@@ -32,6 +32,7 @@ To join Predalnet with docker, open a shell in the container:
 docker run -it --entrypoint=/bin/sh tezos/tezos:master_2e473b9e_20240304144949
 ```
 
+
 #### Alternative: Build the software
 
 ⚠️  If this is your first time installing Tezos, you may need to [install a few dependencies](https://tezos.gitlab.io/introduction/howtoget.html#setting-up-the-development-environment-from-scratch).

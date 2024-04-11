@@ -32,6 +32,7 @@ To join ParisBnet with docker, open a shell in the container:
 docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.0-beta2_d2907625_20240405173623
 ```
 
+
 #### Alternative: Build the software
 
 ⚠️  If this is your first time installing Tezos, you may need to [install a few dependencies](https://tezos.gitlab.io/introduction/howtoget.html#setting-up-the-development-environment-from-scratch).

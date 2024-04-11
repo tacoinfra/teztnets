@@ -32,6 +32,7 @@ To join Ghostnet with docker, open a shell in the container:
 docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.0-rc1
 ```
 
+
 #### Alternative: Build the software
 
 ⚠️  If this is your first time installing Tezos, you may need to [install a few dependencies](https://tezos.gitlab.io/introduction/howtoget.html#setting-up-the-development-environment-from-scratch).
