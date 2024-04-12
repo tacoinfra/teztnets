@@ -48,7 +48,7 @@ activation:
     cache_script_size: 100000000
     cache_stake_distribution_cycles: 8
     consensus_committee_size: 7000
-    consensus_rights_delay: 3
+    consensus_rights_delay: 2
     consensus_threshold: 4667
     cost_per_byte: '250'
     cycles_per_voting_period: 1
@@ -299,7 +299,7 @@ accounts:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
     type: public
-    is_bootstrap_baker_account: false
+    is_bootstrap_baker_account: true
     bootstrap_balance: "1000000000000"
   mathias:
     # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
