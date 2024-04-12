@@ -1,41 +1,4 @@
 {
-  "atlasnet": {
-    "category": "Feature Teztnets",
-    "chain_name": "TEZOS_ATLASNET_2024-04-12T11:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.atlasnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.atlasnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.atlasnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.atlasnet.teztnets.com"
-      }
-    },
-    "description": "Emergency testnet",
-    "docker_build": "tezos/tezos:master_a6ca1175_20240409132115",
-    "evm_proxy_urls": [
-      "https://evm.atlasnet.teztnets.com"
-    ],
-    "faucet_url": "https://faucet.atlasnet.teztnets.com",
-    "git_ref": "a6ca1175",
-    "human_name": "Atlasnet",
-    "indexers": [],
-    "last_baking_daemon": "alpha",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/atlasnet",
-    "rollup_urls": [
-      "https://evm-rollup-node.atlasnet.teztnets.com"
-    ],
-    "rpc_url": "https://rpc.atlasnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.atlasnet.teztnets.com"
-    ],
-    "activated_on": "2024-04-12"
-  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",

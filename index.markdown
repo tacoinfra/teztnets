@@ -33,7 +33,6 @@ Testnets deployed specifically to test specific Tezos features.
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
-| [Atlasnet](/atlasnet-about) | `2024-04-12` | [Faucet](https://faucet.atlasnet.teztnets.com) |
 | [ParisBnet](/parisbnet-about) | `2024-03-27` | [Faucet](https://faucet.parisbnet.teztnets.com) |
 | [Predalnet](/predalnet-about) | `2024-03-11` | [Faucet](https://faucet.predalnet.teztnets.com) |
 
