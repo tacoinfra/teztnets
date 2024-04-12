@@ -81,25 +81,6 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 
 // chains
 
-const atlasnet_chain = new TezosChain(
-  {
-    category: featureCategory,
-    humanName: "Atlasnet",
-    description:
-      "Emergency testnet",
-    activationBucket: activationBucket,
-    bootstrapContracts: [
-      // "exchanger.json",
-      // "evm_bridge.json",
-    ],
-    helmValuesFile: "networks/weeklynet/values-t.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
-    bootstrapPeers: [],
-  },
-  provider
-)
-
 // Weeklynet - restarts Wednesdays
 //
 const weeklynet_chain = new TezosChain(
@@ -455,7 +436,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([atlasnet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnetb_chain,parisnet_chain]),
+  ...getNetworks([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnetb_chain,parisnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -521,7 +502,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([atlasnet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnetb_chain,parisnet_chain]),
+  ...getTeztnets([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnetb_chain,parisnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
