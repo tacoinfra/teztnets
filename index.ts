@@ -521,7 +521,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([atlasnetchain, weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnetb_chain,parisnet_chain]),
+  ...getTeztnets([atlasnet_chain, weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnetb_chain,parisnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
