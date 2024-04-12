@@ -157,7 +157,7 @@
   },
   "weeklynet-2024-04-10": {
     "category": "Periodic Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2024-04-11T15:00:00Z",
+    "chain_name": "TEZOS-WEEKLYNET-2024-04-12T10:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -190,6 +190,6 @@
     "rpc_urls": [
       "https://rpc.weeklynet-2024-04-10.teztnets.com"
     ],
-    "activated_on": "2024-04-11"
+    "activated_on": "2024-04-12"
   }
 }
