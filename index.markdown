@@ -33,7 +33,6 @@ Testnets deployed specifically to test specific Tezos features.
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
-| [ParisBnet](/parisbnet-about) | `2024-03-27` | [Faucet](https://faucet.parisbnet.teztnets.com) |
 | [Predalnet](/predalnet-about) | `2024-03-11` | [Faucet](https://faucet.predalnet.teztnets.com) |
 
 
@@ -46,7 +45,7 @@ Testnets that restart regularly and track the development of the master branch o
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
-| [Weeklynet](/weeklynet-about) | `2024-04-12` | [Faucet](https://faucet.weeklynet-2024-04-10.teztnets.com) |
+| [Weeklynet](/weeklynet-about) | `2024-04-10` | [Faucet](https://faucet.weeklynet-2024-04-10.teztnets.com) |
 
 
 

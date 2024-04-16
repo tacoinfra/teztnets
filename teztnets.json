@@ -80,27 +80,6 @@
     ],
     "activated_on": "2023-12-07"
   },
-  "parisbnet": {
-    "category": "Feature Teztnets",
-    "chain_name": "TEZOS_PARIS_B_NET_2024-04-02T18:00:00Z",
-    "description": "Exploratory Chain for Paris B protocol",
-    "docker_build": "tezos/tezos:octez-v20.0-beta2_d2907625_20240405173623",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.parisbnet.teztnets.com",
-    "git_ref": "octez-v20.0-beta2_d2907625_20240405173623",
-    "human_name": "ParisBnet",
-    "indexers": [],
-    "last_baking_daemon": "PtParisB",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/parisbnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.parisbnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.parisbnet.teztnets.com"
-    ],
-    "activated_on": "2024-03-27"
-  },
   "parisnet": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_PARISNET_2024-04-10T15:00:00Z",
@@ -157,7 +136,7 @@
   },
   "weeklynet-2024-04-10": {
     "category": "Periodic Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2024-04-12T10:00:00Z",
+    "chain_name": "TEZOS-WEEKLYNET-2024-04-10T00:00:00.000Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -190,6 +169,6 @@
     "rpc_urls": [
       "https://rpc.weeklynet-2024-04-10.teztnets.com"
     ],
-    "activated_on": "2024-04-12"
+    "activated_on": "2024-04-10"
   }
 }
