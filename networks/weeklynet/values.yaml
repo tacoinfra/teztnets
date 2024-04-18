@@ -183,7 +183,7 @@ nodes:
 
 smartRollupNodes:
   evm:
-    storageSize: 50Gi
+    storage_size: 50Gi
     operators:
       operating: teztnetsbaker
       cementing: teztnetsbaker
