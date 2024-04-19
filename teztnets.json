@@ -101,39 +101,6 @@
     ],
     "activated_on": "2024-04-10"
   },
-  "predalnet": {
-    "category": "Feature Teztnets",
-    "chain_name": "TEZOS_PREDALNET_2024-03-11T15:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.predalnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.predalnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.predalnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.predalnet.teztnets.com"
-      }
-    },
-    "description": "Test Chain for DAL",
-    "docker_build": "tezos/tezos:master_2e473b9e_20240304144949",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.predalnet.teztnets.com",
-    "git_ref": "2e473b9e",
-    "human_name": "Predalnet",
-    "indexers": [],
-    "last_baking_daemon": "alpha",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/predalnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.predalnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.predalnet.teztnets.com"
-    ],
-    "activated_on": "2024-03-11"
-  },
   "weeklynet-2024-04-17": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-04-17T00:00:00.000Z",

@@ -27,16 +27,6 @@ Testnets deployed specifically to test new Tezos protocol proposals.
 
 
 
-# Feature Teztnets
-
-Testnets deployed specifically to test specific Tezos features.
-
-| | Activated on | Faucet |
-|-------|---------------------|--|
-| [Predalnet](/predalnet-about) | `2024-03-11` | [Faucet](https://faucet.predalnet.teztnets.com) |
-
-
-
 # Periodic Teztnets
 
 Testnets that restart regularly and track the development of the master branch of [Octez repo](https://gitlab.com/tezos/tezos/).
