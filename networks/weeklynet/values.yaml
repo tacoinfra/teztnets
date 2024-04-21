@@ -207,7 +207,7 @@ dalNodes:
   dal-bootstrap:
     bootstrapProfile: true
     node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-    storageSize: 30Gi
+    storageSize: 100Gi
     ingress:
     # ingress details filled up by pulumi
     identity:
