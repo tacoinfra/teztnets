@@ -101,27 +101,6 @@
     ],
     "activated_on": "2024-05-30"
   },
-  "parisnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_PARISNET_2024-04-10T15:00:00Z",
-    "description": "Test Chain for Paris protocol",
-    "docker_build": "tezos/tezos:octez-v20.0-rc1",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.parisnet.teztnets.com",
-    "git_ref": "octez-v20.0-rc1",
-    "human_name": "Parisnet",
-    "indexers": [],
-    "last_baking_daemon": "PtParisB",
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/parisnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.parisnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.parisnet.teztnets.com"
-    ],
-    "activated_on": "2024-04-10"
-  },
   "weeklynet-2024-05-29": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-05-29T00:00:00.000Z",

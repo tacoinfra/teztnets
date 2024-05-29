@@ -24,7 +24,6 @@ Testnets deployed specifically to test new Tezos protocol proposals.
 |-------|---------------------|--|
 | [Oxfordnet](/oxfordnet-about) | `2023-12-07` | [Faucet](https://faucet.oxfordnet.teztnets.com) |
 | [Paris2net](/paris2net-about) | `2024-05-30` | [Faucet](https://faucet.paris2net.teztnets.com) |
-| [Parisnet](/parisnet-about) | `2024-04-10` | [Faucet](https://faucet.parisnet.teztnets.com) |
 
 
 
