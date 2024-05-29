@@ -33,7 +33,7 @@ accounts:
     # Michael Kernaghan
     key: edpkvE16Jw7ijHkUyPLkBR5sm7p7XxRxd1eThX3S8RCQCuEJwqPYsR
     is_bootstrap_baker_account: true
-    bootstrap_balance: "100000000000"
+    bootstrap_balance: "1000000000000"
   german:
     # tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     # German
