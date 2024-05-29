@@ -193,7 +193,7 @@ new TezosFaucet(
 // End of Paris Exploratory networks
 
 // Paris2net reboot test network
-/*const paris2net_chain = new TezosChain(
+const paris2net_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Paris2net",
@@ -222,7 +222,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 
 // Parisnet test network
@@ -377,7 +376,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, oxfordnet_chain, parisnet_chain]),
+  ...getNetworks([weeklynet_chain, oxfordnet_chain, parisnet_chain, paris2net_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -443,7 +442,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, oxfordnet_chain, parisnet_chain]),
+  ...getTeztnets([weeklynet_chain, oxfordnet_chain, parisnet_chain, paris2net_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
