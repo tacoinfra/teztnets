@@ -82,7 +82,7 @@
   },
   "paris2net": {
     "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_PARIS2NET_2024-05-31T15:00:00Z",
+    "chain_name": "TEZOS_PARIS2NET_2024-05-30T15:00:00Z",
     "description": "Test Chain for Paris protocol",
     "docker_build": "tezos/tezos:octez-v20.0",
     "evm_proxy_urls": [],
@@ -99,7 +99,7 @@
     "rpc_urls": [
       "https://rpc.paris2net.teztnets.com"
     ],
-    "activated_on": "2024-05-31"
+    "activated_on": "2024-05-30"
   },
   "parisnet": {
     "category": "Protocol Teztnets",

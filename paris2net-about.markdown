@@ -10,9 +10,9 @@ Test Chain for Paris protocol
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.paris2net.teztnets.com](https://rpc.paris2net.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Paris2net faucet](https://faucet.paris2net.teztnets.com) |
-| Full network name | `TEZOS_PARIS2NET_2024-05-31T15:00:00Z` |
+| Full network name | `TEZOS_PARIS2NET_2024-05-30T15:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v20.0](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.0) |
-| Activated on | 2024-05-31T15:00:00Z |
+| Activated on | 2024-05-30T15:00:00Z |
 
 
 
