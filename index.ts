@@ -224,37 +224,6 @@ new TezosFaucet(
 )
 
 
-// Parisnet test network
-const parisnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Parisnet",
-    description: "Test Chain for Paris protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/parisnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["parisnet.tzinit.net"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.1.2",
-    networkStakes: true,
-  },
-  provider
-)
-new TezosFaucet(
-  parisnet_chain.name,
-  {
-    namespace: parisnet_chain.namespace,
-    humanName: "Parisnet",
-    helmValuesFile: "networks/parisnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.1.2",
-  },
-  provider
-)
-
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
 
