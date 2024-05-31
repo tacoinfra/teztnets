@@ -96,11 +96,10 @@ export class TezosChain extends pulumi.ComponentResource {
           .prev()
           .toLocaleString()
       )
-      const imageResolver = new TezosImageResolver()
-
       // Hack XXX Hardcode the image
       //this.tezosHelmValues["images"]["octez"] = ""
 
+      const imageResolver = new TezosImageResolver()
       this.tezosHelmValues["images"]["octez"] =
         pulumi
           .output(imageResolver.getLatestTagAsync(deployDate))
