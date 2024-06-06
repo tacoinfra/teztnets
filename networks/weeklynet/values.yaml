@@ -271,7 +271,7 @@ accounts:
     is_bootstrap_baker_account: true
     type: secret
     # key injected by pulumi
-    dal_node_rpc_url: http://dal-dal1:10732
+#    dal_node_rpc_url: http://dal-dal1:10732
   tf_frankfurt1:
     # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
     key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW
