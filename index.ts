@@ -153,22 +153,22 @@ new TezosFaucet(
 )
 
 
-// Oxfordnet
+// Q
 //
-const oxfordnet_chain = new TezosChain(
+/*const qnet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Oxfordnet",
-    description: "Test Chain for the Oxford Protocol Proposal",
+    humanName: "Qnet",
+    description: "Test Chain for the Q Protocol Proposal",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/oxfordnet/values.yaml",
+    helmValuesFile: "networks/qnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["oxfordnet.tzinit.org"],
+    bootstrapPeers: ["qnet.tzinit.org"],
     rpcUrls: [],
     indexers: [
       {
         name: "TzKT",
-        url: "https://oxfordnet.tzkt.io",
+        url: "https://qnet.tzkt.io",
       },
     ],
     chartRepoVersion: "7.0.9",
@@ -176,11 +176,11 @@ const oxfordnet_chain = new TezosChain(
   provider
 )
 new TezosFaucet(
-  oxfordnet_chain.name,
+  qnet_chain.name,
   {
-    namespace: oxfordnet_chain.namespace,
-    humanName: "Oxfordnet",
-    helmValuesFile: "networks/oxfordnet/faucet_values.yaml",
+    namespace: qnet_chain.namespace,
+    humanName: "Qnet",
+    helmValuesFile: "networks/qnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -188,8 +188,7 @@ new TezosFaucet(
   },
   provider
 )
-
-// End of Paris Exploratory networks
+*/
 
 // Paris2net reboot test network
 const paris2net_chain = new TezosChain(
