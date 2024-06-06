@@ -343,12 +343,12 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, oxfordnet_chain, paris2net_chain]),
+  ...getNetworks([weeklynet_chain, paris2net_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
 // We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "Proxford"
+const lastBakingDaemonMainnetGhostnet = "PtParisB"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -409,7 +409,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, oxfordnet_chain, paris2net_chain]),
+  ...getTeztnets([weeklynet_chain, paris2net_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
