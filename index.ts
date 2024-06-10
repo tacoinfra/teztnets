@@ -117,14 +117,13 @@ new TezosFaucet(
   provider
 )
 
-
 // Ghostnet is different from the other testnets:
 // * launched long time ago, launch code is not in the active code path
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v20.0-rc1";
-const ghostnetArchiveVersion = "v19.1";
+const ghostnetRollingVersion = "octez-v20.0";
+const ghostnetArchiveVersion = "octez-v20.0";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -154,22 +153,22 @@ new TezosFaucet(
 )
 
 
-// Oxfordnet
+// Q
 //
-const oxfordnet_chain = new TezosChain(
+/*const qnet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Oxfordnet",
-    description: "Test Chain for the Oxford Protocol Proposal",
+    humanName: "Qnet",
+    description: "Test Chain for the Q Protocol Proposal",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/oxfordnet/values.yaml",
+    helmValuesFile: "networks/qnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["oxfordnet.tzinit.org"],
+    bootstrapPeers: ["qnet.tzinit.org"],
     rpcUrls: [],
     indexers: [
       {
         name: "TzKT",
-        url: "https://oxfordnet.tzkt.io",
+        url: "https://qnet.tzkt.io",
       },
     ],
     chartRepoVersion: "7.0.9",
@@ -177,11 +176,11 @@ const oxfordnet_chain = new TezosChain(
   provider
 )
 new TezosFaucet(
-  oxfordnet_chain.name,
+  qnet_chain.name,
   {
-    namespace: oxfordnet_chain.namespace,
-    humanName: "Oxfordnet",
-    helmValuesFile: "networks/oxfordnet/faucet_values.yaml",
+    namespace: qnet_chain.namespace,
+    humanName: "Qnet",
+    helmValuesFile: "networks/qnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -189,17 +188,16 @@ new TezosFaucet(
   },
   provider
 )
+*/
 
-// End of Paris Exploratory networks
-
-// Parisnet test network
-const parisnet_chain = new TezosChain(
+// Paris2net reboot test network
+const paris2net_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Parisnet",
+    humanName: "Paris2net",
     description: "Test Chain for Paris protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/parisnet/values.yaml",
+    helmValuesFile: "networks/paris2net/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: ["parisnet.tzinit.net"],
     rpcUrls: [],
@@ -210,11 +208,11 @@ const parisnet_chain = new TezosChain(
   provider
 )
 new TezosFaucet(
-  parisnet_chain.name,
+  paris2net_chain.name,
   {
-    namespace: parisnet_chain.namespace,
-    humanName: "Parisnet",
-    helmValuesFile: "networks/parisnet/faucet_values.yaml",
+    namespace: paris2net_chain.namespace,
+    humanName: "Paris2net",
+    helmValuesFile: "networks/paris2net/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -223,65 +221,6 @@ new TezosFaucet(
   provider
 )
 
-// Dalnet Pre test
-const predalnet_chain = new TezosChain(
-  {
-    category: featureCategory,
-    humanName: "Predalnet",
-    description: "Test Chain for DAL",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/dalnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["dalnet.tzinit.net"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  predalnet_chain.name,
-  {
-    namespace: predalnet_chain.namespace,
-    humanName: "Predalnet",
-    helmValuesFile: "networks/dalnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
-// Dalnet Test network
-/* const dalnet_chain = new TezosChain(
- {
-   category: featureCategory,
-    humanName: "Dalnet",
-    description: "Test Chain for DAL",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/dalnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["dalnet.tzinit.net"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  dalnet_chain.name,
-  {
-    namespace: dalnet_chain.namespace,
-    humanName: "Dalnetpre",
-    helmValuesFile: "networks/dalnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-) */
 
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
@@ -404,12 +343,12 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnet_chain]),
+  ...getNetworks([weeklynet_chain, paris2net_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
 // We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "Proxford"
+const lastBakingDaemonMainnetGhostnet = "PtParisB"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -470,7 +409,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, oxfordnet_chain, predalnet_chain, parisnet_chain]),
+  ...getTeztnets([weeklynet_chain, paris2net_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

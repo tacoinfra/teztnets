@@ -96,14 +96,18 @@ export class TezosChain extends pulumi.ComponentResource {
           .prev()
           .toLocaleString()
       )
+      // Hack XXX Hardcode the image
+      //this.tezosHelmValues["images"]["octez"] = ""
+
       const imageResolver = new TezosImageResolver()
       this.tezosHelmValues["images"]["octez"] =
         pulumi
           .output(imageResolver.getLatestTagAsync(deployDate))
           .apply((tag) => `${imageResolver.image}:${tag}`)
-      // this is a trick to change Weeklynet's name when it needs to be respun.
-      // if the chain has already launched but gets bricked because it can no longer upgrade from one proto to the next,
-      // change the date below. It will start with a different chainId.
+      // Hack XXXthis is a trick to change Weeklynet's name when it
+      // needs to be respun. if the chain has already launched but 
+      // gets bricked because it can no longer upgrade from one proto to the 
+      // next, change the date below. It will start with a different chainId.
       // This way, it won't mix with the existing Weeklynet and will be able to sync.
       // Otherwise, the old broken Weeklynet will mix with the new one and you'll never be able to produce
       // another genesis block.

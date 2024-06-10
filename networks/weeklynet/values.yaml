@@ -5,39 +5,39 @@ node_config_network:
   user_activated_upgrades:
     - level: 512
       replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
-  dal_config:
-    activated: true
-    use_mock_srs_for_testing: true
+#  dal_config:
+#    activated: true
+#    use_mock_srs_for_testing: true
 
 activation:
-  protocol_hash: PtParisBQscdCm6Cfow6ndeU6wKJyA3aV1j4D3gQBQMsTQyJCrz
-  protocol_parameters:   
+  protocol_hash: PtParisBxoLz5gzMmn3d9WBQNoPSZakgnkMC2VNuQ3KXfUtUQeZ
+  protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
-    adaptive_issuance_force_activation: false 
+    adaptive_issuance_force_activation: false
     adaptive_issuance_launch_ema_threshold: 0
     adaptive_rewards_params:
-      issuance_ratio_final_min: 
+      issuance_ratio_final_min:
         numerator: "1"
         denominator: "400"
-      issuance_ratio_final_max: 
+      issuance_ratio_final_max:
         numerator: "1"
         denominator: "10"
-      issuance_ratio_initial_min: 
+      issuance_ratio_initial_min:
         numerator: "9"
         denominator: "200"
-      issuance_ratio_initial_max: 
+      issuance_ratio_initial_max:
         numerator: "11"
         denominator: "200"
       initial_period: 10
       transition_period: 50
       max_bonus: "50000000000000"
-      growth_rate: 
+      growth_rate:
         numerator: "1"
         denominator: "100"
-      center_dz: 
+      center_dz:
         numerator: "1"
         denominator: "2"
-      radius_dz: 
+      radius_dz:
         numerator: "1"
         denominator: "50"
     autostaking_enable: true
@@ -65,7 +65,7 @@ activation:
     delay_increment_per_round: "7"
     delegate_parameters_activation_delay: 3
     direct_ticket_spending_enable: false
-    edge_of_staking_over_delegation: 2 
+    edge_of_staking_over_delegation: 2
     global_limit_of_staking_over_baking: 5
     hard_gas_limit_per_block: "5200000"
     hard_gas_limit_per_operation: "1040000"
@@ -76,7 +76,7 @@ activation:
       baking_reward_bonus_weight: 5120
       attesting_reward_weight: 10240
       vdf_revelation_tip_weight: 1
-      seed_nonce_revelation_tip_weight: 1    
+      seed_nonce_revelation_tip_weight: 1
     limit_of_delegation_over_baking: 9
     liquidity_baking_subsidy: "5000000"
     liquidity_baking_toggle_ema_threshold: 100000
@@ -97,7 +97,7 @@ activation:
     percentage_of_frozen_deposits_slashed_per_double_baking: 700
     proof_of_work_threshold: "-1"
     quorum_max: 7000
-    quorum_min: 2000   
+    quorum_min: 2000
     smart_rollup_arith_pvm_enable: true
     smart_rollup_challenge_window_in_blocks: 40
     smart_rollup_commitment_period_in_blocks: 20
@@ -203,43 +203,43 @@ smartRollupNodes:
         'pulumi.com/skipAwait': 'true'
       ingress:
       # ingress details filled by pulumi
-dalNodes:
-  dal-bootstrap:
-    bootstrapProfile: true
-    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-    storageSize: 15Gi
-    ingress:
-    # ingress details filled up by pulumi
-    identity:
-      peer_id: "idtJh8bYedP2hKdRk6oCLX3SS2KuTM"
-      public_key:
-        "5a6cd66cbd2f69817fb2eb81e5dd2a9c4f88df950fc90a96a08fe3976724a063"
-      secret_key:
-          "42f716781cf80b2b7ad129ac56dfcb1b333f3021e49c6729199de8303c7152c9"
-      proof_of_work_stamp: "b7edd6ea938998f8f088b83b692baeddb49f5522f07572f9"
-  dal-dal1:
-    attest_using_accounts:
-      - teztnetsbaker
-    attesterProfiles: tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
-    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-    storageSize: 100Gi
-    ingress:
-    # ingress details filled up by pulumi
-    identity:
-      peer_id: "ids8gZ6Gu67e58DqPn2e9VyjasB1jo"
-      public_key:
-        "c4ea1f6dddfa43b87b6a37432c4c34e1c79baeed5ff165fee2a85ffafb819e5f"
-      secret_key:
-          "a67519da6166f97ca2dea6dc519f1a453d96e01348816d102fb9a7099ee08137"
-      proof_of_work_stamp: "c85a3aab8a1fc903e8c7e9bcd1714a890e22f160a96d9779"
-
-dal_deploy_slot_injector:
-  enabled: true
-  inject_using_account: teztnetsbaker
-  node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-  dal_node_rpc_url: http://dal-dal1:10732
-  slot_size: 65536
-
+#dalNodes:
+#  dal-bootstrap:
+#    bootstrapProfile: true
+#    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+#    storageSize: 100Gi
+#    ingress:
+#    # ingress details filled up by pulumi
+#    identity:
+#      peer_id: "idtJh8bYedP2hKdRk6oCLX3SS2KuTM"
+#      public_key:
+#        "5a6cd66cbd2f69817fb2eb81e5dd2a9c4f88df950fc90a96a08fe3976724a063"
+#      secret_key:
+#          "42f716781cf80b2b7ad129ac56dfcb1b333f3021e49c6729199de8303c7152c9"
+#      proof_of_work_stamp: "b7edd6ea938998f8f088b83b692baeddb49f5522f07572f9"
+#  dal-dal1:
+#    attest_using_accounts:
+#      - teztnetsbaker
+#    attesterProfiles: tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
+#    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+#    storageSize: 100Gi
+#    ingress:
+#    # ingress details filled up by pulumi
+#    identity:
+#      peer_id: "ids8gZ6Gu67e58DqPn2e9VyjasB1jo"
+#      public_key:
+#        "c4ea1f6dddfa43b87b6a37432c4c34e1c79baeed5ff165fee2a85ffafb819e5f"
+#      secret_key:
+#          "a67519da6166f97ca2dea6dc519f1a453d96e01348816d102fb9a7099ee08137"
+#      proof_of_work_stamp: "c85a3aab8a1fc903e8c7e9bcd1714a890e22f160a96d9779"
+#
+#dal_deploy_slot_injector:
+#  enabled: true
+#  inject_using_account: teztnetsbaker
+#  node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+#  dal_node_rpc_url: http://dal-dal1:10732
+#  slot_size: 65536
+#
 bootstrap_peers: []
 full_snapshot_url: null
 rolling_snapshot_url: null
@@ -271,7 +271,7 @@ accounts:
     is_bootstrap_baker_account: true
     type: secret
     # key injected by pulumi
-    dal_node_rpc_url: http://dal-dal1:10732
+#    dal_node_rpc_url: http://dal-dal1:10732
   tf_frankfurt1:
     # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
     key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW

@@ -51,7 +51,7 @@ export class TezosNodes extends pulumi.ComponentResource {
       node_config_network: {
         chain_name: params.chainName,
       },
-      snapshot_source: 'https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json',
+      rolling_snapshot_url: 'https://snapshots.us.tzinit.org/ghostnet/rolling',
       nodes: {
         'rolling-node': {
           local_storage: true,
