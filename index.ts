@@ -190,6 +190,39 @@ new TezosFaucet(
 )
 */
 
+/*
+// ParisC reboot test network
+const pariscnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "ParisCnet",
+    description: "Test Chain for Paris replacement protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/pariscnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.1.2",
+    networkStakes: true,
+  },
+  provider
+)
+new TezosFaucet(
+  pariscnet_chain.name,
+  {
+    namespace: pariscnet_chain.namespace,
+    humanName: "Pariscnet",
+    helmValuesFile: "networks/pariscnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
+*/
+
 // Paris2net reboot test network
 const paris2net_chain = new TezosChain(
   {
