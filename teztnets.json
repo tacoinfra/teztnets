@@ -75,29 +75,29 @@
     ],
     "activated_on": "2024-05-30"
   },
-  "weeklynet-2024-06-05": {
+  "weeklynet-2024-06-12": {
     "category": "Periodic Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2024-06-05T00:00:00.000Z",
+    "chain_name": "TEZOS-WEEKLYNET-2024-06-12T00:00:00.000Z",
     "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Oxford for 4 cycles then upgrades to proto Alpha.",
-    "docker_build": "tezos/tezos:master_242392ef_20240604223553",
+    "docker_build": "tezos/tezos:master_f11b74fc_20240611183150",
     "evm_proxy_urls": [
-      "https://evm.weeklynet-2024-06-05.teztnets.com"
+      "https://evm.weeklynet-2024-06-12.teztnets.com"
     ],
-    "faucet_url": "https://faucet.weeklynet-2024-06-05.teztnets.com",
-    "git_ref": "242392ef",
+    "faucet_url": "https://faucet.weeklynet-2024-06-12.teztnets.com",
+    "git_ref": "f11b74fc",
     "human_name": "Weeklynet",
     "indexers": [],
     "last_baking_daemon": "alpha",
     "masked_from_main_page": false,
     "network_stakes": false,
-    "network_url": "https://teztnets.com/weeklynet-2024-06-05",
+    "network_url": "https://teztnets.com/weeklynet-2024-06-12",
     "rollup_urls": [
-      "https://evm-rollup-node.weeklynet-2024-06-05.teztnets.com"
+      "https://evm-rollup-node.weeklynet-2024-06-12.teztnets.com"
     ],
-    "rpc_url": "https://rpc.weeklynet-2024-06-05.teztnets.com",
+    "rpc_url": "https://rpc.weeklynet-2024-06-12.teztnets.com",
     "rpc_urls": [
-      "https://rpc.weeklynet-2024-06-05.teztnets.com"
+      "https://rpc.weeklynet-2024-06-12.teztnets.com"
     ],
-    "activated_on": "2024-06-05"
+    "activated_on": "2024-06-12"
   }
 }

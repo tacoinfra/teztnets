@@ -1,12 +1,12 @@
 {
-  "chain_name": "TEZOS-WEEKLYNET-2024-06-05T00:00:00.000Z",
+  "chain_name": "TEZOS-WEEKLYNET-2024-06-12T00:00:00.000Z",
   "default_bootstrap_peers": [
-    "weeklynet-2024-06-05.teztnets.com"
+    "weeklynet-2024-06-12.teztnets.com"
   ],
   "genesis": {
-    "block": "BLZ42zR8MhbALTi7f5KF11ZDM1nj3C8cnFEqr1PSXEQtKoN3raJ",
+    "block": "BKkEUWzeX72PujzLW2Ch3ddShEL6YGYwiqKQEkDd2sj2jBYy5FE",
     "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
-    "timestamp": "2024-06-05T00:00:00.000Z"
+    "timestamp": "2024-06-12T00:00:00.000Z"
   },
   "genesis_parameters": {
     "values": {

@@ -8,11 +8,11 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.weeklynet-2024-06-05.teztnets.com](https://rpc.weeklynet-2024-06-05.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2024-06-05.teztnets.com) |
-| Full network name | `TEZOS-WEEKLYNET-2024-06-05T00:00:00.000Z` |
-| Tezos docker build | [tezos/tezos:master_242392ef_20240604223553](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_242392ef_20240604223553) |
-| Activated on | 2024-06-05T00:00:00.000Z |
+| Public RPC endpoints | [https://rpc.weeklynet-2024-06-12.teztnets.com](https://rpc.weeklynet-2024-06-12.teztnets.com/chains/main/chain_id)<br/> |
+| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2024-06-12.teztnets.com) |
+| Full network name | `TEZOS-WEEKLYNET-2024-06-12T00:00:00.000Z` |
+| Tezos docker build | [tezos/tezos:master_f11b74fc_20240611183150](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_f11b74fc_20240611183150) |
+| Activated on | 2024-06-12T00:00:00.000Z |
 
 
 
@@ -29,7 +29,7 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 To join Weeklynet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master_242392ef_20240604223553
+docker run -it --entrypoint=/bin/sh tezos/tezos:master_f11b74fc_20240611183150
 ```
 
 
@@ -41,7 +41,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master_242392ef_20240604223553
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout 242392ef
+git checkout f11b74fc
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
@@ -54,7 +54,7 @@ export PATH=$HOME/tezos:$PATH
 Run the following commands:
 
 ```
-octez-node config init --network https://teztnets.com/weeklynet-2024-06-05
+octez-node config init --network https://teztnets.com/weeklynet-2024-06-12
 
 octez-node run --rpc-addr 127.0.0.1:8732
 ```
@@ -70,8 +70,8 @@ This is not to be confused with [Etherlink](https://docs.etherlink.com/get-start
 
 | | |
 |-------|---------------------|
-| EVM RPC URL | [`https://evm.weeklynet-2024-06-05.teztnets.com`](https://evm.weeklynet-2024-06-05.teztnets.com) |
-| Bare Rollup RPC URL | [`https://evm-rollup-node.weeklynet-2024-06-05.teztnets.com`](https://evm-rollup-node.weeklynet-2024-06-05.teztnets.com/global/block/head) |
+| EVM RPC URL | [`https://evm.weeklynet-2024-06-12.teztnets.com`](https://evm.weeklynet-2024-06-12.teztnets.com) |
+| Bare Rollup RPC URL | [`https://evm-rollup-node.weeklynet-2024-06-12.teztnets.com`](https://evm-rollup-node.weeklynet-2024-06-12.teztnets.com/global/block/head) |
 
 
 
