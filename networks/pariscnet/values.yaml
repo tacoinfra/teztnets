@@ -1,12 +1,14 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_PARISCNET_2024-06-11T19:00:00Z
+#  chain_name: TEZOS_PARISCNET_2024-06-18T12:00:00Z
+  chain_name: TEZOS_PARISCTENET_2024-06-18T09:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-06-11T19:00:00Z"
+#    timestamp: "2024-06-18T12:00:00Z"
+    timestamp: "2024-06-18T09:00:00Z"
 
 activation:
-  protocol_hash: PtParisCXXXXXXXXX
+  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: false
@@ -170,7 +172,7 @@ protocols:
   - command: PtParisB
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: PtParisC XXX
+  - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
 accounts:
@@ -216,3 +218,16 @@ accounts:
     key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
+  tz1THUNA:
+    # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
+    # Romain's faucet
+    key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "50000000000000000"
+  tf:
+    # TF production-style baker
+    #
+    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
+    key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "370000000000"
