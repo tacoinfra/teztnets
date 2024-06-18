@@ -28,7 +28,7 @@ minTez: 1
 maxTez: 12000
 
 # Faucet won't dispense to an address if its balance exceeds this.
-maxBalance: 50000
+maxBalance: 60000
 
 disableChallenges: true
 # Minimum number of challenges required for the minimum Tez request.
