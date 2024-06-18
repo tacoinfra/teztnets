@@ -190,7 +190,6 @@ new TezosFaucet(
 )
 */
 
-/*
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
   {
@@ -221,7 +220,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // Paris2net reboot test network
 const paris2net_chain = new TezosChain(

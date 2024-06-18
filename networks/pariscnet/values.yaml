@@ -1,17 +1,15 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-#  chain_name: TEZOS_PARISCNET_2024-06-18T12:00:00Z
-  chain_name: TEZOS_PARISCTENET_2024-06-18T09:00:00Z
+  chain_name: TEZOS_PARISCNET_2024-06-18T12:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-#    timestamp: "2024-06-18T12:00:00Z"
-    timestamp: "2024-06-18T09:00:00Z"
+    timestamp: "2024-06-18T12:00:00Z"
 
 activation:
   protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
-    adaptive_issuance_force_activation: false
+    adaptive_issuance_force_activation: true
     adaptive_issuance_launch_ema_threshold: 0
     adaptive_rewards_params:
       issuance_ratio_final_min:
