@@ -1,19 +1,19 @@
 ---
 layout: page
-title: Ghostnet
-permalink: /ghostnet-about
+title: ParisCnet
+permalink: /pariscnet-about
 ---
 
-Ghostnet is the long-running testnet for Tezos.
+Test Chain for Paris replacement protocol
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/>[https://ghostnet.ecadinfra.com](https://ghostnet.ecadinfra.com/chains/main/chain_id)<br/>[https://ghostnet.tezos.marigold.dev](https://ghostnet.tezos.marigold.dev/chains/main/chain_id)<br/> |
-| Faucet | [Ghostnet faucet](https://faucet.ghostnet.teztnets.com) |
-| Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
+| Public RPC endpoints | [https://rpc.pariscnet.teztnets.com](https://rpc.pariscnet.teztnets.com/chains/main/chain_id)<br/> |
+| Faucet | [ParisCnet faucet](https://faucet.pariscnet.teztnets.com) |
+| Full network name | `TEZOS_PARISCNET_2024-06-18T12:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v20.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.1) |
-| Activated on | 2022-01-25T15:00:00Z |
-| Block Explorers | [TzKT](https://ghostnet.tzkt.io) - [TzStats](https://ghost.tzstats.com) |
+| Activated on | 2024-06-18T12:00:00Z |
+
 
 
 
@@ -26,7 +26,7 @@ Ghostnet is the long-running testnet for Tezos.
 
 #### Alternative: Use docker
 
-To join Ghostnet with docker, open a shell in the container:
+To join ParisCnet with docker, open a shell in the container:
 
 ```
 docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.1
@@ -49,12 +49,12 @@ make
 export PATH=$HOME/tezos:$PATH
 ```
 
-### Join the Ghostnet network
+### Join the ParisCnet network
 
 Run the following commands:
 
 ```
-octez-node config init --network ghostnet
+octez-node config init --network https://teztnets.com/pariscnet
 
 octez-node run --rpc-addr 127.0.0.1:8732
 ```
@@ -64,9 +64,9 @@ octez-node run --rpc-addr 127.0.0.1:8732
 
 
 
-### Bake on the Ghostnet network
+### Bake on the ParisCnet network
 
-To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.ghostnet.teztnets.com).
+To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.pariscnet.teztnets.com).
 
 If you are not a bootstrap baker, you need to register your key as a delegate using your alias or `pkh`. For instance:
 ```bash=2
@@ -74,15 +74,20 @@ octez-client register key mykey as delegate
 ```
 
 
+If you have registered your key after AI has activated on the network, you will need to stake. For instance:
+```
+octez-client stake <amount> for mykey
+```	
+
 
 You may now launch the baker process.
 ```bash=3
-octez-baker-PtParisB run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
+octez-baker-PsParisC run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
 ```
 
 You may run the accuser as well:
 ```bash=3
-octez-accuser-PtParisB run
+octez-accuser-PsParisC run
 ```
 
 Note that you need a minimum amount of tez to get baking rights. If you are not a bootstrap baker, it will take you several cycles to start baking.

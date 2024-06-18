@@ -3,9 +3,9 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:octez-v20.0",
+    "docker_build": "tezos/tezos:octez-v20.1",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "octez-v20.0",
+    "git_ref": "octez-v20.1",
     "human_name": "Ghostnet",
     "indexers": [
       {
@@ -32,8 +32,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v20.0",
-    "git_ref": "octez-v20.0",
+    "docker_build": "tezos/tezos:octez-v20.1",
+    "git_ref": "octez-v20.1",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -58,10 +58,10 @@
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_PARIS2NET_2024-05-30T15:00:00Z",
     "description": "Test Chain for Paris protocol",
-    "docker_build": "tezos/tezos:octez-v20.0",
+    "docker_build": "tezos/tezos:octez-v20.1",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.paris2net.teztnets.com",
-    "git_ref": "octez-v20.0",
+    "git_ref": "octez-v20.1",
     "human_name": "Paris2net",
     "indexers": [],
     "last_baking_daemon": "PtParisB",
@@ -74,6 +74,27 @@
       "https://rpc.paris2net.teztnets.com"
     ],
     "activated_on": "2024-05-30"
+  },
+  "pariscnet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_PARISCNET_2024-06-18T12:00:00Z",
+    "description": "Test Chain for Paris replacement protocol",
+    "docker_build": "tezos/tezos:octez-v20.1",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.pariscnet.teztnets.com",
+    "git_ref": "octez-v20.1",
+    "human_name": "ParisCnet",
+    "indexers": [],
+    "last_baking_daemon": "PsParisC",
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/pariscnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.pariscnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.pariscnet.teztnets.com"
+    ],
+    "activated_on": "2024-06-18"
   },
   "weeklynet-2024-06-12": {
     "category": "Periodic Teztnets",
