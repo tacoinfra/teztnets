@@ -99,16 +99,12 @@ activation:
     quorum_max: 7000
     quorum_min: 2000
     smart_rollup_arith_pvm_enable: true
-    smart_rollup_challenge_window_in_blocks: 40
     smart_rollup_commitment_period_in_blocks: 20
     smart_rollup_max_active_outbox_levels: 20160
     smart_rollup_max_lookahead_in_blocks: 30000
     smart_rollup_max_number_of_cemented_commitments: 5
-#    smart_rollup_max_number_of_messages_per_level: 1000000
     smart_rollup_max_number_of_parallel_games: 32
     smart_rollup_max_outbox_messages_per_level: 100
-#    smart_rollup_max_wrapped_proof_binary_size: 30000
-#    smart_rollup_message_size_limit: 4096
     smart_rollup_number_of_sections_in_dissection: 32
     smart_rollup_origination_size: 6314
     smart_rollup_private_enable: true
