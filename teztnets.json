@@ -17,7 +17,7 @@
         "url": "https://ghost.tzstats.com"
       }
     ],
-    "last_baking_daemon": "PtParisB",
+    "last_baking_daemon": "PsParisC",
     "masked_from_main_page": false,
     "network_url": "https://teztnets.com/ghostnet",
     "rpc_url": "https://rpc.ghostnet.teztnets.com",
@@ -45,7 +45,7 @@
         "url": "https://tzstats.com"
       }
     ],
-    "last_baking_daemon": "PtParisB",
+    "last_baking_daemon": "PsParisC",
     "masked_from_main_page": true,
     "rpc_url": "https://mainnet.api.tez.ie",
     "rpc_urls": [
