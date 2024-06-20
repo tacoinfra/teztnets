@@ -15,23 +15,5 @@
       "genesis_pubkey": "edpkuYLienS3Xdt5c1vfRX1ibMxQuvfM67ByhJ9nmRYYKGAAoTq1UC"
     }
   },
-  "sandboxed_chain_name": "SANDBOXED_TEZOS",
-  "user_activated_upgrades": [
-    {
-      "level": 8191,
-      "replacement_protocol": "Psithaca2MLRFYargivpo7YvUr7wUDqyxrdhC5CQq78mRvimz6A"
-    },
-    {
-      "level": 765952,
-      "replacement_protocol": "PtJakart2xVj7pYXJBXrqHgd82rdkLey5ZeeGwDgPp9rhQUbSqY"
-    },
-    {
-      "level": 1191936,
-      "replacement_protocol": "PtKathmankSpLLDALzWw7CGD2j2MtyveTwboEYokqUCP4a1LxMg"
-    },
-    {
-      "level": 1654784,
-      "replacement_protocol": "PtLimaPtLMwfNinJi9rCfDPWea8dFgTZ1MeJ9f1m2SRic6ayiwW"
-    }
-  ]
+  "sandboxed_chain_name": "SANDBOXED_TEZOS"
 }
