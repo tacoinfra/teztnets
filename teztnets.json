@@ -99,6 +99,18 @@
   "weeklynet-2024-06-19": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-06-19T00:00:00.000Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.weeklynet-2024-06-19.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.weeklynet-2024-06-19.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.weeklynet-2024-06-19.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.weeklynet-2024-06-19.teztnets.com"
+      }
+    },
     "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Oxford for 4 cycles then upgrades to proto Alpha.",
     "docker_build": "tezos/tezos:master_8fe63768_20240617144822",
     "evm_proxy_urls": [

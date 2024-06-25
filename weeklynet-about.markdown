@@ -76,5 +76,20 @@ This is not to be confused with [Etherlink](https://docs.etherlink.com/get-start
 
 
 
+### Data Availability Layer
+
+This network is running [Data Availability Layer](https://tezos.gitlab.io/shell/dal.html) nodes.
+
+
+The DAL nodes are accessible with the following endpoints:
+
+| | RPC | P2P Endpoint |
+|------------|---------|--------------|
+| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.weeklynet-2024-06-19.teztnets.com/p2p/gossipsub/scores) | `dal.weeklynet-2024-06-19.teztnets.com:11732` |
+| DAL Teztnets Attester | [Link](https://dal-attester-rpc.weeklynet-2024-06-19.teztnets.com/p2p/gossipsub/scores) | `dal1.weeklynet-2024-06-19.teztnets.com:11732` |
+
+
+For more info, read this [blog post from Nomadic Labs](https://research-development.nomadic-labs.com/data-availability-layer-tezos.html).
+
 
 

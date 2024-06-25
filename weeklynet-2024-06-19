@@ -1,5 +1,12 @@
 {
   "chain_name": "TEZOS-WEEKLYNET-2024-06-19T00:00:00.000Z",
+  "dal_config": {
+    "activated": true,
+    "bootstrap_peers": [
+      "dal.weeklynet-2024-06-19.teztnets.com:11732"
+    ],
+    "use_mock_srs_for_testing": true
+  },
   "default_bootstrap_peers": [
     "weeklynet-2024-06-19.teztnets.com"
   ],
