@@ -156,7 +156,8 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: []
+bootstrap_peers:
+  - pariscnet.tzinit.org
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
@@ -227,5 +228,3 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "370000000000"
 
-bootstrap_peers:
-  - pariscnet.tzinit.org
