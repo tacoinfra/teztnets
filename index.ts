@@ -122,8 +122,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v20.0";
-const ghostnetArchiveVersion = "octez-v20.0";
+const ghostnetRollingVersion = "octez-v20.1";
+const ghostnetArchiveVersion = "octez-v20.1";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -189,6 +189,37 @@ new TezosFaucet(
   provider
 )
 */
+
+// ParisC reboot test network
+const pariscnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "ParisCnet",
+    description: "Test Chain for Paris replacement protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/pariscnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: ["pariscnet.tzinit.org"],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.1.2",
+    networkStakes: true,
+  },
+  provider
+)
+new TezosFaucet(
+  pariscnet_chain.name,
+  {
+    namespace: pariscnet_chain.namespace,
+    humanName: "Pariscnet",
+    helmValuesFile: "networks/pariscnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.1.2",
+  },
+  provider
+)
 
 // Paris2net reboot test network
 const paris2net_chain = new TezosChain(
@@ -318,37 +349,15 @@ const ghostnetNetwork = {
     },
   },
   sandboxed_chain_name: "SANDBOXED_TEZOS",
-  user_activated_upgrades: [
-    {
-      level: 8191,
-      replacement_protocol:
-        "Psithaca2MLRFYargivpo7YvUr7wUDqyxrdhC5CQq78mRvimz6A",
-    },
-    {
-      level: 765952,
-      replacement_protocol:
-        "PtJakart2xVj7pYXJBXrqHgd82rdkLey5ZeeGwDgPp9rhQUbSqY",
-    },
-    {
-      level: 1191936,
-      replacement_protocol:
-        "PtKathmankSpLLDALzWw7CGD2j2MtyveTwboEYokqUCP4a1LxMg",
-    },
-    {
-      level: 1654784,
-      replacement_protocol:
-        "PtLimaPtLMwfNinJi9rCfDPWea8dFgTZ1MeJ9f1m2SRic6ayiwW",
-    },
-  ],
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, paris2net_chain]),
+  ...getNetworks([weeklynet_chain, paris2net_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
 // We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "PtParisB"
+const lastBakingDaemonMainnetGhostnet = "PsParisC"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -409,7 +418,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, paris2net_chain]),
+  ...getTeztnets([weeklynet_chain, paris2net_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
