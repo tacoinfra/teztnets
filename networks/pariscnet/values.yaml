@@ -226,3 +226,6 @@ accounts:
     key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
     is_bootstrap_baker_account: false
     bootstrap_balance: "370000000000"
+
+bootstrap_peers:
+  - pariscnet.tzinit.org

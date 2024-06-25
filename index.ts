@@ -199,7 +199,7 @@ const pariscnet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/pariscnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
+    bootstrapPeers: ["pariscnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.1.2",
