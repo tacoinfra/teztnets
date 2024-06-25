@@ -8,7 +8,7 @@ This list of Teztnets is also available in [json format](https://teztnets.com/te
 
 # Long-running Teztnets
 
-If you are not sure, pick this one.
+These networks are long-running test networks that are similar to mainnet. They run the same protocol as mainnet but switch over to the next protocol earlier than mainnet for testing. If you are developing applications, you probably want to develop on these networks.
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
@@ -18,7 +18,7 @@ If you are not sure, pick this one.
 
 # Protocol Teztnets
 
-Testnets deployed specifically to test new Tezos protocol proposals.
+These test networks are deployed specifically to test individual Tezos protocols. There is usually one for the currently deployed protocol and one for the next protocol. If you are developing your application for the next protocol, you will want to use that test network.
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
@@ -29,9 +29,9 @@ Testnets deployed specifically to test new Tezos protocol proposals.
 
 # Periodic Teztnets
 
-Testnets that restart regularly and track the development of the master branch of [Octez repo](https://gitlab.com/tezos/tezos/).
+These test networks restart regularly and track the development of the master branch of [Octez repo](https://gitlab.com/tezos/tezos/).
  
-☠️ You probably don't want this unless you are a core protocol developer.
+☠️ You probably don't want to use these unless you are a core protocol developer.
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
