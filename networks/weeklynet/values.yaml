@@ -7,7 +7,6 @@ node_config_network:
       replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
   dal_config:
     activated: true
-    use_mock_srs_for_testing: true
 
 activation:
   protocol_hash: PtParisBxoLz5gzMmn3d9WBQNoPSZakgnkMC2VNuQ3KXfUtUQeZ
