@@ -77,7 +77,7 @@
   },
   "weeklynet-2024-06-26": {
     "category": "Periodic Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2024-06-26T16:00:00Z",
+    "chain_name": "TEZOS-WEEKLYNET-2024-06-26T00:00:00.000Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
