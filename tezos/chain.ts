@@ -86,9 +86,9 @@ export class TezosChain extends pulumi.ComponentResource {
     this.tezosHelmValues = YAML.parse(
       fs.readFileSync(this.params.helmValuesFile, "utf8")
     );
-   
+
     this.tezosHelmValues["accounts"]["teztnetsbaker"]["key"] = this.params.bakingPrivateKey
-    
+
     if (this.params.schedule) {
       const deployDate = new Date(
         cronParser
@@ -105,8 +105,8 @@ export class TezosChain extends pulumi.ComponentResource {
           .output(imageResolver.getLatestTagAsync(deployDate))
           .apply((tag) => `${imageResolver.image}:${tag}`)
       // Hack XXXthis is a trick to change Weeklynet's name when it
-      // needs to be respun. if the chain has already launched but 
-      // gets bricked because it can no longer upgrade from one proto to the 
+      // needs to be respun. if the chain has already launched but
+      // gets bricked because it can no longer upgrade from one proto to the
       // next, change the date below. It will start with a different chainId.
       // This way, it won't mix with the existing Weeklynet and will be able to sync.
       // Otherwise, the old broken Weeklynet will mix with the new one and you'll never be able to produce
@@ -117,9 +117,9 @@ export class TezosChain extends pulumi.ComponentResource {
 
       // This is the hack to restart Weeklynet
       //
-      this.tezosHelmValues["node_config_network"]["chain_name"] =
-        `TEZOS-${this.params.humanName.toUpperCase()}-2024-06-26T16:00:00Z`
-      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-06-26T16:00:00Z";
+      // this.tezosHelmValues["node_config_network"]["chain_name"] =
+      //   `TEZOS-${this.params.humanName.toUpperCase()}-2024-06-26T16:00:00Z`
+      // this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-06-26T16:00:00Z";
 
     }
 
