@@ -9,7 +9,7 @@ node_config_network:
     activated: true
 
 activation:
-  protocol_hash: PtParisBxoLz5gzMmn3d9WBQNoPSZakgnkMC2VNuQ3KXfUtUQeZ
+  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: false
@@ -253,7 +253,7 @@ serviceMonitor:
     release: monitoring-96695a88
 
 protocols:
-  - command: PtParisB
+  - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
   - command: alpha
