@@ -89,7 +89,7 @@ const weeklynet_chain = new TezosChain(
     category: periodicCategory,
     humanName: "Weeklynet",
     description:
-      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Oxford for 4 cycles then upgrades to proto Alpha.",
+      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs ParisC for 4 cycles then upgrades to proto Alpha.",
     schedule: "0 0 * * WED",
     activationBucket: activationBucket,
     bootstrapContracts: [
