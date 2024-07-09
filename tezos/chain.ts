@@ -104,7 +104,8 @@ export class TezosChain extends pulumi.ComponentResource {
         pulumi
           .output(imageResolver.getLatestTagAsync(deployDate))
           .apply((tag) => `${imageResolver.image}:${tag}`)
-      // Hack XXXthis is a trick to change Weeklynet's name when it
+      // Hack XXX 
+      // This is a trick to change Weeklynet's name when it
       // needs to be respun. if the chain has already launched but 
       // gets bricked because it can no longer upgrade from one proto to the 
       // next, change the date below. It will start with a different chainId.
@@ -115,11 +116,11 @@ export class TezosChain extends pulumi.ComponentResource {
         `TEZOS-${this.params.humanName.toUpperCase()}-${deployDate.toISOString()}`
       this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = deployDate.toISOString();
 
-      // This is the hack to restart Weeklynet
+      // This is the hack to restart Weeklynet with a new chain name
       //
-      this.tezosHelmValues["node_config_network"]["chain_name"] =
-        `TEZOS-${this.params.humanName.toUpperCase()}-2024-06-26T16:00:00Z`
-      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-06-26T16:00:00Z";
+      //this.tezosHelmValues["node_config_network"]["chain_name"] =
+      //  `TEZOS-${this.params.humanName.toUpperCase()}-2024-06-26T16:00:00Z`
+      //this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2024-06-26T16:00:00Z";
 
     }
 
