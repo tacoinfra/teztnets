@@ -164,7 +164,7 @@ rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 
-images: 
+images:
   octez: tezos/tezos:octez-v20.1
 
 protocols:
@@ -227,4 +227,3 @@ accounts:
     key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
     is_bootstrap_baker_account: false
     bootstrap_balance: "370000000000"
-
