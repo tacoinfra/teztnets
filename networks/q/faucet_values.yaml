@@ -9,10 +9,10 @@ config:
     backendUrl: # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet
   network:
-    name: # filled in by pulumi
+    name: custom
     rpcUrl: # filled in by pulumi
     faucetAddress: tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
-    viewer: https://qqqqqqq.tzstats.com
+#    viewer: https://paris2net.tzkt.io
 
 # Value the server sets for the "Access-Control-Allow-Origin" header for CORS.
 authorizedHost: "" # filled in by pulumi
@@ -25,7 +25,10 @@ enableCaptcha: true
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 24000
+maxTez: 12000
+
+# Faucet won't dispense to an address if its balance exceeds this.
+maxBalance: 48000
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.
