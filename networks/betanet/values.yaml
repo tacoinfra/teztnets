@@ -234,6 +234,12 @@ accounts:
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
+  marco:
+    # Marco Schurtenberger
+    # Inference
+    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
   faucet:
     # faucet on teztnets.xyz platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
