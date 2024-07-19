@@ -1,16 +1,15 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_nane: TEZOS_BETANET_2024-07-18T16:00:00Z
+  chain_name: TEZOS_BETANET_2024-07-18T16:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
+    timestamp: "2024-07-18T16:00:00Z"
   user_activated_upgrades:
     - level: 512
-      replacement_protocol: BetaXXX
-  dal_config:
-    activated: true
+      replacement_protocol: PtRU6wuXeNfhzbbbNbZNbaahu2eKBDztN5cqG8LbvLspdUnPGVX
 
 activation:
-  protocol_hash: PtBetaXXX
+  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: false
@@ -202,21 +201,21 @@ accounts:
     bootstrap_balance: "1500000000000"
     is_bootstrap_baker_account: true
     type: secret
-  ecadlabs:
-    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
-    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  ecadlabs_2:
-    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
-    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
-    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
+  #ecadlabs:
+  #  # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
+  #  key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
+  #ecadlabs_2:
+  #  # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
+  #  key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
+  #captstake:
+  #  # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+  #  key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
   german:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
@@ -242,23 +241,23 @@ accounts:
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-  marco:
-    # Marco Schurtenberger
-    # Inference
-    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  tf:
-    # TF production-style baker
-    #
-    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
-    #key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-    #
-    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
-    key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
-    #
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
+  #marco:
+  #  # Marco Schurtenberger
+  #  # Inference
+  #  key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
+  #tf:
+  #  # TF production-style baker
+  #  #
+  #  # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
+  #  #key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
+  #  #
+  #  # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
+  #  key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
+  #  #
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
   faucet:
     # faucet on teztnets.xyz platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
