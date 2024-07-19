@@ -1,0 +1,135 @@
+node_config_network:
+  activation_account_name: teztnetsbaker
+  chain_name: TEZOS_BETANET_2024-07-22T15:00:00Z
+  genesis:
+    protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
+    timestamp: "2024-07-22T15:00:00Z"
+
+nodes:
+  tezos-baking-node:
+    env:
+      all:
+        TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER: "Y"
+    instances:
+      - bake_using_accounts:
+          - teztnetsbaker
+        config:
+          shell:
+            history_mode: archive
+          rpc:
+            cors-headers: [ "content-type" ]
+            cors-origin: [ "*" ]
+            max_active_rpc_connections: 1000
+          metrics_addr: ["0.0.0.0:9932"]
+        is_bootstrap_node: true
+        identity:
+          # hard-coded identity - saves 1-2 minutes on daily cron
+          peer_id: idqnaeAw4oGfUEnKrLH2fZYRQo4Ev1
+          public_key:
+            c988f65dfbc50ef61d8db84b89ea8df93643328bbd0524321582e39d33e32115
+          secret_key:
+            38ffcb4629db7152141824835bebf42f12d90933d68773d78002f86637500b62
+          proof_of_work_stamp: 3ee07208e41a0489299909c0bd3cac5c05b20a9acc4a3bc7
+    runs:
+      - octez_node
+      - baker
+      - accuser
+      - vdf
+    bootstrapped_readiness_probe: false
+    storage_size: 100Gi
+  # Overwrite default values.yaml rolling-node
+  rolling-node: null
+
+bootstrap_peers: []
+full_snapshot_url: null
+rolling_snapshot_url: null
+rolling_tarball_url: null
+archive_tarball_url: null
+snapshot_source: null
+
+images: 
+  octez: tezos/tezos:master_325368dd_20240718223526
+
+protocols:
+  - command: PsParisC
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+  - command: beta
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+      adaptive_issuance_vote: "on"
+accounts:
+  teztnetsbaker:
+    # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
+    bootstrap_balance: "1500000000000"
+    is_bootstrap_baker_account: true
+    type: secret
+  ecadlabs:
+    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
+    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
+  ecadlabs_2:
+    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
+    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
+  captstake:
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
+  german:
+    #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  mathias:
+    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
+    key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  tfrichfund:
+    # an account that would allow Chris to finally have that holiday
+    # if only it were on mainnet...
+    # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
+    key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
+    bootstrap_balance: "5000000000000000"
+    is_bootstrap_baker_account: false
+  tz1THUNA:
+    # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
+    # Romain's faucet
+    key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "50000000000000000"
+  marco:
+    # Marco Schurtenberger
+    # Inference
+    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
+  tf:
+    # TF production-style baker
+    #
+    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
+    #key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
+    #
+    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
+    key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
+    #
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
+  faucet:
+    # faucet on teztnets.xyz platform
+    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
+    bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
+  # DAL Rich account and baker
+  # Contact: Francois Thire at Nomadic
+  dal_rich_account:
+    key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
+    bootstrap_balance: "370000000000"
+    is_bootstrap_baker_account: false
