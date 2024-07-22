@@ -156,7 +156,6 @@ new TezosFaucet(
 
 // Albin's broken network(TM)
 //
-/*
 const albinnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -172,7 +171,6 @@ const albinnet_chain = new TezosChain(
   },
   provider
 )
-*/
 
 // Beta First Blood Part I
 //
@@ -372,7 +370,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain]),
+  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
 //  ...getNetworks([pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -439,7 +437,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain]),
+  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
 //  ...getTeztnets([pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
