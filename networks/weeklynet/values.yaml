@@ -117,7 +117,7 @@ activation:
       metadata: 0
       dal_page: 1
       dal_parameters: 1
-      dal_attested_slots_validity_lag: 241920
+      dal_attested_slots_validity_lag: 80
     vdf_difficulty: '10000000'
     zk_rollup_enable: true
     zk_rollup_origination_size: 4000
