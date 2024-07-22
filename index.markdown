@@ -22,6 +22,7 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
+| [Albinnet-20240719](/albinnet-20240719-about) | `2024-07-18` | [Faucet](https://faucet.albinnet-20240719.teztnets.com) |
 | [Betanet-2024-07-22](/betanet-2024-07-22-about) | `2024-07-22` | [Faucet](https://faucet.betanet-2024-07-22.teztnets.com) |
 | [ParisCnet](/pariscnet-about) | `2024-06-18` | [Faucet](https://faucet.pariscnet.teztnets.com) |
 

@@ -1,4 +1,25 @@
 {
+  "albinnet-20240719": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_ALBINNET_2024-07-18T17:00:00Z",
+    "description": "Test Chain",
+    "docker_build": "tezos/tezos:master_325368dd_20240718223526",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.albinnet-20240719.teztnets.com",
+    "git_ref": "325368dd",
+    "human_name": "Albinnet-20240719",
+    "indexers": [],
+    "last_baking_daemon": "beta",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/albinnet-20240719",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.albinnet-20240719.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.albinnet-20240719.teztnets.com"
+    ],
+    "activated_on": "2024-07-18"
+  },
   "betanet-2024-07-22": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_BETANET_2024-07-22T15:00:00Z",
