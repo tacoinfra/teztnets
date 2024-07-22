@@ -159,7 +159,7 @@ new TezosFaucet(
 const albinnet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Albinnet-20240719",
+    humanName: "Albinnet",
     description: "Test Chain",
     activationBucket: activationBucket,
     helmValuesFile: "networks/albinnet/values.yaml",
@@ -370,7 +370,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
+  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain]),
+//  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
 //  ...getNetworks([pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -437,7 +438,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
+  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain]),
+//  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
 //  ...getTeztnets([pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }

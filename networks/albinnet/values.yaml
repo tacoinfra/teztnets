@@ -1,9 +1,9 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_ALBINNET_2024-07-18T17:00:00Z
+  chain_name: TEZOS_ALBINNET_2024-07-22T14:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-07-18T17:00:00Z"
+    timestamp: "2024-07-22T14:00:00Z"
   user_activated_upgrades:
     - level: 512
       replacement_protocol: PtRU6wuXeNfhzbbbNbZNbaahu2eKBDztN5cqG8LbvLspdUnPGVX
@@ -241,23 +241,11 @@ accounts:
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-  #marco:
-  #  # Marco Schurtenberger
-  #  # Inference
-  #  key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-  #  is_bootstrap_baker_account: true
-  #  bootstrap_balance: "1000000000000"
-  #tf:
-  #  # TF production-style baker
-  #  #
-  #  # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
-  #  #key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-  #  #
-  #  # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
-  #  key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
-  #  #
-  #  is_bootstrap_baker_account: true
-  #  bootstrap_balance: "1000000000000"
+  lamb:
+    # Second baker tz1hmwpJG2MyCuVb7MnHWvTV8iAms3KJ3r4T
+    key: edpkvMbspPqbbYtxoae3zssJcmD8keqdZ4NSDKbwvVLew9pweBuPgx
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
   faucet:
     # faucet on teztnets.xyz platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
