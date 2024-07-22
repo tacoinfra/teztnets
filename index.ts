@@ -174,27 +174,8 @@ const albinnet_chain = new TezosChain(
 )
 */
 
-// Beta First Nuke
-//
-const betanet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Betanet-2024-07-18",
-    description: "Test Chain for the Betanet 2024-07-18 Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/betanet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
 // Beta First Blood Part I
 //
-/*
 const betanet1_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -210,7 +191,6 @@ const betanet1_chain = new TezosChain(
   },
   provider
 )
-/*
 new TezosFaucet(
   betanet1_chain.name,
   {
@@ -224,7 +204,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // Q
 //
@@ -393,8 +372,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-//  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain]),
-  ...getNetworks([weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain]),
 //  ...getNetworks([pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -461,8 +439,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, pariscnet_chain]),
-//  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain]),
+  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain]),
 //  ...getTeztnets([pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
