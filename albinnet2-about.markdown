@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Albinnet
-permalink: /albinnet-about
+title: Albinnet2
+permalink: /albinnet2-about
 ---
 
 Test Chain
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.albinnet.teztnets.com](https://rpc.albinnet.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [Albinnet faucet](https://faucet.albinnet.teztnets.com) |
-| Full network name | `TEZOS_ALBINNET_2024-07-22T14:00:00Z` |
+| Public RPC endpoints | [https://rpc.albinnet2.teztnets.com](https://rpc.albinnet2.teztnets.com/chains/main/chain_id)<br/> |
+| Faucet | [Albinnet2 faucet](https://faucet.albinnet2.teztnets.com) |
+| Full network name | `TEZOS_ALBINNET_2024-07-22T16:00:00Z` |
 | Tezos docker build | [tezos/tezos:master_325368dd_20240718223526](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_325368dd_20240718223526) |
-| Activated on | 2024-07-22T14:00:00Z |
+| Activated on | 2024-07-22T16:00:00Z |
 
 
 
@@ -26,7 +26,7 @@ Test Chain
 
 #### Alternative: Use docker
 
-To join Albinnet with docker, open a shell in the container:
+To join Albinnet2 with docker, open a shell in the container:
 
 ```
 docker run -it --entrypoint=/bin/sh tezos/tezos:master_325368dd_20240718223526
@@ -49,12 +49,12 @@ make
 export PATH=$HOME/tezos:$PATH
 ```
 
-### Join the Albinnet network
+### Join the Albinnet2 network
 
 Run the following commands:
 
 ```
-octez-node config init --network https://teztnets.com/albinnet
+octez-node config init --network https://teztnets.com/albinnet2
 
 octez-node run --rpc-addr 127.0.0.1:8732
 ```
@@ -64,9 +64,9 @@ octez-node run --rpc-addr 127.0.0.1:8732
 
 
 
-### Bake on the Albinnet network
+### Bake on the Albinnet2 network
 
-To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.albinnet.teztnets.com).
+To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.albinnet2.teztnets.com).
 
 If you are not a bootstrap baker, you need to register your key as a delegate using your alias or `pkh`. For instance:
 ```bash=2
