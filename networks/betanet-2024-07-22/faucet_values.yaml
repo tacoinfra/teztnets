@@ -12,7 +12,7 @@ config:
     backendUrl: "" # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet
   network:
-    name: Betanet-2024-07-22
+    name: custom
     rpcUrl: "" # filled in by pulumi
     faucetAddress: tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
 
