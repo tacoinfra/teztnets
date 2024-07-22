@@ -156,10 +156,10 @@ new TezosFaucet(
 
 // Albin's broken network(TM)
 //
-const albinnet_chain = new TezosChain(
+const albinnet2_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Albinnet",
+    humanName: "Albinnet2",
     description: "Test Chain",
     activationBucket: activationBucket,
     helmValuesFile: "networks/albinnet/values.yaml",
@@ -371,7 +371,7 @@ const ghostnetNetwork = {
 
 export const networks = {
 //  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain]),
-  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
+  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet2_chain]),
 //  ...getNetworks([pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -439,7 +439,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
 //  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain]),
-  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet_chain]),
+  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, albinnet2_chain]),
 //  ...getTeztnets([pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
