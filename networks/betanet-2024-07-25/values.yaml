@@ -259,7 +259,7 @@ accounts:
   tzktfaucet:
     # Dmitry's personal fund
     # tz1KhnTgwoRRALBX6vRHRnydDGSBFsWtcJxc
-    key: xx
+    key: edpkuFRauFAdhipQu9s4xmfNJWmtLxPKpoaoG41gYGq5AgUA43Vxqx
     bootstrap_balance: "200000000000000"
     is_bootstrap_baker_account: false
   faucet:
