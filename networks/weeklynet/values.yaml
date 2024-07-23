@@ -253,12 +253,6 @@ serviceMonitor:
     release: monitoring-96695a88
 
 protocols:
-  - command: PsParisC
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-  - command: beta
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: alpha
     vote:
       liquidity_baking_toggle_vote: "pass"
