@@ -104,7 +104,7 @@ dal_deploy_slot_injector:
 
 bootstrap_peers: []
 full_snapshot_url: null
-rolling_snapshot_url: null
+rolling_snapshot_url: https://snapshots.eu.tzinit.org/weeklynet/rolling
 rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
