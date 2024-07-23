@@ -84,13 +84,12 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 // Weeklynet - restarts Wednesdays
 //
 
-/*
 const weeklynet_chain = new TezosChain(
   {
     category: periodicCategory,
     humanName: "Weeklynet",
     description:
-      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs ParisC for 4 cycles then upgrades to proto Alpha.",
+      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Beta for 4 cycles then upgrades to proto Alpha.",
     schedule: "0 0 * * WED",
     activationBucket: activationBucket,
     bootstrapContracts: [
@@ -118,7 +117,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // Ghostnet is different from the other testnets:
 // * launched long time ago, launch code is not in the active code path

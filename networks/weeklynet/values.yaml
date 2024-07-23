@@ -243,7 +243,9 @@ rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 
-images: {}
+#images: {}
+images: 
+  octez: tezos/tezos:master_235ad8fd_20240723114855
 
 serviceMonitor:
   enabled: true
@@ -257,10 +259,10 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: beta
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-      adaptive_issuance_vote: "on"
+#  - command: beta
+#    vote:
+#      liquidity_baking_toggle_vote: "pass"
+#      adaptive_issuance_vote: "on"
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
