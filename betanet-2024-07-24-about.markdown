@@ -11,7 +11,7 @@ Test Chain for the Betanet 2024-07-24 Proposal
 | Public RPC endpoints | [https://rpc.betanet-2024-07-24.teztnets.com](https://rpc.betanet-2024-07-24.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Betanet-2024-07-24 faucet](https://faucet.betanet-2024-07-24.teztnets.com) |
 | Full network name | `TEZOS_BETANET_2024-07-24T15:00:00Z` |
-| Tezos docker build | [tezos/tezos:master_325368dd_20240718223526](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_325368dd_20240718223526) |
+| Tezos docker build | [tezos/tezos:master_ce1902ca_20240724061255](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_ce1902ca_20240724061255) |
 | Activated on | 2024-07-24T15:00:00Z |
 
 
@@ -29,7 +29,7 @@ Test Chain for the Betanet 2024-07-24 Proposal
 To join Betanet-2024-07-24 with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master_325368dd_20240718223526
+docker run -it --entrypoint=/bin/sh tezos/tezos:master_ce1902ca_20240724061255
 ```
 
 
@@ -41,7 +41,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master_325368dd_20240718223526
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout 325368dd
+git checkout ce1902ca
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
