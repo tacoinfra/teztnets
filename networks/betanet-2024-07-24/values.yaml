@@ -185,7 +185,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_325368dd_20240718223526
+  octez: tezos/tezos:master_ce1902ca_20240724061255
 
 protocols:
   - command: PsParisC
