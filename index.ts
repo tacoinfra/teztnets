@@ -153,37 +153,6 @@ new TezosFaucet(
   provider
 )
 
-// Beta First Blood Part I
-//
-const betanet1_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Betanet-2024-07-22",
-    description: "Test Chain for the Betanet 2024-07-22 Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/betanet-2024-07-22/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  betanet1_chain.name,
-  {
-    namespace: betanet1_chain.namespace,
-    humanName: "Betanet-2024-07-22",
-    helmValuesFile: "networks/betanet-2024-07-22/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
 // Beta First Blood Part II
 //
 /*
@@ -383,8 +352,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([pariscnet_chain, betanet1_chain]),
-//  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain,betanet2_chain]),
+  ...getNetworks([pariscnet_chain]),
+//  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet2_chain]),
 //  ...getNetworks([pariscnet_chain, betanet1_chain]),
 //  ...getNetworks([pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -452,8 +421,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-//  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, betanet2_chain]),
-  ...getTeztnets([pariscnet_chain, betanet1_chain]),
+//  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet2_chain]),
+  ...getTeztnets([pariscnet_chain]),
 //  ...getTeztnets([pariscnet_chain, betanet1_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
