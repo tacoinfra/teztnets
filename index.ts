@@ -154,7 +154,6 @@ new TezosFaucet(
 
 // Beta First Blood Part II
 //
-/*
 const betanet2_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -183,7 +182,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // Q
 //
 /*const qnet_chain = new TezosChain(
@@ -351,10 +350,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, pariscnet_chain]),
-//  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet2_chain]),
-//  ...getNetworks([pariscnet_chain, betanet1_chain]),
-//  ...getNetworks([pariscnet_chain]),
+//  ...getNetworks([weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -420,9 +417,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-//  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet2_chain]),
-  ...getTeztnets([weeklynet_chain, pariscnet_chain]),
-//  ...getTeztnets([pariscnet_chain, betanet1_chain]),
+  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet2_chain]),
+//  ...getTeztnets([weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
