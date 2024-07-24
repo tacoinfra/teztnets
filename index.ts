@@ -83,7 +83,7 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 
 // Weeklynet - restarts Wednesdays
 //
-
+/*
 const weeklynet_chain = new TezosChain(
   {
     category: periodicCategory,
@@ -117,7 +117,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // Ghostnet is different from the other testnets:
 // * launched long time ago, launch code is not in the active code path
 // * heavy usage on the RPC endpoint requires a more elaborate setup
@@ -186,6 +186,7 @@ new TezosFaucet(
 
 // Beta First Blood Part II
 //
+/*
 const betanet2_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -214,7 +215,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // Q
 //
 /*const qnet_chain = new TezosChain(
@@ -382,7 +383,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain,betanet2_chain]),
+  ...getNetworks([pariscnet_chain, betanet1_chain]),
+//  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet1_chain,betanet2_chain]),
 //  ...getNetworks([pariscnet_chain, betanet1_chain]),
 //  ...getNetworks([pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -450,7 +452,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, betanet2_chain]),
+//  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet1_chain, betanet2_chain]),
+  ...getTeztnets([pariscnet_chain, betanet1_chain]),
 //  ...getTeztnets([pariscnet_chain, betanet1_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
