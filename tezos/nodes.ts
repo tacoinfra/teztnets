@@ -137,7 +137,7 @@ location ~ ^/injection/(block|protocol) {
   return 403;
 }
 # Deny access to internal node config
-location ~ ^/(network|worker|stats|config) {
+location ~ ^/(network|worker|stats) {
   deny all;
   return 403;
 }
