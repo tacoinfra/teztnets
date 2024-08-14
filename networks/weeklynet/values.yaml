@@ -9,7 +9,7 @@ node_config_network:
     activated: true
 
 activation:
-  protocol_hash: PtQ2DrEGKLgFVzti6LSwK9c6SHHANWi1Wdzy4X4AY2BGoazwaAW
+  protocol_hash: PtQuebeckFQ2o9nDghrNQf6N9qyBM8kHf2daUzEcSPKo1C7B35T
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: true
@@ -257,7 +257,7 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: beta
+  - command: PtQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
