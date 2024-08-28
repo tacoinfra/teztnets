@@ -1,0 +1,17 @@
+{
+  "chain_name": "TEZOS_BETANET_2024-08-29T16:00:00Z",
+  "default_bootstrap_peers": [
+    "betanet-2024-08-29.teztnets.com"
+  ],
+  "genesis": {
+    "block": "BM2rWq1Tpdjtp8GJy1QaiAgY4kERuXg1h5rvUJMxSJHYF4BaZyH",
+    "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
+    "timestamp": "2024-08-29T16:00:00Z"
+  },
+  "genesis_parameters": {
+    "values": {
+      "genesis_pubkey": "edpktosVHk2f3Yrz9Jb6rMrk6uVy4sTxVhP2iyF39AdgzvsTWgbaLy"
+    }
+  },
+  "sandboxed_chain_name": "SANDBOXED_TEZOS"
+}

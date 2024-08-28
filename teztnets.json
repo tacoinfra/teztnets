@@ -20,6 +20,27 @@
     ],
     "activated_on": "2024-07-24"
   },
+  "betanet-2024-08-29": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_BETANET_2024-08-29T16:00:00Z",
+    "description": "Test Chain for the Betanet 2024-08-29 Proposal",
+    "docker_build": "tezos/tezos:master_8e411109_20240828164016",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.betanet-2024-08-29.teztnets.com",
+    "git_ref": "8e411109",
+    "human_name": "Betanet-2024-08-29",
+    "indexers": [],
+    "last_baking_daemon": "beta",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/betanet-2024-08-29",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.betanet-2024-08-29.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.betanet-2024-08-29.teztnets.com"
+    ],
+    "activated_on": "2024-08-29"
+  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
