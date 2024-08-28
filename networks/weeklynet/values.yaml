@@ -9,7 +9,7 @@ node_config_network:
     activated: true
 
 activation:
-  protocol_hash: PtQuebeckFQ2o9nDghrNQf6N9qyBM8kHf2daUzEcSPKo1C7B35T
+  protocol_hash: PsPxPKEtaNmZbEArSYm2HdPk419cHLqe8DpkxDmMWpToKHwu2Bg
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: true
@@ -257,7 +257,7 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: PtQuebec
+  - command: beta
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
@@ -291,27 +291,32 @@ accounts:
     # tz1ck3EJwzFpbLVmXVuEn5Ptwzc6Aj14mHSH
     key: edpkvFUn1N79a7hGtVUF8AoQHf5q3A5g6xXtDcVTmna5wzHmgF1BfA
     type: public
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "370000000000"
   german:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
     type: public
     is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
+    bootstrap_balance: "100000000000"
   mathias:
     # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
     key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
     type: public
     is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  oxheadfree:
-    # an account with a lot of money in it
-    # tz1foxFdz2ieSj8P9YxKYBTEqYbgFXXEeiQY
-    key: edpkubSgCoMjB2a6vPWRNRHfGa6HUFfFyEUKoEQhWC8osnav8QzBdJ
-    bootstrap_balance: "5000000000000000"
+    bootstrap_balance: "100000000000"
+  captstake:
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof
+    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
     is_bootstrap_baker_account: false
-    type: public
+    bootstrap_balance: "100000000000"
+  tfrichfund:
+    # an account that would allow Chris to finally have that holiday
+    # if only it were on mainnet...
+    # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
+    key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
+    bootstrap_balance: "100000000000"
+    is_bootstrap_baker_account: false
   faucet:
     # faucet on teztnets.xyz platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
