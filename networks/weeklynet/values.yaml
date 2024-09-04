@@ -257,7 +257,7 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: beta
+  - command: PsquebeC
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
