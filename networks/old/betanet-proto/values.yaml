@@ -1,18 +1,15 @@
 node_config_network:
   activation_account_name: teztnetsbaker
+  chain_name: TEZOS_BETANET_2024-07-18T17:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-  user_activated_upgrades:
-    - level: 800
-      replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
-  dal_config:
-    activated: true
+    timestamp: "2024-07-18T17:00:00Z"
 
 activation:
-  protocol_hash: PsPxPKEtaNmZbEArSYm2HdPk419cHLqe8DpkxDmMWpToKHwu2Bg
+  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
-    adaptive_issuance_force_activation: true
+    adaptive_issuance_force_activation: false
     adaptive_issuance_launch_ema_threshold: 0
     adaptive_rewards_params:
       issuance_ratio_final_min:
@@ -40,8 +37,8 @@ activation:
         numerator: "1"
         denominator: "50"
     autostaking_enable: true
-    blocks_per_commitment: 25
-    blocks_per_cycle: 200
+    blocks_per_commitment: 20
+    blocks_per_cycle: 168
     blocks_preservation_cycles: 1
     cache_sampler_state_cycles: 8
     cache_script_size: 100000000
@@ -61,12 +58,12 @@ activation:
       slot_size: 126944
       redundancy_factor: 8
       page_size: 3967
-    delay_increment_per_round: "4"
+    delay_increment_per_round: "5"
     delegate_parameters_activation_delay: 3
     direct_ticket_spending_enable: false
     edge_of_staking_over_delegation: 2
     global_limit_of_staking_over_baking: 5
-    hard_gas_limit_per_block: "3328000"
+    hard_gas_limit_per_block: "4160000"
     hard_gas_limit_per_operation: "1040000"
     hard_storage_limit_per_operation: "60000"
     issuance_weights:
@@ -79,17 +76,17 @@ activation:
     limit_of_delegation_over_baking: 9
     liquidity_baking_subsidy: "5000000"
     liquidity_baking_toggle_ema_threshold: 100000
-    max_operations_time_to_live: 120
+    max_operations_time_to_live: 150
     max_slashing_per_block: 10000
     max_slashing_threshold: 2334
-    minimal_block_delay: "4"
+    minimal_block_delay: "5"
     min_proposal_quorum: 500
     minimal_frozen_stake: "600000000"
     minimal_participation_ratio:
       numerator: 2
       denominator: 3
     minimal_stake: "6000000000"
-    nonce_revelation_threshold: 50
+    nonce_revelation_threshold: 40
     ns_enable: true
     origination_size: 257
     percentage_of_frozen_deposits_slashed_per_double_attestation: 5000
@@ -98,10 +95,10 @@ activation:
     quorum_max: 7000
     quorum_min: 2000
     smart_rollup_arith_pvm_enable: true
-    smart_rollup_challenge_window_in_blocks: 62
-    smart_rollup_commitment_period_in_blocks: 31
-    smart_rollup_max_active_outbox_levels: 31500
-    smart_rollup_max_lookahead_in_blocks: 346875
+    smart_rollup_challenge_window_in_blocks: 50
+    smart_rollup_commitment_period_in_blocks: 25
+    smart_rollup_max_active_outbox_levels: 25200
+    smart_rollup_max_lookahead_in_blocks: 37500
     smart_rollup_max_number_of_cemented_commitments: 5
     smart_rollup_max_number_of_parallel_games: 32
     smart_rollup_max_outbox_messages_per_level: 100
@@ -110,14 +107,15 @@ activation:
     smart_rollup_private_enable: true
     smart_rollup_riscv_pvm_enable: true
     smart_rollup_stake_amount: "32000000"
-    smart_rollup_timeout_period_in_blocks: 781
+    smart_rollup_timeout_period_in_blocks: 625
     smart_rollup_reveal_activation_level:
       raw_data:
         Blake2B: 0
       metadata: 0
       dal_page: 1
       dal_parameters: 1
-      dal_attested_slots_validity_lag: 80
+      dal_attested_slots_validity_lag: 241920
+    testnet_dictator: tz1Xf8zdT3DbAX9cHw3c3CXh79rc4nK4gCe8
     vdf_difficulty: '10000000'
     zk_rollup_enable: true
     zk_rollup_origination_size: 4000
@@ -177,86 +175,20 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-#smartRollupNodes:
-#  evm:
-#    storage_size: 50Gi
-#    operators:
-#      operating: teztnetsbaker
-#      cementing: teztnetsbaker
-#      executing_outbox: teztnetsbaker
-#      batching1: evm-rollup-batcher-1
-#      batching2: evm-rollup-batcher-2
-#      batching3: evm-rollup-batcher-3
-#      batching4: evm-rollup-batcher-4
-#    rollup_address: sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf
-#    ingress:
-#      # ingress details filled by pulumi
-#    evm_proxy:
-#      annotations:
-#        # sometimes evm proxy takes too long to initialize
-#        # because it depends on the rollup node which in turn
-#        # depends on the octez node to be available
-#        'pulumi.com/skipAwait': 'true'
-#      ingress:
-#      # ingress details filled by pulumi
-dalNodes:
-  dal-bootstrap:
-    bootstrapProfile: true
-    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-    storageSize: 100Gi
-    ingress:
-    # ingress details filled up by pulumi
-    identity:
-      peer_id: "idtJh8bYedP2hKdRk6oCLX3SS2KuTM"
-      public_key:
-        "5a6cd66cbd2f69817fb2eb81e5dd2a9c4f88df950fc90a96a08fe3976724a063"
-      secret_key:
-          "42f716781cf80b2b7ad129ac56dfcb1b333f3021e49c6729199de8303c7152c9"
-      proof_of_work_stamp: "b7edd6ea938998f8f088b83b692baeddb49f5522f07572f9"
-  dal-dal1:
-    attest_using_accounts:
-      - teztnetsbaker
-    attesterProfiles: tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
-    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-    storageSize: 100Gi
-    ingress:
-    # ingress details filled up by pulumi
-    identity:
-      peer_id: "ids8gZ6Gu67e58DqPn2e9VyjasB1jo"
-      public_key:
-        "c4ea1f6dddfa43b87b6a37432c4c34e1c79baeed5ff165fee2a85ffafb819e5f"
-      secret_key:
-          "a67519da6166f97ca2dea6dc519f1a453d96e01348816d102fb9a7099ee08137"
-      proof_of_work_stamp: "c85a3aab8a1fc903e8c7e9bcd1714a890e22f160a96d9779"
-
-dal_deploy_slot_injector:
-  enabled: true
-  inject_using_account: teztnetsbaker
-  node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
-  dal_node_rpc_url: http://dal-dal1:10732
-  slot_size: 65536
-
 bootstrap_peers: []
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
 archive_tarball_url: null
-snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
+snapshot_source: null
 
-images: {}
-
-serviceMonitor:
-  enabled: true
-  labels:
-    # FIXME: reinstall prom-opreator chart so this name is predictable.
-    # Right now, it contains the random chart name.
-    release: monitoring-96695a88
+images: 
+  octez: tezos/tezos:master_325368dd_20240718223526
 
 protocols:
-  - command: alpha
+  - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
-      adaptive_issuance_vote: "on"
   - command: beta
     vote:
       liquidity_baking_toggle_vote: "pass"
@@ -267,56 +199,63 @@ accounts:
     bootstrap_balance: "1500000000000"
     is_bootstrap_baker_account: true
     type: secret
-    # key injected by pulumi
-    dal_node_rpc_url: http://dal-dal1:10732
-  tf_frankfurt1:
-    # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
-    key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_oregon_1:
-    # tz1Q5yMydHkc2DHaP8GdWcz6YcuNu5wKWSa9
-    key: edpkuqgGiesSEaxJ2pUjNpHa46Lq7TiRJBqDCxBgdVisEQjPG1TdxQ
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_zurich_1:
-    # tz1e4nXmvHK8TC8VbBg9KmD8So3BxzS4qUnN
-    key: edpktx15jbSycZMkDEmB9Yrnzf6YnUgSj6qzQv2MVPy2E27UFJUZDR
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  ecadlabs:
-    # tz1ck3EJwzFpbLVmXVuEn5Ptwzc6Aj14mHSH
-    key: edpkvFUn1N79a7hGtVUF8AoQHf5q3A5g6xXtDcVTmna5wzHmgF1BfA
-    type: public
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "370000000000"
+  #ecadlabs:
+  #  # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
+  #  key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
+  #ecadlabs_2:
+  #  # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
+  #  key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
+  #captstake:
+  #  # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+  #  key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
   german:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
     type: public
     is_bootstrap_baker_account: false
-    bootstrap_balance: "100000000000"
+    bootstrap_balance: "1000000000000"
   mathias:
     # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
     key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
     type: public
     is_bootstrap_baker_account: false
-    bootstrap_balance: "100000000000"
-  captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof
-    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "100000000000"
+    bootstrap_balance: "1000000000000"
   tfrichfund:
     # an account that would allow Chris to finally have that holiday
     # if only it were on mainnet...
     # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
     key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
-    bootstrap_balance: "100000000000"
+    bootstrap_balance: "5000000000000000"
     is_bootstrap_baker_account: false
+  tz1THUNA:
+    # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
+    # Romain's faucet
+    key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "50000000000000000"
+  #marco:
+  #  # Marco Schurtenberger
+  #  # Inference
+  #  key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
+  #tf:
+  #  # TF production-style baker
+  #  #
+  #  # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
+  #  #key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
+  #  #
+  #  # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
+  #  key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
+  #  #
+  #  is_bootstrap_baker_account: true
+  #  bootstrap_balance: "1000000000000"
   faucet:
     # faucet on teztnets.xyz platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
@@ -329,19 +268,3 @@ accounts:
     key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
     bootstrap_balance: "370000000000"
     is_bootstrap_baker_account: false
-  evm-rollup-batcher-1:
-    key: edsk3ioP9xYzM1USEXsph8z2CPxxHEc85HWDRwwMeiJdMAFaMNHMWL
-    is_bootstrap_baker_account: false
-    bootstrap_balance: '2000000000'
-  evm-rollup-batcher-2:
-    key: edsk3YEZnguwHGtsDjHdHr8EenSybKyJqh9P1xnba6VWN6n5yP5hoz
-    is_bootstrap_baker_account: false
-    bootstrap_balance: '2000000000'
-  evm-rollup-batcher-3:
-    key: edsk366GyDzqJSyiZJmmexM7YubJ77rEKqcYKzRtQocKHXU2kyqcLb
-    is_bootstrap_baker_account: false
-    bootstrap_balance: '2000000000'
-  evm-rollup-batcher-4:
-    key: edsk4DKhPabyQUDfCqTRXrKucXWdkHKnYM3NYFNS2XmyCQhu9xdprZ
-    is_bootstrap_baker_account: false
-    bootstrap_balance: '2000000000'
