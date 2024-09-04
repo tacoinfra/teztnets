@@ -185,16 +185,15 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_8e411109_20240828164016
+  octez: tezos/tezos:octez-v21XXX
 
 protocols:
   - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: beta
+  - command: PsquebeC
     vote:
       liquidity_baking_toggle_vote: "pass"
-      adaptive_issuance_vote: "on"
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
