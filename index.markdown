@@ -22,7 +22,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
-| [Betanet-2024-07-24](/betanet-2024-07-24-about) | `2024-07-24` | [Faucet](https://faucet.betanet-2024-07-24.teztnets.com) |
 | [Betanet-2024-08-29](/betanet-2024-08-29-about) | `2024-08-29` | [Faucet](https://faucet.betanet-2024-08-29.teztnets.com) |
 | [ParisCnet](/pariscnet-about) | `2024-06-18` | [Faucet](https://faucet.pariscnet.teztnets.com) |
 
@@ -36,6 +35,7 @@ These test networks restart regularly and track the development of the master br
 
 | | Activated on | Faucet |
 |-------|---------------------|--|
+| [Weeklynet](/weeklynet-about) | `2024-09-04` | [Faucet](https://faucet.weeklynet-2024-09-04.teztnets.com) |
 
 
 
