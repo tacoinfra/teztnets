@@ -96,6 +96,27 @@
     ],
     "activated_on": "2024-06-18"
   },
+  "ptopnet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_PTOP1_2024-09-09T15:00:00Z",
+    "description": "Test Chain for the P2P testing",
+    "docker_build": "tezos/tezos:master_5d160cc0_20240909131320",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.ptopnet.teztnets.com",
+    "git_ref": "5d160cc0",
+    "human_name": "Ptopnet",
+    "indexers": [],
+    "last_baking_daemon": "PsParisC",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/ptopnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.ptopnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.ptopnet.teztnets.com"
+    ],
+    "activated_on": "2024-09-09"
+  },
   "weeklynet-2024-09-04": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-09-04T00:00:00.000Z",

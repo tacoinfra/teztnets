@@ -1,0 +1,17 @@
+{
+  "chain_name": "TEZOS_PTOP1_2024-09-09T15:00:00Z",
+  "default_bootstrap_peers": [
+    "ptopnet.teztnets.com"
+  ],
+  "genesis": {
+    "block": "BLhp4XUubbnWBNeRTpuyQGJ4GpLajUgVTsGuJJPd228QASXeAUr",
+    "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
+    "timestamp": "2024-09-09T15:00:00Z"
+  },
+  "genesis_parameters": {
+    "values": {
+      "genesis_pubkey": "edpktosVHk2f3Yrz9Jb6rMrk6uVy4sTxVhP2iyF39AdgzvsTWgbaLy"
+    }
+  },
+  "sandboxed_chain_name": "SANDBOXED_TEZOS"
+}
