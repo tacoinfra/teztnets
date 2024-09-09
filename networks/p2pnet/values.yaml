@@ -1,11 +1,9 @@
-# protocol_hash: PtA4NFGxa5mLmPaEAAxAofESvLzZPSJ6GQz66SobecGbnCy3FXE
-
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_BETANET_2024-08-29T16:00:00Z
+  chain_name: TEZOS_PTOP1_2024-09-09T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-08-29T16:00:00Z"
+    timestamp: "2024-09-09T15:00:00Z"
 
 activation:
   protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
@@ -123,25 +121,7 @@ activation:
     zk_rollup_origination_size: 4000
     zk_rollup_min_pending_to_process: 10
     zk_rollup_max_ticket_payload_size: 2048
-#  bootstrap_parameters:
-#    bootstrap_smart_rollups:
-#    - address: "sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf"
-#      pvm_kind: "wasm_2_0_0"
-#      kernel: "fromfile#/usr/local/share/tezos/evm_kernel/evm_installer.wasm"
-#      parameters_ty:
-#        prim: pair
-#        args:
-#        - prim: pair
-#          args:
-#          - prim: bytes
-#          - prim: ticket
-#            args:
-#            - prim: unit
-#        - prim: pair
-#          args:
-#          - prim: nat
-#          - prim: bytes
-#
+
 nodes:
   tezos-baking-node:
     env:
@@ -185,37 +165,18 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_8e411109_20240828164016
+  octez: tezos/tezos:master_5d160cc0_20240909131320
 
 protocols:
   - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: beta
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-      adaptive_issuance_vote: "on"
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
     bootstrap_balance: "1500000000000"
     is_bootstrap_baker_account: true
     type: secret
-  ecadlabs:
-    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
-    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  ecadlabs_2:
-    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
-    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
-    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
   german:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
@@ -241,23 +202,6 @@ accounts:
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-  marco:
-    # Marco Schurtenberger
-    # Inference
-    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  tf:
-    # TF production-style baker
-    #
-    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
-    #key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-    #
-    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
-    key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
-    #
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
   tzktfaucet:
     # Dmitry's personal fund
     # tz1KhnTgwoRRALBX6vRHRnydDGSBFsWtcJxc
@@ -276,3 +220,26 @@ accounts:
     key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
     bootstrap_balance: "370000000000"
     is_bootstrap_baker_account: false
+# Quebec thumpers
+#
+  que1:
+    # tz1XS7817D2e7w679DyBMjpH68HXbcvQJJNK
+    key: edpkvJZy4bDq1c4Zt55dfugUatXf9wRMNiL9Tsov1b9fMRNuWF92Qq
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+  que2:
+    # tz1Tk8UUJYMXn3EicB4yFBtgxVovZ2q5CBtt
+    key: edpktr1fN8Nu9L1hPFRkBLKPEgCyEQPmZWbLcSUh3kPbZFrTACC5Jr
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+  que3:
+    # tz1ea2Matw3mbVi6ooKXeEpRama3nLpSvyaC
+    key: edpkvJFPuaPopoUZVNueRz78VTehBiYDpwNuntyBwrhscdDwbS8rE6
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+  que4:
+    # tz1c7QwMT4HmxV1hkE8FfBzzyFN3Vx3syAVd
+    key: edpktums7Lx55EdfFJrPAtSTUhfYfGngT6dT5UYiweGXakGqhLHvvx
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+
