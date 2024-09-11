@@ -183,37 +183,6 @@ new TezosFaucet(
   provider
 )
 
-// Beta First Blood Part II
-//
-const p2pnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Ptopnet",
-    description: "Test Chain for the P2P testing",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/p2pnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  p2pnet_chain.name,
-  {
-    namespace: p2pnet_chain.namespace,
-    humanName: "P2PNet",
-    helmValuesFile: "networks/p2pnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
 // Q
 //
 /*const qnet_chain = new TezosChain(
@@ -381,7 +350,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([p2pnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet3_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -447,7 +416,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([p2pnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet3_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
