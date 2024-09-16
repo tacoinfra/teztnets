@@ -2,10 +2,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_QUEBECANET_2024-09-06T16:00:00Z
+  chain_name: TEZOS_QUEBECANET_2024-09-19T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-09-06T16:00:00Z"
+    timestamp: "2024-09-19T15:00:00Z"
 
 #activation:
 #  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
@@ -177,7 +177,8 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: []
+bootstrap_peers:
+  - quebeca.tzinit.org
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
