@@ -245,7 +245,7 @@ accounts:
     # Marco Schurtenberger
     # Inference
     key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: false
+    is_bootstrap_baker_account: true
     bootstrap_balance: "1000000000000"
   tf:
     # TF production-style baker
