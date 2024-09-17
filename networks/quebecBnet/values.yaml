@@ -186,7 +186,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:octez-v21XXX
+  octez: tezos/tezos:octez-v21.0-rc2
 
 protocols:
   - command: PsParisC
