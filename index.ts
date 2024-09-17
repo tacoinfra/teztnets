@@ -88,7 +88,7 @@ const weeklynet_chain = new TezosChain(
     category: periodicCategory,
     humanName: "Weeklynet",
     description:
-      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Q for 4 cycles then upgrades to proto Alpha.",
+      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Quebec for 4 cycles then upgrades to proto Alpha.",
     schedule: "0 0 * * WED",
     activationBucket: activationBucket,
     bootstrapContracts: [
@@ -183,22 +183,23 @@ new TezosFaucet(
   provider
 )
 
-// Q
+/*
+// Quebec A
 //
-/*const qnet_chain = new TezosChain(
+const quebecanet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Qnet",
-    description: "Test Chain for the Q Protocol Proposal",
+    humanName: "Quebecanet",
+    description: "Test Chain for the Quebec A Protocol Proposal",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/qnet/values.yaml",
+    helmValuesFile: "networks/quebecAnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["qnet.tzinit.org"],
+    bootstrapPeers: ["quebecanet.tzinit.org"],
     rpcUrls: [],
     indexers: [
       {
         name: "TzKT",
-        url: "https://qnet.tzkt.io",
+        url: "https://quebecnet.tzkt.io",
       },
     ],
     chartRepoVersion: "7.0.9",
@@ -206,11 +207,11 @@ new TezosFaucet(
   provider
 )
 new TezosFaucet(
-  qnet_chain.name,
+  quebecanet_chain.name,
   {
-    namespace: qnet_chain.namespace,
-    humanName: "Qnet",
-    helmValuesFile: "networks/qnet/faucet_values.yaml",
+    namespace: quebecanet_chain.namespace,
+    humanName: "Quebecanet",
+    helmValuesFile: "networks/quebecAnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -218,6 +219,39 @@ new TezosFaucet(
   },
   provider
 )
+
+
+// Quebec B
+//
+const quebecbnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Quebecbnet",
+    description: "Test Chain for the Quebec B Protocol Proposal",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/quebecBnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: ["quebecbnet.tzinit.org"],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+new TezosFaucet(
+  quebecbnet_chain.name,
+  {
+    namespace: quebecbnet_chain.namespace,
+    humanName: "Quebecbnet",
+    helmValuesFile: "networks/quebecBnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+// XXX end of Q
 */
 
 // ParisC reboot test network
