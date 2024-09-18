@@ -219,7 +219,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 
 // Quebec B
 //
@@ -251,8 +251,6 @@ new TezosFaucet(
   },
   provider
 )
-// XXX end of Q
-*/
 
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
@@ -384,7 +382,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getNetworks([quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -450,7 +448,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getTeztnets([quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
