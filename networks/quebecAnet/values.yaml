@@ -276,6 +276,12 @@ accounts:
     key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
     bootstrap_balance: "370000000000"
     is_bootstrap_baker_account: false
+  vincent:
+    # XTZmaster
+    # tz1XMiZwHpHZ8a1AfwRWKfzLskJgZNyV8PHs
+    key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
 # Quebec thumpers
 #
   que1:
