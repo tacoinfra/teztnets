@@ -24,6 +24,7 @@ These test networks are deployed specifically to test individual Tezos protocols
 |-------|---------------------|--|
 | [Betanet-2024-08-29](/betanet-2024-08-29-about) | `2024-08-29` | [Faucet](https://faucet.betanet-2024-08-29.teztnets.com) |
 | [ParisCnet](/pariscnet-about) | `2024-06-18` | [Faucet](https://faucet.pariscnet.teztnets.com) |
+| [Quebecbnet](/quebecbnet-about) | `2024-09-19` | [Faucet](https://faucet.quebecbnet.teztnets.com) |
 
 
 
