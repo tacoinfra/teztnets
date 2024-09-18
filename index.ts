@@ -183,7 +183,6 @@ new TezosFaucet(
   provider
 )
 
-/*
 // Quebec A
 //
 const quebecanet_chain = new TezosChain(
@@ -219,7 +218,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // Quebec B
 //
@@ -382,7 +380,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -448,7 +446,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
