@@ -280,13 +280,13 @@ accounts:
     # tz1Q5yMydHkc2DHaP8GdWcz6YcuNu5wKWSa9
     key: edpkuqgGiesSEaxJ2pUjNpHa46Lq7TiRJBqDCxBgdVisEQjPG1TdxQ
     type: public
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "370000000000"
   tf_gcp_zurich_1:
     # tz1e4nXmvHK8TC8VbBg9KmD8So3BxzS4qUnN
     key: edpktx15jbSycZMkDEmB9Yrnzf6YnUgSj6qzQv2MVPy2E27UFJUZDR
     type: public
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "370000000000"
   ecadlabs:
     # tz1ck3EJwzFpbLVmXVuEn5Ptwzc6Aj14mHSH
