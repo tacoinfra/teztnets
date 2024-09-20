@@ -169,19 +169,6 @@ const betanet3_chain = new TezosChain(
   },
   provider
 )
-new TezosFaucet(
-  betanet3_chain.name,
-  {
-    namespace: betanet3_chain.namespace,
-    humanName: "Betanet-2024-08-29",
-    helmValuesFile: "networks/betanet-2024-08-29/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
 
 // Quebec A
 //
@@ -380,7 +367,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -446,7 +433,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain, betanet3_chain]),
+  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
