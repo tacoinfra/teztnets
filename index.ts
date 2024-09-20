@@ -152,24 +152,6 @@ new TezosFaucet(
   provider
 )
 
-// Beta First Blood Part III
-//
-const betanet3_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Betanet-2024-08-29",
-    description: "Test Chain for the Betanet 2024-08-29 Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/betanet-2024-08-29/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
 // Quebec A
 //
 const quebecanet_chain = new TezosChain(
