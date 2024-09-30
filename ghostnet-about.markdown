@@ -73,7 +73,10 @@ If you are not a bootstrap baker, you need to register your key as a delegate us
 octez-client register key mykey as delegate
 ```
 
-
+On a modern Tezos network, you will need to stake to declare your security bond.  You will need to have access to at least 6000tz of stake to get baking rights. For instance:
+```
+octez-client stake <amount> for mykey
+```	
 
 You may now launch the baker process.
 ```bash=3
