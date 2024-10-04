@@ -8,7 +8,7 @@ Ghostnet is the long-running testnet for Tezos.
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/>[https://ghostnet.ecadinfra.com](https://ghostnet.ecadinfra.com/chains/main/chain_id)<br/>[https://ghostnet.tezos.marigold.dev](https://ghostnet.tezos.marigold.dev/chains/main/chain_id)<br/> |
+| Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/>[https://ghostnet.ecadinfra.com](https://ghostnet.ecadinfra.com/chains/main/chain_id)<br/> |
 | Faucet | [Ghostnet faucet](https://faucet.ghostnet.teztnets.com) |
 | Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v20.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.1) |

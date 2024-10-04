@@ -23,8 +23,7 @@
     "rpc_url": "https://rpc.ghostnet.teztnets.com",
     "rpc_urls": [
       "https://rpc.ghostnet.teztnets.com",
-      "https://ghostnet.ecadinfra.com",
-      "https://ghostnet.tezos.marigold.dev"
+      "https://ghostnet.ecadinfra.com"
     ],
     "activated_on": "2022-01-25"
   },
