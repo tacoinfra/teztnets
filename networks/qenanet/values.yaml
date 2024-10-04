@@ -249,8 +249,9 @@ accounts:
     bootstrap_balance: "1000000000000"
   marcofaucet:
     # Marco Schurtenberger
-    # Inference
-    key: edpXXX
+    # tz1bRUpEJ9zKLAe3zrE81DGDayH9S4P7ZqGz
+    # Inference Faucet
+    key: edpkuzzJcZDjXL7hWMnyC1y3joyrGgBiDVVRJUqnG3LKgPvZrpNWxT
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   tf:
