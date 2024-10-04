@@ -408,8 +408,6 @@ const mainnetMetadata = {
   rpc_url: "https://mainnet.api.tez.ie",
   rpc_urls: [
     "https://mainnet.api.tez.ie",
-    "https://mainnet.smartpy.io",
-    "https://mainnet.tezos.marigold.dev",
   ],
 }
 
