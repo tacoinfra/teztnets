@@ -380,7 +380,6 @@ const ghostnetTeztnet = {
   rpc_urls: [
     `https://rpc.ghostnet.${domainNameCom}`,
     "https://ghostnet.ecadinfra.com",
-    "https://ghostnet.tezos.marigold.dev",
   ],
 }
 
