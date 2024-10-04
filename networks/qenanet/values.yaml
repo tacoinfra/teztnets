@@ -189,9 +189,9 @@ images:
   octez: tezos/tezos:octez-v21.0-rc3
 
 protocols:
-  - command: PsParisC
-    vote:
-      liquidity_baking_toggle_vote: "pass"
+#  - command: PsParisC
+#    vote:
+#      liquidity_baking_toggle_vote: "pass"
   - command: PtQenaB1
     vote:
       liquidity_baking_toggle_vote: "pass"
