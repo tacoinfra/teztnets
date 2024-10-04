@@ -72,27 +72,6 @@
     ],
     "activated_on": "2024-06-18"
   },
-  "qenanet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_QENANET_2024-10-04T18:30:00Z",
-    "description": "Test Chain for the Qena Protocol Proposal",
-    "docker_build": "tezos/tezos:octez-v21.0-rc3",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.qenanet.teztnets.com",
-    "git_ref": "octez-v21.0-rc3",
-    "human_name": "Qenanet",
-    "indexers": [],
-    "last_baking_daemon": "PtQenaB1",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/qenanet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.qenanet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.qenanet.teztnets.com"
-    ],
-    "activated_on": "2024-10-04"
-  },
   "quebecanet": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_QUEBECANET_2024-09-19T15:00:00Z",
