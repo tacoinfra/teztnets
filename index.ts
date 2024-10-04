@@ -160,7 +160,7 @@ const quebecanet_chain = new TezosChain(
     humanName: "Quebecanet",
     description: "Test Chain for the Quebec A Protocol Proposal",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/quebecAnet/values.yaml",
+    helmValuesFile: "networks/old/quebecAnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: ["quebecanet.tzinit.org"],
     rpcUrls: [],
@@ -179,7 +179,7 @@ new TezosFaucet(
   {
     namespace: quebecanet_chain.namespace,
     humanName: "Quebecanet",
-    helmValuesFile: "networks/quebecAnet/faucet_values.yaml",
+    helmValuesFile: "networks/old/quebecAnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -196,7 +196,7 @@ const quebecbnet_chain = new TezosChain(
     humanName: "Quebecbnet",
     description: "Test Chain for the Quebec B Protocol Proposal",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/quebecBnet/values.yaml",
+    helmValuesFile: "networks/old/quebecBnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: ["quebecbnet.tzinit.org"],
     rpcUrls: [],
@@ -210,7 +210,7 @@ new TezosFaucet(
   {
     namespace: quebecbnet_chain.namespace,
     humanName: "Quebecbnet",
-    helmValuesFile: "networks/quebecBnet/faucet_values.yaml",
+    helmValuesFile: "networks/old/quebecBnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -221,7 +221,7 @@ new TezosFaucet(
 
 // Ooooo Qena (I'm mean Oooo Viena)
 //
-const qenanet_chain = new TezosChain(
+/*const qenanet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Qenanet",
@@ -249,6 +249,7 @@ new TezosFaucet(
   },
   provider
 )
+*/
 
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
@@ -380,7 +381,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getNetworks([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -443,7 +445,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getTeztnets([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
