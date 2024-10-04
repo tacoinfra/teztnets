@@ -1,0 +1,18 @@
+{
+  "chain_name": "TEZOS_QENANET_2024-10-04T18:30:00Z",
+  "default_bootstrap_peers": [
+    "qenanet.teztnets.com",
+    "qenanet.tzinit.org"
+  ],
+  "genesis": {
+    "block": "BLKVQLW4YLPokoHBk3KJAz8VYAtGaU85Pz3BpkBD24vxKiyQnWa",
+    "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
+    "timestamp": "2024-10-04T18:30:00Z"
+  },
+  "genesis_parameters": {
+    "values": {
+      "genesis_pubkey": "edpktosVHk2f3Yrz9Jb6rMrk6uVy4sTxVhP2iyF39AdgzvsTWgbaLy"
+    }
+  },
+  "sandboxed_chain_name": "SANDBOXED_TEZOS"
+}
