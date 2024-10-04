@@ -277,6 +277,12 @@ accounts:
     key: edpkuFRauFAdhipQu9s4xmfNJWmtLxPKpoaoG41gYGq5AgUA43Vxqx
     bootstrap_balance: "200000000000000"
     is_bootstrap_baker_account: false
+  deligation_danilo:
+    # Capt Stake's sidekick
+    # tz1iir8f4JpoC1TuWq3tPN2E7LaMwxzNe9tS
+    key: edpkubZwGk9EPfxGYA2y4axvr1WfUDkSQFvHd2cg68wcvwSf5Mua6H
+    is_bootstrap_baker_account: true
+    bootstrap_balance: "1000000000000"
   faucet:
     # faucet on teztnets.xyz platform
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
