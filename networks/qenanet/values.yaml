@@ -2,10 +2,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_QENANET_2024-10-04T20:00:00Z
+  chain_name: TEZOS_QENANET_2024-10-04T18:30:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-10-04T20:00:00Z"
+    timestamp: "2024-10-04T18:30:00Z"
 
 #activation:
 #  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
@@ -192,7 +192,7 @@ protocols:
   - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: PsQuebecXXXXXX
+  - command: PtQenaB1
     vote:
       liquidity_baking_toggle_vote: "pass"
 accounts:

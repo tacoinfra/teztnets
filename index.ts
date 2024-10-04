@@ -219,6 +219,37 @@ new TezosFaucet(
   provider
 )
 
+// Ooooo Qena (I'm mean Oooo Viena)
+//
+const qenanet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Qenanet",
+    description: "Test Chain for the Qena Protocol Proposal",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/qenanet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: ["qenanet.tzinit.org"],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+new TezosFaucet(
+  qenanet_chain.name,
+  {
+    namespace: qenanet_chain.namespace,
+    humanName: "Qenanet",
+    helmValuesFile: "networks/qenanet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
   {
