@@ -2,10 +2,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_QENANET_2024-10-08T15:00:00Z
+  chain_name: TEZOS_QENANET_2024-10-04T20:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-10-08T15:00:00Z"
+    timestamp: "2024-10-04T20:00:00Z"
 
 #activation:
 #  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
@@ -178,7 +178,7 @@ nodes:
   rolling-node: null
 
 bootstrap_peers: 
-  - qena.tzinit.org
+  - qenanet.tzinit.org
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
@@ -186,7 +186,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:octez-v21.0-rc2XXXXXXX 
+  octez: tezos/tezos:octez-v21.0-rc3
 
 protocols:
   - command: PsParisC
@@ -204,12 +204,12 @@ accounts:
   ecadlabs:
     # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
     key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   ecadlabs_2:
     # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
     key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   captstake:
     # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
@@ -245,7 +245,7 @@ accounts:
     # Marco Schurtenberger
     # Inference
     key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   marcofaucet:
     # Marco Schurtenberger
@@ -269,7 +269,7 @@ accounts:
     # XTZmaster
     # tz1XMiZwHpHZ8a1AfwRWKfzLskJgZNyV8PHs
     key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   tzktfaucet:
     # Dmitry's personal fund
