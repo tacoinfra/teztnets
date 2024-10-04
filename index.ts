@@ -221,7 +221,7 @@ new TezosFaucet(
 
 // Ooooo Qena (I'm mean Oooo Viena)
 //
-/*const qenanet_chain = new TezosChain(
+const qenanet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Qenanet",
@@ -249,7 +249,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
@@ -381,8 +381,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-//  ...getNetworks([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
-  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -445,8 +445,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-//  ...getTeztnets([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
-  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getTeztnets([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

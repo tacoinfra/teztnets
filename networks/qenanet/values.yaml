@@ -2,10 +2,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_QENANET_2024-10-04T18:30:00Z
+  chain_name: TEZOS_QENANET_2024-10-04T19:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-10-04T18:30:00Z"
+    timestamp: "2024-10-04T19:00:00Z"
 
 activation:
   protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
@@ -214,7 +214,7 @@ accounts:
   captstake:
     # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   german:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
@@ -263,7 +263,7 @@ accounts:
     # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
     key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
     #
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   vincent:
     # XTZmaster
@@ -281,7 +281,7 @@ accounts:
     # Capt Stake's sidekick
     # tz1iir8f4JpoC1TuWq3tPN2E7LaMwxzNe9tS
     key: edpkubZwGk9EPfxGYA2y4axvr1WfUDkSQFvHd2cg68wcvwSf5Mua6H
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   faucet:
     # faucet on teztnets.xyz platform
