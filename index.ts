@@ -152,74 +152,7 @@ new TezosFaucet(
   provider
 )
 
-// Quebec A
-//
-const quebecanet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Quebecanet",
-    description: "Test Chain for the Quebec A Protocol Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/old/quebecAnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["quebecanet.tzinit.org"],
-    rpcUrls: [],
-    indexers: [
-      {
-        name: "TzKT",
-        url: "https://quebecnet.tzkt.io",
-      },
-    ],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  quebecanet_chain.name,
-  {
-    namespace: quebecanet_chain.namespace,
-    humanName: "Quebecanet",
-    helmValuesFile: "networks/old/quebecAnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
-// Quebec B
-//
-const quebecbnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Quebecbnet",
-    description: "Test Chain for the Quebec B Protocol Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/old/quebecBnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["quebecbnet.tzinit.org"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  quebecbnet_chain.name,
-  {
-    namespace: quebecbnet_chain.namespace,
-    humanName: "Quebecbnet",
-    helmValuesFile: "networks/old/quebecBnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
-// Ooooo Qena (I'm mean Oooo Viena)
+// Ooooo Qena (I'm mean Oooo Vienna)
 //
 const qenanet_chain = new TezosChain(
   {
