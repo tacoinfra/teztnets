@@ -314,8 +314,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getNetworks([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([qenanet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -378,8 +377,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([qenanet_chain, quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getTeztnets([quebecanet_chain, quebecbnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getTeztnets([qenanet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
