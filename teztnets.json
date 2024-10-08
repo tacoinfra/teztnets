@@ -93,53 +93,6 @@
     ],
     "activated_on": "2024-10-04"
   },
-  "quebecanet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_QUEBECANET_2024-09-19T15:00:00Z",
-    "description": "Test Chain for the Quebec A Protocol Proposal",
-    "docker_build": "tezos/tezos:octez-v21.0-rc1",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.quebecanet.teztnets.com",
-    "git_ref": "octez-v21.0-rc1",
-    "human_name": "Quebecanet",
-    "indexers": [
-      {
-        "name": "TzKT",
-        "url": "https://quebecnet.tzkt.io"
-      }
-    ],
-    "last_baking_daemon": "PsquebeC",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/quebecanet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.quebecanet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.quebecanet.teztnets.com"
-    ],
-    "activated_on": "2024-09-19"
-  },
-  "quebecbnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_QUEBECBNET_2024-09-19T15:00:00Z",
-    "description": "Test Chain for the Quebec B Protocol Proposal",
-    "docker_build": "tezos/tezos:octez-v21.0-rc2",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.quebecbnet.teztnets.com",
-    "git_ref": "octez-v21.0-rc2",
-    "human_name": "Quebecbnet",
-    "indexers": [],
-    "last_baking_daemon": "PsQuebec",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/quebecbnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.quebecbnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.quebecbnet.teztnets.com"
-    ],
-    "activated_on": "2024-09-19"
-  },
   "weeklynet-2024-10-02": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-10-02T00:00:00.000Z",
