@@ -9,7 +9,7 @@ node_config_network:
     activated: true
 
 activation:
-  protocol_hash: PsquebeCaYyvBEESCaXL8B8Tn8BcEhps2Zke1xMVtyr7X4qMfxT
+  protocol_hash: PtQenaB1PqFEfTe2og7bZTaPvMw2CxRyDFEwWNj3GiWp9ba4bJd
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
     adaptive_issuance_force_activation: true
@@ -258,7 +258,7 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-  - command: PsquebeC
+  - command: PtQenaB1
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
