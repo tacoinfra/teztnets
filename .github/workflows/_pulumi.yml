@@ -44,7 +44,7 @@ jobs:
       - name: Install gke-gcloud-auth-plugin
         run: gcloud components install gke-gcloud-auth-plugin
 
-      - uses: pulumi/actions@v4
+      - uses: pulumi/actions@v6
         id: pup
         with:
           command: ${{ inputs.pulumi-command }}
