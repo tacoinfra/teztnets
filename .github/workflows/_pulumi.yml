@@ -32,19 +32,19 @@ jobs:
       - run: npm install
 
       - id: 'auth'
-        uses: 'google-github-actions/auth@v1'
+        uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
       - name: Set up Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v1
+        uses: google-github-actions/setup-gcloud@v2
         with:
           project_id: tf-teztnets
             
       - name: Install gke-gcloud-auth-plugin
         run: gcloud components install gke-gcloud-auth-plugin
 
-      - uses: pulumi/actions@v4
+      - uses: pulumi/actions@v5
         id: pup
         with:
           command: ${{ inputs.pulumi-command }}
