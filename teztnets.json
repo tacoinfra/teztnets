@@ -3,9 +3,9 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:octez-v20.1",
+    "docker_build": "tezos/tezos:octez-v20.3",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "octez-v20.1",
+    "git_ref": "octez-v20.3",
     "human_name": "Ghostnet",
     "indexers": [
       {
@@ -31,8 +31,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v20.1",
-    "git_ref": "octez-v20.1",
+    "docker_build": "tezos/tezos:octez-v20.3",
+    "git_ref": "octez-v20.3",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -55,10 +55,10 @@
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_PARISCNET_2024-06-18T12:00:00Z",
     "description": "Test Chain for Paris replacement protocol",
-    "docker_build": "tezos/tezos:octez-v20.1",
+    "docker_build": "tezos/tezos:octez-v20.3",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.pariscnet.teztnets.com",
-    "git_ref": "octez-v20.1",
+    "git_ref": "octez-v20.3",
     "human_name": "ParisCnet",
     "indexers": [],
     "last_baking_daemon": "PsParisC",

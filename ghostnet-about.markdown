@@ -11,7 +11,7 @@ Ghostnet is the long-running testnet for Tezos.
 | Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/>[https://ghostnet.ecadinfra.com](https://ghostnet.ecadinfra.com/chains/main/chain_id)<br/> |
 | Faucet | [Ghostnet faucet](https://faucet.ghostnet.teztnets.com) |
 | Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v20.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.1) |
+| Tezos docker build | [tezos/tezos:octez-v20.3](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v20.3) |
 | Activated on | 2022-01-25T15:00:00Z |
 | Block Explorers | [TzKT](https://ghostnet.tzkt.io) - [TzStats](https://ghost.tzstats.com) |
 
@@ -29,7 +29,7 @@ Ghostnet is the long-running testnet for Tezos.
 To join Ghostnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.1
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.3
 ```
 
 
@@ -41,7 +41,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v20.1
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v20.1
+git checkout octez-v20.3
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
