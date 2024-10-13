@@ -185,6 +185,39 @@ new TezosFaucet(
 )
 */
 
+/*
+// Ooooo Qena 42 (I'm mean Oooo Vienna)
+//
+const qena42net_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Qena42net",
+    description: "Test Chain for the Qena Protocol Proposal",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/qena42net/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: ["qena42net.tzinit.org"],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+new TezosFaucet(
+  qenanet_chain.name,
+  {
+    namespace: qena42net_chain.namespace,
+    humanName: "Qena42net",
+    helmValuesFile: "networks/qena42net/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+*/
+
 // Ooooo Qena (I'm mean Oooo Vienna)
 //
 const qenanet_chain = new TezosChain(
@@ -348,7 +381,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([qenanet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getNetworks([quebecnet_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getNetworks([quebecnet_chain, qena42net_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
 //  ...getNetworks([qenanet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -414,7 +447,7 @@ const mainnetMetadata = {
 export const teztnets = {
 //  ...getTeztnets([qenanet_chain, pariscnet_chain]),
   ...getTeztnets([qenanet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getTeztnets([quebecnet_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getTeztnets([quebecnet_chain, qena42net_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
