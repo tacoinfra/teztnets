@@ -152,9 +152,9 @@ new TezosFaucet(
   provider
 )
 
-/*
 // Quebecnet First Blood Part II
 //
+/*
 const quebecnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -381,8 +381,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([qenanet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getNetworks([quebecnet_chain, qena42net_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getNetworks([qenanet_chain, pariscnet_chain]),
+//  ...getNetworks([quebecnet_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -445,9 +444,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-//  ...getTeztnets([qenanet_chain, pariscnet_chain]),
   ...getTeztnets([qenanet_chain, weeklynet_chain, pariscnet_chain]),
-//  ...getTeztnets([quebecnet_chain, qena42net_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getTeztnets([quebecnet_chain, qenanet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
