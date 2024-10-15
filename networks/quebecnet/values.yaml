@@ -223,7 +223,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:sha256-fc865ccef0af661e885445e4c951edf0fa5df1f44edc5e9138ed990ad4705661.sig
+  octez: tezos/tezos:master_ce3a131f_20241015084737
 
 protocols:
   - command: PsParisC

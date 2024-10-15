@@ -223,7 +223,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_21733dbc_20241011095542
+  octez: tezos/tezos:master_ce3a131f_20241015084737
 
 protocols:
   - command: PsParisC
