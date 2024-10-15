@@ -259,10 +259,10 @@ protocols:
     vote:
       liquidity_baking_toggle_vote: "pass"
       adaptive_issuance_vote: "on"
-#  - command: PsQuebec
-#    vote:
-#      liquidity_baking_toggle_vote: "pass"
-#      adaptive_issuance_vote: "on"
+  - command: PtQenaB1
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+      adaptive_issuance_vote: "on"
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
