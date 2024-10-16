@@ -79,8 +79,6 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
   ]
 });
 
-// chains
-
 // Weeklynet - restarts Wednesdays
 //
 const weeklynet_chain = new TezosChain(
