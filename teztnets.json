@@ -114,37 +114,37 @@
     ],
     "activated_on": "2024-10-15"
   },
-  "weeklynet-2024-10-09": {
+  "weeklynet-2024-10-16": {
     "category": "Periodic Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2024-10-09T00:00:00.000Z",
+    "chain_name": "TEZOS-WEEKLYNET-2024-10-16T00:00:00.000Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
-        "p2p": "dal.weeklynet-2024-10-09.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.weeklynet-2024-10-09.teztnets.com"
+        "p2p": "dal.weeklynet-2024-10-16.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.weeklynet-2024-10-16.teztnets.com"
       },
       "dal-dal1": {
         "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.weeklynet-2024-10-09.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.weeklynet-2024-10-09.teztnets.com"
+        "p2p": "dal1.weeklynet-2024-10-16.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.weeklynet-2024-10-16.teztnets.com"
       }
     },
     "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
-    "docker_build": "tezos/tezos:master_55e484b1_20241008234601",
+    "docker_build": "tezos/tezos:master_7229819f_20241015221534",
     "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.weeklynet-2024-10-09.teztnets.com",
-    "git_ref": "55e484b1",
+    "faucet_url": "https://faucet.weeklynet-2024-10-16.teztnets.com",
+    "git_ref": "7229819f",
     "human_name": "Weeklynet",
     "indexers": [],
     "last_baking_daemon": "PsQuebec",
     "masked_from_main_page": false,
     "network_stakes": false,
-    "network_url": "https://teztnets.com/weeklynet-2024-10-09",
+    "network_url": "https://teztnets.com/weeklynet-2024-10-16",
     "rollup_urls": [],
-    "rpc_url": "https://rpc.weeklynet-2024-10-09.teztnets.com",
+    "rpc_url": "https://rpc.weeklynet-2024-10-16.teztnets.com",
     "rpc_urls": [
-      "https://rpc.weeklynet-2024-10-09.teztnets.com"
+      "https://rpc.weeklynet-2024-10-16.teztnets.com"
     ],
-    "activated_on": "2024-10-09"
+    "activated_on": "2024-10-16"
   }
 }
