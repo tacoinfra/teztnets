@@ -1,4 +1,37 @@
 {
+  "dqnet-202410": {
+    "category": "Periodic Teztnets",
+    "chain_name": "TEZOS_DQNET_2024-10-17T08:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.dqnet-202410.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.dqnet-202410.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.dqnet-202410.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.dqnet-202410.teztnets.com"
+      }
+    },
+    "description": "Invitation only test chain for a pure DAL baking network. Please DM the Chief Baker.",
+    "docker_build": "tezos/tezos:master_64df48cf_20241017065944",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.dqnet-202410.teztnets.com",
+    "git_ref": "64df48cf",
+    "human_name": "DQnet-202410",
+    "indexers": [],
+    "last_baking_daemon": "PsQuebec",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/dqnet-202410",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.dqnet-202410.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.dqnet-202410.teztnets.com"
+    ],
+    "activated_on": "2024-10-17"
+  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
