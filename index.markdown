@@ -23,7 +23,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 | | Activated on | Faucet |
 |-------|---------------------|--|
 | [ParisCnet](/pariscnet-about) | `2024-06-18` | [Faucet](https://faucet.pariscnet.teztnets.com) |
-| [Qenanet](/qenanet-about) | `2024-10-04` | [Faucet](https://faucet.qenanet.teztnets.com) |
 | [Quebecnet](/quebecnet-about) | `2024-10-15` | [Faucet](https://faucet.quebecnet.teztnets.com) |
 
 
