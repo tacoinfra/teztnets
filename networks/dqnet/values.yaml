@@ -93,9 +93,6 @@ images:
   octez: tezos/tezos:master_64df48cf_20241017065944
 
 protocols:
-  - command: PsParisC
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PsQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
