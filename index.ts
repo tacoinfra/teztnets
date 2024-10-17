@@ -181,6 +181,22 @@ new TezosFaucet(
   provider
 )
 
+// Dal-test
+const dqnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "DQnet-202410",
+    description: "Invitation only test chain for a pure DAL baking network. Please DM the Chief Baker.",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/dqnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
 /*
 // Ooooo Qena 42 (I'm mean Oooo Vienna)
 //
