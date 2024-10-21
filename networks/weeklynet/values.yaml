@@ -9,7 +9,6 @@ node_config_network:
     activated: true
 
 activation:
-#  protocol_hash: PtQenaB1PqFEfTe2og7bZTaPvMw2CxRyDFEwWNj3GiWp9ba4bJd
   protocol_hash: PsQuebecnLByd3JwTiGadoG4nGWi3HYiLXUjkibeFV8dCFeVMUg
   protocol_parameters:
     adaptive_issuance_activation_vote_enable: true
