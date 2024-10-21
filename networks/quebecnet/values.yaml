@@ -226,9 +226,6 @@ images:
   octez: tezos/tezos:master_ce3a131f_20241015084737
 
 protocols:
-  - command: PsParisC
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PsQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
