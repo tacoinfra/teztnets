@@ -36,7 +36,7 @@ These test networks restart regularly and track the development of the master br
 | | Activated on | Faucet |
 |-------|---------------------|--|
 | [DQnet-202410](/dqnet-202410-about) | `2024-10-17` | [Faucet](https://faucet.dqnet-202410.teztnets.com) |
-| [Weeklynet](/weeklynet-about) | `2024-10-16` | [Faucet](https://faucet.weeklynet-2024-10-16.teztnets.com) |
+| [Weeklynet](/weeklynet-about) | `2024-10-23` | [Faucet](https://faucet.weeklynet-2024-10-23.teztnets.com) |
 
 
 
