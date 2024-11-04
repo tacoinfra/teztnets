@@ -57,6 +57,22 @@ Run the following commands:
 ```
 octez-node config init --network https://teztnets.com/weeklynet-2024-10-30
 
+```
+
+
+### Recover from a snapshot
+
+```
+wget -O snapshot_file https://snapshots.tzinit.org/weeklynet/rolling
+octez-node snapshot import snapshot_file
+```
+
+
+### Run the node
+
+Use the following command:
+
+```
 octez-node run --rpc-addr 127.0.0.1:8732
 ```
 
