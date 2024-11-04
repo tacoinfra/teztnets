@@ -14,6 +14,7 @@ export interface TezosParameters {
   readonly description: string
   readonly bakingPrivateKey: pulumi.Output<string>
   readonly humanName: string
+  readonly snapOver?: string
   readonly indexers?: { name: string; url: string }[]
   readonly chartPath?: string
   readonly chartRepoVersion?: string
@@ -34,6 +35,7 @@ const domainName = 'teztnets.com';
 
 export class TezosChain extends pulumi.ComponentResource {
   readonly name: string
+  readonly snap: string
   readonly params: TezosParameters
   readonly tezosHelmValues: any
   readonly namespace: k8s.core.v1.Namespace
@@ -72,15 +74,23 @@ export class TezosChain extends pulumi.ComponentResource {
         `${params.humanName.toLowerCase()}-${
         deployDate.toISOString().split("T")[0]
         }`
-        // Hack - Don't use except in emergencies!
-        //name = `${params.humanName.toLowerCase()}-2024-04-11`
+      // Hack - Don't use except in emergencies!
+      //name = `${params.humanName.toLowerCase()}-2024-04-11`
     } else {
       name = params.humanName.toLowerCase()
     }
+    let snap: string;
+    if (params.snapOver) {
+	    snap = params.snapOver
+    } else {
+	    snap = `${params.humanName.toLowerCase()}`
+    }
+    
     super("pulumi-contrib:components:TezosChain", name, inputs, opts)
 
     this.params = params
     this.name = name
+    this.snap = snap
     this.dalNodes = {}
 
     this.tezosHelmValues = YAML.parse(

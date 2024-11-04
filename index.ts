@@ -235,6 +235,7 @@ const pariscnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "ParisCnet",
+    snapOver: "parisnet",
     description: "Test Chain for Paris replacement protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/pariscnet/values.yaml",
@@ -318,6 +319,7 @@ function getTeztnets(chains: TezosChain[]): object {
       git_ref: chain.getGitRef(),
       last_baking_daemon: chain.getLastBakingDaemon(),
       faucet_url: faucetUrl,
+      snapshot_url: `https://snapshots.tzinit.org/${chain.snap}/rolling`,
       category: chain.params.category,
       rpc_url: chain.getRpcUrl(),
       rollup_urls: chain.getRollupUrls(),
@@ -372,6 +374,7 @@ const ghostnetTeztnet = {
   description: "Ghostnet is the long-running testnet for Tezos.",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
   faucet_url: `https://faucet.ghostnet.${domainNameCom}`,
+  snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
   git_ref: ghostnetRollingVersion,
   human_name: "Ghostnet",
   indexers: [
