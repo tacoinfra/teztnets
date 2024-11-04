@@ -67,6 +67,22 @@ octez-node config init --network {{ k }}
 {% else -%}
 octez-node config init --network {{ v["network_url"] }}
 {% endif%}
+```
+
+{% if v["snapshot_url"] | length > 0 %}
+### Recover from a snapshot
+
+```
+wget -O snapshot_file {{ v["snapshot_url"] }}
+octez-node snapshot import snapshot_file
+```
+{% endif%}
+
+### Run the node
+
+Use the following command:
+
+```
 octez-node run --rpc-addr 127.0.0.1:8732
 ```
 
