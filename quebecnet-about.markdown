@@ -10,6 +10,7 @@ Test Chain for the Quebec Protocol Proposal
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.quebecnet.teztnets.com](https://rpc.quebecnet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Quebecnet faucet](https://faucet.quebecnet.teztnets.com) |
+| Rolling Snapshot | [Quebecnet snapshot](https://snapshots.tzinit.org/quebecnet/rolling) |
 | Full network name | `TEZOS_QUEBECNET_2024-10-15T08:00:00Z` |
 | Tezos docker build | [tezos/tezos:master_ce3a131f_20241015084737](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_ce3a131f_20241015084737) |
 | Activated on | 2024-10-15T08:00:00Z |

@@ -10,6 +10,7 @@ Invitation only test chain for a pure DAL baking network. Please DM the Chief Ba
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.dqnet-202410.teztnets.com](https://rpc.dqnet-202410.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [DQnet-202410 faucet](https://faucet.dqnet-202410.teztnets.com) |
+| Rolling Snapshot | [DQnet-202410 snapshot](https://snapshots.tzinit.org/dqnet-202410/rolling) |
 | Full network name | `TEZOS_DQNET_2024-10-17T08:00:00Z` |
 | Tezos docker build | [tezos/tezos:master_64df48cf_20241017065944](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_64df48cf_20241017065944) |
 | Activated on | 2024-10-17T08:00:00Z |

@@ -30,6 +30,7 @@
     "rpc_urls": [
       "https://rpc.dqnet-202410.teztnets.com"
     ],
+    "snapshot_url": "https://snapshots.tzinit.org/dqnet-202410/rolling",
     "activated_on": "2024-10-17"
   },
   "ghostnet": {
@@ -58,6 +59,7 @@
       "https://rpc.ghostnet.teztnets.com",
       "https://ghostnet.ecadinfra.com"
     ],
+    "snapshot_url": "https://snapshots.tzinit.org/ghostnet/rolling",
     "activated_on": "2022-01-25"
   },
   "mainnet": {
@@ -103,6 +105,7 @@
     "rpc_urls": [
       "https://rpc.pariscnet.teztnets.com"
     ],
+    "snapshot_url": "https://snapshots.tzinit.org/parisnet/rolling",
     "activated_on": "2024-06-18"
   },
   "quebecnet": {
@@ -124,6 +127,7 @@
     "rpc_urls": [
       "https://rpc.quebecnet.teztnets.com"
     ],
+    "snapshot_url": "https://snapshots.tzinit.org/quebecnet/rolling",
     "activated_on": "2024-10-15"
   },
   "weeklynet-2024-10-30": {
@@ -157,6 +161,7 @@
     "rpc_urls": [
       "https://rpc.weeklynet-2024-10-30.teztnets.com"
     ],
+    "snapshot_url": "https://snapshots.tzinit.org/weeklynet/rolling",
     "activated_on": "2024-10-30"
   }
 }
