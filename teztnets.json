@@ -130,38 +130,38 @@
     "snapshot_url": "https://snapshots.tzinit.org/quebecnet/rolling",
     "activated_on": "2024-10-15"
   },
-  "weeklynet-2024-10-30": {
+  "weeklynet-2024-11-06": {
     "category": "Periodic Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2024-10-30T00:00:00.000Z",
+    "chain_name": "TEZOS-WEEKLYNET-2024-11-06T00:00:00.000Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
-        "p2p": "dal.weeklynet-2024-10-30.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.weeklynet-2024-10-30.teztnets.com"
+        "p2p": "dal.weeklynet-2024-11-06.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.weeklynet-2024-11-06.teztnets.com"
       },
       "dal-dal1": {
         "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.weeklynet-2024-10-30.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.weeklynet-2024-10-30.teztnets.com"
+        "p2p": "dal1.weeklynet-2024-11-06.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.weeklynet-2024-11-06.teztnets.com"
       }
     },
     "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
-    "docker_build": "tezos/tezos:master_3c71741a_20241029221357",
+    "docker_build": "tezos/tezos:master_09b5be5a_20241105165957",
     "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.weeklynet-2024-10-30.teztnets.com",
-    "git_ref": "3c71741a",
+    "faucet_url": "https://faucet.weeklynet-2024-11-06.teztnets.com",
+    "git_ref": "09b5be5a",
     "human_name": "Weeklynet",
     "indexers": [],
     "last_baking_daemon": "PsQuebec",
     "masked_from_main_page": false,
     "network_stakes": false,
-    "network_url": "https://teztnets.com/weeklynet-2024-10-30",
+    "network_url": "https://teztnets.com/weeklynet-2024-11-06",
     "rollup_urls": [],
-    "rpc_url": "https://rpc.weeklynet-2024-10-30.teztnets.com",
+    "rpc_url": "https://rpc.weeklynet-2024-11-06.teztnets.com",
     "rpc_urls": [
-      "https://rpc.weeklynet-2024-10-30.teztnets.com"
+      "https://rpc.weeklynet-2024-11-06.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/weeklynet/rolling",
-    "activated_on": "2024-10-30"
+    "activated_on": "2024-11-06"
   }
 }
