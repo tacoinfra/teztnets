@@ -108,6 +108,40 @@
     "snapshot_url": "https://snapshots.tzinit.org/parisnet/rolling",
     "activated_on": "2024-06-18"
   },
+  "quebecnet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_QUEBECNET_2024-11-12T08:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.quebecnet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.quebecnet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.quebecnet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.quebecnet.teztnets.com"
+      }
+    },
+    "description": "Test Chain for the Quebec Protocol Proposal 20241113",
+    "docker_build": "tezos/tezos:master_f51989b5_20241112094554",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.quebecnet.teztnets.com",
+    "git_ref": "f51989b5",
+    "human_name": "Quebecnet",
+    "indexers": [],
+    "last_baking_daemon": "PsQuebec",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/quebecnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.quebecnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.quebecnet.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/quebecnet/rolling",
+    "activated_on": "2024-11-12"
+  },
   "weeklynet-2024-11-06": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-11-06T00:00:00.000Z",
