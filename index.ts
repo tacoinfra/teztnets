@@ -152,7 +152,7 @@ new TezosFaucet(
 
 // Qena
 //
-/*
+
 const qenanet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -164,12 +164,11 @@ const qenanet_chain = new TezosChain(
     bootstrapPeers: [],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.2.0",
   },
   provider
-)*/
+)
 
-/*
 new TezosFaucet(
   qenanet_chain.name,
   {
@@ -179,11 +178,11 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.2.0",
   },
   provider
 )
-*/
+
 // End of Qena
 
 // Quebecnet First Blood Part III
@@ -200,7 +199,7 @@ const quebecnet_chain = new TezosChain(
     bootstrapPeers: [ "quebecnet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.1.2",
   },
   provider
 )
@@ -213,7 +212,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.1.2",
   },
   provider
 )
@@ -370,6 +369,7 @@ const ghostnetNetwork = {
 export const networks = {
   ...getNetworks([dqnet_chain, weeklynet_chain, pariscnet_chain]),
   ...getNetworks([quebecnet_chain]),
+  ...getNetworks([qenanet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -435,6 +435,7 @@ const mainnetMetadata = {
 export const teztnets = {
   ...getTeztnets([dqnet_chain, weeklynet_chain, pariscnet_chain]),
   ...getTeztnets([quebecnet_chain]),
+  ...getTeztnets([qenanet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

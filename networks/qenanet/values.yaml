@@ -179,8 +179,7 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: 
-  - qenanet.tzinit.org
+bootstrap_peers: []
 
 dalNodes:
   dal-bootstrap:
@@ -227,15 +226,15 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: ghcr.io/tez-capital/tezos:latest
+  octez: ghcr.io/tez-capital/tezos:testnet
 
 protocols:
   - command: PsParisC
     vote:
       liquidity_baking_toggle_vote: "pass"
-#  - command: PsQuebec
-#    vote:
-#      liquidity_baking_toggle_vote: "pass"
+  - command: PsQ3NAxQ
+    vote:
+      liquidity_baking_toggle_vote: "pass"
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
