@@ -150,17 +150,53 @@ new TezosFaucet(
   provider
 )
 
-// Quebecnet First Blood Part II
+// Qena
 //
+/*
+const qenanet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Qenanet",
+    description: "Test Chain for the Qena Protocol Proposal",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/qenanet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [ qenanet.tzinit.org ],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+  *//*
+new TezosFaucet(
+  qenanet_chain.name,
+  {
+    namespace: qenanet_chain.namespace,
+    humanName: "Qenanet",
+    helmValuesFile: "networks/qenanet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.0.9",
+  },
+  provider
+)
+*/
+// End of Qena
+
+// Quebecnet First Blood Part III
+//
+/*
 const quebecnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Quebecnet",
-    description: "Test Chain for the Quebec Protocol Proposal",
+    description: "Test Chain for the Quebec Protocol Proposal 20241113",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/quebecnet/values.yaml",
+    helmValuesFile: "networks/quebecnet2/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["quebecnet.tzinit.org"],
+    bootstrapPeers: [],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.0.9",
@@ -180,6 +216,7 @@ new TezosFaucet(
   },
   provider
 )
+*/
 
 // Dal-test
 const dqnet_chain = new TezosChain(
@@ -197,38 +234,6 @@ const dqnet_chain = new TezosChain(
   },
   provider
 )
-/*
-// Ooooo Qena 42 (I'm mean Oooo Vienna)
-//
-const qena42net_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Qena42net",
-    description: "Test Chain for the Qena Protocol Proposal",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/qena42net/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["qena42net.tzinit.org"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-new TezosFaucet(
-  qena42net_chain.name,
-  {
-    namespace: qena42net_chain.namespace,
-    humanName: "Qena42net",
-    helmValuesFile: "networks/qena42net/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-*/
 
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
@@ -240,7 +245,7 @@ const pariscnet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/pariscnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["pariscnet.tzinit.org"],
+    bootstrapPeers: [],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.1.2",
@@ -362,7 +367,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getNetworks([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([dqnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -426,7 +432,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
+//  ...getTeztnets([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getTeztnets([dqnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

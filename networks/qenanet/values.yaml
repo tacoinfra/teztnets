@@ -1,15 +1,21 @@
+# protocol_hash: PsQuebecnLByd3JwTiGadoG4nGWi3HYiLXUjkibeFV8dCFeVMUg
+
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_PARISCNET_2024-06-18T12:00:00Z
+#  chain_name: TEZOS_QUEBECNET_2024-11-13T15:00:00Z
+  chain_name: TEZOS_QUEBECNET_2024-11-12T08:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-06-18T12:00:00Z"
+    timestamp: "2024-11-12T08:00:00Z"
+#    timestamp: "2024-11-13T15:00:00Z"
+  dal_config:
+    activated: true
 
 #activation:
 #  protocol_hash: PsParisCZo7KAh1Z1smVd9ZMZ1HHn5gkzbM94V3PLCpknFWhUAi
 #  protocol_parameters:
 #    adaptive_issuance_activation_vote_enable: true
-#    adaptive_issuance_force_activation: true
+#    adaptive_issuance_force_activation: false
 #    adaptive_issuance_launch_ema_threshold: 0
 #    adaptive_rewards_params:
 #      issuance_ratio_final_min:
@@ -37,8 +43,8 @@ node_config_network:
 #        numerator: "1"
 #        denominator: "50"
 #    autostaking_enable: true
-#    blocks_per_commitment: 16
-#    blocks_per_cycle: 128
+#    blocks_per_commitment: 20
+#    blocks_per_cycle: 168
 #    blocks_preservation_cycles: 1
 #    cache_sampler_state_cycles: 8
 #    cache_script_size: 100000000
@@ -58,12 +64,12 @@ node_config_network:
 #      slot_size: 126944
 #      redundancy_factor: 8
 #      page_size: 3967
-#    delay_increment_per_round: "7"
+#    delay_increment_per_round: "5"
 #    delegate_parameters_activation_delay: 3
 #    direct_ticket_spending_enable: false
 #    edge_of_staking_over_delegation: 2
 #    global_limit_of_staking_over_baking: 5
-#    hard_gas_limit_per_block: "5200000"
+#    hard_gas_limit_per_block: "4160000"
 #    hard_gas_limit_per_operation: "1040000"
 #    hard_storage_limit_per_operation: "60000"
 #    issuance_weights:
@@ -76,17 +82,17 @@ node_config_network:
 #    limit_of_delegation_over_baking: 9
 #    liquidity_baking_subsidy: "5000000"
 #    liquidity_baking_toggle_ema_threshold: 100000
-#    max_operations_time_to_live: 120
+#    max_operations_time_to_live: 150
 #    max_slashing_per_block: 10000
 #    max_slashing_threshold: 2334
-#    minimal_block_delay: "7"
+#    minimal_block_delay: "5"
 #    min_proposal_quorum: 500
 #    minimal_frozen_stake: "600000000"
 #    minimal_participation_ratio:
 #      numerator: 2
 #      denominator: 3
 #    minimal_stake: "6000000000"
-#    nonce_revelation_threshold: 32
+#    nonce_revelation_threshold: 40
 #    ns_enable: true
 #    origination_size: 257
 #    percentage_of_frozen_deposits_slashed_per_double_attestation: 5000
@@ -95,10 +101,10 @@ node_config_network:
 #    quorum_max: 7000
 #    quorum_min: 2000
 #    smart_rollup_arith_pvm_enable: true
-#    smart_rollup_challenge_window_in_blocks: 40
-#    smart_rollup_commitment_period_in_blocks: 20
-#    smart_rollup_max_active_outbox_levels: 20160
-#    smart_rollup_max_lookahead_in_blocks: 30000
+#    smart_rollup_challenge_window_in_blocks: 50
+#    smart_rollup_commitment_period_in_blocks: 25
+#    smart_rollup_max_active_outbox_levels: 25200
+#    smart_rollup_max_lookahead_in_blocks: 37500
 #    smart_rollup_max_number_of_cemented_commitments: 5
 #    smart_rollup_max_number_of_parallel_games: 32
 #    smart_rollup_max_outbox_messages_per_level: 100
@@ -107,7 +113,7 @@ node_config_network:
 #    smart_rollup_private_enable: true
 #    smart_rollup_riscv_pvm_enable: true
 #    smart_rollup_stake_amount: "32000000"
-#    smart_rollup_timeout_period_in_blocks: 500
+#    smart_rollup_timeout_period_in_blocks: 625
 #    smart_rollup_reveal_activation_level:
 #      raw_data:
 #        Blake2B: 0
@@ -115,12 +121,31 @@ node_config_network:
 #      dal_page: 1
 #      dal_parameters: 1
 #      dal_attested_slots_validity_lag: 241920
+#    testnet_dictator: tz1e1TX7KghsqWUBXWmBTAAtPK3W6JTbNc82
 #    vdf_difficulty: '10000000'
 #    zk_rollup_enable: true
 #    zk_rollup_origination_size: 4000
 #    zk_rollup_min_pending_to_process: 10
 #    zk_rollup_max_ticket_payload_size: 2048
-
+#  bootstrap_parameters:
+#    bootstrap_smart_rollups:
+#    - address: "sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf"
+#      pvm_kind: "wasm_2_0_0"
+#      kernel: "fromfile#/usr/local/share/tezos/evm_kernel/evm_installer.wasm"
+#      parameters_ty:
+#        prim: pair
+#        args:
+#        - prim: pair
+#          args:
+#          - prim: bytes
+#          - prim: ticket
+#            args:
+#            - prim: unit
+#        - prim: pair
+#          args:
+#          - prim: nat
+#          - prim: bytes
+#
 nodes:
   tezos-baking-node:
     env:
@@ -152,22 +177,63 @@ nodes:
       - accuser
       - vdf
     bootstrapped_readiness_probe: false
-    storage_size: 150Gi
+    storage_size: 100Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: []
+dalNodes:
+  dal-bootstrap:
+    bootstrapProfile: true
+        node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+    storageSize: 100Gi
+    ingress:
+    # ingress details filled up by pulumi
+    identity:
+      peer_id: "idtJh8bYedP2hKdRk6oCLX3SS2KuTM"
+      public_key:
+        "5a6cd66cbd2f69817fb2eb81e5dd2a9c4f88df950fc90a96a08fe3976724a063"
+      secret_key:
+          "42f716781cf80b2b7ad129ac56dfcb1b333f3021e49c6729199de8303c7152c9"
+      proof_of_work_stamp: "b7edd6ea938998f8f088b83b692baeddb49f5522f07572f9"
+  dal-dal1:
+    attest_using_accounts:
+      - teztnetsbaker
+    attesterProfiles: tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
+    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+    storageSize: 100Gi
+    ingress:
+    # ingress details filled up by pulumi
+    identity:
+      peer_id: "ids8gZ6Gu67e58DqPn2e9VyjasB1jo"
+      public_key:
+        "c4ea1f6dddfa43b87b6a37432c4c34e1c79baeed5ff165fee2a85ffafb819e5f"
+      secret_key:
+          "a67519da6166f97ca2dea6dc519f1a453d96e01348816d102fb9a7099ee08137"
+      proof_of_work_stamp: "c85a3aab8a1fc903e8c7e9bcd1714a890e22f160a96d9779"
+
+dal_deploy_slot_injector:
+  enabled: true
+  inject_using_account: teztnetsbaker
+  node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+  dal_node_rpc_url: http://dal-dal1:10732
+  slot_size: 65536
+
+bootstrap_peers: 
+  - quebec.tzinit.org
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
 archive_tarball_url: null
-snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
+snapshot_source: null
 
-images:
-  octez: tezos/tezos:octez-v20.3
+images: 
+  octez: tezos/tezos:master_ce3a131f_20241015084737
 
 protocols:
   - command: PsParisC
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+  - command: PsQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
 accounts:
@@ -176,6 +242,33 @@ accounts:
     bootstrap_balance: "1500000000000"
     is_bootstrap_baker_account: true
     type: secret
+  ecadlabs:
+    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
+    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  ecadlabs_2:
+    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
+    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  captstake:
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  german:
+    #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  mathias:
+    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
+    key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
   tfrichfund:
     # an account that would allow Chris to finally have that holiday
     # if only it were on mainnet...
@@ -183,46 +276,67 @@ accounts:
     key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
     bootstrap_balance: "5000000000000000"
     is_bootstrap_baker_account: false
-  tf_frankfurt1:
-    # tz1WLNVBKmPWEMdXD5c3NrpnUsTtb97Fdevg
-    key: edpktzR9unKcG2XtsArVGNzQkrkUvbV3KAyWmX8XAsYFBLXwb1MicW
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_oregon_1:
-    # tz1Q5yMydHkc2DHaP8GdWcz6YcuNu5wKWSa9
-    key: edpkuqgGiesSEaxJ2pUjNpHa46Lq7TiRJBqDCxBgdVisEQjPG1TdxQ
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  tf_gcp_zurich_1:
-    # tz1e4nXmvHK8TC8VbBg9KmD8So3BxzS4qUnN
-    key: edpktx15jbSycZMkDEmB9Yrnzf6YnUgSj6qzQv2MVPy2E27UFJUZDR
-    type: public
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "370000000000"
-  faucet:
-    # Farrah Fawcett on teztnets.xyz platform
-    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
-    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
-    bootstrap_balance: "200000000000000"
-    is_bootstrap_baker_account: false
-  marco:
-    # Marco Schurtenberger
-    # Inference
-    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
   tz1THUNA:
     # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
     # Romain's faucet
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-  tf:
-    # TF production-style baker
+  marco:
+    # Marco Schurtenberger
+    # Inference
+    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  marcofaucet:
+    # Marco Schurtenberger
+    # tz1bRUpEJ9zKLAe3zrE81DGDayH9S4P7ZqGz
+    # Inference Faucet
+    key: edpkuzzJcZDjXL7hWMnyC1y3joyrGgBiDVVRJUqnG3LKgPvZrpNWxT
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+    # TF production-style bakers
+  tf1:
     #
     # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
     key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
     is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  tf2:
+    #
+    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
+    key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
+    #
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  vincent:
+    # XTZmaster
+    # tz1XMiZwHpHZ8a1AfwRWKfzLskJgZNyV8PHs
+    key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  tzktfaucet:
+    # Dmitry's personal fund
+    # tz1KhnTgwoRRALBX6vRHRnydDGSBFsWtcJxc
+    key: edpkuFRauFAdhipQu9s4xmfNJWmtLxPKpoaoG41gYGq5AgUA43Vxqx
+    bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
+  deligation_danilo:
+    # Capt Stake's sidekick
+    # tz1iir8f4JpoC1TuWq3tPN2E7LaMwxzNe9tS
+    key: edpkubZwGk9EPfxGYA2y4axvr1WfUDkSQFvHd2cg68wcvwSf5Mua6H
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  faucet:
+    # faucet on teztnets.xyz platform
+    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
+    bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
+  # DAL Rich account and baker
+  # Contact: Francois Thire at Nomadic
+  dal_rich_account:
+    key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
     bootstrap_balance: "370000000000"
+    is_bootstrap_baker_account: false
+
