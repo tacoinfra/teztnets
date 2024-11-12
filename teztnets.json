@@ -108,28 +108,6 @@
     "snapshot_url": "https://snapshots.tzinit.org/parisnet/rolling",
     "activated_on": "2024-06-18"
   },
-  "quebecnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_QUEBECNET_2024-10-15T08:00:00Z",
-    "description": "Test Chain for the Quebec Protocol Proposal",
-    "docker_build": "tezos/tezos:master_ce3a131f_20241015084737",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.quebecnet.teztnets.com",
-    "git_ref": "ce3a131f",
-    "human_name": "Quebecnet",
-    "indexers": [],
-    "last_baking_daemon": "PsQuebec",
-    "masked_from_main_page": false,
-    "network_stakes": false,
-    "network_url": "https://teztnets.com/quebecnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.quebecnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.quebecnet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/quebecnet/rolling",
-    "activated_on": "2024-10-15"
-  },
   "weeklynet-2024-11-06": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2024-11-06T00:00:00.000Z",

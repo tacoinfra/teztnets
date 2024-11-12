@@ -23,7 +23,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
 | [ParisCnet](/pariscnet-about) | `2024-06-18` | [Faucet](https://faucet.pariscnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/parisnet/rolling) |
-| [Quebecnet](/quebecnet-about) | `2024-10-15` | [Faucet](https://faucet.quebecnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/quebecnet/rolling) |
 
 
 
