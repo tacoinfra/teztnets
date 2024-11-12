@@ -108,6 +108,40 @@
     "snapshot_url": "https://snapshots.tzinit.org/parisnet/rolling",
     "activated_on": "2024-06-18"
   },
+  "qenanet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_QENANET_2024-11-12T11:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.qenanet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.qenanet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.qenanet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.qenanet.teztnets.com"
+      }
+    },
+    "description": "Test Chain for the Qena Protocol Proposal",
+    "docker_build": "ghcr.io/tez-capital/tezos:testnet",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.qenanet.teztnets.com",
+    "git_ref": "testnet",
+    "human_name": "Qenanet",
+    "indexers": [],
+    "last_baking_daemon": "PsQ3NAxQ",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/qenanet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.qenanet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.qenanet.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/qenanet/rolling",
+    "activated_on": "2024-11-12"
+  },
   "quebecnet": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_QUEBECNET_2024-11-13T08:00:00Z",
