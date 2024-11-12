@@ -181,10 +181,13 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
+bootstrap_peers: 
+  - quebecnet.tzinit.org
+
 dalNodes:
   dal-bootstrap:
     bootstrapProfile: true
-        node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
+    node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
     storageSize: 100Gi
     ingress:
     # ingress details filled up by pulumi
@@ -218,8 +221,6 @@ dal_deploy_slot_injector:
   dal_node_rpc_url: http://dal-dal1:10732
   slot_size: 65536
 
-bootstrap_peers: 
-  - quebec.tzinit.org
 full_snapshot_url: null
 rolling_snapshot_url: null
 rolling_tarball_url: null
@@ -227,7 +228,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_ce3a131f_20241015084737
+  octez: tezos/tezos:master_f51989b5_20241112094554
 
 protocols:
   - command: PsParisC
