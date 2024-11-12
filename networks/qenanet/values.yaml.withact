@@ -1,13 +1,11 @@
-# protocol_hash: PsQuebecnLByd3JwTiGadoG4nGWi3HYiLXUjkibeFV8dCFeVMUg
+# protocol_hash: PsQ3NAxQC3pXSizDrKEkPHsarkKD78T58X9CXBfYaiXAi2rsvsD
 
 node_config_network:
   activation_account_name: teztnetsbaker
-#  chain_name: TEZOS_QUEBECNET_2024-11-13T15:00:00Z
-  chain_name: TEZOS_QUEBECNET_2024-11-12T08:00:00Z
+  chain_name: TEZOS_QENANET_2024-11-12T11:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2024-11-12T08:00:00Z"
-#    timestamp: "2024-11-13T15:00:00Z"
+    timestamp: "2024-11-12T11:00:00Z"
   dal_config:
     activated: true
 
@@ -182,7 +180,7 @@ nodes:
   rolling-node: null
 
 bootstrap_peers: 
-  - quebecnet.tzinit.org
+  - qenanet.tzinit.org
 
 dalNodes:
   dal-bootstrap:
@@ -228,7 +226,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_f51989b5_20241112094554
+  octez: ghcr.io/tez-capital/tezos:latest
 
 protocols:
   - command: PsParisC
