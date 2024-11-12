@@ -226,7 +226,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:octez-v21.0-rc3
+  octez: tezos/tezos:master_b8a8a798_20241112142246
 
 protocols:
   - command: PsParisC

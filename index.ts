@@ -217,7 +217,6 @@ new TezosFaucet(
   provider
 )
 
-
 // Dal-test
 const dqnet_chain = new TezosChain(
   {
