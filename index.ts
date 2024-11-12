@@ -187,7 +187,6 @@ new TezosFaucet(
 
 // Quebecnet First Blood Part III
 //
-/*
 const quebecnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -208,7 +207,7 @@ new TezosFaucet(
   {
     namespace: quebecnet_chain.namespace,
     humanName: "Quebecnet",
-    helmValuesFile: "networks/quebecnet/faucet_values.yaml",
+    helmValuesFile: "networks/quebecnet2/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -216,7 +215,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 
 // Dal-test
 const dqnet_chain = new TezosChain(
@@ -367,8 +366,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-//  ...getNetworks([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
-  ...getNetworks([dqnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -432,8 +430,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-//  ...getTeztnets([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
-  ...getTeztnets([dqnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getTeztnets([dqnet_chain, quebecnet_chain, weeklynet_chain, pariscnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
