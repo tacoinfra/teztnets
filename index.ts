@@ -161,14 +161,15 @@ const qenanet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/qenanet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ qenanet.tzinit.org ],
+    bootstrapPeers: [],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.0.9",
   },
   provider
-)
-  *//*
+)*/
+
+/*
 new TezosFaucet(
   qenanet_chain.name,
   {
@@ -196,7 +197,7 @@ const quebecnet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/quebecnet2/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
+    bootstrapPeers: [ "quebecnet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.0.9",
