@@ -229,9 +229,6 @@ images:
   octez: ghcr.io/tez-capital/tezos:testnet
 
 protocols:
-  - command: PsParisC
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PsQ3NAxQ
     vote:
       liquidity_baking_toggle_vote: "pass"
