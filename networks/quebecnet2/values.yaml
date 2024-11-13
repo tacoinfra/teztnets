@@ -230,9 +230,6 @@ images:
   octez: tezos/tezos:master_b8a8a798_20241112142246
 
 protocols:
-  - command: PsParisC
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PsQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
