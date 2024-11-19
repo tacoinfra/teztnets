@@ -227,7 +227,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images: 
-  octez: tezos/tezos:master_b8a8a798_20241112142246
+  octez: tezos/tezos:octez-v21.0
 
 protocols:
   - command: PsQuebec
