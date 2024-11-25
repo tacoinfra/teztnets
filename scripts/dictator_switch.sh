@@ -14,8 +14,8 @@ sleep 5
 # The dictator key needs funds
 #
 octez-client -E ${ENDPOINT} transfer 2 from ${FAUCET} to $KEY --burn-cap 0.06425
-sleep 20
+sleep 5 
 octez-client -E ${ENDPOINT} transfer 1 from ${KEY} to $FAUCET --burn-cap 0.06425
-sleep 20
+sleep 5
 
-#octez-client -E ${ENDPOINT} submit proposals for $KEY $PROTO --force
+octez-client -E ${ENDPOINT} submit proposals for $KEY $PROTO --force
