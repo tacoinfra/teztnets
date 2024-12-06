@@ -1,0 +1,104 @@
+accounts:
+  teztnetsbaker:
+    # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
+    bootstrap_balance: "1500000000000"
+    is_bootstrap_baker_account: true
+    type: secret
+  ecadlabs:
+    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
+    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  ecadlabs_2:
+    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
+    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  captstake:
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  german:
+    #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  mathias:
+    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
+    key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  tfrichfund:
+    # an account that would allow Chris to finally have that holiday
+    # if only it were on mainnet...
+    # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
+    key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
+    bootstrap_balance: "5000000000000000"
+    is_bootstrap_baker_account: false
+  tz1THUNA:
+    # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
+    # Romain's faucet
+    key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "50000000000000000"
+  marco:
+    # Marco Schurtenberger
+    # Inference
+    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  marcofaucet:
+    # Marco Schurtenberger
+    # tz1bRUpEJ9zKLAe3zrE81DGDayH9S4P7ZqGz
+    # Inference Faucet
+    key: edpkuzzJcZDjXL7hWMnyC1y3joyrGgBiDVVRJUqnG3LKgPvZrpNWxT
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+    # TF production-style bakers
+  tf1:
+    #
+    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
+    key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  tf2:
+    #
+    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
+    key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
+    #
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  vincent:
+    # XTZmaster
+    # tz1XMiZwHpHZ8a1AfwRWKfzLskJgZNyV8PHs
+    key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  tzktfaucet:
+    # Dmitry's personal fund
+    # tz1KhnTgwoRRALBX6vRHRnydDGSBFsWtcJxc
+    key: edpkuFRauFAdhipQu9s4xmfNJWmtLxPKpoaoG41gYGq5AgUA43Vxqx
+    bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
+  deligation_danilo:
+    # Capt Stake's sidekick
+    # tz1iir8f4JpoC1TuWq3tPN2E7LaMwxzNe9tS
+    key: edpkubZwGk9EPfxGYA2y4axvr1WfUDkSQFvHd2cg68wcvwSf5Mua6H
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "1000000000000"
+  faucet:
+    # faucet on teztnets.xyz platform
+    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
+    bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
+  # DAL Rich account and baker
+  # Contact: Francois Thire at Nomadic
+  dal_rich_account:
+    key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
+    bootstrap_balance: "370000000000"
+    is_bootstrap_baker_account: false
+
