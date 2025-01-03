@@ -175,11 +175,11 @@ nodes:
       - accuser
       - vdf
     bootstrapped_readiness_probe: false
-    storage_size: 100Gi
+    storage_size: 150Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: 
+bootstrap_peers:
   - quebecnet.tzinit.org
 
 dalNodes:
@@ -226,7 +226,7 @@ rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: null
 
-images: 
+images:
   octez: tezos/tezos:octez-v21.0
 
 protocols:
@@ -250,7 +250,7 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
@@ -336,4 +336,3 @@ accounts:
     key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
     bootstrap_balance: "370000000000"
     is_bootstrap_baker_account: false
-
