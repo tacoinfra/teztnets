@@ -182,23 +182,6 @@ new TezosFaucet(
   provider
 )
 
-// Dal-test
-const dqnet_chain = new TezosChain(
-  {
-    category: periodicCategory,
-    humanName: "DQnet-202410",
-    description: "Invitation only test chain for a pure DAL baking network. Please DM the Chief Baker.",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/dqnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.0.9",
-  },
-  provider
-)
-
 // ParisC reboot test network
 const pariscnet_chain = new TezosChain(
   {
@@ -331,7 +314,8 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([dqnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getNetworks([weeklynet_chain]),
+  ...getNetworks([pariscnet_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -396,7 +380,8 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([dqnet_chain, weeklynet_chain, pariscnet_chain]),
+  ...getTeztnets([weeklynet_chain]),
+  ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
