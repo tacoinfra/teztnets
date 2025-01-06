@@ -381,7 +381,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([weeklynet_chain]),
+  ...getTeztnets([pariscnet_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
