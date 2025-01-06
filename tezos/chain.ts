@@ -341,6 +341,7 @@ export class TezosChain extends pulumi.ComponentResource {
       // Set bootstrap peers on the network config (specific to testnets)
       this.tezosHelmValues.node_config_network.dal_config.bootstrap_peers = [
         `dal.${name}.${domainName}:11732`
+        `${name}.bootstrap.dal.nomadic-labs.com`
       ];
     }
 
