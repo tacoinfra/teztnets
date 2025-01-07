@@ -121,7 +121,7 @@ new TezosFaucet(
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
 const ghostnetRollingVersion = "octez-v21.1";
-const ghostnetArchiveVersion = "octez-v20.3";
+const ghostnetArchiveVersion = "octez-v21.1";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
