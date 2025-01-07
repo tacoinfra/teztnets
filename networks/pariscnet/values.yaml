@@ -164,7 +164,7 @@ archive_tarball_url: null
 snapshot_source: https://snapshots.tezos.marigold.dev/api/tezos-snapshots.json
 
 images:
-  octez: tezos/tezos:octez-v20.3
+  octez: tezos/tezos:octez-v21.1
 
 protocols:
   - command: PsParisC
