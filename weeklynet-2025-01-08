@@ -1,18 +1,18 @@
 {
-  "chain_name": "TEZOS-WEEKLYNET-2025-01-01T00:00:00.000Z",
+  "chain_name": "TEZOS-WEEKLYNET-2025-01-08T00:00:00.000Z",
   "dal_config": {
     "activated": true,
     "bootstrap_peers": [
-      "dal.weeklynet-2025-01-01.teztnets.com:11732"
+      "dal.weeklynet-2025-01-08.teztnets.com:11732"
     ]
   },
   "default_bootstrap_peers": [
-    "weeklynet-2025-01-01.teztnets.com"
+    "weeklynet-2025-01-08.teztnets.com"
   ],
   "genesis": {
-    "block": "BMKg6in7MHw6qo1qsBBbLkdmojqvgefU8fccyFt9csN6vCHFezz",
+    "block": "BMKt6VpbEgjgusEQFTevUCgn1mRDMt1qtAW3LriMjhCuB4Vs8sM",
     "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
-    "timestamp": "2025-01-01T00:00:00.000Z"
+    "timestamp": "2025-01-08T00:00:00.000Z"
   },
   "genesis_parameters": {
     "values": {
