@@ -132,7 +132,7 @@ const ghostnet_chain = new TezosNodes(
     octezArchiveVersion: ghostnetArchiveVersion,
     chartRepoVersion: "7.0.9",
     rollingPvcSize: "50Gi",
-    archivePvcSize: "1500Gi"
+    archivePvcSize: "1800Gi"
   },
   provider,
 )
