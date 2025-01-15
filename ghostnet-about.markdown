@@ -12,7 +12,7 @@ Ghostnet is the long-running testnet for Tezos.
 | Faucet | [Ghostnet faucet](https://faucet.ghostnet.teztnets.com) |
 | Rolling Snapshot | [Ghostnet snapshot](https://snapshots.tzinit.org/ghostnet/rolling) |
 | Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v21.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v21.1) |
+| Tezos docker build | [tezos/tezos:octez-v21.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v21.2) |
 | Activated on | 2022-01-25T15:00:00Z |
 | Block Explorers | [TzKT](https://ghostnet.tzkt.io) - [TzStats](https://ghost.tzstats.com) |
 
@@ -30,7 +30,7 @@ Ghostnet is the long-running testnet for Tezos.
 To join Ghostnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v21.1
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v21.2
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v21.1
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v21.1
+git checkout octez-v21.2
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
@@ -97,12 +97,12 @@ octez-client stake <amount> for mykey
 
 You may now launch the baker process.
 ```bash=3
-octez-baker-PsParisC run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
+octez-baker-PsQuebec run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
 ```
 
 You may run the accuser as well:
 ```bash=3
-octez-accuser-PsParisC run
+octez-accuser-PsQuebec run
 ```
 
 Note that you need a minimum amount of tez to get baking rights. If you are not a bootstrap baker, it will take you several cycles to start baking.
