@@ -120,8 +120,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v21.1";
-const ghostnetArchiveVersion = "octez-v21.1";
+const ghostnetRollingVersion = "octez-v21.2";
+const ghostnetArchiveVersion = "octez-v21.2";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -321,7 +321,7 @@ export const networks = {
 }
 
 // We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "PsParisC"
+const lastBakingDaemonMainnetGhostnet = "PsQuebec"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
