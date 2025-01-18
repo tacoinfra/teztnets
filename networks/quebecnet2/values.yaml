@@ -175,7 +175,7 @@ nodes:
       - accuser
       - vdf
     bootstrapped_readiness_probe: false
-    storage_size: 150Gi
+    storage_size: 250Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
