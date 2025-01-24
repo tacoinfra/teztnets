@@ -52,28 +52,6 @@
       "https://mainnet.api.tez.ie"
     ]
   },
-  "pariscnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_PARISCNET_2024-06-18T12:00:00Z",
-    "description": "Test Chain for Paris replacement protocol",
-    "docker_build": "tezos/tezos:octez-v21.1",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.pariscnet.teztnets.com",
-    "git_ref": "octez-v21.1",
-    "human_name": "ParisCnet",
-    "indexers": [],
-    "last_baking_daemon": "PsParisC",
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/pariscnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.pariscnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.pariscnet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/parisnet/rolling",
-    "activated_on": "2024-06-18"
-  },
   "quebecnet": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_QUEBECNET_2024-11-13T08:00:00Z",
