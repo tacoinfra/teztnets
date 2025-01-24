@@ -182,15 +182,16 @@ new TezosFaucet(
   provider
 )
 
-// ParisC reboot test network
-const pariscnet_chain = new TezosChain(
+// Nextnet reboot test network
+/*
+const nextnet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "ParisCnet",
-    snapOver: "parisnet",
-    description: "Test Chain for Paris replacement protocol",
+    humanName: "Nextnet",
+    snapOver: "nextnet",
+    description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/pariscnet/values.yaml",
+    helmValuesFile: "networks/nextnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: [],
     rpcUrls: [],
@@ -201,11 +202,11 @@ const pariscnet_chain = new TezosChain(
   provider
 )
 new TezosFaucet(
-  pariscnet_chain.name,
+  nextnet_chain.name,
   {
-    namespace: pariscnet_chain.namespace,
-    humanName: "Pariscnet",
-    helmValuesFile: "networks/pariscnet/faucet_values.yaml",
+    namespace: nextnet_chain.namespace,
+    humanName: "Nextnet",
+    helmValuesFile: "networks/nextnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -213,6 +214,8 @@ new TezosFaucet(
   },
   provider
 )
+*/
+// END of Nextnet
 
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
@@ -315,7 +318,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-  ...getNetworks([pariscnet_chain]),
+//  ...getNetworks([nextnet_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -381,7 +384,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([pariscnet_chain]),
+//  ...getTeztnets([nextnet_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
