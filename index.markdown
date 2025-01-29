@@ -34,7 +34,7 @@ These test networks restart regularly and track the development of the master br
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Weeklynet](/weeklynet-about) | `2025-01-22` | [Faucet](https://faucet.weeklynet-2025-01-22.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
+| [Weeklynet](/weeklynet-about) | `2025-01-29` | [Faucet](https://faucet.weeklynet-2025-01-29.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
 
 
 
