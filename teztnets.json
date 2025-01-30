@@ -52,40 +52,6 @@
       "https://mainnet.api.tez.ie"
     ]
   },
-  "nextnet-20250130": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_NEXTNET_2025-01-30T08:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.nextnet-20250130.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.nextnet-20250130.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.nextnet-20250130.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.nextnet-20250130.teztnets.com"
-      }
-    },
-    "description": "Test Chain for Next protocol (not for public use)",
-    "docker_build": "tezos/tezos:master_078ed061_20250130133446",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.nextnet-20250130.teztnets.com",
-    "git_ref": "078ed061",
-    "human_name": "Nextnet-20250130",
-    "indexers": [],
-    "last_baking_daemon": "next",
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/nextnet-20250130",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.nextnet-20250130.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.nextnet-20250130.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
-    "activated_on": "2025-01-30"
-  },
   "quebecnet": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_QUEBECNET_2024-11-13T08:00:00Z",
