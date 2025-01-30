@@ -102,3 +102,26 @@ accounts:
     bootstrap_balance: "370000000000"
     is_bootstrap_baker_account: false
 
+  # NL Vigies Nodes (Corentin)
+  # tz1ViGF3WbG8gZH6w2oizRjJkyi43BtGr1ma
+  nl_vigies_full:
+    key: edpkvBMSXw1VNAqQDBweScaDPFnkUidDpX3FUWuPe5wn6QHUKgGBWT
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+  # tz1ViGA65hAiAvWonzuc4ndnUkztCnbDTsFj
+  nl_vigies_archive:
+    key: edpktjogMNJ34uG9ED3WZzP8eKiGs4zzJdhAPZ9B4rbfwn111zhHQS
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+  # tz1VigrUuQDe1EikkGQTWGMS6JVkaKb1rnx1
+  nl_vigies_rolling:
+    key: edpkvQ9wHEWVtuHBk8qjjYJNETVV1UmUoiz9ME3PK3M7ehnZVSEhBQ
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+  # tz1VigxFsaiceHojGNfEKMsPHuL8sxK4t7jZ
+  nl_vigies_default:
+    key: edpkvaKebJW8Y871pHq3sbNq8vre2Gyk9pxZ9mc3TTqYEP2LGWZhX9
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: false
+    
+
