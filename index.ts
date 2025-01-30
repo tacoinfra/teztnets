@@ -184,24 +184,6 @@ new TezosFaucet(
 
 // Nextnet 1st Blood reboot test network
 
-const nextnet2_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Nextnet-20250130",
-    snapOver: "nextnet",
-    description: "Test Chain for Next protocol (not for public use)",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20250130/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
-  },
-  provider
-)
-
 /*
 // Nextnet 1st Blood reboot test network
 
@@ -343,7 +325,6 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-  ...getNetworks([nextnet2_chain]),
 //  ...getNetworks([nextnet3_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -410,7 +391,6 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([nextnet2_chain]),
 //  ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
