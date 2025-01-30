@@ -159,6 +159,7 @@ nodes:
             max_active_rpc_connections: 1000
           metrics_addr: ["0.0.0.0:9932"]
         is_bootstrap_node: true
+        dal_node_rpc_url: http://dal-dal1:10732
         identity:
           # hard-coded identity - saves 1-2 minutes on daily cron
           peer_id: idqnaeAw4oGfUEnKrLH2fZYRQo4Ev1

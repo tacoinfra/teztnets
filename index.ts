@@ -182,40 +182,42 @@ new TezosFaucet(
   provider
 )
 
-// Nextnet reboot test network
-/*
-const nextnet_chain = new TezosChain(
+// Nextnet 1st Blood reboot test network
+
+const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Nextnet",
+    humanName: "Nextnet-20240130",
     snapOver: "nextnet",
-    description: "Test Chain for Next protocol",
+    description: "Test Chain for Next protocol (not for public use)",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet/values.yaml",
+    helmValuesFile: "networks/nextnet-20240130/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: [],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.1.2",
+    chartRepoVersion: "7.2.0",
     networkStakes: true,
   },
   provider
 )
+/* 
 new TezosFaucet(
-  nextnet_chain.name,
+  nextnet2_chain.name,
   {
-    namespace: nextnet_chain.namespace,
-    humanName: "Nextnet",
-    helmValuesFile: "networks/nextnet/faucet_values.yaml",
+    namespace: nextnet2_chain.namespace,
+    humanName: "Nextnet-20240130",
+    helmValuesFile: "networks/nextnet-20240130/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.1.2",
+    chartRepoVersion: "7.2.0",
   },
   provider
 )
-*/
+  */
 // END of Nextnet
+
 
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
@@ -251,6 +253,7 @@ function getNetworks(chains: TezosChain[]): object {
     if ("dal_config" in network) {
       network["dal_config"]["bootstrap_peers"] = [
         `dal.${chain.name}.${domainNameCom}:11732`,
+	`${chain.name}.bootstrap.dal.nomadic-labs.com:11732`,
       ]
     }
 
@@ -318,7 +321,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-//  ...getNetworks([nextnet_chain]),
+  ...getNetworks([nextnet2_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -384,7 +387,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-//  ...getTeztnets([nextnet_chain]),
+  ...getTeztnets([nextnet2_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
