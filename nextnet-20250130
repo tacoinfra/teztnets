@@ -3,12 +3,12 @@
   "dal_config": {
     "activated": true,
     "bootstrap_peers": [
-      "dal.nextnet-20240130.teztnets.com:11732",
-      "nextnet-20240130.bootstrap.dal.nomadic-labs.com:11732"
+      "dal.nextnet-20250130.teztnets.com:11732",
+      "nextnet-20250130.bootstrap.dal.nomadic-labs.com:11732"
     ]
   },
   "default_bootstrap_peers": [
-    "nextnet-20240130.teztnets.com"
+    "nextnet-20250130.teztnets.com"
   ],
   "genesis": {
     "block": "BL4EnuktUaVFz6bVBVJPZpRxkh5xezuWunfAxE6Vz2Rm6V3uVZi",
