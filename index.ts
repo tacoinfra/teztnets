@@ -201,12 +201,34 @@ const nextnet2_chain = new TezosChain(
   },
   provider
 )
+
+/*
+// Nextnet 1st Blood reboot test network
+
+const nextnet3_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Nextnet-20250203",
+    snapOver: "nextnet",
+    description: "Test Chain for Next protocol (not for public use)",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/nextnet-20250203/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
 /* 
 new TezosFaucet(
-  nextnet2_chain.name,
+  nextnet3_chain.name,
   {
-    namespace: nextnet2_chain.namespace,
-    humanName: "Nextnet-20250130",
+    namespace: nextnet3_chain.namespace,
+    humanName: "Nextnet-20250203",
     helmValuesFile: "networks/nextnet-20240130/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
