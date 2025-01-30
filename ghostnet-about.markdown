@@ -95,9 +95,15 @@ On a modern Tezos network, you will need to stake to declare your security bond.
 octez-client stake <amount> for mykey
 ```	
 
-You may now launch the baker process.
+Ideally you should run a DAL node.
+```
+octez-dal-node config init
+octez-dal-node run
+```
+
+You may now launch the baker process (connecting to the DAL node).
 ```bash=3
-octez-baker-PsQuebec run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass
+octez-baker-PsQuebec run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass --dal-node http://localhost:10732
 ```
 
 You may run the accuser as well:
