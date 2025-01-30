@@ -3,10 +3,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_NEXTNET_2025-01-30T08:00:00Z
+  chain_name: TEZOS_NEXTNET_2025-02-03T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-01-30T08:00:00Z"
+    timestamp: "2025-02-03T15:00:00Z"
   dal_config:
     activated: true
 
