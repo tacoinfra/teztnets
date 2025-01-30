@@ -85,7 +85,12 @@ accounts:
     key: edpkvaKebJW8Y871pHq3sbNq8vre2Gyk9pxZ9mc3TTqYEP2LGWZhX9
     bootstrap_balance: "1000000000000"
     is_bootstrap_baker_account: true
-    
+  # "Zir0h's Testnet bakery" 
+  # tz1NNT9EERmcKekRq2vdv6e8TL3WQpY8AXSF
+  zir0h:
+    key: edpkvGTRQwdJ11QENyYifpnnNxthH6KzQsFtD5FKtEJj3MaijAUkof
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: true  
 
 
   # Faucets
