@@ -8,7 +8,8 @@
     ]
   },
   "default_bootstrap_peers": [
-    "nextnet-20250203.teztnets.com"
+    "nextnet-20250203.teztnets.com",
+    "nextnet.tzinit.org"
   ],
   "genesis": {
     "block": "BM3CenPXajBRBntwVAcJ91oaqHbkRguwssqZeGu6oHQDu7EHfk8",
