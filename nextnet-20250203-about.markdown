@@ -4,7 +4,7 @@ title: Nextnet-20250203
 permalink: /nextnet-20250203-about
 ---
 
-Test Chain for Next protocol (not for public use)
+Test Chain for Next protocol
 
 | | |
 |-------|---------------------|

@@ -67,7 +67,7 @@
         "rpc": "https://dal-attester-rpc.nextnet-20250203.teztnets.com"
       }
     },
-    "description": "Test Chain for Next protocol (not for public use)",
+    "description": "Test Chain for Next protocol",
     "docker_build": "tezos/tezos:master_1bad9dc5_20250129184607",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.nextnet-20250203.teztnets.com",
