@@ -193,7 +193,7 @@ const nextnet3_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20250203/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
+    bootstrapPeers: [ "nextnet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.2.0",
