@@ -184,9 +184,6 @@ new TezosFaucet(
 
 // Nextnet 1st Blood reboot test network
 
-
-// Nextnet 1st Blood reboot test network
-
 const nextnet3_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -324,7 +321,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-//  ...getNetworks([nextnet3_chain]),
+  ...getNetworks([nextnet3_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -390,7 +387,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-//  ...getTeztnets([nextnet3_chain]),
+  ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
