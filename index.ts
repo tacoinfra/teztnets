@@ -189,7 +189,7 @@ const nextnet3_chain = new TezosChain(
     category: protocolCategory,
     humanName: "Nextnet-20250203",
     snapOver: "nextnet",
-    description: "Test Chain for Next protocol (not for public use)",
+    description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20250203/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
