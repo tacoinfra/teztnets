@@ -184,7 +184,7 @@ new TezosFaucet(
 
 // Nextnet 1st Blood reboot test network
 
-/*
+
 // Nextnet 1st Blood reboot test network
 
 const nextnet3_chain = new TezosChain(
@@ -205,13 +205,12 @@ const nextnet3_chain = new TezosChain(
   provider
 )
 
-/* 
 new TezosFaucet(
   nextnet3_chain.name,
   {
     namespace: nextnet3_chain.namespace,
     humanName: "Nextnet-20250203",
-    helmValuesFile: "networks/nextnet-20240130/faucet_values.yaml",
+    helmValuesFile: "networks/nextnet-20250203/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -219,7 +218,7 @@ new TezosFaucet(
   },
   provider
 )
-  */
+
 // END of Nextnet
 
 

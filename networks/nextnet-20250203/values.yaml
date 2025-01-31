@@ -209,7 +209,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master_078ed061_20250130133446
+  octez: tezos/tezos:master_1bad9dc5_20250129184607
 
 protocols:
   - command: PsQuebec
