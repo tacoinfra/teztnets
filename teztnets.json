@@ -3,9 +3,9 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:octez-v21.2",
+    "docker_build": "tezos/tezos:octez-v21.3",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "octez-v21.2",
+    "git_ref": "octez-v21.3",
     "human_name": "Ghostnet",
     "indexers": [
       {
@@ -32,8 +32,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v21.2",
-    "git_ref": "octez-v21.2",
+    "docker_build": "tezos/tezos:octez-v21.3",
+    "git_ref": "octez-v21.3",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -119,5 +119,39 @@
     ],
     "snapshot_url": "https://snapshots.tzinit.org/quebecnet/rolling",
     "activated_on": "2024-11-13"
+  },
+  "weeklynet-2025-02-05": {
+    "category": "Periodic Teztnets",
+    "chain_name": "TEZOS-WEEKLYNET-2025-02-05T00:00:00.000Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.weeklynet-2025-02-05.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.weeklynet-2025-02-05.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.weeklynet-2025-02-05.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.weeklynet-2025-02-05.teztnets.com"
+      }
+    },
+    "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
+    "docker_build": "tezos/tezos:master_0ce9912a_20250204231454",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.weeklynet-2025-02-05.teztnets.com",
+    "git_ref": "0ce9912a",
+    "human_name": "Weeklynet",
+    "indexers": [],
+    "last_baking_daemon": "next",
+    "masked_from_main_page": false,
+    "network_stakes": false,
+    "network_url": "https://teztnets.com/weeklynet-2025-02-05",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.weeklynet-2025-02-05.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.weeklynet-2025-02-05.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/weeklynet/rolling",
+    "activated_on": "2025-02-05"
   }
 }
