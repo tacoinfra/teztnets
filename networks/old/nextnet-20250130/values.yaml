@@ -158,7 +158,7 @@ nodes:
       - accuser
       - vdf
     bootstrapped_readiness_probe: false
-    storage_size: 250Gi
+    storage_size: 700Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
@@ -218,7 +218,7 @@ protocols:
   - command: next
     vote:
       liquidity_baking_toggle_vote: "pass"
-    
+
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
@@ -271,7 +271,7 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
 
-    
+
 
 
   # Faucets
@@ -313,4 +313,3 @@ accounts:
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-
