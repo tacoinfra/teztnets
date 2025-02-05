@@ -81,39 +81,39 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 
 // Weeklynet - restarts Wednesdays
 //
-const weeklynet_chain = new TezosChain(
-  {
-    category: periodicCategory,
-    humanName: "Weeklynet",
-    description:
-      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
-    schedule: "0 0 * * WED",
-    activationBucket: activationBucket,
-    bootstrapContracts: [
-      // "exchanger.json",
-      // "evm_bridge.json",
-    ],
-    helmValuesFile: "networks/weeklynet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
-    bootstrapPeers: [],
-  },
-  provider
-)
-new TezosFaucet(
-  weeklynet_chain.name,
-  {
-    humanName: "Weeklynet",
-    namespace: weeklynet_chain.namespace,
-    helmValuesFile: "networks/weeklynet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.1.2",
-  },
-  provider
-)
+// const weeklynet_chain = new TezosChain(
+//   {
+//     category: periodicCategory,
+//     humanName: "Weeklynet",
+//     description:
+//       "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
+//     schedule: "0 0 * * WED",
+//     activationBucket: activationBucket,
+//     bootstrapContracts: [
+//       // "exchanger.json",
+//       // "evm_bridge.json",
+//     ],
+//     helmValuesFile: "networks/weeklynet/values.yaml",
+//     bakingPrivateKey: private_teztnets_baking_key,
+//     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
+//     chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
+//     bootstrapPeers: [],
+//   },
+//   provider
+// )
+// new TezosFaucet(
+//   weeklynet_chain.name,
+//   {
+//     humanName: "Weeklynet",
+//     namespace: weeklynet_chain.namespace,
+//     helmValuesFile: "networks/weeklynet/faucet_values.yaml",
+//     faucetPrivateKey: faucetPrivateKey,
+//     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+//     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+//     chartRepoVersion: "7.1.2",
+//   },
+//   provider
+// )
 
 // Ghostnet is different from the other testnets:
 // * launched long time ago, launch code is not in the active code path
@@ -320,7 +320,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([weeklynet_chain]),
+  // ...getNetworks([weeklynet_chain]),
   ...getNetworks([nextnet3_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -386,7 +386,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([weeklynet_chain]),
+  // ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
