@@ -218,6 +218,43 @@ new TezosFaucet(
 
 // END of Nextnet
 
+// Romfordnet 1st Blood reboot test network
+/*
+const romfordnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Romfordnet",
+    description: "Test Chain for Next protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/romfordnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+//    bootstrapPeers: [ "nextnet.tzinit.org" ],
+    bootstrapPeers: [],   
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
+new TezosFaucet(
+  romfordnet_chain.name,
+  {
+    namespace: romfordnet_chain.namespace,
+    humanName: "Romfordnet",
+    helmValuesFile: "networks/romfordnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.2.0",
+  },
+  provider
+)
+*/
+
+// END of Nextnet
+
 
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
