@@ -97,7 +97,7 @@ const weeklynet_chain = new TezosChain(
     bakingPrivateKey: private_teztnets_baking_key,
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
     chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
-    bootstrapPeers: [],
+    bootstrapPeers: [ "weeklynet.tzinit.org" ],
   },
   provider
 )
