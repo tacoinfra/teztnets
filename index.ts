@@ -80,7 +80,7 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 });
 
 // Weeklynet - restarts Wednesdays
-//
+
 const weeklynet_chain = new TezosChain(
   {
     category: periodicCategory,
@@ -96,7 +96,7 @@ const weeklynet_chain = new TezosChain(
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.1.2", // point to a release of tezos-k8s. This should be the default state.
+    chartRepoVersion: "7.2.0", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [ "weeklynet.tzinit.org" ],
   },
   provider
@@ -110,7 +110,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.1.2",
+    chartRepoVersion: "7.2.0",
   },
   provider
 )
@@ -120,7 +120,7 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v21.2";
+const ghostnetRollingVersion = "octez-v21.3";
 const ghostnetArchiveVersion = "octez-v21.2";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
@@ -130,7 +130,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.2.0",
     rollingPvcSize: "50Gi",
     archivePvcSize: "1800Gi"
   },
@@ -145,7 +145,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.0.9",
+    chartRepoVersion: "7.2.0",
   },
   provider
 )

@@ -7,7 +7,7 @@ images:
 enableUI: true
 config:
   application:
-    name: "Tezos Nextnet 20250203 Faucet"
+    name: "Tezos Nextnet 20250210 Faucet"
     googleCaptchaSiteKey: "" # filled in by pulumi
     backendUrl: "" # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet
