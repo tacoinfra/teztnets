@@ -8,7 +8,8 @@
     ]
   },
   "default_bootstrap_peers": [
-    "weeklynet-2025-02-12.teztnets.com"
+    "weeklynet-2025-02-12.teztnets.com",
+    "weeklynet.tzinit.org"
   ],
   "genesis": {
     "block": "BLBmhrsVHTGVFz2WetxZiu4ynvgfwvAKLedWJEY66pNimLEShde",
