@@ -122,7 +122,7 @@ node_config_network:
 #         denominator: "50"
 #     adaptive_issuance_activation_vote_enable: true
 #     autostaking_enable: true
-#     adaptive_issuance_force_activation: false
+#     adaptive_issuance_force_activation: true
 #     ns_enable: true
 #     direct_ticket_spending_enable: false
 #     testnet_dictator: tz1e1TX7KghsqWUBXWmBTAAtPK3W6JTbNc82
@@ -209,13 +209,13 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master_1bad9dc5_20250129184607
+  octez: tezos/tezos:master_1bad9dc5_20250129184607 XXX
 
 protocols:
   - command: PsQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: next
+  - command: next XXXXX
     vote:
       liquidity_baking_toggle_vote: "pass"
     
