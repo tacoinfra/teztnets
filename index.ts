@@ -218,18 +218,17 @@ new TezosFaucet(
 
 // END of Nextnet
 
-// Romfordnet 1st Blood reboot test network
+// Rionet 1st Blood reboot test network
 /*
-const romfordnet_chain = new TezosChain(
+const rionet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Romfordnet",
+    humanName: "Rionet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/romfordnet/values.yaml",
+    helmValuesFile: "networks/rionet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-//    bootstrapPeers: [ "nextnet.tzinit.org" ],
-    bootstrapPeers: [],   
+    bootstrapPeers: [ "rionet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.2.0",
@@ -239,11 +238,11 @@ const romfordnet_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  romfordnet_chain.name,
+  rionet_chain.name,
   {
-    namespace: romfordnet_chain.namespace,
-    humanName: "Romfordnet",
-    helmValuesFile: "networks/romfordnet/faucet_values.yaml",
+    namespace: rionet_chain.namespace,
+    humanName: "Rionet",
+    helmValuesFile: "networks/rionet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,

@@ -7,7 +7,7 @@ images:
 enableUI: true
 config:
   application:
-    name: "Tezos Romfordnet Faucet"
+    name: "Tezos Rionet Faucet"
     googleCaptchaSiteKey: "" # filled in by pulumi
     backendUrl: "" # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet
