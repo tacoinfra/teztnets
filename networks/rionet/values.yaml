@@ -313,6 +313,11 @@ accounts:
     key: edpkvGTRQwdJ11QENyYifpnnNxthH6KzQsFtD5FKtEJj3MaijAUkof
     bootstrap_balance: "1000000000000"
     is_bootstrap_baker_account: false  
+  # tz1iHq8QLYf3CvPV23UVkhk6WG74psJ4WpWp (Barry Manilow)
+  barry_manilow:
+    key: edpkvKpSMUDaKZKCLwE69XDiijZcAuuFH2h2NcRiTQD4W3FLGAzxei
+    bootstrap_balance: "1000000000000"
+    is_bootstrap_baker_account: true
     
 
 
