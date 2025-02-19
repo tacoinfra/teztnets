@@ -212,9 +212,6 @@ images:
   octez: tezos/tezos:master_2b5fa122_20250219105821
 
 protocols:
-  - command: PsQuebec
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PsRiotum
     vote:
       liquidity_baking_toggle_vote: "pass"
