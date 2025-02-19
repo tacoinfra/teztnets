@@ -219,7 +219,6 @@ new TezosFaucet(
 // END of Nextnet
 
 // Rionet 1st Blood reboot test network
-/*
 const rionet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -250,7 +249,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // END of Nextnet
 
@@ -358,6 +356,7 @@ const ghostnetNetwork = {
 export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([nextnet3_chain]),
+  ...getNetworks([rionet_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -425,6 +424,7 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([quebecnet_chain]),
+  ...getNetworks([rionet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

@@ -3,10 +3,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_RIONET_2025-02-18T18:00:00Z
+  chain_name: TEZOS_RIONET_2025-02-19T12:45:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-02-18T18:00:00Z"
+    timestamp: "2025-02-19T12:45:00Z"
   dal_config:
     activated: true
 
@@ -163,7 +163,7 @@ nodes:
   rolling-node: null
 
 bootstrap_peers:
-  - nextnet.tzinit.org
+  - rionet.tzinit.org
 
 dalNodes:
   dal-bootstrap:
@@ -209,13 +209,13 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master_1bad9dc5_20250129184607 XXX
+  octez: tezos/tezos:master_2b5fa122_20250219105821
 
 protocols:
   - command: PsQuebec
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: next XXXXX
+  - command: PsRiotum
     vote:
       liquidity_baking_toggle_vote: "pass"
     
@@ -264,7 +264,7 @@ accounts:
     # TF Testnet A
     # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
     key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   tf2:
     # TF Testnet B
@@ -317,7 +317,7 @@ accounts:
   barry_manilow:
     key: edpkvKpSMUDaKZKCLwE69XDiijZcAuuFH2h2NcRiTQD4W3FLGAzxei
     bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     
 
 
