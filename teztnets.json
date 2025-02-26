@@ -102,10 +102,10 @@
       }
     },
     "description": "Test Chain for Next protocol",
-    "docker_build": "tezos/tezos:master_2b5fa122_20250219105821",
+    "docker_build": "tezos/tezos:octez-v22.0-rc1",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.rionet.teztnets.com",
-    "git_ref": "2b5fa122",
+    "git_ref": "octez-v22.0-rc1",
     "human_name": "Rionet",
     "indexers": [],
     "last_baking_daemon": "PsRiotum",

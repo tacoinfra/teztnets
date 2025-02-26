@@ -12,7 +12,7 @@ Test Chain for Next protocol
 | Faucet | [Rionet faucet](https://faucet.rionet.teztnets.com) |
 | Rolling Snapshot | [Rionet snapshot](https://snapshots.tzinit.org/rionet/rolling) |
 | Full network name | `TEZOS_RIONET_2025-02-19T12:45:00Z` |
-| Tezos docker build | [tezos/tezos:master_2b5fa122_20250219105821](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_2b5fa122_20250219105821) |
+| Tezos docker build | [tezos/tezos:octez-v22.0-rc1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v22.0-rc1) |
 | Activated on | 2025-02-19T12:45:00Z |
 
 
@@ -30,7 +30,7 @@ Test Chain for Next protocol
 To join Rionet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master_2b5fa122_20250219105821
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v22.0-rc1
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master_2b5fa122_20250219105821
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout 2b5fa122
+git checkout octez-v22.0-rc1
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
