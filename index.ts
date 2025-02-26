@@ -182,9 +182,9 @@ new TezosFaucet(
   provider
 )
 
-// Nextnet 1st Blood reboot test network
-
-const nextnet3_chain = new TezosChain(
+// Nextnet test network - use pre-protocol proposal
+/*
+const nextnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20250203",
@@ -203,9 +203,9 @@ const nextnet3_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  nextnet3_chain.name,
+  nextnet_chain.name,
   {
-    namespace: nextnet3_chain.namespace,
+    namespace: nextnet_chain.namespace,
     humanName: "Nextnet-20250203",
     helmValuesFile: "networks/nextnet-20250203/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
@@ -215,6 +215,7 @@ new TezosFaucet(
   },
   provider
 )
+*/
 
 // END of Nextnet
 
