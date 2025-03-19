@@ -63,8 +63,8 @@ accounts:
     key: edpkubZwGk9EPfxGYA2y4axvr1WfUDkSQFvHd2cg68wcvwSf5Mua6H
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
-  # tz1iHq8QLYf3CvPV23UVkhk6WG74psJ4WpWp (Barry Manilow)
-  barry_manilow:
+  # tz1iHq8QLYf3CvPV23UVkhk6WG74psJ4WpWp (DALman)
+  dalman:
     key: edpkvKpSMUDaKZKCLwE69XDiijZcAuuFH2h2NcRiTQD4W3FLGAzxei
     bootstrap_balance: "1000000000000"
     is_bootstrap_baker_account: true

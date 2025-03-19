@@ -209,7 +209,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v22.0-rc1
+  octez: tezos/tezos:octez-v22.0-rc2
 
 protocols:
   - command: PsRiotum
