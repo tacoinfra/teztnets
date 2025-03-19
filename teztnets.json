@@ -68,10 +68,10 @@
       }
     },
     "description": "Test Chain for the Quebec Protocol Proposal 20241113",
-    "docker_build": "tezos/tezos:octez-v21.1",
+    "docker_build": "tezos/tezos:octez-v22.0-rc2",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.quebecnet.teztnets.com",
-    "git_ref": "octez-v21.1",
+    "git_ref": "octez-v22.0-rc2",
     "human_name": "Quebecnet",
     "indexers": [],
     "last_baking_daemon": "PsQuebec",
