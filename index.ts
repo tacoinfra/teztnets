@@ -120,8 +120,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v22.0-rc3"
-const ghostnetArchiveVersion = "octez-v22.0-rc3";
+const ghostnetRollingVersion = "octez-v22.0"
+const ghostnetArchiveVersion = "octez-v22.0";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -216,8 +216,25 @@ new TezosFaucet(
   provider
 )
 */
-
 // END of Nextnet
+
+// const pouletnet_chain = new TezosChain(
+//   {
+//     category: protocolCategory,
+//     humanName: "Pouletnet",
+//     description: "Test Chain for Stuff",
+//     activationBucket: activationBucket,
+//     helmValuesFile: "networks/albinnet/values.yaml",
+//     bakingPrivateKey: private_teztnets_baking_key,
+//     bootstrapPeers: [],
+//     rpcUrls: [],
+//     indexers: [],
+//     chartRepoVersion: "7.2.0",
+//     networkStakes: true,
+//   },
+//   provider
+// )
+
 
 // Rionet 1st Blood reboot test network
 const rionet_chain = new TezosChain(
