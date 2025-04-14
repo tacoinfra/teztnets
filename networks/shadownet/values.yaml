@@ -1,17 +1,18 @@
-# Rio
-# protocol_hash: TBA
+# Shadownet
+# New long-term test network
+#
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_RIONET_2025-02-19T12:45:00Z
+  chain_name: TEZOS_SHADOWNET_2025-05-01T12:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-02-19T12:45:00Z"
+    timestamp: "2025-05-01T12:00:00Z"
   dal_config:
     activated: true
 
 # activation:
-#   protocol_hash: PsQuebecnLByd3JwTiGadoG4nGWi3HYiLXUjkibeFV8dCFeVMUg
+#     protocol_hash: PsRiotumaAMotcRoDWW1bysEhQy2n1M5fy8JgRp8jjRfHGmfeA7
 #   protocol_parameters:
 #     consensus_rights_delay: 2
 #     blocks_preservation_cycles: 1
@@ -166,6 +167,7 @@ bootstrap_peers:
   - rionet.tzinit.org
 
 dalNodes:
+# XXX Don't run a bootstrap here if NAT is a problem?
   dal-bootstrap:
     bootstrapProfile: true
     node_rpc_url: http://tezos-baking-node-0.tezos-baking-node:8732
