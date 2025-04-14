@@ -120,8 +120,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v21.3";
-const ghostnetArchiveVersion = "octez-v21.2";
+const ghostnetRollingVersion = "octez-v22.0"
+const ghostnetArchiveVersion = "octez-v22.0";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -182,9 +182,9 @@ new TezosFaucet(
   provider
 )
 
-// Nextnet 1st Blood reboot test network
-
-const nextnet3_chain = new TezosChain(
+// Nextnet test network - use pre-protocol proposal
+/*
+const nextnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20250203",
@@ -203,9 +203,9 @@ const nextnet3_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  nextnet3_chain.name,
+  nextnet_chain.name,
   {
-    namespace: nextnet3_chain.namespace,
+    namespace: nextnet_chain.namespace,
     humanName: "Nextnet-20250203",
     helmValuesFile: "networks/nextnet-20250203/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
@@ -215,8 +215,26 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // END of Nextnet
+
+// const pouletnet_chain = new TezosChain(
+//   {
+//     category: protocolCategory,
+//     humanName: "Pouletnet",
+//     description: "Test Chain for Stuff",
+//     activationBucket: activationBucket,
+//     helmValuesFile: "networks/albinnet/values.yaml",
+//     bakingPrivateKey: private_teztnets_baking_key,
+//     bootstrapPeers: [],
+//     rpcUrls: [],
+//     indexers: [],
+//     chartRepoVersion: "7.2.0",
+//     networkStakes: true,
+//   },
+//   provider
+// )
+
 
 // Rionet 1st Blood reboot test network
 const rionet_chain = new TezosChain(
@@ -355,7 +373,6 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-  ...getNetworks([nextnet3_chain]),
   ...getNetworks([rionet_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -422,7 +439,6 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...getTeztnets([rionet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
