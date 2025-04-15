@@ -305,6 +305,13 @@ accounts:
     type: public
     is_bootstrap_baker_account: false
     bootstrap_balance: "100000000000"
+  albin:
+    # tz3PgFHdYvEGEbUo1pUJmuNH8fgc8cwARKfC
+    key: p2pk67wXWykNWau9DpoAqGBuGdo7ke8TkF32D6PJt5QEx4P9b27MKbK
+    type: public
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "100000000000"
+
   tfrichfund:
     # an account that would allow Chris to finally have that holiday
     # if only it were on mainnet...
