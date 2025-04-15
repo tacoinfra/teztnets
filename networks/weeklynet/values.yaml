@@ -37,9 +37,9 @@ activation:
       radius_dz:
         numerator: "1"
         denominator: "50"
-    aggregate_attestation: false
+    aggregate_attestation: true
     all_bakers_attest_activation_level: null
-    allow_tz4_delegate_enable: false
+    allow_tz4_delegate_enable: true
     blocks_per_commitment: 25
     blocks_per_cycle: 200
     blocks_preservation_cycles: 1
