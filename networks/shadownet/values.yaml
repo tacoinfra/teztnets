@@ -37,7 +37,7 @@ activation:
       vdf_difficulty: "8000000000"
       origination_size: 257
       issuance_weights:
-        base_total_issued_per_minute: "85007812"
+        base_total_issued_per_minute: "80007812"
         baking_reward_fixed_portion_weight: 5120
         baking_reward_bonus_weight: 5120
         attesting_reward_weight: 10240
@@ -87,7 +87,7 @@ activation:
         page_size: 3967
         slot_size: 126944
         number_of_shards: 512
-      smart_rollup_arith_pvm_enable: true
+      smart_rollup_arith_pvm_enable: false
       smart_rollup_origination_size: 6314
       smart_rollup_challenge_window_in_blocks: 151200
       smart_rollup_stake_amount: "10000000000"
