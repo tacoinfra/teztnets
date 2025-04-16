@@ -317,7 +317,7 @@ accounts:
     # if only it were on mainnet...
     # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
     key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
-    bootstrap_balance: "100000000000"
+    bootstrap_balance: "100000000000000"
     is_bootstrap_baker_account: false
   faucet:
     # faucet on teztnets.xyz platform

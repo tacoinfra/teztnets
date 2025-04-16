@@ -4,142 +4,152 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_SHADOWNET_2025-05-01T12:00:00Z
+#  chain_name: TEZOS_SHADOWNET_2025-05-01T12:00:00Z
+  chain_name: TEZOS_THXNET_2025-04-16T08:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-05-01T12:00:00Z"
+#    timestamp: "2025-05-01T12:00:00Z"
+    timestamp: "2025-04-16T08:00:00Z"
   dal_config:
     activated: true
 
-# activation:
-#     protocol_hash: PsRiotumaAMotcRoDWW1bysEhQy2n1M5fy8JgRp8jjRfHGmfeA7
-#   protocol_parameters:
-#     consensus_rights_delay: 2
-#     blocks_preservation_cycles: 1
-#     delegate_parameters_activation_delay: 5
-#     tolerated_inactivity_period: 2
-#     blocks_per_cycle: 10800
-#     blocks_per_commitment: 240
-#     nonce_revelation_threshold: 960
-#     cycles_per_voting_period: 14
-#     hard_gas_limit_per_operation: "1040000"
-#     hard_gas_limit_per_block: "1386666"
-#     proof_of_work_threshold: "281474976710655"
-#     minimal_stake: "6000000000"
-#     minimal_frozen_stake: "600000000"
-#     vdf_difficulty: "8000000000"
-#     origination_size: 257
-#     issuance_weights:
-#       base_total_issued_per_minute: "85007812"
-#       baking_reward_fixed_portion_weight: 5120
-#       baking_reward_bonus_weight: 5120
-#       attesting_reward_weight: 10240
-#       seed_nonce_revelation_tip_weight: 1
-#       vdf_revelation_tip_weight: 1
-#       dal_rewards_weight: 2275
-#     cost_per_byte: "250"
-#     hard_storage_limit_per_operation: "60000"
-#     quorum_min: 2000
-#     quorum_max: 7000
-#     min_proposal_quorum: 500
-#     liquidity_baking_subsidy: "5000000"
-#     liquidity_baking_toggle_ema_threshold: 1000000000
-#     max_operations_time_to_live: 450
-#     minimal_block_delay: "8"
-#     delay_increment_per_round: "4"
-#     consensus_committee_size: 7000
-#     consensus_threshold: 4667
-#     minimal_participation_ratio:
-#       numerator: 2
-#       denominator: 3
-#     limit_of_delegation_over_baking: 9
-#     percentage_of_frozen_deposits_slashed_per_double_baking: 500
-#     max_slashing_per_block: 10000
-#     max_slashing_threshold:
-#       numerator: 1
-#       denominator: 3
-#     cache_script_size: 100000000
-#     cache_stake_distribution_cycles: 5
-#     cache_sampler_state_cycles: 5
-#     dal_parametric:
-#       feature_enable: true
-#       incentives_enable: true
-#       number_of_slots: 32
-#       attestation_lag: 8
-#       attestation_threshold: 66
-#       minimal_participation_ratio:
-#         numerator: 16
-#         denominator: 25
-#       rewards_ratio:
-#         numerator: 1
-#         denominator: 10
-#       traps_fraction:
-#         numerator: 1
-#         denominator: 2000
-#       redundancy_factor: 8
-#       page_size: 3967
-#       slot_size: 126944
-#       number_of_shards: 512
-#     smart_rollup_arith_pvm_enable: true
-#     smart_rollup_origination_size: 6314
-#     smart_rollup_challenge_window_in_blocks: 151200
-#     smart_rollup_stake_amount: "10000000000"
-#     smart_rollup_commitment_period_in_blocks: 112
-#     smart_rollup_max_lookahead_in_blocks: 324000
-#     smart_rollup_max_active_outbox_levels: 151200
-#     smart_rollup_max_outbox_messages_per_level: 100
-#     smart_rollup_number_of_sections_in_dissection: 32
-#     smart_rollup_timeout_period_in_blocks: 75600
-#     smart_rollup_max_number_of_cemented_commitments: 5
-#     smart_rollup_max_number_of_parallel_games: 32
-#     smart_rollup_reveal_activation_level:
-#       raw_data:
-#         Blake2B: 0
-#       metadata: 0
-#       dal_page: 5726209
-#       dal_parameters: 5726209
-#       dal_attested_slots_validity_lag: 241920
-#     smart_rollup_private_enable: true
-#     smart_rollup_riscv_pvm_enable: false
-#     zk_rollup_enable: false
-#     zk_rollup_origination_size: 4000
-#     zk_rollup_min_pending_to_process: 10
-#     zk_rollup_max_ticket_payload_size: 2048
-#     global_limit_of_staking_over_baking: 9
-#     edge_of_staking_over_delegation: 3
-#     adaptive_rewards_params:
-#       issuance_ratio_final_min:
-#         numerator: "1"
-#         denominator: "400"
-#       issuance_ratio_final_max:
-#         numerator: "1"
-#         denominator: "10"
-#       issuance_ratio_initial_min:
-#         numerator: "9"
-#         denominator: "200"
-#       issuance_ratio_initial_max:
-#         numerator: "11"
-#         denominator: "200"
-#       initial_period: 10
-#       transition_period: 50
-#       max_bonus: "50000000000000"
-#       growth_rate:
-#         numerator: "1"
-#         denominator: "100"
-#       center_dz:
-#         numerator: "1"
-#         denominator: "2"
-#       radius_dz:
-#         numerator: "1"
-#         denominator: "50"
-#     direct_ticket_spending_enable: false
-#     testnet_dictator: tz1e1TX7KghsqWUBXWmBTAAtPK3W6JTbNc82
+# Activation Block Start
+
+activation:
+    protocol_hash: PsRiotumaAMotcRoDWW1bysEhQy2n1M5fy8JgRp8jjRfHGmfeA7
+    protocol_parameters:
+      aggregate_attestation: false
+      allow_tz4_delegate_enable: false
+      all_bakers_attest_activation_level: null
+      consensus_rights_delay: 2
+      blocks_preservation_cycles: 1
+      delegate_parameters_activation_delay: 5
+      tolerated_inactivity_period: 2
+      blocks_per_cycle: 10800
+      blocks_per_commitment: 240
+      nonce_revelation_threshold: 960
+      cycles_per_voting_period: 14
+      hard_gas_limit_per_operation: "1040000"
+      hard_gas_limit_per_block: "1386666"
+      proof_of_work_threshold: "281474976710655"
+      minimal_stake: "6000000000"
+      minimal_frozen_stake: "600000000"
+      vdf_difficulty: "8000000000"
+      origination_size: 257
+      issuance_weights:
+        base_total_issued_per_minute: "85007812"
+        baking_reward_fixed_portion_weight: 5120
+        baking_reward_bonus_weight: 5120
+        attesting_reward_weight: 10240
+        seed_nonce_revelation_tip_weight: 1
+        vdf_revelation_tip_weight: 1
+        dal_rewards_weight: 2275
+      cost_per_byte: "250"
+      hard_storage_limit_per_operation: "60000"
+      quorum_min: 2000
+      quorum_max: 7000
+      min_proposal_quorum: 500
+      liquidity_baking_subsidy: "5000000"
+      liquidity_baking_toggle_ema_threshold: 1000000000
+      max_operations_time_to_live: 450
+      minimal_block_delay: "8"
+      delay_increment_per_round: "4"
+      consensus_committee_size: 7000
+      consensus_threshold_size: 4667
+      minimal_participation_ratio:
+        numerator: 2
+        denominator: 3
+      limit_of_delegation_over_baking: 9
+      percentage_of_frozen_deposits_slashed_per_double_baking: 500
+      max_slashing_per_block: 10000
+      max_slashing_threshold:
+        numerator: 1
+        denominator: 3
+      cache_script_size: 100000000
+      cache_stake_distribution_cycles: 5
+      cache_sampler_state_cycles: 5
+      dal_parametric:
+        feature_enable: true
+        incentives_enable: true
+        number_of_slots: 32
+        attestation_lag: 8
+        attestation_threshold: 66
+        minimal_participation_ratio:
+          numerator: "16"
+          denominator: "25"
+        rewards_ratio:
+          numerator: "1"
+          denominator: "10"
+        traps_fraction:
+          numerator: "1"
+          denominator: "2000"
+        redundancy_factor: 8
+        page_size: 3967
+        slot_size: 126944
+        number_of_shards: 512
+      smart_rollup_arith_pvm_enable: true
+      smart_rollup_origination_size: 6314
+      smart_rollup_challenge_window_in_blocks: 151200
+      smart_rollup_stake_amount: "10000000000"
+      smart_rollup_commitment_period_in_blocks: 112
+      smart_rollup_max_lookahead_in_blocks: 324000
+      smart_rollup_max_active_outbox_levels: 151200
+      smart_rollup_max_outbox_messages_per_level: 100
+      smart_rollup_number_of_sections_in_dissection: 32
+      smart_rollup_timeout_period_in_blocks: 75600
+      smart_rollup_max_number_of_cemented_commitments: 5
+      smart_rollup_max_number_of_parallel_games: 32
+      smart_rollup_reveal_activation_level:
+        raw_data:
+          Blake2B: 0
+        metadata: 0
+        dal_page: 5726209
+        dal_parameters: 5726209
+        dal_attested_slots_validity_lag: 241920
+      smart_rollup_private_enable: true
+      smart_rollup_riscv_pvm_enable: false
+      zk_rollup_enable: false
+      zk_rollup_origination_size: 4000
+      zk_rollup_min_pending_to_process: 10
+      zk_rollup_max_ticket_payload_size: 2048
+      global_limit_of_staking_over_baking: 9
+      edge_of_staking_over_delegation: 3
+      adaptive_rewards_params:
+        issuance_ratio_final_min:
+          numerator: "1"
+          denominator: "400"
+        issuance_ratio_final_max:
+          numerator: "1"
+          denominator: "10"
+        issuance_ratio_initial_min:
+          numerator: "9"
+          denominator: "200"
+        issuance_ratio_initial_max:
+          numerator: "11"
+          denominator: "200"
+        initial_period: 10
+        transition_period: 50
+        max_bonus: "50000000000000"
+        growth_rate:
+          numerator: "1"
+          denominator: "100"
+        center_dz:
+          numerator: "1"
+          denominator: "2"
+        radius_dz:
+          numerator: "1"
+          denominator: "50"
+      direct_ticket_spending_enable: false
+      testnet_dictator: tz1e1TX7KghsqWUBXWmBTAAtPK3W6JTbNc82
+
+# Activation Block End
 
 nodes:
   tezos-baking-node:
     env:
       all:
         TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER: "Y"
+  #      BAKER_EXTRA_ARGS: "--dal-node http://dal-dal1:10732"
     instances:
       - bake_using_accounts:
           - teztnetsbaker
@@ -152,6 +162,7 @@ nodes:
             max_active_rpc_connections: 1000
           metrics_addr: ["0.0.0.0:9932"]
         is_bootstrap_node: true
+        dal_node_rpc_url: http://dal-dal1:10732
         identity:
           # hard-coded identity - saves 1-2 minutes on daily cron
           peer_id: idqnaeAw4oGfUEnKrLH2fZYRQo4Ev1
@@ -218,155 +229,268 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master_2b5fa122_20250219105821
+  octez: tezos/tezos:master_46754eda_20250415163531
 
 protocols:
-  - command: PsQuebec
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PsRiotum
     vote:
       liquidity_baking_toggle_vote: "pass"
     
+
+# Initial balances section
+#
+
 accounts:
+  baker1:
+    #  tz1aFuMyvzNydKaEzCNBdhP3DsSVZEbzWFjR
+    key: edpktuZrvWoXVyeD2y62Vd5tFYnuCV7kc27o75uVScWKbaKGh7CyKZ
+    bootstrap_balance: "6100000000000"
+    is_bootstrap_baker_account: false
+
+  baker10:
+    #  tz1Z2uc25cNDrMMZWw8PcQtUjKFtpnsotqyD
+    key: edpkumxosggHSVZGaiPpJyyfkizJqw9qUc5SpG8CGSjsF4GbZfYHDz
+    bootstrap_balance: "1800000000000"
+    is_bootstrap_baker_account: false
+
+  baker11:
+    #  tz1fnocs9pTd3XucNYvQrDiAaEEgtNMEeBsX
+    key: edpkv6uLCRnoefFVrZb8RHrzzCGx5TpQjSwEpH5wZE7DyaHPRWhmJY
+    bootstrap_balance: "990000000000"
+    is_bootstrap_baker_account: false
+
+  baker12:
+    #  tz1fd1u6J9HZVebP31BTT3GjjArCa28oLY3e
+    key: edpktkoh1twRX71jauKQXguNwk7JHhet7cXUp9tbhrHsqqdU2pq4fA
+    bootstrap_balance: "3900000000000"
+    is_bootstrap_baker_account: false
+
+  baker13:
+    #  tz1Z3vX7BsWfybNFEyiMKAeVLLytx65GKbDN
+    key: edpkv6edRJFxdDqd4kjg91cJU2giQmZw1jZEAFGzTRL7EGZ2FyGY4S
+    bootstrap_balance: "1100000000000"
+    is_bootstrap_baker_account: false
+
+  baker14:
+    #  tz1VR8J4LoJL6SV5dmcTLJ56Jo6qqAP2wJeD
+    key: edpku1h3SFJdaAXWYqaWkunBJeuBb2fgbQT5TL4mnPi4orxSRBBTGe
+    bootstrap_balance: "1100000000000"
+    is_bootstrap_baker_account: false
+
+  baker15:
+    #  tz1PJfk1LPgKUz8rhkKUYYmzAhqCaQFHhbn2
+    key: edpkvNJfwMLERDYS6nLCK8zqSHDhGBzPVpmQ7GDFwt3a946mVocZ7V
+    bootstrap_balance: "820000000000"
+    is_bootstrap_baker_account: false
+
+  baker16:
+    #  tz1SKzac24nukxk4LivnLLqZxRNoRtJLv7k4
+    key: edpkv7hxmreFepVoukeg35iCiU8N4ikaWk4rnZsrDupXfp98wWemba
+    bootstrap_balance: "2400000000000"
+    is_bootstrap_baker_account: false
+
+  baker17:
+    #  tz1i3sMJ8kd2f1gdNEczTLQvpyBpPCkoR9E5
+    key: edpkthNRcQYyQSFUqR6MCKeVqWrJDRbY4B8f4naHf1KZJkYTnawjpR
+    bootstrap_balance: "2400000000000"
+    is_bootstrap_baker_account: false
+
+  baker18:
+    #  tz1RAD5Fa9i6SmkvRkcBZRdeS1HbsZin1Ny9
+    key: edpkurdpCdbegybZ8vHTJ8US5JHCRqPpUbD2juVhu81n9i2iPN1voV
+    bootstrap_balance: "2400000000000"
+    is_bootstrap_baker_account: false
+
+  baker19:
+    #  tz1TVWtNCrJ2GHtGLNwxbQPHb1tBLXcgxfi8
+    key: edpkvF6JptqSuJ4dkw9n6tb1XCeYnkhuTBaToR4mqqTVeABA9jX2Jf
+    bootstrap_balance: "2400000000000"
+    is_bootstrap_baker_account: false
+
+  baker2:
+    #  tz1XjU8gRizaXndw29yhvQiT2mgWpXb4GkiC
+    key: edpkvaa3e7T5t2BLre1StygTwtNwdRXX3BrYJVuQMgTKVV9r3sxyfT
+    bootstrap_balance: "2340000000000"
+    is_bootstrap_baker_account: false
+
+  baker20:
+    #  tz1ZA5k6DHsrSKKoTo7Esw5eA99cNwGNQyeM
+    key: edpkuN9RX79tYTX6TyPnnvHxGBNcHHG9EDH8T3NPRZzqGafQYJdhiv
+    bootstrap_balance: "2400000000000"
+    is_bootstrap_baker_account: false
+
+  baker3:
+    #  tz1a28g3f7Eswy7XfX81sJSdhBHZqMjkfaf9
+    key: edpkubS8qgMd3pgtSRo8ipjwYSUZiYavhoFkpMNwN95gpQM5TDVTDp
+    bootstrap_balance: "3170000000000"
+    is_bootstrap_baker_account: false
+
+  baker4:
+    #  tz1LHvQWc46rtzVvpKq5QdTcLdzAH1o6YCmU
+    key: edpkvGsTgdB4kZoLTcApBjgxVnfTHTKS2YqrBoxeUoX1kyjUSeBdP3
+    bootstrap_balance: "2800000000000"
+    is_bootstrap_baker_account: false
+
+  baker5:
+    #  tz1LzoYN1gZt2RjLanisU3mYYKcWk8RJmWwo
+    key: edpkubraUdLFLfS5RX3VQw4vF5qEruzLqpbxzPtCtL4qpLeStTK2a6
+    bootstrap_balance: "2585393429000"
+    is_bootstrap_baker_account: false
+
+  baker6:
+    #  tz1X2jPbN1V6Yae7gf1NcbR4DgMKrouHrrrA
+    key: edpkuWvX18xxna98g6GGPCBBFRy2dG5GCCRNdCE3tfWX6mv8ReZ9SY
+    bootstrap_balance: "2330000000000"
+    is_bootstrap_baker_account: false
+
+  baker7:
+    #  tz1bpjo8ZYtKP7otmNE8sbCMB7zSzUZU3v4H
+    key: edpkutGBQjW6r7v2ojFXm5SK18evMu5AiGkKgvoBjTz5fcDNN7M2Yy
+    bootstrap_balance: "2000000000000"
+    is_bootstrap_baker_account: false
+
+  baker8:
+    #  tz1XYYToEbZ8LT1nph8n14BV35vTd43chM57
+    key: edpkug1fRW7MCo1fzbdF29UMK5sLK6J3ftHbfcdXdQTFPmFaUg4uyf
+    bootstrap_balance: "17300000000000"
+    is_bootstrap_baker_account: false
+
+  baker9:
+    #  tz1dP8eKGuu3DRzSv3WKXF6kAVc5v2prz6gp
+    key: edpkuR98vdgF443LFSJ2ajBx5UpAaGGStq1i5Cvhic9qxSSM1h5cy3
+    bootstrap_balance: "26655000000000"
+    is_bootstrap_baker_account: false
+
+  delegator1:
+    #  tz1gYP7NQitejZRM79SiSYa6YuNUzvcLToM9
+    key: edpkuwUCosWMUuTDLCQdKZTCT6rmqsV6wuCdkAF9UKr9aBNMaJKXwn
+    bootstrap_balance: "30000000000000"
+    is_bootstrap_baker_account: false
+
+  delegator10:
+    #  tz1N2fgMwos2iUBfQoEXN3mE7QKD3AYEvpZ8
+    key: edpkuaFwNrBqB9vL6qg9v5un5n14ZBnhgZumJCqTTHush7wHuk7aeA
+    bootstrap_balance: "13708000000000"
+    is_bootstrap_baker_account: false
+
+  delegator11:
+    #  tz1em6W8PgSEMhHyg2kAqgzSceMaBs1PsfKD
+    key: edpkv5Jo859XkK3RsE9N9G4bCqDpQiCbtb8wWScB5VEzrNT22FmXBM
+    bootstrap_balance: "9586000000000"
+    is_bootstrap_baker_account: false
+
+  delegator12:
+    #  tz1U5yoM52BRUBbBwLKxqmCEgYmyVnFYLHS3
+    key: edpkttMksopMcjkxu5nAfZcPNxp5FcDhzt9wv3UKvGmkJKcfecHPcN
+    bootstrap_balance: "6237000000000"
+    is_bootstrap_baker_account: false
+
+  delegator13:
+    #  tz1Tv57JRbT4g7mdpkwXto1WtGnp1C1dKt8W
+    key: edpkusHwNhVMhghaJ9ytEQtHjyafUHJZ14BYfQr9VtnAJN7SBMwp6h
+    bootstrap_balance: "7729000000000"
+    is_bootstrap_baker_account: false
+
+  delegator14:
+    #  tz1S1GV6sTUx4E2XkkwGTAn9KBWSKXa6Zs7n
+    key: edpkvUJityitbqZfVhcvvtNDRd7emdNxYUDMij4iGGHHYdc2hzixPH
+    bootstrap_balance: "7414000000000"
+    is_bootstrap_baker_account: false
+
+  delegator15:
+    #  tz1WBDD8994HUbgaD8N8WB5eqdq35TErQAjY
+    key: edpkvGZBASJB3n4gGaSUXFUpHyBirw5jXCKSQBLF33nqh6H7F4wD2q
+    bootstrap_balance: "6940000000000"
+    is_bootstrap_baker_account: false
+
+  delegator16:
+    #  tz1SCGfDHoKryCzyjo45UrYcKnUT2rJVxZDE
+    key: edpkuk7Xst2gCwAtMJvpQ3hiWREGcy8xNWDUQ4HK9JowsoiCXZ3kF6
+    bootstrap_balance: "5000000000000"
+    is_bootstrap_baker_account: false
+
+  delegator17:
+    #  tz1b8wmrQNvQbKo3GEaqzqZshAphs1ZAvUfh
+    key: edpkvKtiguwLJpfHCiVetyHtyXGQBV4pg2YdYyczuhFh528XP1vYTQ
+    bootstrap_balance: "5092000000000"
+    is_bootstrap_baker_account: false
+
+  delegator18:
+    #  tz1bSettjZU3DURWa3bjMhtPbzMhUhVKVcEc
+    key: edpkut8Y9bP1iGSg3DhLW23o3iyzZbXEDJ61ZaJp9nJeu46bozwwYa
+    bootstrap_balance: "5092000000000"
+    is_bootstrap_baker_account: false
+
+  delegator19:
+    #  tz1UD9czhA8KrdY1P1R5hThfUgpXTXVr3p7n
+    key: edpkv3kW9CxvY3GJnhfpkiUUE7XV2u6CYF8yHZq2HTsRNLDQNFhzML
+    bootstrap_balance: "4992000000000"
+    is_bootstrap_baker_account: false
+
+  delegator2:
+    #  tz1SYvvmHMtj5A2ZE9ktRmn9fDBGy8F2R2Ee
+    key: edpkurVcM5M8aWjCyG7BQ8NHeFuAEPgeqk5u5uJBKVRPvCSDcWnnvN
+    bootstrap_balance: "30330972000000"
+    is_bootstrap_baker_account: false
+
+  delegator20:
+    #  tz1gC6cszL4qSkHHPeQXaHsgp3BhyThYZoCW
+    key: edpkun9SJTAXA7Stq16sRG2x72P6tM9qhvTspgtiCieC2LkRWUVm5M
+    bootstrap_balance: "4992000000000"
+    is_bootstrap_baker_account: false
+
+  delegator3:
+    #  tz1PUPieUNzu368cRP3ziPxLpU3baDXxZr9N
+    key: edpkuzHBPdzeRQGvA3iMUKisiZB8z3L1e28R6xq5xdJLhRmVrK1c8v
+    bootstrap_balance: "27000000000000"
+    is_bootstrap_baker_account: false
+
+  delegator4:
+    #  tz1WTpQMPtDCWnQZ97YPBQALtQNrmB94MppS
+    key: edpkvRWmLP8jr7tVV5vExue7tVvjRWP1qUqMQ4R4ahmsQNPcunQ9i8
+    bootstrap_balance: "98000000000"
+    is_bootstrap_baker_account: false
+
+  delegator5:
+    #  tz1TqAQD2xrs1JNcLwLXcN5dBwvK9L4AV5pT
+    key: edpkuaYMEY6eYUw81KsaASNmiFqPwYXqkdscEahoHW82tGQej9krZj
+    bootstrap_balance: "20000000000000"
+    is_bootstrap_baker_account: false
+
+  delegator6:
+    #  tz1KgtKzcJU5byWKJFxJ5PTpFqTtwtB75ATs
+    key: edpkuzx3cgrpA87w2YWtYP7cHNGrbkFyk92dkNrHfTK9MEt688KN6c
+    bootstrap_balance: "16871000000000"
+    is_bootstrap_baker_account: false
+
+  delegator7:
+    #  tz1Ktn9wcir6D2qU9gsXqZUWHSRUuxpKA5pH
+    key: edpktqDUwqfzQoU64x2Q5wsSPvtN9pCjP69WNsuTRPS11rrucn3qYz
+    bootstrap_balance: "16375000000000"
+    is_bootstrap_baker_account: false
+
+  delegator9:
+    #  tz1Zyzxg6wdQ9QmJ9HANi4wdBuKQmjzNLT4W
+    key: edpkvKjY4RTKDDRDMmFiDSN4rURgCMZge9F21k3Ngqfwn7KsxuVogX
+    bootstrap_balance: "82387000000000"
+    is_bootstrap_baker_account: false
+
+  faucet:
+    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
+    bootstrap_balance: "100000000000000"
+    is_bootstrap_baker_account: false
+
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
-    bootstrap_balance: "1500000000000"
+    bootstrap_balance: "15000000000000"
     is_bootstrap_baker_account: true
     type: secret
     dal_node_rpc_url: http://dal-dal1:10732
-  ecadlabs:
-    # tz1cjyja1TU6fiyiFav3mFAdnDsCReJ12hPD
-    key: edpkvP1NXoo8vhYbPSvXdy466EHoYWBpf6zmjghB2p3DwJPjbB5nsf
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  ecadlabs_2:
-    # tz1RuHDSj9P7mNNhfKxsyLGRDahTX5QD1DdP
-    key: edpkthQu5xeKjD9Dxh5tAf3f61z2Nteqk9xRVPVoZekk1CF738zbcJ
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
-    key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
-    is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
-  german:
-    #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
-    key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
-    type: public
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  mathias:
-    # tz1SrPwhZgr8MHcyPtGtFrKrtTAjzuiJpYsu
-    key: edpkugFkkbDB4fx6u8KwcKM3KvZ9z465iaR38q4Q1sNgZejEh19gzv
-    type: public
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  marco:
-    # Marco Schurtenberger
-    # Inference
-    key: edpkubw32gvTfUYRERGECHbMTsiLdM9z9JrEXGVEahbZf9yMhTozSg
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-    # TF production-style bakers
-  tf1:
-    # TF Testnet A
-    # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
-    key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  tf2:
-    # TF Testnet B
-    # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
-    key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
-    #
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  vincent:
-    # XTZmaster
-    # tz1XMiZwHpHZ8a1AfwRWKfzLskJgZNyV8PHs
-    key: edpkvaZQ6tt9XgJJTonjFpzwaqDV7RWUQMT7TmntBJ5yXmDsPb8T7L
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  deligation_danilo:
-    # Capt Stake's sidekick
-    # tz1iir8f4JpoC1TuWq3tPN2E7LaMwxzNe9tS
-    key: edpkubZwGk9EPfxGYA2y4axvr1WfUDkSQFvHd2cg68wcvwSf5Mua6H
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
 
-  # NL Vigies Nodes (Corentin)
-  # tz1ViGF3WbG8gZH6w2oizRjJkyi43BtGr1ma
-  nl_vigies_full:
-    key: edpkvBMSXw1VNAqQDBweScaDPFnkUidDpX3FUWuPe5wn6QHUKgGBWT
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
-  # tz1ViGA65hAiAvWonzuc4ndnUkztCnbDTsFj
-  nl_vigies_archive:
-    key: edpktjogMNJ34uG9ED3WZzP8eKiGs4zzJdhAPZ9B4rbfwn111zhHQS
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
-  # tz1VigrUuQDe1EikkGQTWGMS6JVkaKb1rnx1
-  nl_vigies_rolling:
-    key: edpkvQ9wHEWVtuHBk8qjjYJNETVV1UmUoiz9ME3PK3M7ehnZVSEhBQ
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
-  # tz1VigxFsaiceHojGNfEKMsPHuL8sxK4t7jZ
-  nl_vigies_default:
-    key: edpkvaKebJW8Y871pHq3sbNq8vre2Gyk9pxZ9mc3TTqYEP2LGWZhX9
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
-  # "Zir0h's Testnet bakery" 
-  # tz1NNT9EERmcKekRq2vdv6e8TL3WQpY8AXSF
-  zir0h:
-    key: edpkvGTRQwdJ11QENyYifpnnNxthH6KzQsFtD5FKtEJj3MaijAUkof
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false  
-  # tz1iHq8QLYf3CvPV23UVkhk6WG74psJ4WpWp (Barry Manilow)
-  barry_manilow:
-    key: edpkvKpSMUDaKZKCLwE69XDiijZcAuuFH2h2NcRiTQD4W3FLGAzxei
-    bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false
-    
-
-
-  # Faucets
-  #
-  marcofaucet:
-    # Marco Schurtenberger
-    # tz1bRUpEJ9zKLAe3zrE81DGDayH9S4P7ZqGz
-    # Inference Faucet
-    key: edpkuzzJcZDjXL7hWMnyC1y3joyrGgBiDVVRJUqnG3LKgPvZrpNWxT
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
-  tzktfaucet:
-    # Dmitry's personal fund
-    # tz1KhnTgwoRRALBX6vRHRnydDGSBFsWtcJxc
-    key: edpkuFRauFAdhipQu9s4xmfNJWmtLxPKpoaoG41gYGq5AgUA43Vxqx
-    bootstrap_balance: "200000000000000"
-    is_bootstrap_baker_account: false
-  faucet:
-    # faucet on teztnets.xyz platform
-    # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
-    key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
-    bootstrap_balance: "200000000000000"
-    is_bootstrap_baker_account: false
-  # DAL Rich account and baker (Francois Thire)
-  dal_rich_account:
-    key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
-    bootstrap_balance: "370000000000"
-    is_bootstrap_baker_account: false
   tfrichfund:
-    # an account that would allow Chris to finally have that holiday
-    # if only it were on mainnet...
     # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
     key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
-    bootstrap_balance: "5000000000000000"
+    bootstrap_balance: "200000000000000"
     is_bootstrap_baker_account: false
-  tz1THUNA:
-    # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
-    # Romain's faucet
-    key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
-    is_bootstrap_baker_account: false
-    bootstrap_balance: "50000000000000000"
 

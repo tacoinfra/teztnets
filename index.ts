@@ -218,23 +218,40 @@ new TezosFaucet(
 */
 // END of Nextnet
 
-// const pouletnet_chain = new TezosChain(
-//   {
-//     category: protocolCategory,
-//     humanName: "Pouletnet",
-//     description: "Test Chain for Stuff",
-//     activationBucket: activationBucket,
-//     helmValuesFile: "networks/albinnet/values.yaml",
-//     bakingPrivateKey: private_teztnets_baking_key,
-//     bootstrapPeers: [],
-//     rpcUrls: [],
-//     indexers: [],
-//     chartRepoVersion: "7.2.0",
-//     networkStakes: true,
-//   },
-//   provider
-// )
+// Shadownet testing
+//
+const thxnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "thxnet",
+    description: "Test Chain",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/shadownet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
 
+/*
+new TezosFaucet(
+  nextnet_chain.name,
+  {
+    namespace: shadownet_chain.namespace,
+    humanName: "Shadownet",
+    helmValuesFile: "networks/shadownet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.2.0",
+  },
+  provider
+)
+*/
 
 // Rionet 1st Blood reboot test network
 const rionet_chain = new TezosChain(
@@ -374,6 +391,7 @@ const ghostnetNetwork = {
 export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([rionet_chain]),
+  ...getNetworks([thxnet_chain]),
   ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
