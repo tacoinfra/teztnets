@@ -120,6 +120,40 @@
     "snapshot_url": "https://snapshots.tzinit.org/rionet/rolling",
     "activated_on": "2025-02-19"
   },
+  "thxnet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_THXNET_2025-04-16T08:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.thxnet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.thxnet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.thxnet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.thxnet.teztnets.com"
+      }
+    },
+    "description": "Test Chain",
+    "docker_build": "tezos/tezos:master_46754eda_20250415163531",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.thxnet.teztnets.com",
+    "git_ref": "46754eda",
+    "human_name": "thxnet",
+    "indexers": [],
+    "last_baking_daemon": "PsRiotum",
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/thxnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.thxnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.thxnet.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/thxnet/rolling",
+    "activated_on": "2025-04-16"
+  },
   "weeklynet-2025-04-16": {
     "category": "Periodic Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2025-04-16T00:00:00.000Z",

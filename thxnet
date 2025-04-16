@@ -1,0 +1,24 @@
+{
+  "chain_name": "TEZOS_THXNET_2025-04-16T08:00:00Z",
+  "dal_config": {
+    "activated": true,
+    "bootstrap_peers": [
+      "dal.thxnet.teztnets.com:11732",
+      "thxnet.bootstrap.dal.nomadic-labs.com:11732"
+    ]
+  },
+  "default_bootstrap_peers": [
+    "thxnet.teztnets.com"
+  ],
+  "genesis": {
+    "block": "BL4f8hCv9ckqdSGiTkEYNmLXNwL6eMKs3kjg27mSYDhzFK1531p",
+    "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
+    "timestamp": "2025-04-16T08:00:00Z"
+  },
+  "genesis_parameters": {
+    "values": {
+      "genesis_pubkey": "edpktosVHk2f3Yrz9Jb6rMrk6uVy4sTxVhP2iyF39AdgzvsTWgbaLy"
+    }
+  },
+  "sandboxed_chain_name": "SANDBOXED_TEZOS"
+}
