@@ -459,6 +459,7 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([quebecnet_chain]),
   ...getTeztnets([rionet_chain]),
+  ...getTeztnets([thxnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
