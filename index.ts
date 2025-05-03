@@ -150,38 +150,6 @@ new TezosFaucet(
   provider
 )
 
-// Quebecnet First Blood Part III
-//
-
-const quebecnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Quebecnet",
-    description: "Test Chain for the Quebec Protocol Proposal 20241113",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/quebecnet2/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "quebecnet.tzinit.org" ],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.1.2",
-  },
-  provider
-)
-new TezosFaucet(
-  quebecnet_chain.name,
-  {
-    namespace: quebecnet_chain.namespace,
-    humanName: "Quebecnet",
-    helmValuesFile: "networks/quebecnet2/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.1.2",
-  },
-  provider
-)
-
 // Nextnet test network - use pre-protocol proposal
 /*
 const nextnet_chain = new TezosChain(
@@ -392,7 +360,6 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([rionet_chain]),
   ...getNetworks([thxnet_chain]),
-  ...getNetworks([quebecnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -457,7 +424,6 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([quebecnet_chain]),
   ...getTeztnets([rionet_chain]),
   ...getTeztnets([thxnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
