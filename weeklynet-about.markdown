@@ -8,12 +8,12 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.weeklynet-2025-05-07.teztnets.com](https://rpc.weeklynet-2025-05-07.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2025-05-07.teztnets.com) |
+| Public RPC endpoints | [https://rpc.weeklynet-2025-05-14.teztnets.com](https://rpc.weeklynet-2025-05-14.teztnets.com/chains/main/chain_id)<br/> |
+| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2025-05-14.teztnets.com) |
 | Rolling Snapshot | [Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
-| Full network name | `TEZOS-WEEKLYNET-2025-05-07T00:00:00.000Z` |
-| Tezos docker build | [tezos/tezos:master_abe7cdd1_20250506190302](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_abe7cdd1_20250506190302) |
-| Activated on | 2025-05-07T00:00:00.000Z |
+| Full network name | `TEZOS-WEEKLYNET-2025-05-14T00:00:00.000Z` |
+| Tezos docker build | [tezos/tezos:master_4f24cc62_20250513201401](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_4f24cc62_20250513201401) |
+| Activated on | 2025-05-14T00:00:00.000Z |
 
 
 
@@ -30,7 +30,7 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 To join Weeklynet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master_abe7cdd1_20250506190302
+docker run -it --entrypoint=/bin/sh tezos/tezos:master_4f24cc62_20250513201401
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master_abe7cdd1_20250506190302
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout abe7cdd1
+git checkout 4f24cc62
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
@@ -55,7 +55,7 @@ export PATH=$HOME/tezos:$PATH
 Run the following commands:
 
 ```
-octez-node config init --network https://teztnets.com/weeklynet-2025-05-07
+octez-node config init --network https://teztnets.com/weeklynet-2025-05-14
 
 ```
 
@@ -88,8 +88,8 @@ The DAL nodes are accessible with the following endpoints:
 
 | | RPC | P2P Endpoint |
 |------------|---------|--------------|
-| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.weeklynet-2025-05-07.teztnets.com/p2p/gossipsub/scores) | `dal.weeklynet-2025-05-07.teztnets.com:11732` |
-| DAL Teztnets Attester | [Link](https://dal-attester-rpc.weeklynet-2025-05-07.teztnets.com/p2p/gossipsub/scores) | `dal1.weeklynet-2025-05-07.teztnets.com:11732` |
+| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.weeklynet-2025-05-14.teztnets.com/p2p/gossipsub/scores) | `dal.weeklynet-2025-05-14.teztnets.com:11732` |
+| DAL Teztnets Attester | [Link](https://dal-attester-rpc.weeklynet-2025-05-14.teztnets.com/p2p/gossipsub/scores) | `dal1.weeklynet-2025-05-14.teztnets.com:11732` |
 
 
 For more info, read this [blog post from Nomadic Labs](https://research-development.nomadic-labs.com/data-availability-layer-tezos.html).
