@@ -1,8 +1,8 @@
 
 
 NETWORK=ghostnet
-PROTO=PsQuebecnLByd3JwTiGadoG4nGWi3HYiLXUjkibeFV8dCFeVMUg
-KEY=dictator_keys
+PROTO=PsRiotumaAMotcRoDWW1bysEhQy2n1M5fy8JgRp8jjRfHGmfeA7
+KEY=ledger_chris
 FAUCET=oxford_rich_fund 
 ENDPOINT="https://rpc.$NETWORK.teztnets.com"
 
