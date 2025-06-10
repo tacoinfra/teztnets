@@ -3,10 +3,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_NEXTNET_2025-06-10T12:00:00Z
+  chain_name: TEZOS_NEXTNET_2025-06-10T12:10:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-06-10T12:00:00Z"
+    timestamp: "2025-06-10T12:10:00Z"
   dal_config:
     activated: true
 
@@ -249,7 +249,7 @@ accounts:
   captstake:
     # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
-    is_bootstrap_baker_account: true
+    is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   german:
     #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
