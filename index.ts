@@ -155,11 +155,11 @@ new TezosFaucet(
 const nextnet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Nextnet-20250203",
+    humanName: "Nextnet-20250610",
     snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20250203/values.yaml",
+    helmValuesFile: "networks/nextnet-20250610/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: [ "nextnet.tzinit.org" ],
     rpcUrls: [],
@@ -174,8 +174,8 @@ new TezosFaucet(
   nextnet_chain.name,
   {
     namespace: nextnet_chain.namespace,
-    humanName: "Nextnet-20250203",
-    helmValuesFile: "networks/nextnet-20250203/faucet_values.yaml",
+    humanName: "Nextnet-20250610",
+    helmValuesFile: "networks/nextnet-20250610/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -223,6 +223,8 @@ new TezosFaucet(
 )
 */
 
+// End of Shadownet
+
 // Rionet 1st Blood reboot test network
 const rionet_chain = new TezosChain(
   {
@@ -255,7 +257,7 @@ new TezosFaucet(
   provider
 )
 
-// END of Nextnet
+// END of Rionet
 
 
 function getNetworks(chains: TezosChain[]): object {
