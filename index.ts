@@ -150,8 +150,31 @@ new TezosFaucet(
   provider
 )
 
-// Nextnet test network - use pre-protocol proposal
 /*
+// Test
+const nextnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Testnet-20250610",
+    snapOver: "testnet",
+    description: "Test Chain for Next protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/nextnet-20250610/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+// End of Test
+*/
+
+
+// Nextnet test network - use pre-protocol proposal
+
 const nextnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -183,7 +206,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // END of Nextnet
 
 // Shadownet testing
@@ -364,6 +387,7 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([rionet_chain]),
 //  ...getNetworks([shadownet_chain]),
+  ...getNetworks([nextnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -430,6 +454,7 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([rionet_chain]),
 //  ...getTeztnets([shadownet_chain]),
+  ...getTeztnets([nextnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
