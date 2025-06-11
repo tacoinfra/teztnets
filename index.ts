@@ -206,8 +206,42 @@ new TezosFaucet(
   },
   provider
 )
-
 // END of Nextnet
+
+
+// Test
+
+const testnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Testnet-20250610",
+    description: "Test Chain",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/test/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
+new TezosFaucet(
+  testnet_chain.name,
+  {
+    namespace: testnet_chain.namespace,
+    humanName: "Testnet",
+    helmValuesFile: "networks/test/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.2.0",
+  },
+  provider
+)
+
 
 // Shadownet testing
 //
@@ -388,6 +422,7 @@ export const networks = {
   ...getNetworks([rionet_chain]),
 //  ...getNetworks([shadownet_chain]),
   ...getNetworks([nextnet_chain]),
+  ...getNetworks([testnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -455,6 +490,7 @@ export const teztnets = {
   ...getTeztnets([rionet_chain]),
 //  ...getTeztnets([shadownet_chain]),
   ...getTeztnets([nextnet_chain]),
+  ...getTeztnets([testnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
