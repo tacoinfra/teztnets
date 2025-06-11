@@ -8,12 +8,12 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 
 | | |
 |-------|---------------------|
-| Public RPC endpoints | [https://rpc.weeklynet-2025-06-11.teztnets.com](https://rpc.weeklynet-2025-06-11.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2025-06-11.teztnets.com) |
+| Public RPC endpoints | [https://rpc.weeklynet-2025-06-11-1.teztnets.com](https://rpc.weeklynet-2025-06-11-1.teztnets.com/chains/main/chain_id)<br/> |
+| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2025-06-11-1.teztnets.com) |
 | Rolling Snapshot | [Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
-| Full network name | `TEZOS-WEEKLYNET-2025-06-11T00:00:00.000Z` |
+| Full network name | `TEZOS-WEEKLYNET-2025-06-11T16:00:00Z` |
 | Tezos docker build | [tezos/tezos:master_e3336079_20250610192450](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_e3336079_20250610192450) |
-| Activated on | 2025-06-11T00:00:00.000Z |
+| Activated on | 2025-06-11T16:00:00Z |
 
 
 
@@ -55,7 +55,7 @@ export PATH=$HOME/tezos:$PATH
 Run the following commands:
 
 ```
-octez-node config init --network https://teztnets.com/weeklynet-2025-06-11
+octez-node config init --network https://teztnets.com/weeklynet-2025-06-11-1
 
 ```
 
@@ -88,8 +88,8 @@ The DAL nodes are accessible with the following endpoints:
 
 | | RPC | P2P Endpoint |
 |------------|---------|--------------|
-| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.weeklynet-2025-06-11.teztnets.com/p2p/gossipsub/scores) | `dal.weeklynet-2025-06-11.teztnets.com:11732` |
-| DAL Teztnets Attester | [Link](https://dal-attester-rpc.weeklynet-2025-06-11.teztnets.com/p2p/gossipsub/scores) | `dal1.weeklynet-2025-06-11.teztnets.com:11732` |
+| DAL Bootstrap | [Link](https://dal-bootstrap-rpc.weeklynet-2025-06-11-1.teztnets.com/p2p/gossipsub/scores) | `dal.weeklynet-2025-06-11-1.teztnets.com:11732` |
+| DAL Teztnets Attester | [Link](https://dal-attester-rpc.weeklynet-2025-06-11-1.teztnets.com/p2p/gossipsub/scores) | `dal1.weeklynet-2025-06-11-1.teztnets.com:11732` |
 
 
 For more info, read this [blog post from Nomadic Labs](https://research-development.nomadic-labs.com/data-availability-layer-tezos.html).
