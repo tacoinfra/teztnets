@@ -136,10 +136,10 @@
       }
     },
     "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
-    "docker_build": "tezos/tezos:master_e3336079_20250610192450",
+    "docker_build": "tezos/tezos:master_a401d6fa_20250617173336",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.weeklynet-2025-06-11-1.teztnets.com",
-    "git_ref": "e3336079",
+    "git_ref": "a401d6fa",
     "human_name": "Weeklynet",
     "indexers": [],
     "last_baking_daemon": "PsRiotum",
