@@ -79,41 +79,9 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
   ]
 });
 
-// Weeklynet - restarts Wednesdays
 
-const weeklynet_chain = new TezosChain(
-  {
-    category: periodicCategory,
-    humanName: "Weeklynet",
-    description:
-      "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
-    schedule: "0 0 * * WED",
-    activationBucket: activationBucket,
-    bootstrapContracts: [
-      // "exchanger.json",
-      // "evm_bridge.json",
-    ],
-    helmValuesFile: "networks/weeklynet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.2.0", // point to a release of tezos-k8s. This should be the default state.
-    bootstrapPeers: [ "weeklynet.tzinit.org" ],
-  },
-  provider
-)
-new TezosFaucet(
-  weeklynet_chain.name,
-  {
-    humanName: "Weeklynet",
-    namespace: weeklynet_chain.namespace,
-    helmValuesFile: "networks/weeklynet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
-  },
-  provider
-)
+// network chains
+const chain = new Map();
 
 
 // Ghostnet is different from the other testnets:
@@ -152,135 +120,203 @@ new TezosFaucet(
 )
 
 /*
-// Test
-const nextnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Testnet-20250610",
-    snapOver: "testnet",
-    description: "Test Chain for Next protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20250610/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
-  },
-  provider
-)
-// End of Test
+    =======================
+      NETWORK DEFINITIONS
+      DO NOT CHANGE ORDER
+    =======================
 */
 
+// -------------------------------
+// Weeklynet - restarts Wednesdays
+const weeklynet = {
 
-// Nextnet test network - use pre-protocol proposal
+  humanName: "Weeklynet",
+  description: "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
+  chartRepoVersion: "7.2.0",
 
-const nextnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Nextnet-20250610",
-    snapOver: "nextnet",
-    description: "Test Chain for Next protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20250610/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "nextnet.tzinit.org" ],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
+  chain: {
+    category: periodicCategory,
+    schedule: "0 0 * * WED",
+    bootstrapPeers: [ "weeklynet.tzinit.org" ],
+    bootstrapContracts: [
+      // "exchanger.json",
+      // "evm_bridge.json",
+    ],
+    helmValuesFile: "networks/weeklynet/values.yaml",
   },
-  provider
-)
 
-new TezosFaucet(
-  nextnet_chain.name,
-  {
-    namespace: nextnet_chain.namespace,
-    humanName: "Nextnet-20250610",
-    helmValuesFile: "networks/nextnet-20250610/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+  faucet: {
+    helmValuesFile: "networks/weeklynet/faucet_values.yaml",
   },
-  provider
-)
-// END of Nextnet
 
-// Shadownet testing
-//
-/*
-const shadownet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "shadownet",
-    description: "Shadownet Long-term Test Network",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/shadownet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
-  },
-  provider
-)
-*/
+};
 
-/*
-new TezosFaucet(
-  shadownet_chain.name,
-  {
-    namespace: shadownet_chain.namespace,
-    humanName: "Shadownet",
-    helmValuesFile: "networks/shadownet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
-  },
-  provider
-)
-*/
+chain.set('weeklynet', defineChain(weeklynet));
+// END of Weeklynet
+// -------------------------------
 
-// End of Shadownet
 
+// -------------------------------
 // Rionet 1st Blood reboot test network
-const rionet_chain = new TezosChain(
-  {
+const rionet = {
+
+  humanName: "Rionet",
+  description: "Test Chain for Next protocol",
+  chartRepoVersion: "7.2.0",
+
+  chain: {
     category: protocolCategory,
-    humanName: "Rionet",
-    description: "Test Chain for Next protocol",
-    activationBucket: activationBucket,
     helmValuesFile: "networks/rionet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: [ "rionet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.2.0",
     networkStakes: true,
   },
-  provider
-)
 
-new TezosFaucet(
-  rionet_chain.name,
-  {
-    namespace: rionet_chain.namespace,
-    humanName: "Rionet",
+  faucet: {
     helmValuesFile: "networks/rionet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
   },
-  provider
-)
 
+};
+
+chain.set('rionet', defineChain(rionet));
 // END of Rionet
+// -------------------------------
+
+
+// -------------------------------
+// Nextnet test network - use pre-protocol proposal
+
+/*
+// Previous test (converted from old format)
+const nextnet = {
+
+  humanName: "Testnet-20250610",
+  description: "Test Chain for Next protocol",
+  chartRepoVersion: "7.2.0",
+
+  chain: {
+    category: protocolCategory,
+    snapOver: "testnet",
+    helmValuesFile: "networks/nextnet-20250610/values.yaml",
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    networkStakes: true,
+  },
+
+  faucet: {
+    helmValuesFile: "networks/nextnet-20250610/faucet_values.yaml",
+  },
+
+};
+*/
+
+const nextnet = {
+
+  humanName: "Nextnet-20250610",
+  description: "Test Chain for Next protocol",
+  chartRepoVersion: "7.2.0",
+
+  chain: {
+    category: protocolCategory,
+    snapOver: "nextnet",
+    helmValuesFile: "networks/nextnet-20250610/values.yaml",
+    bootstrapPeers: [ "nextnet.tzinit.org" ],
+    rpcUrls: [],
+    indexers: [],
+    networkStakes: true,
+  },
+
+  faucet: {
+    helmValuesFile: "networks/nextnet-20250610/faucet_values.yaml",
+  },
+
+};
+
+chain.set('nextnet', defineChain(nextnet));
+// END of Nextnet
+// -------------------------------
+
+
+// -------------------------------
+// Shadownet testing
+/*
+const shadownet = {
+
+  humanName: "shadownet",
+  description: "Shadownet Long-term Test Network",
+  chartRepoVersion: "7.2.0",
+
+  chain: {
+    category: protocolCategory,
+    helmValuesFile: "networks/shadownet/values.yaml",
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    networkStakes: true,
+  },
+
+  faucet: {
+    helmValuesFile: "networks/shadownet/faucet_values.yaml",
+  },
+
+};
+
+chain.set('shadownet', defineChain(shadownet));
+*/
+// End of Shadownet
+// -------------------------------
+
+
+// -------------------------------
+// Currentnet
+// clone of Rionet, sets new name
+
+/*
+const currentnet = Object.assign({}, rionet);
+
+currentnet.humanName = 'Currentnet';
+currentnet.description = 'Current protocol network';
+*/
+
+// chain.set('currentnet', defineChain(currentnet));
+// END of Currentnet
+// -------------------------------
+
+
+// generic network chain and faucet factory
+function defineChain(cfg: any): TezosChain {
+
+  const tezosChain = new TezosChain(
+    {
+      humanName: cfg.humanName,
+      description: cfg.description,
+      activationBucket: activationBucket,
+      bakingPrivateKey: private_teztnets_baking_key,
+      chartRepoVersion: cfg.chartRepoVersion,
+      ...cfg.chain,
+    },
+    provider
+  );
+
+  new TezosFaucet(
+    tezosChain.name,
+    {
+      namespace: tezosChain.namespace,
+      humanName: cfg.humanName,
+      faucetPrivateKey: faucetPrivateKey,
+      faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+      faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+      chartRepoVersion: cfg.chartRepoVersion,
+      ...cfg.faucet
+    },
+    provider
+  )
+
+  return tezosChain;
+
+}
 
 
 function getNetworks(chains: TezosChain[]): object {
@@ -383,13 +419,12 @@ const ghostnetNetwork = {
   sandboxed_chain_name: "SANDBOXED_TEZOS",
 }
 
-export const networks = {
-  ...getNetworks([weeklynet_chain]),
-  ...getNetworks([rionet_chain]),
-//  ...getNetworks([shadownet_chain]),
-  ...getNetworks([nextnet_chain]),
-  ...{ ghostnet: ghostnetNetwork },
-}
+
+// define network object (in order of definition)
+export const networks = {};
+chain.forEach(net => Object.assign(networks, getNetworks([net])));
+Object.assign(networks, { ghostnet: ghostnetNetwork });
+
 
 // We hardcode the values to be displayed on the webpage.
 const lastBakingDaemonMainnetGhostnet = "PsQuebec"
@@ -450,13 +485,11 @@ const mainnetMetadata = {
   ],
 }
 
-export const teztnets = {
-  ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([rionet_chain]),
-//  ...getTeztnets([shadownet_chain]),
-  ...getTeztnets([nextnet_chain]),
-  ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
-}
+// define teztnets object (in order of definition)
+export const teztnets = {};
+chain.forEach(net => Object.assign(teztnets, getTeztnets([net])));
+Object.assign(teztnets, { ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata });
+
 
 deployStatusPage(provider, {
   networks: networks,
