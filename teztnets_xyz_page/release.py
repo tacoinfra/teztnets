@@ -54,7 +54,7 @@ with open("target/release/teztnets.json", "w") as out_file:
     print(json.dumps(teztnets, indent=2), file=out_file)
 
 for k, v in teztnets.items():
-    if k == "mainnet":
+    if k == "mainnet" or k == "currentnet" or k == "futurenet":
         continue
 
     v["release"] = None
