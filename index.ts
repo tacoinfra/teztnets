@@ -491,11 +491,12 @@ const mainnetMetadata = {
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([rionet_chain]),
+  ...getTeztnets([rionet_chain], 'currentnet'),
 //  ...getTeztnets([shadownet_chain]),
 //  ...getTeztnets([seoulnet_chain]),
+//  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet_chain]),
-  ...getTeztnets([rionet_chain], 'currentnet'),
-//  ...getTeztnets([nextnet_chain], 'futurenet'),
+  ...getTeztnets([nextnet_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
