@@ -87,7 +87,7 @@
   },
   "nextnet": {
     "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_NEXTNET_2025-06-10T12:10:00Z",
+    "chain_name": "TEZOS_NEXTNET_2025-06-25T12:10:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -120,7 +120,7 @@
   },
   "nextnet-20250610": {
     "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_NEXTNET_2025-06-10T12:10:00Z",
+    "chain_name": "TEZOS_NEXTNET_2025-06-25T12:10:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -150,7 +150,7 @@
       "https://rpc.nextnet-20250610.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
-    "activated_on": "2025-06-10"
+    "activated_on": "2025-06-25"
   },
   "rionet": {
     "category": "Protocol Teztnets",
