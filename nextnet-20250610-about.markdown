@@ -11,9 +11,9 @@ Test Chain for Next protocol
 | Public RPC endpoints | [https://rpc.nextnet-20250610.teztnets.com](https://rpc.nextnet-20250610.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Nextnet-20250610 faucet](https://faucet.nextnet-20250610.teztnets.com) |
 | Rolling Snapshot | [Nextnet-20250610 snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
-| Full network name | `TEZOS_NEXTNET_2025-06-25T12:10:00Z` |
+| Full network name | `TEZOS_NEXTNET_2025-06-10T12:10:00Z` |
 | Tezos docker build | [tezos/tezos:master_3f47ba6f_20250610075602](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_3f47ba6f_20250610075602) |
-| Activated on | 2025-06-25T12:10:00Z |
+| Activated on | 2025-06-25T10:10:00Z |
 
 
 
