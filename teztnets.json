@@ -150,7 +150,7 @@
       "https://rpc.nextnet-20250610.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
-    "activated_on": "2025-06-25"
+    "activated_on": "2025-06-10"
   },
   "rionet": {
     "category": "Protocol Teztnets",
