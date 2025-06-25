@@ -209,6 +209,42 @@ new TezosFaucet(
 )
 // END of Nextnet
 
+// Nextnet test network - use pre-protocol proposal
+/*
+const nextnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Nextnet-20250626",
+    snapOver: "nextnet",
+    description: "Test Chain for Next protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/nextnet-20250626/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [ "nextnet.tzinit.org" ],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
+new TezosFaucet(
+  nextnet_chain.name,
+  {
+    namespace: nextnet_chain.namespace,
+    humanName: "Nextnet-20250610",
+    helmValuesFile: "networks/nextnet-20250610/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.2.0",
+  },
+  provider
+)
+*/
+// END of Nextnet
+
 // Seoul test network
 /*
 const seoulnet_chain = new TezosChain(
