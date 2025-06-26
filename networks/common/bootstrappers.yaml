@@ -142,6 +142,13 @@ accounts:
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-
+  techrel_faucet:
+    # TechRel Bakers & Builders Squad Experiments Faucet
+    # faucet for funding experiments and tests
+    # tz2EXHd7C4n7h5Ew2bZGsNvRt7zReAVRqSUs
+    # contact: german.delbianco@trili.tech
+    key: sppk7ZkJrt5MHHFUsQ8ePEqTgchiWLuJERHzneoUV2bVau8nkodXXs7
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "50000000000000000"
 
 
