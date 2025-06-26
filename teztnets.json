@@ -87,34 +87,34 @@
   },
   "nextnet": {
     "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_NEXTNET_2025-06-10T12:10:00Z",
+    "chain_name": "TEZOS_NEXTNET_2025-06-26T09:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
-        "p2p": "dal.nextnet-20250610.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.nextnet-20250610.teztnets.com"
+        "p2p": "dal.nextnet-20250626.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.nextnet-20250626.teztnets.com"
       },
       "dal-dal1": {
         "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.nextnet-20250610.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.nextnet-20250610.teztnets.com"
+        "p2p": "dal1.nextnet-20250626.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.nextnet-20250626.teztnets.com"
       }
     },
     "description": "Test Chain for Next protocol",
-    "docker_build": "tezos/tezos:master_3f47ba6f_20250610075602",
+    "docker_build": "tezos/tezos:master_4872466c_20250626072134",
     "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.nextnet-20250610.teztnets.com",
-    "git_ref": "3f47ba6f",
-    "human_name": "Nextnet-20250610",
+    "faucet_url": "https://faucet.nextnet-20250626.teztnets.com",
+    "git_ref": "4872466c",
+    "human_name": "Nextnet-20250626",
     "indexers": [],
-    "last_baking_daemon": "PtSEouLo",
+    "last_baking_daemon": "PtSeouLo",
     "masked_from_main_page": true,
     "network_stakes": true,
-    "network_url": "https://teztnets.com/nextnet-20250610",
+    "network_url": "https://teztnets.com/nextnet-20250626",
     "rollup_urls": [],
-    "rpc_url": "https://rpc.nextnet-20250610.teztnets.com",
+    "rpc_url": "https://rpc.nextnet-20250626.teztnets.com",
     "rpc_urls": [
-      "https://rpc.nextnet-20250610.teztnets.com"
+      "https://rpc.nextnet-20250626.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling"
   },
@@ -151,6 +151,40 @@
     ],
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
     "activated_on": "2025-06-10"
+  },
+  "nextnet-20250626": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_NEXTNET_2025-06-26T09:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.nextnet-20250626.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.nextnet-20250626.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.nextnet-20250626.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.nextnet-20250626.teztnets.com"
+      }
+    },
+    "description": "Test Chain for Next protocol",
+    "docker_build": "tezos/tezos:master_4872466c_20250626072134",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.nextnet-20250626.teztnets.com",
+    "git_ref": "4872466c",
+    "human_name": "Nextnet-20250626",
+    "indexers": [],
+    "last_baking_daemon": "PtSeouLo",
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/nextnet-20250626",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.nextnet-20250626.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.nextnet-20250626.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
+    "activated_on": "2025-06-26"
   },
   "rionet": {
     "category": "Protocol Teztnets",
