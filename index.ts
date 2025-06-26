@@ -210,8 +210,8 @@ new TezosFaucet(
 // END of Nextnet
 
 // Nextnet test network - use pre-protocol proposal
-/*
-const nextnet_chain = new TezosChain(
+
+const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20250626",
@@ -230,9 +230,9 @@ const nextnet_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  nextnet_chain.name,
+  nextnet2_chain.name,
   {
-    namespace: nextnet_chain.namespace,
+    namespace: nextnet2_chain.namespace,
     humanName: "Nextnet-20250610",
     helmValuesFile: "networks/nextnet-20250610/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
@@ -242,7 +242,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // END of Nextnet
 
 // Seoul test network
@@ -462,6 +462,7 @@ export const networks = {
 //  ...getNetworks([seoulnet_chain]),
 //  ...getNetworks([shadownet_chain]),
   ...getNetworks([nextnet_chain]),
+  ...getNetworks([nextnet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -532,7 +533,8 @@ export const teztnets = {
 //  ...getTeztnets([seoulnet_chain]),
 //  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet_chain]),
-  ...getTeztnets([nextnet_chain], 'nextnet'),
+  ...getTeztnets([nextnet2_chain]),
+  ...getTeztnets([nextnet2_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
