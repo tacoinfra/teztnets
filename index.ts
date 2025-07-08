@@ -178,6 +178,7 @@ const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20250626",
+    virtualName: "nextnet",
     snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
@@ -289,6 +290,7 @@ const rionet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Rionet",
+    virtualName: "currentnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/rionet/values.yaml",
