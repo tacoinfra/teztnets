@@ -1,37 +1,4 @@
 {
-  "currentnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_RIONET_2025-02-19T12:45:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.rionet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.rionet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.rionet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.rionet.teztnets.com"
-      }
-    },
-    "description": "Test Chain for Next protocol",
-    "docker_build": "tezos/tezos:octez-v22.0",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.rionet.teztnets.com",
-    "git_ref": "octez-v22.0",
-    "human_name": "Rionet",
-    "indexers": [],
-    "last_baking_daemon": "PsRiotum",
-    "masked_from_main_page": true,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/rionet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.rionet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.rionet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/rionet/rolling"
-  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -84,39 +51,6 @@
     "rpc_urls": [
       "https://mainnet.api.tez.ie"
     ]
-  },
-  "nextnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_NEXTNET_2025-06-26T09:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.nextnet-20250626.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.nextnet-20250626.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.nextnet-20250626.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.nextnet-20250626.teztnets.com"
-      }
-    },
-    "description": "Test Chain for Next protocol",
-    "docker_build": "tezos/tezos:master_4872466c_20250626072134",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.nextnet-20250626.teztnets.com",
-    "git_ref": "4872466c",
-    "human_name": "Nextnet-20250626",
-    "indexers": [],
-    "last_baking_daemon": "PtSeouLo",
-    "masked_from_main_page": true,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/nextnet-20250626",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.nextnet-20250626.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.nextnet-20250626.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling"
   },
   "nextnet-20250626": {
     "category": "Protocol Teztnets",
