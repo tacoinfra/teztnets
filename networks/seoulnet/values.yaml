@@ -1,12 +1,12 @@
-# Nextnet (S)
+# Seoul
 # protocol_hash: TBA
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_NEXTNET_2025-06-10T12:10:00Z
+  chain_name: TEZOS_SEOULNET_2025-07-11T09:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-06-10T12:10:00Z"
+    timestamp: "2025-07-11T09:00:00Z"
   dal_config:
     activated: true
 
@@ -219,13 +219,13 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master_3f47ba6f_20250610075602
+  octez: tezos/tezos:master_4872466c_20250626072134
 
 protocols:
-  # - command: PsRiotum
-  #   vote:
-  #     liquidity_baking_toggle_vote: "pass"
-  - command: PtSEouLo
+  - command: PsRiotum
+    vote:
+      liquidity_baking_toggle_vote: "pass"
+  - command: PtSeouLo
     vote:
       liquidity_baking_toggle_vote: "pass"
     
@@ -252,7 +252,9 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   german:
-    #  tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    # tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
+    # Germán Delbianco
+    # german.delbianco@trili.tech 
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
     type: public
     is_bootstrap_baker_account: false
@@ -380,6 +382,15 @@ accounts:
     # tz1THUNARo58aD5YdNGYPnWNnvd8yHPrMdsF
     # Romain's faucet
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
+    is_bootstrap_baker_account: false
+    bootstrap_balance: "50000000000000000"
+
+  techrel_faucet:
+    # TechRel Bakers & Builders Squad Experiments Faucet
+    # faucet for funding experiments and tests
+    # tz2EXHd7C4n7h5Ew2bZGsNvRt7zReAVRqSUs
+    # contact: german.delbianco@trili.tech
+    key: sppk7ZkJrt5MHHFUsQ8ePEqTgchiWLuJERHzneoUV2bVau8nkodXXs7
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
 
