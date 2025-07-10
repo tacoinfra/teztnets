@@ -27,6 +27,11 @@ for k, v in teztnets.items():
             if network["chain_name"] == v["chain_name"]:
                 with open(f"target/release/{k}", "w") as out_file:
                     print(json.dumps(networks[network_name], indent=2), file=out_file)
+
+                # output faucet redirect HTML file
+                os.makedirs(f"target/release/{k}.faucet")
+                with open(f"target/release/{k}.faucet/index.html", "w") as out_file:
+                    print(f"<!DOCTYPE html>\n<html><head><script>location.replace('{ v['faucet_url'] }')</script><meta http-equiv=\"refresh\" content=\"0;url={ v['faucet_url'] }\">", file=out_file)
                 break
 
 # group by category for human rendering
