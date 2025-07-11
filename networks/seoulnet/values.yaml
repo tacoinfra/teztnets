@@ -222,9 +222,9 @@ images:
   octez: tezos/tezos:master_d8b9db86_20250710173718
 
 protocols:
-  - command: PsRiotum
-    vote:
-      liquidity_baking_toggle_vote: "pass"
+#  - command: PsRiotum
+#    vote:
+#      liquidity_baking_toggle_vote: "pass"
   - command: PtSeouLo
     vote:
       liquidity_baking_toggle_vote: "pass"
