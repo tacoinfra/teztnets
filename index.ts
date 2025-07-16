@@ -210,12 +210,11 @@ new TezosFaucet(
 // END of Nextnet
 
 // Seoul test network
-/*
+
 const seoulnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Seoulnet",
-    aliasName: "proposednet"
     description: "Test Chain for Seoul protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/seoulnet/values.yaml",
@@ -242,7 +241,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // END of Seoulnet
 
 
@@ -424,7 +423,7 @@ const ghostnetNetwork = {
 export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([rionet_chain]),
-//  ...getNetworks([seoulnet_chain]),
+  ...getNetworks([seoulnet_chain]),
 //  ...getNetworks([shadownet_chain]),
   ...getNetworks([nextnet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -494,8 +493,8 @@ export const teztnets = {
   ...getTeztnets([rionet_chain]),
   ...getTeztnets([rionet_chain], 'currentnet'),
 //  ...getTeztnets([shadownet_chain]),
-//  ...getTeztnets([seoulnet_chain]),
-//  ...getTeztnets([seoulnet_chain], 'proposednet'),
+  ...getTeztnets([seoulnet_chain]),
+  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet2_chain]),
   ...getTeztnets([nextnet2_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
