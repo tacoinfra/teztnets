@@ -221,6 +221,44 @@ new TezosFaucet(
 
 // END of Seoulnet
 
+// Gymnet testing
+//
+
+const shadownet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "gymnet",
+    description: "Gymnet Internal Test Network",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/gymnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
+/*
+new TezosFaucet(
+  shadownet_chain.name,
+  {
+    namespace: gymnet_chain.namespace,
+    humanName: "Gymnet",
+    helmValuesFile: "networks/shadownet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.2.0",
+  },
+  provider
+)
+*/
+
+// End of Gymnet
+
 
 // Shadownet testing
 //
