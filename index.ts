@@ -34,6 +34,7 @@ const provider = new k8s.Provider("do-k8s-provider", {
 const periodicCategory = "Periodic Teztnets"
 const protocolCategory = "Protocol Teztnets"
 const featureCategory = "Feature Teztnets"
+const otherCategory = "Other Teztnets"
 const longCategory = "Long-running Teztnets"
 
 // Create a GCP resource (Storage Bucket) for Bootstrap Smart Contracts
@@ -227,7 +228,7 @@ new TezosFaucet(
 
 const gymnet_chain = new TezosChain(
   {
-    category: protocolCategory,
+    category: otherCategory,
     humanName: "gymnet",
     description: "Gymnet Internal Test Network",
     activationBucket: activationBucket,
