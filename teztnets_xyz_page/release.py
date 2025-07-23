@@ -47,7 +47,7 @@ nested_teztnets = {
     "Long-running Teztnets": {},
     "Protocol Teztnets": {},
 #    "Feature Teztnets": {},
-    "Periodic Teztnets": {},
+    "Periodic/Internal Teztnets": {},
 }
 
 for k, v in teztnets.items():
