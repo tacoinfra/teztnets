@@ -224,7 +224,8 @@ new TezosFaucet(
 // Gymnet testing
 //
 
-const shadownet_chain = new TezosChain(
+
+const gymnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "gymnet",
@@ -243,7 +244,7 @@ const shadownet_chain = new TezosChain(
 
 /*
 new TezosFaucet(
-  shadownet_chain.name,
+  gymnet_chain.name,
   {
     namespace: gymnet_chain.namespace,
     humanName: "Gymnet",
@@ -439,6 +440,7 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([rionet_chain]),
   ...getNetworks([seoulnet_chain]),
+  ...getNetworks([gymnet_chain]),
 //  ...getNetworks([shadownet_chain]),
 //  ...getNetworks([nextnet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -505,6 +507,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
+  ...getTeztnets([gymnet_chain]),
   ...getTeztnets([rionet_chain]),
   ...getTeztnets([rionet_chain], 'currentnet'),
 //  ...getTeztnets([shadownet_chain]),
