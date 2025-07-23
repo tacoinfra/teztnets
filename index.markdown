@@ -29,24 +29,23 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 # Periodic Teztnets
 
+
+
+| | Activated on | Faucet | Rolling Snapshot |
+|-------|---------------------|--|-----|
+
+
+
+# Periodic/Internal Teztnets
+
 These test networks restart regularly and track the development of the master branch of [Octez repo](https://gitlab.com/tezos/tezos/).
  
 ☠️ You probably don't want to use these unless you are a core protocol developer.
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Weeklynet](/weeklynet-about) | `2025-07-23` | [Faucet](https://faucet.weeklynet-2025-07-23.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
-
-
-
-# Other Teztnets
-
-These networks are usually for internal development testing only
-
-
-| | Activated on | Faucet | Rolling Snapshot |
-|-------|---------------------|--|-----|
 | [gymnet](/gymnet-about) | `2025-07-23` | [Faucet](https://faucet.gymnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/gymnet/rolling) |
+| [Weeklynet](/weeklynet-about) | `2025-07-23` | [Faucet](https://faucet.weeklynet-2025-07-23.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
 
 
 

@@ -29,7 +29,7 @@
     "activated_on": "2022-01-25"
   },
   "gymnet": {
-    "category": "Other Teztnets",
+    "category": "Periodic/Internal Teztnets",
     "chain_name": "TEZOS_RIONET_2025-07-23T07:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
@@ -155,7 +155,7 @@
     "activated_on": "2025-07-11"
   },
   "weeklynet-2025-07-23": {
-    "category": "Periodic Teztnets",
+    "category": "Periodic/Internal Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2025-07-23T00:00:00.000Z",
     "dal_nodes": {
       "dal-bootstrap": {
