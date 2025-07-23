@@ -31,7 +31,7 @@ const provider = new k8s.Provider("do-k8s-provider", {
   kubeconfig,
 })
 
-const periodicCategory = "Periodic Teztnets"
+const periodicCategory = "Periodic/Internal Teztnets"
 const protocolCategory = "Protocol Teztnets"
 const featureCategory = "Feature Teztnets"
 const otherCategory = "Other Teztnets"
@@ -228,7 +228,7 @@ new TezosFaucet(
 
 const gymnet_chain = new TezosChain(
   {
-    category: otherCategory,
+    category: periodicCategory,
     humanName: "gymnet",
     description: "Gymnet Internal Test Network",
     activationBucket: activationBucket,
