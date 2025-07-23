@@ -27,15 +27,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 
 
-# Periodic Teztnets
-
-
-
-| | Activated on | Faucet | Rolling Snapshot |
-|-------|---------------------|--|-----|
-
-
-
 # Periodic/Internal Teztnets
 
 These test networks restart regularly and track the development of the master branch of [Octez repo](https://gitlab.com/tezos/tezos/).
