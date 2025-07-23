@@ -22,7 +22,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [gymnet](/gymnet-about) | `2025-07-23` | [Faucet](https://faucet.gymnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/gymnet/rolling) |
 | [Rionet](/rionet-about) | `2025-02-19` | [Faucet](https://faucet.rionet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/rionet/rolling) |
 | [Seoulnet](/seoulnet-about) | `2025-07-11` | [Faucet](https://faucet.seoulnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
 
@@ -37,6 +36,17 @@ These test networks restart regularly and track the development of the master br
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
 | [Weeklynet](/weeklynet-about) | `2025-07-23` | [Faucet](https://faucet.weeklynet-2025-07-23.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
+
+
+
+# Other Teztnets
+
+These networks are usually for internal development testing only
+
+
+| | Activated on | Faucet | Rolling Snapshot |
+|-------|---------------------|--|-----|
+| [gymnet](/gymnet-about) | `2025-07-23` | [Faucet](https://faucet.gymnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/gymnet/rolling) |
 
 
 

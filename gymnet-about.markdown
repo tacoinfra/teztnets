@@ -96,38 +96,3 @@ For more info, read this [blog post from Nomadic Labs](https://research-developm
 
 
 
-### Bake on the gymnet network
-
-To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.gymnet.teztnets.com).
-
-If you are not a bootstrap baker, you need to register your key as a delegate using your alias or `pkh`. For instance:
-```bash=2
-octez-client register key mykey as delegate
-```
-
-On a modern Tezos network, you will need to stake to declare your security bond.  You will need to have access to at least 6000tz of stake to get baking rights. For instance:
-```
-octez-client stake <amount> for mykey
-```	
-
-Ideally you should run a DAL node.
-```
-octez-dal-node config init
-octez-dal-node run
-```
-
-You may now launch the baker process (connecting to the DAL node).
-```bash=3
-octez-baker-PsRiotum run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass --dal-node http://localhost:10732
-```
-
-You may run the accuser as well:
-```bash=3
-octez-accuser-PsRiotum run
-```
-
-Note that you need a minimum amount of tez to get baking rights. If you are not a bootstrap baker, it will take you several cycles to start baking.
-
-> 💡 Now that you are baking, you are responsible for the network health. Please ensure that the baking processes will keep running in the background. You may want to use screen, tmux, nohup or systemd. Also make sure that the baking processes will restart when your machine restarts.
-
-

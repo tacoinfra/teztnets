@@ -29,7 +29,7 @@
     "activated_on": "2022-01-25"
   },
   "gymnet": {
-    "category": "Protocol Teztnets",
+    "category": "Other Teztnets",
     "chain_name": "TEZOS_RIONET_2025-07-23T07:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
