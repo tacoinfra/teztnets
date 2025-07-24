@@ -11,9 +11,9 @@ Gymnet Internal Test Network
 | Public RPC endpoints | [https://rpc.gymnet.teztnets.com](https://rpc.gymnet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [gymnet faucet](https://faucet.gymnet.teztnets.com) |
 | Rolling Snapshot | [gymnet snapshot](https://snapshots.tzinit.org/gymnet/rolling) |
-| Full network name | `TEZOS_RIONET_2025-07-23T07:00:00Z` |
+| Full network name | `TEZOS_RIONET_2025-07-24T15:00:00Z` |
 | Tezos docker build | [tezos/tezos:picdc_account_registry](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=picdc_account_registry) |
-| Activated on | 2025-07-23T07:00:00Z |
+| Activated on | 2025-07-24T15:00:00Z |
 
 
 

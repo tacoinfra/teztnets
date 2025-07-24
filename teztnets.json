@@ -30,7 +30,7 @@
   },
   "gymnet": {
     "category": "Periodic/Internal Teztnets",
-    "chain_name": "TEZOS_RIONET_2025-07-23T07:00:00Z",
+    "chain_name": "TEZOS_RIONET_2025-07-24T15:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -60,7 +60,7 @@
       "https://rpc.gymnet.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/gymnet/rolling",
-    "activated_on": "2025-07-23"
+    "activated_on": "2025-07-24"
   },
   "mainnet": {
     "category": "Long-running Teztnets",
