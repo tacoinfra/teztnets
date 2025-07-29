@@ -12,7 +12,7 @@ Test Chain for Seoul protocol
 | Faucet | [Seoulnet faucet](https://faucet.seoulnet.teztnets.com) |
 | Rolling Snapshot | [Seoulnet snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
 | Full network name | `TEZOS_SEOULNET_2025-07-11T08:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v23.0-rc1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.0-rc1) |
+| Tezos docker build | [tezos/tezos:octez-v23.0-rc2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.0-rc2) |
 | Activated on | 2025-07-11T08:00:00Z |
 
 
@@ -30,7 +30,7 @@ Test Chain for Seoul protocol
 To join Seoulnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.0-rc1
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.0-rc2
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.0-rc1
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v23.0-rc1
+git checkout octez-v23.0-rc2
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
