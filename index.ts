@@ -248,7 +248,7 @@ const gymnet_chain = new TezosChain(
 
 // Shadownet testing
 //
-
+/*
 const shadownet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -266,7 +266,7 @@ const shadownet_chain = new TezosChain(
   },
   provider
 )
-
+*/
 
 /*
 new TezosFaucet(
