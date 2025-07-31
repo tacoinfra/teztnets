@@ -410,6 +410,12 @@ accounts:
     bootstrap_balance: "16375000000000"
     is_bootstrap_baker_account: false
 
+  delegator8:
+    #  tz1Zj8EN2cGUBaiFeCsuVp9JgFbEhzJZ4MvE
+    key: edpkuRyNR76ohr8AdFbUPkGobFofNi7kcTrDD1BkMnm1hPRy9FgDpu
+    bootstrap_balance: "16375000000000"
+    is_bootstrap_baker_account: false
+
   delegator9:
     #  tz1Zyzxg6wdQ9QmJ9HANi4wdBuKQmjzNLT4W
     key: edpkvKjY4RTKDDRDMmFiDSN4rURgCMZge9F21k3Ngqfwn7KsxuVogX
