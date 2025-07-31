@@ -7,7 +7,7 @@ images:
 enableUI: true
 config:
   application:
-    name: "Tezos Rionet Faucet"
+    name: "Tezos Shadownet Faucet"
     googleCaptchaSiteKey: "" # filled in by pulumi
     backendUrl: "" # filled in by pulumi
     githubRepo: https://github.com/tacoinfra/tezos-faucet
@@ -25,12 +25,12 @@ backendRpcUrl: http://tezos-node-rpc:8732
 enableCaptcha: true
 
 # Faucet won't dispense to an address if its balance exceeds this.
-maxBalance: 48000
+maxBalance: 24000
 
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 40000
+maxTez: 24000
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.

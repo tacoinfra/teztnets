@@ -243,22 +243,6 @@ const gymnet_chain = new TezosChain(
   provider
 )
 
-/*
-new TezosFaucet(
-  gymnet_chain.name,
-  {
-    namespace: gymnet_chain.namespace,
-    humanName: "Gymnet",
-    helmValuesFile: "networks/shadownet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
-  },
-  provider
-)
-*/
-
 // End of Gymnet
 
 
@@ -268,8 +252,9 @@ new TezosFaucet(
 const shadownet_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "shadownet",
-    description: "Shadownet Long-term Test Network",
+//    humanName: "shadownet",
+    humanName: "snet",
+    description: "Test network - don't use",
     activationBucket: activationBucket,
     helmValuesFile: "networks/shadownet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
