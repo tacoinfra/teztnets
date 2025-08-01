@@ -244,7 +244,7 @@ accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
     # 7672000
-    bootstrap_balance: "7672000000000"
+    bootstrap_balance: "6552000000000"
     is_bootstrap_baker_account: true
     type: secret
     dal_node_rpc_url: http://dal-dal1:10732
@@ -256,7 +256,7 @@ accounts:
     # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
     key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
     is_bootstrap_baker_account: false
-    bootstrap_balance: "1000000000000"
+    bootstrap_balance: "4680000000000"
   #tf2:
     # TF Protocol Net (S, T, ...)
     # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
@@ -264,62 +264,65 @@ accounts:
 
   baker3:
     #  tz1a28g3f7Eswy7XfX81sJSdhBHZqMjkfaf9
+    #  ECAD Labs
     key: edpkubS8qgMd3pgtSRo8ipjwYSUZiYavhoFkpMNwN95gpQM5TDVTDp
-    bootstrap_balance: "3170000000000"
+    bootstrap_balance: "4212000000000"
     is_bootstrap_baker_account: false
 
   baker4:
+    #  Baking Benjamins
     #  tz1LHvQWc46rtzVvpKq5QdTcLdzAH1o6YCmU
     key: edpkvGsTgdB4kZoLTcApBjgxVnfTHTKS2YqrBoxeUoX1kyjUSeBdP3
-    bootstrap_balance: "2800000000000"
+    bootstrap_balance: "1872000000000"
     is_bootstrap_baker_account: false
 
   baker5:
+    #  Marco/Inference
     #  tz1LzoYN1gZt2RjLanisU3mYYKcWk8RJmWwo
     key: edpkubraUdLFLfS5RX3VQw4vF5qEruzLqpbxzPtCtL4qpLeStTK2a6
-    bootstrap_balance: "2585393429000"
+    bootstrap_balance: "1872000000000"
     is_bootstrap_baker_account: false
 
   baker6:
     #  tz1X2jPbN1V6Yae7gf1NcbR4DgMKrouHrrrA
     key: edpkuWvX18xxna98g6GGPCBBFRy2dG5GCCRNdCE3tfWX6mv8ReZ9SY
-    bootstrap_balance: "2330000000000"
+    bootstrap_balance: "1872000000000"
     is_bootstrap_baker_account: false
 
   baker7:
     #  tz1bpjo8ZYtKP7otmNE8sbCMB7zSzUZU3v4H
     key: edpkutGBQjW6r7v2ojFXm5SK18evMu5AiGkKgvoBjTz5fcDNN7M2Yy
-    bootstrap_balance: "2000000000000"
+    bootstrap_balance: "1872000000000"
     is_bootstrap_baker_account: false
 
   baker8:
     #  tz1XYYToEbZ8LT1nph8n14BV35vTd43chM57
     key: edpkug1fRW7MCo1fzbdF29UMK5sLK6J3ftHbfcdXdQTFPmFaUg4uyf
-    bootstrap_balance: "17300000000000"
+    bootstrap_balance: "1872000000000"
     is_bootstrap_baker_account: false
 
   baker9:
     #  tz1dP8eKGuu3DRzSv3WKXF6kAVc5v2prz6gp
     key: edpkuR98vdgF443LFSJ2ajBx5UpAaGGStq1i5Cvhic9qxSSM1h5cy3
-    bootstrap_balance: "26655000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   baker10:
     #  tz1Z2uc25cNDrMMZWw8PcQtUjKFtpnsotqyD
     key: edpkumxosggHSVZGaiPpJyyfkizJqw9qUc5SpG8CGSjsF4GbZfYHDz
-    bootstrap_balance: "1800000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   baker11:
     #  tz1fnocs9pTd3XucNYvQrDiAaEEgtNMEeBsX
     key: edpkv6uLCRnoefFVrZb8RHrzzCGx5TpQjSwEpH5wZE7DyaHPRWhmJY
-    bootstrap_balance: "990000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   baker12:
     #  tz1fd1u6J9HZVebP31BTT3GjjArCa28oLY3e
     key: edpktkoh1twRX71jauKQXguNwk7JHhet7cXUp9tbhrHsqqdU2pq4fA
-    bootstrap_balance: "3900000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   # Baker 13 - DALberry Pi XXX
@@ -327,7 +330,7 @@ accounts:
   dalberrypi:
     #  tz1Z3vX7BsWfybNFEyiMKAeVLLytx65GKbDN
     key: edpkv6edRJFxdDqd4kjg91cJU2giQmZw1jZEAFGzTRL7EGZ2FyGY4S
-    bootstrap_balance: "1100000000000"
+    bootstrap_balance: "702000000000"
     is_bootstrap_baker_account: false
 
   # Baker 14 - Capt Stake
@@ -336,72 +339,72 @@ accounts:
     # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
     is_bootstrap_baker_account: true
-    bootstrap_balance: "1000000000000"
+    bootstrap_balance: "936000000000"
 
   baker15:
     #  tz1PJfk1LPgKUz8rhkKUYYmzAhqCaQFHhbn2
     key: edpkvNJfwMLERDYS6nLCK8zqSHDhGBzPVpmQ7GDFwt3a946mVocZ7V
-    bootstrap_balance: "820000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   baker16:
     #  tz1SKzac24nukxk4LivnLLqZxRNoRtJLv7k4
     key: edpkv7hxmreFepVoukeg35iCiU8N4ikaWk4rnZsrDupXfp98wWemba
-    bootstrap_balance: "2400000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   baker17:
     #  tz1i3sMJ8kd2f1gdNEczTLQvpyBpPCkoR9E5
     key: edpkthNRcQYyQSFUqR6MCKeVqWrJDRbY4B8f4naHf1KZJkYTnawjpR
-    bootstrap_balance: "2400000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   baker18:
     #  tz1RAD5Fa9i6SmkvRkcBZRdeS1HbsZin1Ny9
     key: edpkurdpCdbegybZ8vHTJ8US5JHCRqPpUbD2juVhu81n9i2iPN1voV
-    bootstrap_balance: "2400000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   baker19:
     #  tz1TVWtNCrJ2GHtGLNwxbQPHb1tBLXcgxfi8
     key: edpkvF6JptqSuJ4dkw9n6tb1XCeYnkhuTBaToR4mqqTVeABA9jX2Jf
-    bootstrap_balance: "2400000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator1:
     #  tz1gYP7NQitejZRM79SiSYa6YuNUzvcLToM9
     key: edpkuwUCosWMUuTDLCQdKZTCT6rmqsV6wuCdkAF9UKr9aBNMaJKXwn
-    bootstrap_balance: "30000000000000"
+    bootstrap_balance: "2808000000000"
     is_bootstrap_baker_account: false
 
   delegator2:
     #  tz1SYvvmHMtj5A2ZE9ktRmn9fDBGy8F2R2Ee
     key: edpkurVcM5M8aWjCyG7BQ8NHeFuAEPgeqk5u5uJBKVRPvCSDcWnnvN
-    bootstrap_balance: "30330972000000"
+    bootstrap_balance: "1404000000000"
     is_bootstrap_baker_account: false
 
   delegator3:
     #  tz1PUPieUNzu368cRP3ziPxLpU3baDXxZr9N
     key: edpkuzHBPdzeRQGvA3iMUKisiZB8z3L1e28R6xq5xdJLhRmVrK1c8v
-    bootstrap_balance: "27000000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   delegator4:
     #  tz1WTpQMPtDCWnQZ97YPBQALtQNrmB94MppS
     key: edpkvRWmLP8jr7tVV5vExue7tVvjRWP1qUqMQ4R4ahmsQNPcunQ9i8
-    bootstrap_balance: "98000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   delegator5:
     #  tz1TqAQD2xrs1JNcLwLXcN5dBwvK9L4AV5pT
     key: edpkuaYMEY6eYUw81KsaASNmiFqPwYXqkdscEahoHW82tGQej9krZj
-    bootstrap_balance: "20000000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   delegator6:
     #  tz1KgtKzcJU5byWKJFxJ5PTpFqTtwtB75ATs
     key: edpkuzx3cgrpA87w2YWtYP7cHNGrbkFyk92dkNrHfTK9MEt688KN6c
-    bootstrap_balance: "16871000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   delegator7:
@@ -413,73 +416,73 @@ accounts:
   delegator8:
     #  tz1Zj8EN2cGUBaiFeCsuVp9JgFbEhzJZ4MvE
     key: edpkuRyNR76ohr8AdFbUPkGobFofNi7kcTrDD1BkMnm1hPRy9FgDpu
-    bootstrap_balance: "16375000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator9:
     #  tz1Zyzxg6wdQ9QmJ9HANi4wdBuKQmjzNLT4W
     key: edpkvKjY4RTKDDRDMmFiDSN4rURgCMZge9F21k3Ngqfwn7KsxuVogX
-    bootstrap_balance: "82387000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator10:
     #  tz1N2fgMwos2iUBfQoEXN3mE7QKD3AYEvpZ8
     key: edpkuaFwNrBqB9vL6qg9v5un5n14ZBnhgZumJCqTTHush7wHuk7aeA
-    bootstrap_balance: "13708000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator11:
     #  tz1em6W8PgSEMhHyg2kAqgzSceMaBs1PsfKD
     key: edpkv5Jo859XkK3RsE9N9G4bCqDpQiCbtb8wWScB5VEzrNT22FmXBM
-    bootstrap_balance: "9586000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator12:
     #  tz1U5yoM52BRUBbBwLKxqmCEgYmyVnFYLHS3
     key: edpkttMksopMcjkxu5nAfZcPNxp5FcDhzt9wv3UKvGmkJKcfecHPcN
-    bootstrap_balance: "6237000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator13:
     #  tz1Tv57JRbT4g7mdpkwXto1WtGnp1C1dKt8W
     key: edpkusHwNhVMhghaJ9ytEQtHjyafUHJZ14BYfQr9VtnAJN7SBMwp6h
-    bootstrap_balance: "7729000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator14:
     #  tz1S1GV6sTUx4E2XkkwGTAn9KBWSKXa6Zs7n
     key: edpkvUJityitbqZfVhcvvtNDRd7emdNxYUDMij4iGGHHYdc2hzixPH
-    bootstrap_balance: "7414000000000"
+    bootstrap_balance: "468000000000"
     is_bootstrap_baker_account: false
 
   delegator15:
     #  tz1WBDD8994HUbgaD8N8WB5eqdq35TErQAjY
     key: edpkvGZBASJB3n4gGaSUXFUpHyBirw5jXCKSQBLF33nqh6H7F4wD2q
-    bootstrap_balance: "6940000000000"
+    bootstrap_balance: "234000000000"
     is_bootstrap_baker_account: false
 
   delegator16:
     #  tz1SCGfDHoKryCzyjo45UrYcKnUT2rJVxZDE
     key: edpkuk7Xst2gCwAtMJvpQ3hiWREGcy8xNWDUQ4HK9JowsoiCXZ3kF6
-    bootstrap_balance: "5000000000000"
+    bootstrap_balance: "234000000000"
     is_bootstrap_baker_account: false
 
   delegator17:
     #  tz1b8wmrQNvQbKo3GEaqzqZshAphs1ZAvUfh
     key: edpkvKtiguwLJpfHCiVetyHtyXGQBV4pg2YdYyczuhFh528XP1vYTQ
-    bootstrap_balance: "5092000000000"
+    bootstrap_balance: "234000000000"
     is_bootstrap_baker_account: false
 
   delegator18:
     #  tz1bSettjZU3DURWa3bjMhtPbzMhUhVKVcEc
     key: edpkut8Y9bP1iGSg3DhLW23o3iyzZbXEDJ61ZaJp9nJeu46bozwwYa
-    bootstrap_balance: "5092000000000"
+    bootstrap_balance: "234000000000"
     is_bootstrap_baker_account: false
 
   delegator19:
     #  tz1UD9czhA8KrdY1P1R5hThfUgpXTXVr3p7n
     key: edpkv3kW9CxvY3GJnhfpkiUUE7XV2u6CYF8yHZq2HTsRNLDQNFhzML
-    bootstrap_balance: "4992000000000"
+    bootstrap_balance: "234000000000"
     is_bootstrap_baker_account: false
 
 
@@ -506,8 +509,9 @@ accounts:
     bootstrap_balance: "5000000000000"
 
   etherlinkfund:
-    # XXX THIS IS THE WRONG KEY. CHANGE LATER.
-    key: edpkuwL7MVYArfQN9jyR8pZTqmFGYFWTYhhF4F8KWjr2vB18ozTqbd
+    # tz1MbA6ZZCPknRtyJ8UkUPXRLKedqHdkVq9M
+    # Etherlink team
+    key: edpkuMHgT3to8GDuzbrEwXHZ1A6ZtTdi3E1P5kSovJcKiFYFsuEdQW
     bootstrap_balance: "10000000000000"
     is_bootstrap_baker_account: false
 
