@@ -426,7 +426,7 @@ export const networks = {
   ...getNetworks([rionet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([gymnet_chain]),
-//  ...getNetworks([shadownet_chain]),
+  ...getNetworks([shadownet_chain]),
 //  ...getNetworks([nextnet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -495,7 +495,7 @@ export const teztnets = {
   ...getTeztnets([gymnet_chain]),
   ...getTeztnets([rionet_chain]),
   ...getTeztnets([rionet_chain], 'currentnet'),
-//  ...getTeztnets([shadownet_chain]),
+  ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([seoulnet_chain], 'proposednet'),
 //  ...getTeztnets([nextnet2_chain]),
