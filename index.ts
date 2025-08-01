@@ -225,7 +225,6 @@ new TezosFaucet(
 // Gymnet testing
 //
 
-
 const gymnet_chain = new TezosChain(
   {
     category: periodicCategory,
