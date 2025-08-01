@@ -178,7 +178,8 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: []
+bootstrap_peers:
+  - shadownet.tzinit.org
 
 dalNodes:
 # XXX Don't run a bootstrap here if NAT is a problem?
