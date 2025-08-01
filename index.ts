@@ -256,7 +256,7 @@ const shadownet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/shadownet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
+    bootstrapPeers: [ "shadownet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "7.2.0",
