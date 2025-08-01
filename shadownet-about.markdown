@@ -1,6 +1,6 @@
 ---
 layout: page
-title: shadownet
+title: Shadownet
 permalink: /shadownet-about
 ---
 
@@ -9,8 +9,8 @@ Shadownet - long term testnet
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.shadownet.teztnets.com](https://rpc.shadownet.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [shadownet faucet](https://faucet.shadownet.teztnets.com) |
-| Rolling Snapshot | [shadownet snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
+| Faucet | [Shadownet faucet](https://faucet.shadownet.teztnets.com) |
+| Rolling Snapshot | [Shadownet snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
 | Full network name | `TEZOS_SHADOWNET_2025-08-02T12:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v23.0-rc2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.0-rc2) |
 | Activated on | 2025-08-02T12:00:00Z |
@@ -27,7 +27,7 @@ Shadownet - long term testnet
 
 #### Alternative: Use docker
 
-To join shadownet with docker, open a shell in the container:
+To join Shadownet with docker, open a shell in the container:
 
 ```
 docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.0-rc2
@@ -50,7 +50,7 @@ make
 export PATH=$HOME/tezos:$PATH
 ```
 
-### Join the shadownet network
+### Join the Shadownet network
 
 Run the following commands:
 
@@ -96,7 +96,7 @@ For more info, read this [blog post from Nomadic Labs](https://research-developm
 
 
 
-### Bake on the shadownet network
+### Bake on the Shadownet network
 
 To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.shadownet.teztnets.com).
 

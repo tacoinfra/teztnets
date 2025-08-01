@@ -13,6 +13,7 @@ These networks are long-running test networks that are similar to mainnet. They 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
 | [Ghostnet](/ghostnet-about) | `2022-01-25` | [Faucet](https://faucet.ghostnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/ghostnet/rolling) |
+| [Shadownet](/shadownet-about) | `2025-08-02` | [Faucet](https://faucet.shadownet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
 
 
 
@@ -24,7 +25,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 |-------|---------------------|--|-----|
 | [Rionet](/rionet-about) | `2025-02-19` | [Faucet](https://faucet.rionet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/rionet/rolling) |
 | [Seoulnet](/seoulnet-about) | `2025-07-11` | [Faucet](https://faucet.seoulnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
-| [shadownet](/shadownet-about) | `2025-08-02` | [Faucet](https://faucet.shadownet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
 
 
 

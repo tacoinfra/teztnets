@@ -155,7 +155,7 @@
     "activated_on": "2025-07-11"
   },
   "shadownet": {
-    "category": "Protocol Teztnets",
+    "category": "Long-running Teztnets",
     "chain_name": "TEZOS_SHADOWNET_2025-08-02T12:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
@@ -174,7 +174,7 @@
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.shadownet.teztnets.com",
     "git_ref": "octez-v23.0-rc2",
-    "human_name": "shadownet",
+    "human_name": "Shadownet",
     "indexers": [],
     "last_baking_daemon": "PtSeouLo",
     "masked_from_main_page": false,
