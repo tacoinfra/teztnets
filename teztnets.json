@@ -154,6 +154,40 @@
     "snapshot_url": "https://snapshots.tzinit.org/seoulnet/rolling",
     "activated_on": "2025-07-11"
   },
+  "snet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_SNET_2025-07-131T08:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.snet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.snet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.snet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.snet.teztnets.com"
+      }
+    },
+    "description": "Test network - don't use",
+    "docker_build": "tezos/tezos:octez-v23.0-rc1",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.snet.teztnets.com",
+    "git_ref": "octez-v23.0-rc1",
+    "human_name": "snet",
+    "indexers": [],
+    "last_baking_daemon": "PsRiotum",
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/snet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.snet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.snet.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/snet/rolling",
+    "activated_on": "2025-07-13"
+  },
   "weeklynet-2025-07-30": {
     "category": "Periodic/Internal Teztnets",
     "chain_name": "TEZOS-WEEKLYNET-2025-07-30T00:00:00.000Z",

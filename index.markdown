@@ -24,6 +24,7 @@ These test networks are deployed specifically to test individual Tezos protocols
 |-------|---------------------|--|-----|
 | [Rionet](/rionet-about) | `2025-02-19` | [Faucet](https://faucet.rionet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/rionet/rolling) |
 | [Seoulnet](/seoulnet-about) | `2025-07-11` | [Faucet](https://faucet.seoulnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
+| [snet](/snet-about) | `2025-07-13` | [Faucet](https://faucet.snet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/snet/rolling) |
 
 
 
