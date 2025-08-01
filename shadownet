@@ -8,7 +8,8 @@
     ]
   },
   "default_bootstrap_peers": [
-    "shadownet.teztnets.com"
+    "shadownet.teztnets.com",
+    "shadownet.tzinit.org"
   ],
   "genesis": {
     "block": "BM2WDxHAyzwBAyvoSyPSmN5YFYSPsKZjHeseX5sd3ezgub8io7d",
