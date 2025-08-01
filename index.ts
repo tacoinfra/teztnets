@@ -250,8 +250,8 @@ const gymnet_chain = new TezosChain(
 
 const shadownet_chain = new TezosChain(
   {
-    category: protocolCategory,
-    humanName: "shadownet",
+    category: longCategory,
+    humanName: "Shadownet",
     description: "Shadownet - long term testnet",
     activationBucket: activationBucket,
     helmValuesFile: "networks/shadownet/values.yaml",
