@@ -332,7 +332,7 @@ accounts:
     #  tz1Z3vX7BsWfybNFEyiMKAeVLLytx65GKbDN
     key: edpkv6edRJFxdDqd4kjg91cJU2giQmZw1jZEAFGzTRL7EGZ2FyGY4S
     bootstrap_balance: "702000000000"
-    is_bootstrap_baker_account: false
+    is_bootstrap_baker_account: true
 
   # Baker 14 - Capt Stake
   #
