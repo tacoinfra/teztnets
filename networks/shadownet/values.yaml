@@ -256,10 +256,10 @@ accounts:
     # TF Shadownet (formerly N,P,R,...)
     # tz3Q67aMz7gSMiQRcW729sXSfuMtkyAHYfqc - ..., N, P, R, ...
     key: p2pk66gP3wq6k9QgNwAgaGLeXc3YFfrxgYdC7cdYuJWAHYBw4hExVHW
-    is_bootstrap_baker_account: false
+    is_bootstrap_baker_account: true
     bootstrap_balance: "4680000000000"
   #tf2:
-    # TF Protocol Net (S, T, ...)
+    # TF Protocol Net testing (S, T, ...)
     # tz3Q1fwk1vh3zm5LqyUV9e2wZBdaEXcovh2r - ..., O, Q, S, ...
     #key: p2pk66p7iVbEFyJaYM5bjJmXP74B7qso8rXMCmKwVRdRZunMdhUjYBH
 
