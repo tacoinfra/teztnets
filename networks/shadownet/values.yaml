@@ -329,7 +329,7 @@ accounts:
   # Baker 13 - DALberry Pi
   #
   dalberrypi:
-    #  tz1Z3vX7BsWfybNFEyiMKAeVLLytx65GKbDN
+    #  tz1e13WxtEt7v3pEcNJtDrhPQyUNWZ53B4Hu
     key: edpkvBAk5jP5xBKuA8jso3X1fP6yHyWrZqb8RpXq215FzTMXqnZR9d
     bootstrap_balance: "702000000000"
     is_bootstrap_baker_account: true
