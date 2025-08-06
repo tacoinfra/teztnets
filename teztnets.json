@@ -28,40 +28,6 @@
     "snapshot_url": "https://snapshots.tzinit.org/ghostnet/rolling",
     "activated_on": "2022-01-25"
   },
-  "gymnet": {
-    "category": "Periodic/Internal Teztnets",
-    "chain_name": "TEZOS_GYMNET_2025-08-01T08:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.gymnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.gymnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.gymnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.gymnet.teztnets.com"
-      }
-    },
-    "description": "Gymnet Internal Test Network",
-    "docker_build": "tezos/tezos:picdc_account_registry",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.gymnet.teztnets.com",
-    "git_ref": "picdc_account_registry",
-    "human_name": "gymnet",
-    "indexers": [],
-    "last_baking_daemon": "PsRiotum",
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/gymnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.gymnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.gymnet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/gymnet/rolling",
-    "activated_on": "2025-08-01"
-  },
   "mainnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
