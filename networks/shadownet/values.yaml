@@ -330,7 +330,7 @@ accounts:
   #
   dalberrypi:
     #  tz1Z3vX7BsWfybNFEyiMKAeVLLytx65GKbDN
-    key: edpkv6edRJFxdDqd4kjg91cJU2giQmZw1jZEAFGzTRL7EGZ2FyGY4S
+    key: edpkvBAk5jP5xBKuA8jso3X1fP6yHyWrZqb8RpXq215FzTMXqnZR9d
     bootstrap_balance: "702000000000"
     is_bootstrap_baker_account: true
 
