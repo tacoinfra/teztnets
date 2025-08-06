@@ -116,14 +116,14 @@ octez-dal-node config init
 octez-dal-node run
 ```
 
-You may now launch the baker process (connecting to the DAL node).
+You may now launch the baker process (connecting to the DAL node). If you are using octez before v23, you will need to launch individual bakers for each protocol.
 ```bash=3
-octez-baker-PsRiotum run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass --dal-node http://localhost:10732
+octez-baker run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass --dal-node http://localhost:10732
 ```
 
 You may run the accuser as well:
 ```bash=3
-octez-accuser-PsRiotum run
+octez-accuser run
 ```
 
 Note that you need a minimum amount of tez to get baking rights. If you are not a bootstrap baker, it will take you several cycles to start baking.
