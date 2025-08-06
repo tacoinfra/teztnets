@@ -4,10 +4,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_SHADOWNET_2025-08-02T12:00:00Z
+  chain_name: TEZOS_SHADOWNET_2025-08-06T15:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-08-02T12:00:00Z"
+    timestamp: "2025-08-06T15:00:00Z"
   dal_config:
     activated: true
 
@@ -326,7 +326,7 @@ accounts:
     bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
-  # Baker 13 - DALberry Pi XXX
+  # Baker 13 - DALberry Pi
   #
   dalberrypi:
     #  tz1Z3vX7BsWfybNFEyiMKAeVLLytx65GKbDN
