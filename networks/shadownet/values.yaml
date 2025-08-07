@@ -4,10 +4,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_SHADOWNET_2025-08-06T15:00:00Z
+  chain_name: TEZOS_SHADOWNET_2025-08-07T20:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-08-06T15:00:00Z"
+    timestamp: "2025-08-07T20:00:00Z"
   dal_config:
     activated: true
 
@@ -411,7 +411,7 @@ accounts:
   delegator7:
     #  tz1Ktn9wcir6D2qU9gsXqZUWHSRUuxpKA5pH
     key: edpktqDUwqfzQoU64x2Q5wsSPvtN9pCjP69WNsuTRPS11rrucn3qYz
-    bootstrap_balance: "16375000000000"
+    bootstrap_balance: "936000000000"
     is_bootstrap_baker_account: false
 
   delegator8:
@@ -499,7 +499,7 @@ accounts:
   tfrichfund:
     # tz1VRj54TQDtUGgv6gF4AbGbXMphyDpVkCpf
     key: edpkvWFRKD8soryXJkcHCr9shnxhkxJLGG5FJAHquka992bgf86YxC
-    bootstrap_balance: "5000000000000"
+    bootstrap_balance: "4000000000000"
     is_bootstrap_baker_account: false
 
   nlrichfund:
@@ -507,7 +507,7 @@ accounts:
     # Nomadic Labs
     key: edpkuh3WSwziyd6nXqDXeh48vZHp5ETxFd43EdkbzhmW98BvuLXK81
     is_bootstrap_baker_account: false
-    bootstrap_balance: "5000000000000"
+    bootstrap_balance: "4000000000000"
 
   etherlinkfund:
     # tz1MbA6ZZCPknRtyJ8UkUPXRLKedqHdkVq9M
