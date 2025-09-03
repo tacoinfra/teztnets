@@ -3,9 +3,9 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:octez-v23.0",
+    "docker_build": "tezos/tezos:octez-v23.1",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "octez-v23.0",
+    "git_ref": "octez-v23.1",
     "human_name": "Ghostnet",
     "indexers": [
       {
@@ -66,8 +66,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v23.0",
-    "git_ref": "octez-v23.0",
+    "docker_build": "tezos/tezos:octez-v23.1",
+    "git_ref": "octez-v23.1",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -102,10 +102,10 @@
       }
     },
     "description": "Test Chain for Next protocol",
-    "docker_build": "tezos/tezos:octez-v23.0",
+    "docker_build": "tezos/tezos:octez-v23.1",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.rionet.teztnets.com",
-    "git_ref": "octez-v23.0",
+    "git_ref": "octez-v23.1",
     "human_name": "Rionet",
     "indexers": [],
     "last_baking_daemon": "PsRiotum",
@@ -136,10 +136,10 @@
       }
     },
     "description": "Test Chain for Seoul protocol",
-    "docker_build": "tezos/tezos:octez-v23.0",
+    "docker_build": "tezos/tezos:octez-v23.1",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.seoulnet.teztnets.com",
-    "git_ref": "octez-v23.0",
+    "git_ref": "octez-v23.1",
     "human_name": "Seoulnet",
     "indexers": [],
     "last_baking_daemon": "PtSeouLo",
@@ -170,10 +170,10 @@
       }
     },
     "description": "Shadownet - long term testnet",
-    "docker_build": "tezos/tezos:octez-v23.0",
+    "docker_build": "tezos/tezos:octez-v23.1",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.shadownet.teztnets.com",
-    "git_ref": "octez-v23.0",
+    "git_ref": "octez-v23.1",
     "human_name": "Shadownet",
     "indexers": [],
     "last_baking_daemon": "PtSeouLo",
