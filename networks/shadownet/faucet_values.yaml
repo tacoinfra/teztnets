@@ -30,14 +30,14 @@ maxBalance: 24000
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 24000
+maxTez: 10000
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.
 minChallenges: 1
 # Maximum number of challenges required for the maximum Tez request.
 # 1100 challenges should take ~20m.
-maxChallenges: 1100
+maxChallenges: 1000
 # Maximum number of challenges required for the maximum Tez request when a
 # captcha is used.
 # 53 challenges should take ~4m.

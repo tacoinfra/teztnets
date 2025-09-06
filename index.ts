@@ -264,7 +264,6 @@ const shadownet_chain = new TezosChain(
   provider
 )
 
-/*
 new TezosFaucet(
   shadownet_chain.name,
   {
@@ -278,7 +277,6 @@ new TezosFaucet(
   },
   provider
 )
-*/
 
 // End of Shadownet
 
