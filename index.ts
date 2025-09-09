@@ -222,29 +222,6 @@ new TezosFaucet(
 
 // END of Seoulnet
 
-// Gymnet testing
-//
-
-const gymnet_chain = new TezosChain(
-  {
-    category: periodicCategory,
-    humanName: "Gymnet",
-    description: "Gymnet Internal Test Network",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/gymnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
-  },
-  provider
-)
-
-// End of Gymnet
-
-
 // Shadownet testing
 //
 const shadownet_chain = new TezosChain(
@@ -420,7 +397,6 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([rionet_chain]),
   ...getNetworks([seoulnet_chain]),
-  ...getNetworks([gymnet_chain]),
   ...getNetworks([shadownet_chain]),
 //  ...getNetworks([nextnet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -487,7 +463,6 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([gymnet_chain]),
   ...getTeztnets([rionet_chain]),
   ...getTeztnets([rionet_chain], 'currentnet'),
   ...getTeztnets([shadownet_chain]),
