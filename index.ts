@@ -257,42 +257,6 @@ new TezosFaucet(
 
 // End of Shadownet
 
-// Rionet 1st Blood reboot test network
-const rionet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Rionet",
-    virtualName: "currentnet",
-    description: "Test Chain for Next protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/rionet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "rionet.tzinit.org" ],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
-  },
-  provider
-)
-
-new TezosFaucet(
-  rionet_chain.name,
-  {
-    namespace: rionet_chain.namespace,
-    humanName: "Rionet",
-    helmValuesFile: "networks/rionet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
-  },
-  provider
-)
-
-// END of Rionet
-
-
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
 
@@ -395,7 +359,6 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-  ...getNetworks([rionet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
 //  ...getNetworks([nextnet2_chain]),
@@ -463,11 +426,10 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
-  ...getTeztnets([rionet_chain]),
-  ...getTeztnets([rionet_chain], 'currentnet'),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
-  ...getTeztnets([seoulnet_chain], 'proposednet'),
+  ...getTeztnets([seoulnet_chain], 'currentnet'),
+//  ...getTeztnets([seoulnet_chain], 'proposednet'),
 //  ...getTeztnets([nextnet2_chain]),
 //  ...getTeztnets([nextnet2_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
