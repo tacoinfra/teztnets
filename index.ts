@@ -428,7 +428,7 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
-  ...getTeztnets([seoulnet_chain], 'currentnet'),
+//  ...getTeztnets([seoulnet_chain], 'currentnet'),
 //  ...getTeztnets([seoulnet_chain], 'proposednet'),
 //  ...getTeztnets([nextnet2_chain]),
 //  ...getTeztnets([nextnet2_chain], 'nextnet'),
