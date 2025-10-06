@@ -59,6 +59,9 @@ export class TezosFaucet extends pulumi.ComponentResource {
         {
           chart: "redis",
           version: "17.15.6",
+//          images: {
+//		  "redis": "docker.io/bitnamilegacy/redis:latest",
+//		},
           namespace: params.namespace.metadata.name,
           repositoryOpts: {
             repo: "https://charts.bitnami.com/bitnami",
