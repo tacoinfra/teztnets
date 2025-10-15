@@ -25,10 +25,6 @@
   "user_activated_upgrades": [
     {
       "level": 800,
-      "replacement_protocol": "PtSeouLouXkxhg39oWzjxDWaCydNfR3RxCUrNe4Q9Ro8BTehcbh"
-    },
-    {
-      "level": 1600,
       "replacement_protocol": "ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK"
     }
   ]
