@@ -151,16 +151,16 @@ new TezosFaucet(
 )
 
 // Nextnet test network - use pre-protocol proposal
-/*
+
 const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Nextnet-20250626",
+    humanName: "Nextnet-20251015",
     virtualName: "nextnet",
     snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20250626/values.yaml",
+    helmValuesFile: "networks/nextnet-20251015/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     bootstrapPeers: [ "nextnet.tzinit.org" ],
     rpcUrls: [],
@@ -176,7 +176,7 @@ new TezosFaucet(
   {
     namespace: nextnet2_chain.namespace,
     humanName: "Nextnet-20250626",
-    helmValuesFile: "networks/nextnet-20250626/faucet_values.yaml",
+    helmValuesFile: "networks/nextnet-20251015/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -184,7 +184,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // END of Nextnet
 
 // Seoul test network
@@ -361,7 +361,7 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
-//  ...getNetworks([nextnet2_chain]),
+  ...getNetworks([nextnet2_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -430,8 +430,8 @@ export const teztnets = {
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([seoulnet_chain], 'currentnet'),
 //  ...getTeztnets([seoulnet_chain], 'proposednet'),
-//  ...getTeztnets([nextnet2_chain]),
-//  ...getTeztnets([nextnet2_chain], 'nextnet'),
+  ...getTeztnets([nextnet2_chain]),
+  ...getTeztnets([nextnet2_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
