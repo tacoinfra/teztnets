@@ -151,7 +151,7 @@ new TezosFaucet(
 )
 
 // Nextnet test network - use pre-protocol proposal
-
+/*
 const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -182,6 +182,9 @@ new TezosFaucet(
   },
   provider
 )
+*/
+
+// Nextnet test network - use pre-protocol proposal
 
 const nextnet3_chain = new TezosChain(
   {
@@ -392,7 +395,6 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
-  ...getNetworks([nextnet2_chain]),
   ...getNetworks([nextnet3_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -462,9 +464,8 @@ export const teztnets = {
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([seoulnet_chain], 'currentnet'),
 //  ...getTeztnets([seoulnet_chain], 'proposednet'),
-  ...getTeztnets([nextnet2_chain]),
   ...getTeztnets([nextnet3_chain]),
-  ...getTeztnets([nextnet2_chain], 'nextnet'),
+  ...getTeztnets([nextnet3_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

@@ -173,7 +173,7 @@ nodes:
   rolling-node: null
 
 bootstrap_peers:
-  - nextnet.tzinit.org
+  - nextnet-20251016.tzinit.org
 
 dalNodes:
   dal-bootstrap:
