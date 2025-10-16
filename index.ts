@@ -156,8 +156,6 @@ const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251015",
-    virtualName: "nextnet",
-    snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251015/values.yaml",
@@ -175,8 +173,41 @@ new TezosFaucet(
   nextnet2_chain.name,
   {
     namespace: nextnet2_chain.namespace,
-    humanName: "Nextnet-20250626",
+    humanName: "Nextnet-20251015",
     helmValuesFile: "networks/nextnet-20251015/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "7.2.0",
+  },
+  provider
+)
+
+const nextnet3_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Nextnet-20251016",
+    virtualName: "nextnet",
+    snapOver: "nextnet",
+    description: "Test Chain for Next protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/nextnet-20251016/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [ "nextnet-20251016.tzinit.org" ],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
+new TezosFaucet(
+  nextnet3_chain.name,
+  {
+    namespace: nextnet3_chain.namespace,
+    humanName: "Nextnet-20251016",
+    helmValuesFile: "networks/nextnet-20251016/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -362,6 +393,7 @@ export const networks = {
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([nextnet2_chain]),
+  ...getNetworks([nextnet3_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -431,6 +463,7 @@ export const teztnets = {
   ...getTeztnets([seoulnet_chain], 'currentnet'),
 //  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet2_chain]),
+  ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([nextnet2_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
