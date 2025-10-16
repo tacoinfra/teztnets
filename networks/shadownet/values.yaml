@@ -228,13 +228,8 @@ snapshot_source: null
 images:
   octez: tezos/tezos:octez-v23.1
 
-protocols:
-  - command: PsRiotum
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-  - command: PtSeouLo
-    vote:
-      liquidity_baking_toggle_vote: "pass"
+votes:
+  liquidity_baking_toggle_vote: "pass"
     
 # Initial balances section
 #
