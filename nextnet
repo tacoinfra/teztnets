@@ -1,20 +1,20 @@
 {
-  "chain_name": "TEZOS_NEXTNET_2025-10-15T08:00:00Z",
+  "chain_name": "TEZOS_TILBURYNET_2025-10-16T08:00:00Z",
   "dal_config": {
     "activated": true,
     "bootstrap_peers": [
-      "dal.nextnet-20251015.teztnets.com:11732",
-      "nextnet-20251015.bootstrap.dal.nomadic-labs.com:11732"
+      "dal.nextnet-20251016.teztnets.com:11732",
+      "nextnet-20251016.bootstrap.dal.nomadic-labs.com:11732"
     ]
   },
   "default_bootstrap_peers": [
-    "nextnet-20251015.teztnets.com",
-    "nextnet.tzinit.org"
+    "nextnet-20251016.teztnets.com",
+    "nextnet-20251016.tzinit.org"
   ],
   "genesis": {
-    "block": "BMC5pexviuP6Pgmq6xVfjpRQTk6hs49WMKFFvhgZvoqwmLrMtRF",
+    "block": "BM3BcV6KmN3N7HH3Qcpey7wPg5LQgsoSqhTNADdjGgLjTqpHn6U",
     "protocol": "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
-    "timestamp": "2025-10-15T08:00:00Z"
+    "timestamp": "2025-10-16T08:00:00Z"
   },
   "genesis_parameters": {
     "values": {
