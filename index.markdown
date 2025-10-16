@@ -23,7 +23,8 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Nextnet-20251015](/nextnet-20251015-about) | `2025-10-15` | [Faucet](https://faucet.nextnet-20251015.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
+| [Nextnet-20251015](/nextnet-20251015-about) | `2025-10-15` | [Faucet](https://faucet.nextnet-20251015.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/nextnet-20251015/rolling) |
+| [Nextnet-20251016](/nextnet-20251016-about) | `2025-10-16` | [Faucet](https://faucet.nextnet-20251016.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
 | [Seoulnet](/seoulnet-about) | `2025-07-11` | [Faucet](https://faucet.seoulnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
 
 
