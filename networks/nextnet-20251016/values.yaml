@@ -221,13 +221,8 @@ snapshot_source: null
 images:
   octez: tezos/tezos:master_761c0116_20251016000731
 
-protocols:
-  - command: PsU87LFi
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-  - command: PtSeouLo
-    vote:
-      liquidity_baking_toggle_vote: "pass"
+votes:
+  liquidity_baking_toggle_vote: "pass"
     
 accounts:
   teztnetsbaker:

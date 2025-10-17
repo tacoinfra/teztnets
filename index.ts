@@ -96,8 +96,8 @@ const weeklynet_chain = new TezosChain(
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.2.0", // point to a release of tezos-k8s. This should be the default state.
-    bootstrapPeers: [ "weeklynet.tzinit.org" ],
+    chartRepoVersion: "8.0.0", // point to a release of tezos-k8s. This should be the default state.
+    bootstrapPeers: ["weeklynet.tzinit.org"],
   },
   provider
 )
@@ -110,7 +110,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
   },
   provider
 )
@@ -130,7 +130,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
     rollingPvcSize: "50Gi",
     archivePvcSize: "3000Gi"
   },
@@ -145,7 +145,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
   },
   provider
 )
@@ -163,7 +163,7 @@ const nextnet2_chain = new TezosChain(
     bootstrapPeers: [ "nextnet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
     networkStakes: true,
   },
   provider
@@ -178,7 +178,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
   },
   provider
 )
@@ -196,10 +196,10 @@ const nextnet3_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251016/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "nextnet-20251016.tzinit.org" ],
+    bootstrapPeers: ["nextnet-20251016.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
     networkStakes: true,
   },
   provider
@@ -214,7 +214,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
   },
   provider
 )
@@ -231,10 +231,10 @@ const seoulnet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/seoulnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "seoulnet.tzinit.org" ],
+    bootstrapPeers: ["seoulnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
     networkStakes: true,
   },
   provider
@@ -249,7 +249,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
   },
   provider
 )
@@ -266,10 +266,10 @@ const shadownet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/shadownet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "shadownet.tzinit.org" ],
+    bootstrapPeers: ["shadownet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
     networkStakes: true,
   },
   provider
@@ -284,7 +284,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "7.2.0",
+    chartRepoVersion: "8.0.0",
   },
   provider
 )
@@ -294,7 +294,7 @@ new TezosFaucet(
 function getNetworks(chains: TezosChain[]): object {
   const networks: { [name: string]: object } = {}
 
-  chains.forEach(function(chain) {
+  chains.forEach(function (chain) {
     const bootstrapPeers: string[] = Object.assign([], chain.params.bootstrapPeers) // clone
     bootstrapPeers.splice(0, 0, `${chain.name}.${domainNameCom}`)
 
@@ -325,7 +325,7 @@ function getNetworks(chains: TezosChain[]): object {
     if ("dal_config" in network) {
       network["dal_config"]["bootstrap_peers"] = [
         `dal.${chain.name}.${domainNameCom}:11732`,
-	`${chain.name}.bootstrap.dal.nomadic-labs.com:11732`,
+        `${chain.name}.bootstrap.dal.nomadic-labs.com:11732`,
       ]
     }
 
@@ -335,10 +335,10 @@ function getNetworks(chains: TezosChain[]): object {
   return networks
 }
 
-function getTeztnets(chains: TezosChain[], virtualName: string=""): object {
+function getTeztnets(chains: TezosChain[], virtualName: string = ""): object {
   const teztnets: { [name: string]: { [name: string]: Object } } = {}
 
-  chains.forEach(function(chain) {
+  chains.forEach(function (chain) {
     let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`
     teztnets[virtualName || chain.name] = {
       chain_name: chain.tezosHelmValues["node_config_network"]["chain_name"],
@@ -463,7 +463,7 @@ export const teztnets = {
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([seoulnet_chain], 'currentnet'),
-//  ...getTeztnets([seoulnet_chain], 'proposednet'),
+  //  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet3_chain]),
   ...getTeztnets([nextnet3_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
