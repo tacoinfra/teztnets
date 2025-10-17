@@ -65,7 +65,7 @@ export class TezosFaucet extends pulumi.ComponentResource {
           },
           values: {
 	    image: {
-		repository: "docker.io/bitnamilegacy",
+		repository: "bitnamilegacy/redis",
 		tag: "latest",
 	    },
             // Keep the resource names short and simple
