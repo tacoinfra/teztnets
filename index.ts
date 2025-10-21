@@ -208,7 +208,7 @@ const nextnet4_chain = new TezosChain(
 new TezosFaucet(
   nextnet4_chain.name,
   {
-    namespace: nextnet3_chain.namespace,
+    namespace: nextnet4_chain.namespace,
     humanName: "Nextnet-20251022",
     helmValuesFile: "networks/nextnet-20251022/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
