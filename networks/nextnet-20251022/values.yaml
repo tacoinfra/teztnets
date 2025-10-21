@@ -222,7 +222,7 @@ images:
   octez: tezos/tezos:master_4c2914d9_20251021152253
 
 protocols:
-  - command: PsU87LFi
+  - command: PsD5wVTJ
     vote:
       liquidity_baking_toggle_vote: "pass"
   - command: PtSeouLo
