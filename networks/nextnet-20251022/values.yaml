@@ -173,7 +173,7 @@ nodes:
   rolling-node: null
 
 bootstrap_peers:
-  - nextnet-20251016.tzinit.org
+  - nextnet.tzinit.org
 
 dalNodes:
   dal-bootstrap:
@@ -219,7 +219,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master_761c0116_20251016000731
+  octez: tezos/tezos:master_4c2914d9_20251021152253
 
 protocols:
   - command: PsU87LFi
