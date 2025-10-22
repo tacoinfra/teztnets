@@ -96,7 +96,7 @@ const weeklynet_chain = new TezosChain(
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "8.0.0", // point to a release of tezos-k8s. This should be the default state.
+    chartRepoVersion: "8.0.2", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: ["weeklynet.tzinit.org"],
   },
   provider
@@ -110,7 +110,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
   },
   provider
 )
@@ -130,7 +130,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
     rollingPvcSize: "50Gi",
     archivePvcSize: "3000Gi"
   },
@@ -145,7 +145,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
   },
   provider
 )
@@ -163,7 +163,7 @@ const nextnet2_chain = new TezosChain(
     bootstrapPeers: [ "nextnet.tzinit.org" ],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
     networkStakes: true,
   },
   provider
@@ -178,7 +178,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
   },
   provider
 )
@@ -199,7 +199,7 @@ const nextnet4_chain = new TezosChain(
     bootstrapPeers: ["nextnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
     networkStakes: true,
   },
   provider
@@ -214,7 +214,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
   },
   provider
 )
@@ -234,7 +234,7 @@ const seoulnet_chain = new TezosChain(
     bootstrapPeers: ["seoulnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
     networkStakes: true,
   },
   provider
@@ -249,7 +249,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
   },
   provider
 )
@@ -269,7 +269,7 @@ const shadownet_chain = new TezosChain(
     bootstrapPeers: ["shadownet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
     networkStakes: true,
   },
   provider
@@ -284,7 +284,7 @@ new TezosFaucet(
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.0",
+    chartRepoVersion: "8.0.2",
   },
   provider
 )
