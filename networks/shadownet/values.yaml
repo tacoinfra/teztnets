@@ -226,12 +226,9 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v23.1
+  octez: tezos/tezos:octez-v23.2
 
 protocols:
-  - command: PsRiotum
-    vote:
-      liquidity_baking_toggle_vote: "pass"
   - command: PtSeouLo
     vote:
       liquidity_baking_toggle_vote: "pass"
