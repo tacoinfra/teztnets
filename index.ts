@@ -81,6 +81,7 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 });
 
 // Weeklynet - restarts Wednesdays
+
 const weeklynet_chain = new TezosChain(
   {
     category: periodicCategory,
@@ -114,6 +115,7 @@ new TezosFaucet(
   },
   provider
 )
+
 
 // Ghostnet is different from the other testnets:
 // * launched long time ago, launch code is not in the active code path
