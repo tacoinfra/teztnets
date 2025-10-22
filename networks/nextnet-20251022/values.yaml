@@ -225,9 +225,9 @@ protocols:
   - command: PsD5wVTJ
     vote:
       liquidity_baking_toggle_vote: "pass"
-  - command: PtSeouLo
-    vote:
-      liquidity_baking_toggle_vote: "pass"
+  # - command: PtSeouLo
+  #   vote:
+  #     liquidity_baking_toggle_vote: "pass"
     
 accounts:
   teztnetsbaker:
