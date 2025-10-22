@@ -1,20 +1,20 @@
-# Seoul
-# protocol_hash: PtSeouLouXkxhg39oWzjxDWaCydNfR3RxCUrNe4Q9Ro8BTehcbh
+# Nextnet T (Tilburynet)
+# protocol_hash: TBA
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_SEOULNET_2025-07-11T08:00:00Z
+  chain_name: TEZOS_TILBURYNET_2025-10-22T08:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2025-07-11T08:00:00Z"
+    timestamp: "2025-10-22T08:00:00Z"
   dal_config:
     activated: true
 
 # activation:
-#   protocol_hash: PsRiotumaAMotcRoDWW1bysEhQy2n1M5fy8JgRp8jjRfHGmfeA7
+#   protocol_hash: PtSeouLouXkxhg39oWzjxDWaCydNfR3RxCUrNe4Q9Ro8BTehcbh
 #   protocol_parameters:
-#     aggregate_attestation: false
-#     allow_tz4_delegate_enable: false
+#     aggregate_attestation: true
+#     allow_tz4_delegate_enable: true
 #     all_bakers_attest_activation_level: null
 #     consensus_rights_delay: 2
 #     blocks_preservation_cycles: 1
@@ -219,7 +219,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v23.1
+  octez: tezos/tezos:master_4c2914d9_20251021152253
 
 votes:
   liquidity_baking_toggle_vote: "pass"

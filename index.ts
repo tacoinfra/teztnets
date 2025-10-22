@@ -186,17 +186,17 @@ new TezosFaucet(
 
 // Nextnet test network - use pre-protocol proposal
 
-const nextnet3_chain = new TezosChain(
+const nextnet4_chain = new TezosChain(
   {
     category: protocolCategory,
-    humanName: "Nextnet-20251016",
+    humanName: "Nextnet-20251022",
     virtualName: "nextnet",
     snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20251016/values.yaml",
+    helmValuesFile: "networks/nextnet-20251022/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["nextnet-20251016.tzinit.org"],
+    bootstrapPeers: ["nextnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "8.0.0",
@@ -206,11 +206,11 @@ const nextnet3_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  nextnet3_chain.name,
+  nextnet4_chain.name,
   {
-    namespace: nextnet3_chain.namespace,
-    humanName: "Nextnet-20251016",
-    helmValuesFile: "networks/nextnet-20251016/faucet_values.yaml",
+    namespace: nextnet4_chain.namespace,
+    humanName: "Nextnet-20251022",
+    helmValuesFile: "networks/nextnet-20251022/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
@@ -347,7 +347,6 @@ function getTeztnets(chains: TezosChain[], virtualName: string = ""): object {
       description: chain.params.description,
       docker_build: chain.getDockerBuild(),
       git_ref: chain.getGitRef(),
-      last_baking_daemon: chain.getLastBakingDaemon(),
       faucet_url: faucetUrl,
       snapshot_url: `https://snapshots.tzinit.org/${chain.snap}/rolling`,
       category: chain.params.category,
@@ -395,12 +394,10 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
-  ...getNetworks([nextnet3_chain]),
+  ...getNetworks([nextnet4_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
-// We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "PsQuebec"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -420,7 +417,6 @@ const ghostnetTeztnet = {
       url: "https://ghost.tzstats.com",
     },
   ],
-  last_baking_daemon: lastBakingDaemonMainnetGhostnet,
   masked_from_main_page: false,
   network_url: `https://${domainNameCom}/ghostnet`,
   rpc_url: `https://rpc.ghostnet.${domainNameCom}`,
@@ -450,7 +446,6 @@ const mainnetMetadata = {
       url: "https://tzstats.com",
     },
   ],
-  last_baking_daemon: lastBakingDaemonMainnetGhostnet,
   masked_from_main_page: true,
   rpc_url: "https://mainnet.api.tez.ie",
   rpc_urls: [
@@ -464,8 +459,8 @@ export const teztnets = {
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([seoulnet_chain], 'currentnet'),
   //  ...getTeztnets([seoulnet_chain], 'proposednet'),
-  ...getTeztnets([nextnet3_chain]),
-  ...getTeztnets([nextnet3_chain], 'nextnet'),
+  ...getTeztnets([nextnet4_chain]),
+  ...getTeztnets([nextnet4_chain], 'nextnet'),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 

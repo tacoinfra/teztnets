@@ -72,8 +72,7 @@ export class TezosChain extends pulumi.ComponentResource {
           .toLocaleString()
       )
       name =
-        `${params.humanName.toLowerCase()}-${
-        deployDate.toISOString().split("T")[0]
+        `${params.humanName.toLowerCase()}-${deployDate.toISOString().split("T")[0]
         }`
       // Hack - Don't use except in emergencies!
       //name = `${params.humanName.toLowerCase()}-2025-06-11-1`
@@ -82,9 +81,9 @@ export class TezosChain extends pulumi.ComponentResource {
     }
     let snap: string;
     if (params.snapOver) {
-	    snap = params.snapOver
+      snap = params.snapOver
     } else {
-	    snap = `${params.humanName.toLowerCase()}`
+      snap = `${params.humanName.toLowerCase()}`
     }
 
     super("pulumi-contrib:components:TezosChain", name, inputs, opts)
@@ -204,7 +203,7 @@ export class TezosChain extends pulumi.ComponentResource {
         }
       )
 
-      rpcHosts.push( rpcVirtual )
+      rpcHosts.push(rpcVirtual)
 
     }
 
@@ -363,7 +362,7 @@ export class TezosChain extends pulumi.ComponentResource {
       // Set bootstrap peers on the network config (specific to testnets)
       this.tezosHelmValues.node_config_network.dal_config.bootstrap_peers = [
         `dal.${name}.${domainName}:11732`,
-	`${name}.bootstrap.dal.nomadic-labs.com`
+        `${name}.bootstrap.dal.nomadic-labs.com`
       ];
     }
 
@@ -445,9 +444,5 @@ export class TezosChain extends pulumi.ComponentResource {
   }
   getRpcUrls(): Array<string> {
     return [...[this.getRpcUrl()], ...this.params.rpcUrls || []]
-  }
-
-  getLastBakingDaemon(): string {
-    return this.tezosHelmValues["protocols"].slice(-1)[0]["command"]
   }
 }
