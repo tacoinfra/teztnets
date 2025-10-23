@@ -191,8 +191,6 @@ const nextnet4_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251022",
-    virtualName: "nextnet",
-    snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251022/values.yaml",
