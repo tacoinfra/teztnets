@@ -1,6 +1,5 @@
 #!/bin/python
 import json
-import copy
 import os
 import shutil
 import jinja2
@@ -20,7 +19,7 @@ for network_name in networks:
     with open(f"target/release/{network_name}", "w") as out_file:
         print(json.dumps(networks[network_name], indent=2), file=out_file)
 
-# output virtual network JSON file (currentnet, nextnet, etc)
+# output virtual network JSON file (currentnet, futurenet, etc)
 for k, v in teztnets.items():
     if k not in networks:
         for network_name, network in networks.items():
@@ -61,17 +60,8 @@ index = jinja2.Template(open("teztnets_xyz_page/index.md.jinja2").read()).render
 
 with open("target/release/index.markdown", "a") as out_file:
     print(index, file=out_file)
-
-# for teztnets.json, clone teztnets
-teztnetsJson = copy.deepcopy(teztnets)
-
-# and remove any that are not in networks.json (except mainnet)
-for k in list(teztnetsJson.keys()):
-    if k not in networks and k != "mainnet":
-        del teztnetsJson[k]
-
 with open("target/release/teztnets.json", "w") as out_file:
-    print(json.dumps(teztnetsJson, indent=2), file=out_file)
+    print(json.dumps(teztnets, indent=2), file=out_file)
 
 for k, v in teztnets.items():
     if k not in networks:

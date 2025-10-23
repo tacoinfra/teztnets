@@ -156,6 +156,7 @@ const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251015",
+    snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251015/values.yaml",
