@@ -1,5 +1,6 @@
 {
   "currentnet": {
+    "aliasOf": "seoulnet",
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_SEOULNET_2025-07-11T08:00:00Z",
     "dal_nodes": {
@@ -21,7 +22,6 @@
     "git_ref": "octez-v23.2",
     "human_name": "Seoulnet",
     "indexers": [],
-    "isAlias": true,
     "masked_from_main_page": false,
     "network_stakes": true,
     "network_url": "https://teztnets.com/seoulnet",
@@ -84,6 +84,7 @@
     ]
   },
   "nextnet": {
+    "aliasOf": "nextnet-20251022",
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_TILBURYNET_2025-10-22T08:00:00Z",
     "dal_nodes": {
@@ -105,7 +106,6 @@
     "git_ref": "4c2914d9",
     "human_name": "Nextnet-20251022",
     "indexers": [],
-    "isAlias": true,
     "masked_from_main_page": false,
     "network_stakes": true,
     "network_url": "https://teztnets.com/nextnet-20251022",

@@ -6,6 +6,8 @@ permalink: /ghostnet-about
 
 Ghostnet is the long-running testnet for Tezos.
 
+
+
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/>[https://ghostnet.ecadinfra.com](https://ghostnet.ecadinfra.com/chains/main/chain_id)<br/> |

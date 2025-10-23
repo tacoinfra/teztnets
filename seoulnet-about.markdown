@@ -6,6 +6,8 @@ permalink: /seoulnet-about
 
 Test Chain for Seoul protocol
 
+
+
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.seoulnet.teztnets.com](https://rpc.seoulnet.teztnets.com/chains/main/chain_id)<br/> |
