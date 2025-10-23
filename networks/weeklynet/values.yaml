@@ -269,6 +269,7 @@ serviceMonitor:
 
 votes:
   liquidity_baking_toggle_vote: "pass"
+
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
