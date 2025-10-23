@@ -267,16 +267,9 @@ serviceMonitor:
     # Right now, it contains the random chart name.
     release: monitoring-96695a88
 
-protocols:
-  - command: alpha
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-  - command: PtSeouLo
-    vote:
-      liquidity_baking_toggle_vote: "pass"
-  - command: PsD5wVTJ
-    vote:
-      liquidity_baking_toggle_vote: "pass"
+votes:
+  liquidity_baking_toggle_vote: "pass"
+
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
