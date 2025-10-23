@@ -203,6 +203,7 @@ const nextnet4_chain = new TezosChain(
     chartRepoVersion: "8.0.2",
     networkStakes: true,
     alias: "nextnet", // Add alias for Nextnet
+    snapOver: "nextnet", // Add alias for Nextnet
   },
   provider
 )
