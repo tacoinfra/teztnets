@@ -99,6 +99,7 @@ const weeklynet_chain = new TezosChain(
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
     chartRepoVersion: "8.0.2", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [ "weeklynet.tzinit.org" ],
+//    alias: "weeklynet",
   },
   provider
 )
@@ -158,7 +159,6 @@ const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251015",
-    snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251015/values.yaml",
@@ -202,6 +202,7 @@ const nextnet4_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.2",
     networkStakes: true,
+    alias: "nextnet", // Add alias for Nextnet
   },
   provider
 )
