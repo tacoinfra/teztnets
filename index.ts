@@ -98,8 +98,8 @@ const weeklynet_chain = new TezosChain(
     bakingPrivateKey: private_teztnets_baking_key,
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
     chartRepoVersion: "8.0.2", // point to a release of tezos-k8s. This should be the default state.
-    bootstrapPeers: [ "weeklynet.tzinit.org" ],
-//    alias: "weeklynet",
+    bootstrapPeers: ["weeklynet.tzinit.org"],
+    //    alias: "weeklynet",
   },
   provider
 )
@@ -405,7 +405,7 @@ function getTeztnets(chains: TezosChain[]): object {
       aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`
       aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`
 
-      // Mark as an alias and store the original network name
+      // Mark as an alias
       aliasNetworkInfo.aliasOf = chain.name
 
       // Add the network alias to teztnets
