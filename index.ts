@@ -218,6 +218,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
+    alias: "nextnet", // Add alias for Nextnet
   },
   provider
 )
