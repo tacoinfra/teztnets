@@ -10,6 +10,7 @@ export interface Parameters {
   readonly faucetRecaptchaSiteKey: pulumi.Output<string>
   readonly faucetRecaptchaSecretKey: pulumi.Output<string>
   readonly humanName: string
+  readonly alias?: string
   readonly namespace: k8s.core.v1.Namespace
   readonly helmValuesFile: string
   readonly chartPath?: string
@@ -107,6 +108,60 @@ export class TezosFaucet extends pulumi.ComponentResource {
         secretName: `${faucetDomain}-secret`,
       },
     ]
+
+    // Create alias faucet ingress if alias is provided
+    if (params.alias) {
+      const domainName = 'teztnets.com'
+      const aliasFaucetDomain = `faucet.${params.alias}.${domainName}`
+      const aliasFaucetIngName = `${aliasFaucetDomain}-ingress`
+      
+      new k8s.networking.v1.Ingress(
+        aliasFaucetIngName,
+        {
+          metadata: {
+            namespace: params.namespace.metadata.name,
+            name: aliasFaucetIngName,
+            annotations: {
+              "kubernetes.io/ingress.class": "nginx",
+              "cert-manager.io/cluster-issuer": "letsencrypt-prod",
+              "nginx.ingress.kubernetes.io/enable-cors": "true",
+              "nginx.ingress.kubernetes.io/cors-allow-origin": "*",
+            },
+            labels: { app: "tezos-faucet" },
+          },
+          spec: {
+            rules: [
+              {
+                host: aliasFaucetDomain,
+                http: {
+                  paths: [
+                    {
+                      path: "/",
+                      pathType: "Prefix",
+                      backend: {
+                        service: {
+                          name: "tezos-faucet",
+                          port: {
+                            number: 80,
+                          },
+                        },
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            tls: [
+              {
+                hosts: [aliasFaucetDomain],
+                secretName: `${aliasFaucetDomain}-secret`,
+              },
+            ],
+          },
+        },
+        { provider, parent: this }
+      )
+    }
 
     const faucetChartValues: any = {
       ...chartParams,

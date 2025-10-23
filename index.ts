@@ -235,6 +235,7 @@ const seoulnet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.2",
     networkStakes: true,
+    alias: "currentnet", // Add alias for Seoulnet
   },
   provider
 )
@@ -249,6 +250,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
+    alias: "currentnet", // Add alias for Seoulnet faucet
   },
   provider
 )
@@ -339,7 +341,9 @@ function getTeztnets(chains: TezosChain[]): object {
 
   chains.forEach(function (chain) {
     let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`
-    teztnets[chain.name] = {
+
+    // Create the base network information
+    const networkInfo = {
       chain_name: chain.tezosHelmValues["node_config_network"]["chain_name"],
       network_url: `https://${domainNameCom}/${chain.name}`,
       human_name: chain.params.humanName,
@@ -357,8 +361,26 @@ function getTeztnets(chains: TezosChain[]): object {
       indexers: chain.params.indexers || [],
       network_stakes: chain.params.networkStakes || false
     }
+
+    // Add DAL nodes if present
     if (Object.keys(chain.dalNodes).length > 0) {
-      teztnets[chain.name].dal_nodes = chain.dalNodes;
+      (networkInfo as any)['dal_nodes'] = chain.dalNodes;
+    }
+
+    // Add the network to teztnets
+    teztnets[chain.name] = networkInfo
+
+    // If an alias is defined, create an alias entry that points to the same network
+    if (chain.params.alias) {
+      // Create a copy of the network info for the alias
+      const aliasNetworkInfo = { ...networkInfo }
+
+      // Update URLs to use the alias domain
+      aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`
+      aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`
+
+      // Add the network alias to teztnets
+      teztnets[chain.params.alias] = aliasNetworkInfo
     }
   })
 

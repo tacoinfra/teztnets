@@ -14,6 +14,7 @@ export interface TezosParameters {
   readonly description: string
   readonly bakingPrivateKey: pulumi.Output<string>
   readonly humanName: string
+  readonly alias?: string
   readonly snapOver?: string
   readonly indexers?: { name: string; url: string }[]
   readonly chartPath?: string
@@ -213,6 +214,59 @@ export class TezosChain extends pulumi.ComponentResource {
       { provider, parent: this }
     )
 
+    // Create alias RPC ingress if alias is provided
+    if (params.alias) {
+      const aliasRpcDomain = `rpc.${params.alias}.${domainName}`
+      const aliasRpcIngName = `${aliasRpcDomain}-ingress`
+      
+      new k8s.networking.v1.Ingress(
+        aliasRpcIngName,
+        {
+          metadata: {
+            namespace: this.namespace.metadata.name,
+            name: aliasRpcIngName,
+            annotations: {
+              "kubernetes.io/ingress.class": "nginx",
+              "cert-manager.io/cluster-issuer": "letsencrypt-prod",
+              "nginx.ingress.kubernetes.io/enable-cors": "true",
+              "nginx.ingress.kubernetes.io/cors-allow-origin": "*",
+            },
+            labels: { app: "tezos-node" },
+          },
+          spec: {
+            rules: [
+              {
+                host: aliasRpcDomain,
+                http: {
+                  paths: [
+                    {
+                      path: "/",
+                      pathType: "Prefix",
+                      backend: {
+                        service: {
+                          name: "tezos-node-rpc",
+                          port: {
+                            name: "rpc",
+                          },
+                        },
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            tls: [
+              {
+                hosts: [aliasRpcDomain],
+                secretName: `${aliasRpcDomain}-secret`,
+              },
+            ],
+          },
+        },
+        { provider, parent: this }
+      )
+    }
+
 
     // Rollup
     if (
@@ -402,6 +456,13 @@ export class TezosChain extends pulumi.ComponentResource {
   getRpcUrl(): string {
     return `https://rpc.${this.name}.${domainName}`
   }
+  
+  getAliasRpcUrl(): string | undefined {
+    if (this.params.alias) {
+      return `https://rpc.${this.params.alias}.${domainName}`
+    }
+    return undefined
+  }
   getRollupUrls(): string[] {
     if (
       this.tezosHelmValues.smartRollupNodes &&
@@ -421,6 +482,19 @@ export class TezosChain extends pulumi.ComponentResource {
     return []
   }
   getRpcUrls(): Array<string> {
-    return [...[this.getRpcUrl()], ...this.params.rpcUrls || []]
+    const urls = [this.getRpcUrl()]
+    
+    // Add alias URL if available
+    const aliasUrl = this.getAliasRpcUrl()
+    if (aliasUrl) {
+      urls.push(aliasUrl)
+    }
+    
+    // Add any additional RPC URLs
+    if (this.params.rpcUrls && this.params.rpcUrls.length > 0) {
+      urls.push(...this.params.rpcUrls)
+    }
+    
+    return urls
   }
 }
