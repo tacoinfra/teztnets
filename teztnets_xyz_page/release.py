@@ -35,7 +35,8 @@ nested_teztnets = {
 }
 
 for k, v in teztnets.items():
-    if v["masked_from_main_page"] or v.get("isAlias"):
+    # Skip networks that are masked or marked as aliases
+    if v["masked_from_main_page"] or v.get("aliasOf"):
         continue
     if v["category"] not in nested_teztnets:
         nested_teztnets[v["category"]] = {}
@@ -54,22 +55,40 @@ with open("target/release/teztnets.json", "w") as out_file:
     print(json.dumps(teztnets, indent=2), file=out_file)
 
 for k, v in teztnets.items():
-    # Skip mainnet and aliases
-    if k == "mainnet" or v.get("isAlias", False):
+    # Skip mainnet
+    if k == "mainnet":
         continue
 
-    v["release"] = None
-    if "tezos/tezos:v" in v["docker_build"]:
-        v["release"] = v["docker_build"].split("tezos/tezos:")[1]
-    v["docker_build_hyperlinked"] = v["docker_build"]
+    # Handle aliases: If this is an alias, we'll use the original network's information
+    original_k = k
+    original_v = v
+    if "aliasOf" in v:
+        # This is an alias, get the original network's information
+        original_k = v["aliasOf"]
+        original_v = teztnets[original_k]
 
-    if v["docker_build"].startswith("tezos/tezos"):
+        # But keep the alias's URLs
+        original_v = dict(original_v)  # Create a copy to avoid modifying the original
+        original_v["rpc_url"] = v["rpc_url"]
+        original_v["faucet_url"] = v["faucet_url"]
+
+        # Add note about being an alias
+        original_v["alias_note"] = (
+            f"{v['human_name']} is an alias for {original_v['human_name']}."
+        )
+
+    v["release"] = None
+    if "tezos/tezos:v" in original_v["docker_build"]:
+        v["release"] = original_v["docker_build"].split("tezos/tezos:")[1]
+    v["docker_build_hyperlinked"] = original_v["docker_build"]
+
+    if original_v["docker_build"].startswith("tezos/tezos"):
         # build from docker hub, providing a link
         v["docker_build_hyperlinked"] = (
             "["
-            + v["docker_build"]
+            + original_v["docker_build"]
             + "](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name="
-            + v["docker_build"].replace("tezos/tezos:", "")
+            + original_v["docker_build"].replace("tezos/tezos:", "")
             + ")"
         )
 
@@ -77,14 +96,21 @@ for k, v in teztnets.items():
 
     readme = ""
 
-    readme_path = f"networks/{k.split('-')[0]}/README.md"
+    # Use the original network's README for aliases
+    readme_path = f"networks/{original_k.split('-')[0]}/README.md"
     if os.path.exists(readme_path):
         with open(readme_path) as readme_file:
             readme = readme_file.read()
 
     teztnet_md = jinja2.Template(
         open("teztnets_xyz_page/teztnet_page.md.jinja2").read()
-    ).render(k=k, v=v, network_params=networks[k], readme=readme)
+    ).render(
+        k=k,
+        v=v,
+        original_k=original_k,
+        network_params=networks[original_k],
+        readme=readme,
+    )
 
     with open(
         f"target/release/{v['human_name'].lower()}-about.markdown", "w"

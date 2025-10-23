@@ -6,6 +6,10 @@ permalink: /{{ v["human_name"] | lower }}-about
 
 {{ v["description"] }}
 
+{% if v.get("alias_note") %}
+> {{ v["alias_note"] }}
+{% endif %}
+
 | | |
 |-------|---------------------|
 | Public RPC endpoints | {% for r in v["rpc_urls"] -%}[{{ r }}]({{ r }}/chains/main/chain_id)<br/> {%- endfor %} |
