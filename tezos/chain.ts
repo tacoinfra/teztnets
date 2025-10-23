@@ -128,9 +128,9 @@ export class TezosChain extends pulumi.ComponentResource {
 
       // This is the hack to restart Weeklynet with a new chain name
       //
-      //this.tezosHelmValues["node_config_network"]["chain_name"] =
-      //  `TEZOS-${this.params.humanName.toUpperCase()}-2025-06-11T16:00:00Z`
-      //this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2025-06-11T16:00:00Z";
+      this.tezosHelmValues["node_config_network"]["chain_name"] =
+        `TEZOS-${this.params.humanName.toUpperCase()}-2025-06-22T14:00:00Z`
+      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2025-06-22T14:00:00Z";
 
     }
 
@@ -218,7 +218,7 @@ export class TezosChain extends pulumi.ComponentResource {
     if (params.alias) {
       const aliasRpcDomain = `rpc.${params.alias}.${domainName}`
       const aliasRpcIngName = `${aliasRpcDomain}-ingress`
-      
+
       new k8s.networking.v1.Ingress(
         aliasRpcIngName,
         {
@@ -456,7 +456,7 @@ export class TezosChain extends pulumi.ComponentResource {
   getRpcUrl(): string {
     return `https://rpc.${this.name}.${domainName}`
   }
-  
+
   getAliasRpcUrl(): string | undefined {
     if (this.params.alias) {
       return `https://rpc.${this.params.alias}.${domainName}`
@@ -482,19 +482,6 @@ export class TezosChain extends pulumi.ComponentResource {
     return []
   }
   getRpcUrls(): Array<string> {
-    const urls = [this.getRpcUrl()]
-    
-    // Add alias URL if available
-    const aliasUrl = this.getAliasRpcUrl()
-    if (aliasUrl) {
-      urls.push(aliasUrl)
-    }
-    
-    // Add any additional RPC URLs
-    if (this.params.rpcUrls && this.params.rpcUrls.length > 0) {
-      urls.push(...this.params.rpcUrls)
-    }
-    
-    return urls
+    return [...[this.getRpcUrl()], ...this.params.rpcUrls || []]
   }
 }

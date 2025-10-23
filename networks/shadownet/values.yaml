@@ -170,8 +170,8 @@ nodes:
           proof_of_work_stamp: 3ee07208e41a0489299909c0bd3cac5c05b20a9acc4a3bc7
     runs:
       - octez_node
-#      - baker
-#      - accuser
+      - baker
+      - accuser
       - vdf
     bootstrapped_readiness_probe: false
     storage_size: 250Gi
@@ -226,7 +226,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v23.1
+  octez: tezos/tezos:octez-v23.2
 
 votes:
   liquidity_baking_toggle_vote: "pass"

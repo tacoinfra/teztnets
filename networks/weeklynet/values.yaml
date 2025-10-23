@@ -4,6 +4,8 @@ node_config_network:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
   user_activated_upgrades:
     - level: 800
+      replacement_protocol: PsD5wVTJc9Rg228rXbXbeoeEo8g3fgWH211U7V3qjUed11g5Gqk
+    - level: 1600
       replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
   dal_config:
     activated: true
@@ -251,7 +253,7 @@ dal_deploy_slot_injector:
 bootstrap_peers:
   - weeklynet.tzinit.org
 full_snapshot_url: null
-rolling_snapshot_url: https://snapshots.eu.tzinit.org/weeklynet/rolling
+rolling_snapshot_url: https://snapshots.tzinit.org/weeklynet/rolling
 rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: null
