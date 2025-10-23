@@ -12,7 +12,7 @@ Shadownet - long term testnet
 | Faucet | [Shadownet faucet](https://faucet.shadownet.teztnets.com) |
 | Rolling Snapshot | [Shadownet snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
 | Full network name | `TEZOS_SHADOWNET_2025-08-07T20:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v23.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.1) |
+| Tezos docker build | [tezos/tezos:octez-v23.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.2) |
 | Activated on | 2025-08-07T20:00:00Z |
 
 
@@ -30,7 +30,7 @@ Shadownet - long term testnet
 To join Shadownet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.1
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.2
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v23.1
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v23.1
+git checkout octez-v23.2
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)

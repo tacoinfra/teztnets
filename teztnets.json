@@ -3,9 +3,9 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:octez-v23.1",
+    "docker_build": "tezos/tezos:octez-v23.2",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "octez-v23.1",
+    "git_ref": "octez-v23.2",
     "human_name": "Ghostnet",
     "indexers": [
       {
@@ -32,8 +32,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v23.1",
-    "git_ref": "octez-v23.1",
+    "docker_build": "tezos/tezos:octez-v23.2",
+    "git_ref": "octez-v23.2",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -74,7 +74,7 @@
     "git_ref": "4c2914d9",
     "human_name": "Nextnet-20251022",
     "indexers": [],
-    "last_baking_daemon": "PtSeouLo",
+    "last_baking_daemon": "PsD5wVTJ",
     "masked_from_main_page": false,
     "network_stakes": true,
     "network_url": "https://teztnets.com/nextnet-20251022",
@@ -102,10 +102,10 @@
       }
     },
     "description": "Test Chain for Seoul protocol",
-    "docker_build": "tezos/tezos:octez-v23.1",
+    "docker_build": "tezos/tezos:octez-v23.2",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.seoulnet.teztnets.com",
-    "git_ref": "octez-v23.1",
+    "git_ref": "octez-v23.2",
     "human_name": "Seoulnet",
     "indexers": [],
     "last_baking_daemon": "PtSeouLo",
@@ -136,10 +136,10 @@
       }
     },
     "description": "Shadownet - long term testnet",
-    "docker_build": "tezos/tezos:octez-v23.1",
+    "docker_build": "tezos/tezos:octez-v23.2",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.shadownet.teztnets.com",
-    "git_ref": "octez-v23.1",
+    "git_ref": "octez-v23.2",
     "human_name": "Shadownet",
     "indexers": [],
     "last_baking_daemon": "PtSeouLo",
@@ -156,7 +156,7 @@
   },
   "weeklynet-2025-10-22": {
     "category": "Periodic/Internal Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2025-10-22T00:00:00.000Z",
+    "chain_name": "TEZOS-WEEKLYNET-2025-06-22T14:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -176,7 +176,7 @@
     "git_ref": "08c36774",
     "human_name": "Weeklynet",
     "indexers": [],
-    "last_baking_daemon": "PtSeouLo",
+    "last_baking_daemon": "PsD5wVTJ",
     "masked_from_main_page": false,
     "network_stakes": false,
     "network_url": "https://teztnets.com/weeklynet-2025-10-22",
@@ -186,6 +186,6 @@
       "https://rpc.weeklynet-2025-10-22.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/weeklynet/rolling",
-    "activated_on": "2025-10-22"
+    "activated_on": "2025-06-22"
   }
 }
