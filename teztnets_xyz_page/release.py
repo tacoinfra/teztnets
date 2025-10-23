@@ -14,19 +14,9 @@ networks = {}
 with open("./networks.json", "r") as networks_file:
     networks = json.load(networks_file)
 
-# output network JSON file
 for network_name in networks:
     with open(f"target/release/{network_name}", "w") as out_file:
         print(json.dumps(networks[network_name], indent=2), file=out_file)
-
-# output virtual network JSON file (currentnet, futurenet, etc)
-for k, v in teztnets.items():
-    if k not in networks:
-        for network_name, network in networks.items():
-            if network["chain_name"] == v["chain_name"]:
-                with open(f"target/release/{k}", "w") as out_file:
-                    print(json.dumps(networks[network_name], indent=2), file=out_file)
-                break
 
 # group by category for human rendering
 # Order manually. Start with long-running.
@@ -64,7 +54,7 @@ with open("target/release/teztnets.json", "w") as out_file:
     print(json.dumps(teztnets, indent=2), file=out_file)
 
 for k, v in teztnets.items():
-    if k not in networks:
+    if k == "mainnet" or k == "currentnet" or k == "futurenet":
         continue
 
     v["release"] = None
