@@ -15,6 +15,7 @@ export interface TezosParameters {
   readonly bakingPrivateKey: pulumi.Output<string>
   readonly humanName: string
   readonly alias?: string
+  readonly snapOver?: string
   readonly indexers?: { name: string; url: string }[]
   readonly chartPath?: string
   readonly chartRepoVersion?: string
@@ -79,8 +80,8 @@ export class TezosChain extends pulumi.ComponentResource {
       name = params.humanName.toLowerCase()
     }
     let snap: string;
-    if (params.alias) {
-      snap = params.alias
+    if (params.snapOver) {
+      snap = params.snapOver
     } else {
       snap = `${params.humanName.toLowerCase()}`
     }
