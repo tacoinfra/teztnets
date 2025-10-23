@@ -339,14 +339,36 @@ function getNetworks(chains: TezosChain[]): object {
   return networks
 }
 
+// Define the network info interface
+interface NetworkInfo {
+  chain_name: any;
+  network_url: string;
+  human_name: string;
+  description: string;
+  docker_build: string;
+  git_ref: any;
+  faucet_url: string;
+  snapshot_url: string;
+  category: string;
+  rpc_url: string;
+  rollup_urls: any;
+  evm_proxy_urls: any;
+  rpc_urls: any;
+  masked_from_main_page: boolean;
+  indexers: any[];
+  network_stakes: boolean;
+  isAlias?: boolean;
+  dal_nodes?: any;
+}
+
 function getTeztnets(chains: TezosChain[]): object {
-  const teztnets: { [name: string]: { [name: string]: Object } } = {}
+  const teztnets: { [name: string]: NetworkInfo } = {}
 
   chains.forEach(function (chain) {
     let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`
 
     // Create the base network information
-    const networkInfo = {
+    const networkInfo: NetworkInfo = {
       chain_name: chain.tezosHelmValues["node_config_network"]["chain_name"],
       network_url: `https://${domainNameCom}/${chain.name}`,
       human_name: chain.params.humanName,
@@ -376,11 +398,14 @@ function getTeztnets(chains: TezosChain[]): object {
     // If an alias is defined, create an alias entry that points to the same network
     if (chain.params.alias) {
       // Create a copy of the network info for the alias
-      const aliasNetworkInfo = { ...networkInfo }
+      const aliasNetworkInfo: NetworkInfo = { ...networkInfo }
 
       // Update URLs to use the alias domain
       aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`
       aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`
+
+      // Mark as an alias
+      aliasNetworkInfo.isAlias = true
 
       // Add the network alias to teztnets
       teztnets[chain.params.alias] = aliasNetworkInfo
