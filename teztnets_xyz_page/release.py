@@ -35,7 +35,7 @@ nested_teztnets = {
 }
 
 for k, v in teztnets.items():
-    if v["masked_from_main_page"]:
+    if v["masked_from_main_page"] or v.get("isAlias"):
         continue
     if v["category"] not in nested_teztnets:
         nested_teztnets[v["category"]] = {}
