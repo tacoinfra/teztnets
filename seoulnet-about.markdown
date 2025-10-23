@@ -12,7 +12,7 @@ Test Chain for Seoul protocol
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.seoulnet.teztnets.com](https://rpc.seoulnet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Seoulnet faucet](https://faucet.seoulnet.teztnets.com) |
-| Rolling Snapshot | [Seoulnet snapshot](https://snapshots.tzinit.org/currentnet/rolling) |
+| Rolling Snapshot | [Seoulnet snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
 | Full network name | `TEZOS_SEOULNET_2025-07-11T08:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v23.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.2) |
 | Activated on | 2025-07-11T08:00:00Z |
@@ -65,7 +65,7 @@ octez-node config init --network https://teztnets.com/seoulnet
 ### Recover from a snapshot
 
 ```
-wget -O snapshot_file https://snapshots.tzinit.org/currentnet/rolling
+wget -O snapshot_file https://snapshots.tzinit.org/seoulnet/rolling
 octez-node snapshot import snapshot_file
 ```
 

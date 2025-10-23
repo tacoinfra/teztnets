@@ -30,7 +30,7 @@
     "rpc_urls": [
       "https://rpc.seoulnet.teztnets.com"
     ],
-    "snapshot_url": "https://snapshots.tzinit.org/currentnet/rolling"
+    "snapshot_url": "https://snapshots.tzinit.org/seoulnet/rolling"
   },
   "ghostnet": {
     "category": "Long-running Teztnets",
@@ -179,7 +179,7 @@
     "rpc_urls": [
       "https://rpc.seoulnet.teztnets.com"
     ],
-    "snapshot_url": "https://snapshots.tzinit.org/currentnet/rolling",
+    "snapshot_url": "https://snapshots.tzinit.org/seoulnet/rolling",
     "activated_on": "2025-07-11"
   },
   "shadownet": {
