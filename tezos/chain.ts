@@ -14,8 +14,8 @@ export interface TezosParameters {
   readonly description: string
   readonly bakingPrivateKey: pulumi.Output<string>
   readonly humanName: string
+  readonly alias?: string
   readonly snapOver?: string
-  readonly virtualName?: string
   readonly indexers?: { name: string; url: string }[]
   readonly chartPath?: string
   readonly chartRepoVersion?: string
@@ -114,10 +114,10 @@ export class TezosChain extends pulumi.ComponentResource {
         pulumi
           .output(imageResolver.getLatestTagAsync(deployDate))
           .apply((tag) => `${imageResolver.image}:${tag}`)
-      // Hack XXX
+      // Hack XXX 
       // This is a trick to change Weeklynet's name when it
-      // needs to be respun. if the chain has already launched but
-      // gets bricked because it can no longer upgrade from one proto to the
+      // needs to be respun. if the chain has already launched but 
+      // gets bricked because it can no longer upgrade from one proto to the 
       // next, change the date below. It will start with a different chainId.
       // This way, it won't mix with the existing Weeklynet and will be able to sync.
       // Otherwise, the old broken Weeklynet will mix with the new one and you'll never be able to produce
@@ -165,47 +165,6 @@ export class TezosChain extends pulumi.ComponentResource {
 
     // RPC Ingress
     const rpcDomain = `rpc.${name}.${domainName}`
-    const rpcVirtual = params.virtualName ? `rpc.${params.virtualName}.${domainName}` : false
-
-    const rpcHttp = {
-      paths: [
-        {
-          path: "/",
-          pathType: "Prefix",
-          backend: {
-            service: {
-              name: "tezos-node-rpc",
-              port: {
-                name: "rpc",
-              },
-            },
-          },
-        },
-      ],
-    }
-
-    const rpcRules = [
-      {
-        host: rpcDomain,
-        http: rpcHttp,
-      }
-    ]
-
-    const rpcHosts = [rpcDomain]
-
-    // add virtual network ingress
-    if (rpcVirtual) {
-
-      rpcRules.push(
-        {
-          host: rpcVirtual,
-          http: rpcHttp,
-        }
-      )
-
-      rpcHosts.push(rpcVirtual)
-
-    }
 
     const rpcIngName = `${rpcDomain}-ingress`
     new k8s.networking.v1.Ingress(
@@ -223,10 +182,30 @@ export class TezosChain extends pulumi.ComponentResource {
           labels: { app: "tezos-node" },
         },
         spec: {
-          rules: rpcRules,
+          rules: [
+            {
+              host: rpcDomain,
+              http: {
+                paths: [
+                  {
+                    path: "/",
+                    pathType: "Prefix",
+                    backend: {
+                      service: {
+                        name: "tezos-node-rpc",
+                        port: {
+                          name: "rpc",
+                        },
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+          ],
           tls: [
             {
-              hosts: rpcHosts,
+              hosts: [rpcDomain],
               secretName: `${rpcDomain}-secret`,
             },
           ],
@@ -234,6 +213,59 @@ export class TezosChain extends pulumi.ComponentResource {
       },
       { provider, parent: this }
     )
+
+    // Create alias RPC ingress if alias is provided
+    if (params.alias) {
+      const aliasRpcDomain = `rpc.${params.alias}.${domainName}`
+      const aliasRpcIngName = `${aliasRpcDomain}-ingress`
+
+      new k8s.networking.v1.Ingress(
+        aliasRpcIngName,
+        {
+          metadata: {
+            namespace: this.namespace.metadata.name,
+            name: aliasRpcIngName,
+            annotations: {
+              "kubernetes.io/ingress.class": "nginx",
+              "cert-manager.io/cluster-issuer": "letsencrypt-prod",
+              "nginx.ingress.kubernetes.io/enable-cors": "true",
+              "nginx.ingress.kubernetes.io/cors-allow-origin": "*",
+            },
+            labels: { app: "tezos-node" },
+          },
+          spec: {
+            rules: [
+              {
+                host: aliasRpcDomain,
+                http: {
+                  paths: [
+                    {
+                      path: "/",
+                      pathType: "Prefix",
+                      backend: {
+                        service: {
+                          name: "tezos-node-rpc",
+                          port: {
+                            name: "rpc",
+                          },
+                        },
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            tls: [
+              {
+                hosts: [aliasRpcDomain],
+                secretName: `${aliasRpcDomain}-secret`,
+              },
+            ],
+          },
+        },
+        { provider, parent: this }
+      )
+    }
 
 
     // Rollup
@@ -423,6 +455,13 @@ export class TezosChain extends pulumi.ComponentResource {
 
   getRpcUrl(): string {
     return `https://rpc.${this.name}.${domainName}`
+  }
+
+  getAliasRpcUrl(): string | undefined {
+    if (this.params.alias) {
+      return `https://rpc.${this.params.alias}.${domainName}`
+    }
+    return undefined
   }
   getRollupUrls(): string[] {
     if (

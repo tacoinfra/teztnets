@@ -1,6 +1,5 @@
 #!/bin/python
 import json
-import copy
 import os
 import shutil
 import jinja2
@@ -15,24 +14,9 @@ networks = {}
 with open("./networks.json", "r") as networks_file:
     networks = json.load(networks_file)
 
-# output network JSON file
 for network_name in networks:
     with open(f"target/release/{network_name}", "w") as out_file:
         print(json.dumps(networks[network_name], indent=2), file=out_file)
-
-# output virtual network JSON file (currentnet, nextnet, etc)
-for k, v in teztnets.items():
-    if k not in networks:
-        for network_name, network in networks.items():
-            if network["chain_name"] == v["chain_name"]:
-                with open(f"target/release/{k}", "w") as out_file:
-                    print(json.dumps(networks[network_name], indent=2), file=out_file)
-
-                # output faucet redirect HTML file
-                os.makedirs(f"target/release/{k}.faucet")
-                with open(f"target/release/{k}.faucet/index.html", "w") as out_file:
-                    print(f"<!DOCTYPE html>\n<html><head><script>location.replace('{ v['faucet_url'] }')</script><meta http-equiv=\"refresh\" content=\"0;url={ v['faucet_url'] }\">", file=out_file)
-                break
 
 # group by category for human rendering
 # Order manually. Start with long-running.
@@ -66,20 +50,11 @@ index = jinja2.Template(open("teztnets_xyz_page/index.md.jinja2").read()).render
 
 with open("target/release/index.markdown", "a") as out_file:
     print(index, file=out_file)
-
-# for teztnets.json, clone teztnets
-teztnetsJson = copy.deepcopy(teztnets)
-
-# and remove any that are not in networks.json (except mainnet)
-for k in list(teztnetsJson.keys()):
-    if k not in networks and k != "mainnet":
-        del teztnetsJson[k]
-
 with open("target/release/teztnets.json", "w") as out_file:
-    print(json.dumps(teztnetsJson, indent=2), file=out_file)
+    print(json.dumps(teztnets, indent=2), file=out_file)
 
 for k, v in teztnets.items():
-    if k not in networks:
+    if k == "mainnet":
         continue
 
     v["release"] = None

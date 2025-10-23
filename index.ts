@@ -158,6 +158,7 @@ const nextnet2_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251015",
+    snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251015/values.yaml",
@@ -192,8 +193,6 @@ const nextnet4_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251022",
-    virtualName: "nextnet",
-    snapOver: "nextnet",
     description: "Test Chain for Next protocol",
     activationBucket: activationBucket,
     helmValuesFile: "networks/nextnet-20251022/values.yaml",
@@ -238,6 +237,7 @@ const seoulnet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.2",
     networkStakes: true,
+    alias: "currentnet", // Add alias for Seoulnet
   },
   provider
 )
@@ -252,6 +252,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
+    alias: "currentnet", // Add alias for Seoulnet faucet
   },
   provider
 )
@@ -337,12 +338,14 @@ function getNetworks(chains: TezosChain[]): object {
   return networks
 }
 
-function getTeztnets(chains: TezosChain[], virtualName: string = ""): object {
+function getTeztnets(chains: TezosChain[]): object {
   const teztnets: { [name: string]: { [name: string]: Object } } = {}
 
   chains.forEach(function (chain) {
     let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`
-    teztnets[virtualName || chain.name] = {
+
+    // Create the base network information
+    const networkInfo = {
       chain_name: chain.tezosHelmValues["node_config_network"]["chain_name"],
       network_url: `https://${domainNameCom}/${chain.name}`,
       human_name: chain.params.humanName,
@@ -356,12 +359,30 @@ function getTeztnets(chains: TezosChain[], virtualName: string = ""): object {
       rollup_urls: chain.getRollupUrls(),
       evm_proxy_urls: chain.getEvmProxyUrls(),
       rpc_urls: chain.getRpcUrls(),
-      masked_from_main_page: !!virtualName,
+      masked_from_main_page: false,
       indexers: chain.params.indexers || [],
       network_stakes: chain.params.networkStakes || false
     }
+
+    // Add DAL nodes if present
     if (Object.keys(chain.dalNodes).length > 0) {
-      teztnets[virtualName || chain.name].dal_nodes = chain.dalNodes;
+      (networkInfo as any)['dal_nodes'] = chain.dalNodes;
+    }
+
+    // Add the network to teztnets
+    teztnets[chain.name] = networkInfo
+
+    // If an alias is defined, create an alias entry that points to the same network
+    if (chain.params.alias) {
+      // Create a copy of the network info for the alias
+      const aliasNetworkInfo = { ...networkInfo }
+
+      // Update URLs to use the alias domain
+      aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`
+      aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`
+
+      // Add the network alias to teztnets
+      teztnets[chain.params.alias] = aliasNetworkInfo
     }
   })
 
@@ -459,10 +480,9 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
-  ...getTeztnets([seoulnet_chain], 'currentnet'),
-  //  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet4_chain]),
-  ...getTeztnets([nextnet4_chain], 'nextnet'),
+  //  ...getTeztnets([shadownet_chain]),
+  //  ...getTeztnets([seoulnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
