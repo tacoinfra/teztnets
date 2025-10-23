@@ -336,12 +336,12 @@ function getNetworks(chains: TezosChain[]): object {
   return networks
 }
 
-function getTeztnets(chains: TezosChain[], virtualName: string = ""): object {
+function getTeztnets(chains: TezosChain[]): object {
   const teztnets: { [name: string]: { [name: string]: Object } } = {}
 
   chains.forEach(function (chain) {
     let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`
-    teztnets[virtualName || chain.name] = {
+    teztnets[chain.name] = {
       chain_name: chain.tezosHelmValues["node_config_network"]["chain_name"],
       network_url: `https://${domainNameCom}/${chain.name}`,
       human_name: chain.params.humanName,
@@ -355,12 +355,12 @@ function getTeztnets(chains: TezosChain[], virtualName: string = ""): object {
       rollup_urls: chain.getRollupUrls(),
       evm_proxy_urls: chain.getEvmProxyUrls(),
       rpc_urls: chain.getRpcUrls(),
-      masked_from_main_page: !!virtualName,
+      masked_from_main_page: false,
       indexers: chain.params.indexers || [],
       network_stakes: chain.params.networkStakes || false
     }
     if (Object.keys(chain.dalNodes).length > 0) {
-      teztnets[virtualName || chain.name].dal_nodes = chain.dalNodes;
+      teztnets[chain.name].dal_nodes = chain.dalNodes;
     }
   })
 
@@ -458,10 +458,9 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
-  ...getTeztnets([seoulnet_chain], 'currentnet'),
-  //  ...getTeztnets([seoulnet_chain], 'proposednet'),
   ...getTeztnets([nextnet4_chain]),
-  ...getTeztnets([nextnet4_chain], 'nextnet'),
+  //  ...getTeztnets([shadownet_chain]),
+  //  ...getTeztnets([seoulnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
