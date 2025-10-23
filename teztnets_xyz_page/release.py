@@ -18,6 +18,12 @@ for network_name in networks:
     with open(f"target/release/{network_name}", "w") as out_file:
         print(json.dumps(networks[network_name], indent=2), file=out_file)
 
+# Create network definition files for aliases as well
+for network_name, network_info in teztnets.items():
+    if network_info.get("aliasOf") and network_name in networks:
+        with open(f"target/release/{network_name}", "w") as out_file:
+            print(json.dumps(networks[network_name], indent=2), file=out_file)
+
 # group by category for human rendering
 # Order manually. Start with long-running.
 category_desc = {
@@ -35,7 +41,7 @@ nested_teztnets = {
 }
 
 for k, v in teztnets.items():
-    if v["masked_from_main_page"] or v.get("isAlias"):
+    if v["masked_from_main_page"] or v.get("aliasOf"):
         continue
     if v["category"] not in nested_teztnets:
         nested_teztnets[v["category"]] = {}
@@ -55,7 +61,7 @@ with open("target/release/teztnets.json", "w") as out_file:
 
 for k, v in teztnets.items():
     # Skip mainnet and aliases
-    if k == "mainnet" or v.get("isAlias", False):
+    if k == "mainnet" or v.get("aliasOf"):
         continue
 
     v["release"] = None
