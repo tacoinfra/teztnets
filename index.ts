@@ -357,7 +357,7 @@ interface NetworkInfo {
   masked_from_main_page: boolean;
   indexers: any[];
   network_stakes: boolean;
-  isAlias?: boolean;
+  aliasOf?: string;
   dal_nodes?: any;
 }
 
@@ -404,8 +404,8 @@ function getTeztnets(chains: TezosChain[]): object {
       aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`
       aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`
 
-      // Mark as an alias
-      aliasNetworkInfo.isAlias = true
+      // Mark as an alias and store the original network name
+      aliasNetworkInfo.aliasOf = chain.name
 
       // Add the network alias to teztnets
       teztnets[chain.params.alias] = aliasNetworkInfo
