@@ -97,7 +97,7 @@ const weeklynet_chain = new TezosChain(
     helmValuesFile: "networks/weeklynet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
     // chartPath: "networks/weeklynet/tezos-k8s", // point to a submodule, to run unreleased tezos-k8s code
-    chartRepoVersion: "7.2.0", // point to a release of tezos-k8s. This should be the default state.
+    chartRepoVersion: "8.0.2", // point to a release of tezos-k8s. This should be the default state.
     bootstrapPeers: [ "weeklynet.tzinit.org" ],
   },
   provider
@@ -349,7 +349,6 @@ function getTeztnets(chains: TezosChain[], virtualName: string=""): object {
       description: chain.params.description,
       docker_build: chain.getDockerBuild(),
       git_ref: chain.getGitRef(),
-      last_baking_daemon: chain.getLastBakingDaemon(),
       faucet_url: faucetUrl,
       snapshot_url: `https://snapshots.tzinit.org/${chain.snap}/rolling`,
       category: chain.params.category,
@@ -402,7 +401,6 @@ export const networks = {
 }
 
 // We hardcode the values to be displayed on the webpage.
-const lastBakingDaemonMainnetGhostnet = "PsQuebec"
 const ghostnetTeztnet = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -422,7 +420,6 @@ const ghostnetTeztnet = {
       url: "https://ghost.tzstats.com",
     },
   ],
-  last_baking_daemon: lastBakingDaemonMainnetGhostnet,
   masked_from_main_page: false,
   network_url: `https://${domainNameCom}/ghostnet`,
   rpc_url: `https://rpc.ghostnet.${domainNameCom}`,
@@ -452,7 +449,6 @@ const mainnetMetadata = {
       url: "https://tzstats.com",
     },
   ],
-  last_baking_daemon: lastBakingDaemonMainnetGhostnet,
   masked_from_main_page: true,
   rpc_url: "https://mainnet.api.tez.ie",
   rpc_urls: [
