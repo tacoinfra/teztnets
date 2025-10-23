@@ -10,7 +10,7 @@ Test Chain for Seoul protocol
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.seoulnet.teztnets.com](https://rpc.seoulnet.teztnets.com/chains/main/chain_id)<br/> |
 | Faucet | [Seoulnet faucet](https://faucet.seoulnet.teztnets.com) |
-| Rolling Snapshot | [Seoulnet snapshot](https://snapshots.tzinit.org/seoulnet/rolling) |
+| Rolling Snapshot | [Seoulnet snapshot](https://snapshots.tzinit.org/currentnet/rolling) |
 | Full network name | `TEZOS_SEOULNET_2025-07-11T08:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v23.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v23.2) |
 | Activated on | 2025-07-11T08:00:00Z |
@@ -63,7 +63,7 @@ octez-node config init --network https://teztnets.com/seoulnet
 ### Recover from a snapshot
 
 ```
-wget -O snapshot_file https://snapshots.tzinit.org/seoulnet/rolling
+wget -O snapshot_file https://snapshots.tzinit.org/currentnet/rolling
 octez-node snapshot import snapshot_file
 ```
 
@@ -116,7 +116,7 @@ octez-dal-node config init
 octez-dal-node run
 ```
 
-You may now launch the baker process (connecting to the DAL node). If you are using octez before v23, you will need to launch individual bakers for each protocol.
+You may now launch the baker process (connecting to the DAL node).
 ```bash=3
 octez-baker run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass --dal-node http://localhost:10732
 ```

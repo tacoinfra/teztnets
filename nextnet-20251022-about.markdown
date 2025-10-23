@@ -116,7 +116,7 @@ octez-dal-node config init
 octez-dal-node run
 ```
 
-You may now launch the baker process (connecting to the DAL node). If you are using octez before v23, you will need to launch individual bakers for each protocol.
+You may now launch the baker process (connecting to the DAL node).
 ```bash=3
 octez-baker run with local node ~/.tezos-node mykey --liquidity-baking-toggle-vote pass --dal-node http://localhost:10732
 ```
