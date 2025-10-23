@@ -122,8 +122,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v23.1"
-const ghostnetArchiveVersion = "octez-v23.1";
+const ghostnetRollingVersion = "octez-v23.2"
+const ghostnetArchiveVersion = "octez-v23.2";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
