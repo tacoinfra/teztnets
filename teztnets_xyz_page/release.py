@@ -30,7 +30,7 @@ category_desc = {
 nested_teztnets = {
     "Long-running Teztnets": {},
     "Protocol Teztnets": {},
-#    "Feature Teztnets": {},
+    #    "Feature Teztnets": {},
     "Periodic/Internal Teztnets": {},
 }
 
@@ -54,7 +54,8 @@ with open("target/release/teztnets.json", "w") as out_file:
     print(json.dumps(teztnets, indent=2), file=out_file)
 
 for k, v in teztnets.items():
-    if k == "mainnet":
+    # Skip mainnet and aliases
+    if k == "mainnet" or v.get("isAlias", False):
         continue
 
     v["release"] = None
@@ -81,9 +82,9 @@ for k, v in teztnets.items():
         with open(readme_path) as readme_file:
             readme = readme_file.read()
 
-    teztnet_md = jinja2.Template(open("teztnets_xyz_page/teztnet_page.md.jinja2").read()).render(
-        k=k, v=v, network_params=networks[k], readme=readme
-    )
+    teztnet_md = jinja2.Template(
+        open("teztnets_xyz_page/teztnet_page.md.jinja2").read()
+    ).render(k=k, v=v, network_params=networks[k], readme=readme)
 
     with open(
         f"target/release/{v['human_name'].lower()}-about.markdown", "w"
