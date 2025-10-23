@@ -6,8 +6,6 @@ permalink: /shadownet-about
 
 Shadownet - long term testnet
 
-
-
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.shadownet.teztnets.com](https://rpc.shadownet.teztnets.com/chains/main/chain_id)<br/> |

@@ -6,8 +6,6 @@ permalink: /weeklynet-about
 
 A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.
 
-
-
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.weeklynet-2025-10-22.teztnets.com](https://rpc.weeklynet-2025-10-22.teztnets.com/chains/main/chain_id)<br/> |

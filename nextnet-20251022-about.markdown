@@ -6,8 +6,6 @@ permalink: /nextnet-20251022-about
 
 Test Chain for Next protocol
 
-
-
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.nextnet-20251022.teztnets.com](https://rpc.nextnet-20251022.teztnets.com/chains/main/chain_id)<br/> |
