@@ -20,9 +20,10 @@ for network_name in networks:
 
 # Create network definition files for aliases as well
 for network_name, network_info in teztnets.items():
-    if network_info.get("aliasOf") and network_name in networks:
+    alias_target = network_info.get("aliasOf")
+    if alias_target in networks:
         with open(f"target/release/{network_name}", "w") as out_file:
-            print(json.dumps(networks[network_name], indent=2), file=out_file)
+            print(json.dumps(networks[alias_target], indent=2), file=out_file)
 
 # group by category for human rendering
 # Order manually. Start with long-running.
