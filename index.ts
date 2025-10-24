@@ -202,7 +202,7 @@ const nextnet4_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.2",
     networkStakes: true,
-    alias: "nextnet", // Add alias for Nextnet
+//    alias: "nextnet", // Add alias for Nextnet
     snapOver: "nextnet", // Add alias for Nextnet
   },
   provider
@@ -218,7 +218,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
-    alias: "nextnet", // Add alias for Nextnet
+//    alias: "nextnet", // Add alias for Nextnet
   },
   provider
 )
@@ -240,7 +240,7 @@ const seoulnet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.2",
     networkStakes: true,
-    alias: "currentnet", // Add alias for Seoulnet
+//    alias: "currentnet", // Add alias for Seoulnet
   },
   provider
 )
@@ -255,7 +255,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
-    alias: "currentnet", // Add alias for Seoulnet faucet
+//    alias: "currentnet", // Add alias for Seoulnet faucet
   },
   provider
 )
