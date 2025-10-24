@@ -136,13 +136,49 @@ export class TezosFaucet extends pulumi.ComponentResource {
                 http: {
                   paths: [
                     {
+                      path: "/info",
+                      pathType: "Exact",
+                      backend: {
+                        service: {
+                          name: "tezos-faucet",
+                          port: {
+                            number: 3000,
+                          },
+                        },
+                      },
+                    },
+                    {
+                      path: "/challenge",
+                      pathType: "Exact",
+                      backend: {
+                        service: {
+                          name: "tezos-faucet",
+                          port: {
+                            number: 3000,
+                          },
+                        },
+                      },
+                    },
+                    {
+                      path: "/verify",
+                      pathType: "Exact",
+                      backend: {
+                        service: {
+                          name: "tezos-faucet",
+                          port: {
+                            number: 3000,
+                          },
+                        },
+                      },
+                    },
+                    {
                       path: "/",
                       pathType: "Prefix",
                       backend: {
                         service: {
                           name: "tezos-faucet",
                           port: {
-                            number: 80,
+                            number: 8080,
                           },
                         },
                       },
