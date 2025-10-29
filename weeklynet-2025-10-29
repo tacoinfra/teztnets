@@ -3,12 +3,12 @@
   "dal_config": {
     "activated": true,
     "bootstrap_peers": [
-      "dal.weeklynet-2025-10-22.teztnets.com:11732",
-      "weeklynet-2025-10-22.bootstrap.dal.nomadic-labs.com:11732"
+      "dal.weeklynet-2025-10-29.teztnets.com:11732",
+      "weeklynet-2025-10-29.bootstrap.dal.nomadic-labs.com:11732"
     ]
   },
   "default_bootstrap_peers": [
-    "weeklynet-2025-10-22.teztnets.com",
+    "weeklynet-2025-10-29.teztnets.com",
     "weeklynet.tzinit.org"
   ],
   "genesis": {
