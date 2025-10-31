@@ -128,9 +128,9 @@ export class TezosChain extends pulumi.ComponentResource {
 
       // This is the hack to restart Weeklynet with a new chain name
       //
-      this.tezosHelmValues["node_config_network"]["chain_name"] =
+      //this.tezosHelmValues["node_config_network"]["chain_name"] =
         `TEZOS-${this.params.humanName.toUpperCase()}-2025-06-22T14:00:00Z`
-      this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2025-06-22T14:00:00Z";
+      //this.tezosHelmValues["node_config_network"]["genesis"]["timestamp"] = "2025-06-22T14:00:00Z";
 
     }
 
