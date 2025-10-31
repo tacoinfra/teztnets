@@ -217,7 +217,7 @@
   },
   "weeklynet-2025-10-29": {
     "category": "Periodic/Internal Teztnets",
-    "chain_name": "TEZOS-WEEKLYNET-2025-06-22T14:00:00Z",
+    "chain_name": "TEZOS-WEEKLYNET-2025-10-29T00:00:00.000Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -246,6 +246,6 @@
       "https://rpc.weeklynet-2025-10-29.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/weeklynet/rolling",
-    "activated_on": "2025-06-22"
+    "activated_on": "2025-10-29"
   }
 }
