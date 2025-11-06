@@ -12,7 +12,7 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 | Faucet | [Weeklynet faucet](https://faucet.weeklynet-2025-11-05.teztnets.com) |
 | Rolling Snapshot | [Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
 | Full network name | `TEZOS-WEEKLYNET-2025-11-05T00:00:00.000Z` |
-| Tezos docker build | [tezos/tezos:master_d2a3495f_20251104090124](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_d2a3495f_20251104090124) |
+| Tezos docker build | [tezos/tezos:master_57c171f1_20251104102454](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_57c171f1_20251104102454) |
 | Activated on | 2025-11-05T00:00:00.000Z |
 
 
@@ -30,7 +30,7 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 To join Weeklynet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master_d2a3495f_20251104090124
+docker run -it --entrypoint=/bin/sh tezos/tezos:master_57c171f1_20251104102454
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master_d2a3495f_20251104090124
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout d2a3495f
+git checkout 57c171f1
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
