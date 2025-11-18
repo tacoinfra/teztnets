@@ -223,6 +223,43 @@ new TezosFaucet(
 
 // END of Nextnet
 
+// Tallinnnet test network 
+/*
+const tallinnnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Tallinnnet",
+    description: "Test Chain for Tallinn protocol",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/tallinnnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: ["tallinnnet.tzinit.org"],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "8.0.2",
+    networkStakes: true,
+    alias: "proposednet", // Add alias
+  },
+  provider
+)
+
+new TezosFaucet(
+  tallinnnet_chain.name,
+  {
+    namespace: tallinnnet_chain.namespace,
+    humanName: "Tallinnnet",
+    helmValuesFile: "networks/tallinnnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "8.0.2",
+    alias: "proposednet", // Add alias
+  },
+  provider
+)
+*/
+// END of Tallinnnet
+
 // Seoul test network
 
 const seoulnet_chain = new TezosChain(
