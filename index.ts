@@ -224,7 +224,7 @@ new TezosFaucet(
 // END of Nextnet
 
 // Tallinnnet test network 
-/*
+
 const tallinnnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -236,7 +236,7 @@ const tallinnnet_chain = new TezosChain(
     bootstrapPeers: ["tallinnnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.2",
+    chartRepoVersion: "8.0.3",
     networkStakes: true,
     alias: "proposednet", // Add alias
   },
@@ -257,7 +257,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // END of Tallinnnet
 
 // Seoul test network
@@ -481,6 +481,7 @@ export const networks = {
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([nextnet4_chain]),
+  ...getNetworks([tallinnnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
 
@@ -544,6 +545,7 @@ export const teztnets = {
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([nextnet4_chain]),
+  ...getTeztnets([tallinnnet_chain]),
   //  ...getTeztnets([shadownet_chain]),
   //  ...getTeztnets([seoulnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
