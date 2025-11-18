@@ -186,7 +186,7 @@ new TezosFaucet(
 */
 
 // Nextnet test network - use pre-protocol proposal
-
+//
 const nextnet4_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -224,7 +224,7 @@ new TezosFaucet(
 // END of Nextnet
 
 // Tallinnnet test network 
-
+//
 const tallinnnet_chain = new TezosChain(
   {
     category: protocolCategory,
