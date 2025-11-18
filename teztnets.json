@@ -149,6 +149,39 @@
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
     "activated_on": "2025-10-22"
   },
+  "proposednet": {
+    "aliasOf": "tallinnnet",
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_TALLINNNET_2025-11-18T21:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.tallinnnet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.tallinnnet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.tallinnnet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.tallinnnet.teztnets.com"
+      }
+    },
+    "description": "Test Chain for Tallinn protocol",
+    "docker_build": "tezos/tezos:master_c19543dd_20251118174641",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.proposednet.teztnets.com",
+    "git_ref": "c19543dd",
+    "human_name": "Tallinnnet",
+    "indexers": [],
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/tallinnnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.proposednet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.tallinnnet.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling"
+  },
   "seoulnet": {
     "category": "Protocol Teztnets",
     "chain_name": "TEZOS_SEOULNET_2025-07-11T08:00:00Z",
@@ -214,6 +247,39 @@
     ],
     "snapshot_url": "https://snapshots.tzinit.org/shadownet/rolling",
     "activated_on": "2025-08-07"
+  },
+  "tallinnnet": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_TALLINNNET_2025-11-18T21:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.tallinnnet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.tallinnnet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.tallinnnet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.tallinnnet.teztnets.com"
+      }
+    },
+    "description": "Test Chain for Tallinn protocol",
+    "docker_build": "tezos/tezos:master_c19543dd_20251118174641",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.tallinnnet.teztnets.com",
+    "git_ref": "c19543dd",
+    "human_name": "Tallinnnet",
+    "indexers": [],
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/tallinnnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.tallinnnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.tallinnnet.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling",
+    "activated_on": "2025-11-18"
   },
   "weeklynet-2025-11-12": {
     "category": "Periodic/Internal Teztnets",
