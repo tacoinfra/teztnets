@@ -153,42 +153,9 @@ new TezosFaucet(
 )
 
 // Nextnet test network - use pre-protocol proposal
-/*
-const nextnet2_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Nextnet-20251015",
-    description: "Test Chain for Next protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/nextnet-20251015/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [ "nextnet.tzinit.org" ],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "8.0.2",
-    networkStakes: true,
-  },
-  provider
-)
-
-new TezosFaucet(
-  nextnet2_chain.name,
-  {
-    namespace: nextnet2_chain.namespace,
-    humanName: "Nextnet-20251015",
-    helmValuesFile: "networks/nextnet-20251015/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.2",
-  },
-  provider
-)
-*/
-
-// Nextnet test network - use pre-protocol proposal
 //
-const nextnet4_chain = new TezosChain(
+/*
+const nextnet_chain = new TezosChain(
   {
     category: protocolCategory,
     humanName: "Nextnet-20251022",
@@ -199,7 +166,7 @@ const nextnet4_chain = new TezosChain(
     bootstrapPeers: ["nextnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.2",
+    chartRepoVersion: "8.0.3",
     networkStakes: true,
     alias: "nextnet", // Add alias for Nextnet
     snapOver: "nextnet", // Add alias for Nextnet
@@ -208,9 +175,9 @@ const nextnet4_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  nextnet4_chain.name,
+  nextnet_chain.name,
   {
-    namespace: nextnet4_chain.namespace,
+    namespace: nextnet_chain.namespace,
     humanName: "Nextnet-20251022",
     helmValuesFile: "networks/nextnet-20251022/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
@@ -221,7 +188,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // END of Nextnet
 
 // Tallinnnet test network 
@@ -481,7 +448,6 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
-  ...getNetworks([nextnet4_chain]),
   ...getNetworks([tallinnnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
 }
@@ -545,10 +511,7 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
-  ...getTeztnets([nextnet4_chain]),
   ...getTeztnets([tallinnnet_chain]),
-  //  ...getTeztnets([shadownet_chain]),
-  //  ...getTeztnets([seoulnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
