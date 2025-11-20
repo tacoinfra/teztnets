@@ -82,7 +82,7 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 });
 
 // Weeklynet - restarts Wednesdays
-/*const weeklynet_chain = new TezosChain(
+const weeklynet_chain = new TezosChain(
   {
     category: periodicCategory,
     humanName: "Weeklynet",
@@ -116,7 +116,7 @@ new TezosFaucet(
   },
   provider
 )
-*/
+
 // Ghostnet is different from the other testnets:
 // * launched long time ago, launch code is not in the active code path
 // * heavy usage on the RPC endpoint requires a more elaborate setup
@@ -478,7 +478,7 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-//  ...getNetworks([weeklynet_chain]),
+  ...getNetworks([weeklynet_chain]),
   ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([nextnet4_chain]),
@@ -542,7 +542,7 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-//  ...getTeztnets([weeklynet_chain]),
+  ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([nextnet4_chain]),
