@@ -30,7 +30,7 @@ maxBalance: 24000
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 10000
+maxTez: 6001
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.
