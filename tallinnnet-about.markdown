@@ -12,7 +12,7 @@ Test Chain for Tallinn protocol
 | Faucet | [Tallinnnet faucet](https://faucet.tallinnnet.teztnets.com) |
 | Rolling Snapshot | [Tallinnnet snapshot](https://snapshots.tzinit.org/tallinnnet/rolling) |
 | Full network name | `TEZOS_TALLINNNET_2025-11-18T21:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v24.0-beta1_c52da0bd_20251118171002](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.0-beta1_c52da0bd_20251118171002) |
+| Tezos docker build | [tezos/tezos:octez-v24.0-rc1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.0-rc1) |
 | Activated on | 2025-11-18T21:00:00Z |
 
 
@@ -30,7 +30,7 @@ Test Chain for Tallinn protocol
 To join Tallinnnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v24.0-beta1_c52da0bd_20251118171002
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v24.0-rc1
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v24.0-beta1_c52da0bd_20251
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v24.0-beta1_c52da0bd_20251118171002
+git checkout octez-v24.0-rc1
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
