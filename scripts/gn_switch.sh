@@ -1,7 +1,7 @@
 
 
 NETWORK=ghostnet
-PROTO=PtSeouLouXkxhg39oWzjxDWaCydNfR3RxCUrNe4Q9Ro8BTehcbh
+PROTO=PtTALLiNtPec7mE7yY4m3k26J8Qukef3E3ehzhfXgFZKGtDdAXu
 KEY=ghostnet_dictator
 FAUCET=oxford_rich_fund 
 ENDPOINT="https://rpc.$NETWORK.teztnets.com"
