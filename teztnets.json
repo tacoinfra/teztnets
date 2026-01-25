@@ -1,37 +1,4 @@
 {
-  "currentnet": {
-    "aliasOf": "seoulnet",
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_SEOULNET_2025-07-11T08:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.seoulnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.seoulnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.seoulnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.seoulnet.teztnets.com"
-      }
-    },
-    "description": "Test Chain for Seoul protocol",
-    "docker_build": "tezos/tezos:octez-v24.0",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.currentnet.teztnets.com",
-    "git_ref": "octez-v24.0",
-    "human_name": "Seoulnet",
-    "indexers": [],
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/seoulnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.currentnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.seoulnet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/seoulnet/rolling"
-  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -115,39 +82,6 @@
       "https://rpc.tallinnnet.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling"
-  },
-  "seoulnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_SEOULNET_2025-07-11T08:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.seoulnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.seoulnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.seoulnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.seoulnet.teztnets.com"
-      }
-    },
-    "description": "Test Chain for Seoul protocol",
-    "docker_build": "tezos/tezos:octez-v24.0",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.seoulnet.teztnets.com",
-    "git_ref": "octez-v24.0",
-    "human_name": "Seoulnet",
-    "indexers": [],
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/seoulnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.seoulnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.seoulnet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/seoulnet/rolling",
-    "activated_on": "2025-07-11"
   },
   "shadownet": {
     "category": "Long-running Teztnets",
