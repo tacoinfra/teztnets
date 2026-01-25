@@ -228,43 +228,6 @@ new TezosFaucet(
 
 // END of Tallinnnet
 
-// Seoul test network
-
-const seoulnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Seoulnet",
-    description: "Test Chain for Seoul protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/seoulnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["seoulnet.tzinit.org"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "8.0.2",
-    networkStakes: true,
-    alias: "currentnet", // Add alias for Seoulnet
-  },
-  provider
-)
-
-new TezosFaucet(
-  seoulnet_chain.name,
-  {
-    namespace: seoulnet_chain.namespace,
-    humanName: "Seoulnet",
-    helmValuesFile: "networks/seoulnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.2",
-    alias: "currentnet", // Add alias for Seoulnet faucet
-  },
-  provider
-)
-
-// END of Seoulnet
-
 // Shadownet testing
 //
 const shadownet_chain = new TezosChain(
@@ -446,7 +409,6 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([weeklynet_chain]),
-  ...getNetworks([seoulnet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
   ...{ ghostnet: ghostnetNetwork },
@@ -510,7 +472,6 @@ const mainnetMetadata = {
 export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
-  ...getTeztnets([seoulnet_chain]),
   ...getTeztnets([tallinnnet_chain]),
   ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
