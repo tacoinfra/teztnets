@@ -1,6 +1,6 @@
 images:
-  tezosFaucet: ghcr.io/tacoinfra/tezos-faucet:3.0.4
-  tezosFaucetBackend: ghcr.io/tacoinfra/tezos-faucet-backend:3.0.3
+  tezosFaucet: ghcr.io/tacoinfra/tezos-faucet:3.0.5
+  tezosFaucetBackend: ghcr.io/tacoinfra/tezos-faucet-backend:3.0.4
 
 
 # Frontend app configuration. You can optionally deploy only the faucet backend.
@@ -15,6 +15,7 @@ config:
     name: custom
     rpcUrl: "" # filled in by pulumi
     faucetAddress: tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
+    viewer: https://tallinnnet.tzkt.io
 
 # Value the server sets for the "Access-Control-Allow-Origin" header for CORS.
 authorizedHost: "" # filled in by pulumi
