@@ -3,26 +3,16 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos.",
-    "docker_build": "tezos/tezos:octez-v24.1-1",
+    "docker_build": "tezos/tezos:octez-v24.2",
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
-    "git_ref": "octez-v24.1-1",
+    "git_ref": "octez-v24.2",
     "human_name": "Ghostnet",
-    "indexers": [
-      {
-        "name": "TzKT",
-        "url": "https://ghostnet.tzkt.io"
-      },
-      {
-        "name": "TzStats",
-        "url": "https://ghost.tzstats.com"
-      }
-    ],
+    "indexers": [],
     "masked_from_main_page": false,
     "network_url": "https://teztnets.com/ghostnet",
     "rpc_url": "https://rpc.ghostnet.teztnets.com",
     "rpc_urls": [
-      "https://rpc.ghostnet.teztnets.com",
-      "https://ghostnet.ecadinfra.com"
+      "https://rpc.ghostnet.teztnets.com"
     ],
     "snapshot_url": "https://snapshots.tzinit.org/ghostnet/rolling",
     "activated_on": "2022-01-25"
@@ -31,8 +21,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v24.1-1",
-    "git_ref": "octez-v24.1-1",
+    "docker_build": "tezos/tezos:octez-v24.2",
+    "git_ref": "octez-v24.2",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -67,10 +57,10 @@
       }
     },
     "description": "Test Chain for Tallinn protocol",
-    "docker_build": "tezos/tezos:octez-v24.1-1",
+    "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.proposednet.teztnets.com",
-    "git_ref": "octez-v24.1-1",
+    "git_ref": "octez-v24.2",
     "human_name": "Tallinnnet",
     "indexers": [],
     "masked_from_main_page": false,
@@ -99,10 +89,10 @@
       }
     },
     "description": "Shadownet - long term testnet",
-    "docker_build": "tezos/tezos:octez-v24.1-1",
+    "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.shadownet.teztnets.com",
-    "git_ref": "octez-v24.1-1",
+    "git_ref": "octez-v24.2",
     "human_name": "Shadownet",
     "indexers": [],
     "masked_from_main_page": false,
@@ -132,10 +122,10 @@
       }
     },
     "description": "Test Chain for Tallinn protocol",
-    "docker_build": "tezos/tezos:octez-v24.1-1",
+    "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
     "faucet_url": "https://faucet.tallinnnet.teztnets.com",
-    "git_ref": "octez-v24.1-1",
+    "git_ref": "octez-v24.2",
     "human_name": "Tallinnnet",
     "indexers": [],
     "masked_from_main_page": false,
