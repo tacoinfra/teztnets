@@ -122,8 +122,8 @@ new TezosFaucet(
 // * heavy usage on the RPC endpoint requires a more elaborate setup
 //   with archive/rolling nodes, NGINX path filtering and rate limiting.
 // Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v24.1-1";
-const ghostnetArchiveVersion = "octez-v24.1-1";
+const ghostnetRollingVersion = "octez-v24.2";
+const ghostnetArchiveVersion = "octez-v24.2";
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -132,7 +132,7 @@ const ghostnet_chain = new TezosNodes(
     p2pFqdn: `ghostnet.${domainNameCom}`,
     octezRollingVersion: ghostnetRollingVersion,
     octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "8.0.2",
+    chartRepoVersion: "8.0.3",
     rollingPvcSize: "50Gi",
     archivePvcSize: "3000Gi"
   },
@@ -241,7 +241,7 @@ const shadownet_chain = new TezosChain(
     bootstrapPeers: ["shadownet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
-    chartRepoVersion: "8.0.2",
+    chartRepoVersion: "8.0.3",
     networkStakes: true,
   },
   provider
@@ -391,7 +391,6 @@ const ghostnetNetwork = {
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   default_bootstrap_peers: [
     `ghostnet.${domainNameCom}`,
-    "ghostnet.boot.ecadinfra.com",
     "ghostnet.stakenow.de:9733",
   ],
   genesis: {
@@ -423,22 +422,12 @@ const ghostnetTeztnet = {
   snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
   git_ref: ghostnetRollingVersion,
   human_name: "Ghostnet",
-  indexers: [
-    {
-      name: "TzKT",
-      url: "https://ghostnet.tzkt.io",
-    },
-    {
-      name: "TzStats",
-      url: "https://ghost.tzstats.com",
-    },
-  ],
+  indexers: [],
   masked_from_main_page: false,
   network_url: `https://${domainNameCom}/ghostnet`,
   rpc_url: `https://rpc.ghostnet.${domainNameCom}`,
   rpc_urls: [
-    `https://rpc.ghostnet.${domainNameCom}`,
-    "https://ghostnet.ecadinfra.com",
+    `https://rpc.ghostnet.${domainNameCom}`
   ],
 }
 
