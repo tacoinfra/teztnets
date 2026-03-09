@@ -446,15 +446,11 @@ const mainnetMetadata = {
       name: "TzKT",
       url: "https://tzkt.io",
     },
-    {
-      name: "TzStats",
-      url: "https://tzstats.com",
-    },
   ],
   masked_from_main_page: true,
-  rpc_url: "https://mainnet.api.tez.ie",
+  rpc_url: `https://rpc.ghostnet.${domainNameCom}`,
   rpc_urls: [
-    "https://mainnet.api.tez.ie",
+    `https://rpc.ghostnet.${domainNameCom}`
   ],
 }
 
