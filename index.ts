@@ -206,7 +206,7 @@ const tallinnnet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.3",
     networkStakes: true,
-//    alias: "currentnet", // Add alias
+    alias: "currentnet", // Add alias
   },
   provider
 )
@@ -221,7 +221,7 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
-//    alias: "currentnet", // Add alias
+    alias: "currentnet", // Add alias
   },
   provider
 )
