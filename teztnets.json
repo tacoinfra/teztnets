@@ -36,39 +36,6 @@
       "https://rpc.ghostnet.teztnets.com"
     ]
   },
-  "proposednet": {
-    "aliasOf": "tallinnnet",
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_TALLINNNET_2025-11-18T21:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.tallinnnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.tallinnnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.tallinnnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.tallinnnet.teztnets.com"
-      }
-    },
-    "description": "Test Chain for Tallinn protocol",
-    "docker_build": "tezos/tezos:octez-v24.2",
-    "evm_proxy_urls": [],
-    "faucet_url": "https://faucet.proposednet.teztnets.com",
-    "git_ref": "octez-v24.2",
-    "human_name": "Tallinnnet",
-    "indexers": [],
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/tallinnnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.proposednet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.tallinnnet.teztnets.com"
-    ],
-    "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling"
-  },
   "shadownet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_SHADOWNET_2025-08-07T20:00:00Z",
