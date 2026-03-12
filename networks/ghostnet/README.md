@@ -1,0 +1,1 @@
+> ⚠️ **Ghostnet is shutting down at the end of March 2026.** Please migrate to [Shadownet](/shadownet-about), which is the new long-running testnet. Shadownet runs the same protocol as mainnet with matching constants, making it the recommended network for dApp development and testing.
