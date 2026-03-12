@@ -1,0 +1,1 @@
+> ⚠️ **Note:** This network's `hard_gas_limit_per_block` (1,386,666) does not match mainnet (1,040,000). This is a known discrepancy from the initial network setup. If you are testing gas-sensitive behavior, consider using Shadownet instead, which matches mainnet constants.
