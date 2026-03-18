@@ -8,7 +8,9 @@ This list of Teztnets is also available in [json format](https://teztnets.com/te
 
 # Long-running Teztnets
 
-These networks are long-running test networks that are similar to mainnet. They run the same protocol as mainnet but switch over to the next protocol earlier than mainnet for testing. If you are developing applications, you probably want to develop on these networks. Ghostnet is deprecated, please use Shadownet!
+These networks are long-running test networks that are similar to mainnet. They run the same protocol as mainnet but switch over to the next protocol earlier than mainnet for testing. If you are developing applications, you probably want to develop on these networks. 
+
+**Ghostnet is deprecated, please use Shadownet!**
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
