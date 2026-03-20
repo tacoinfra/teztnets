@@ -1,10 +1,9 @@
 
 
-#PROTO=PtSEouLov7Fp6XoqXUBqd7XzggUpUarSMcSUsR5MarqspqiuQBY
-PROTO=PtSeouLouXkxhg39oWzjxDWaCydNfR3RxCUrNe4Q9Ro8BTehcbh
+PROTO=PsGXQmSv1UDDm2brdEFsuJCHjajS9Cv8mp44w93wNS2TpXFSvTC
 KEY=qdictator
 FAUCET=oxford_rich_fund 
-ENDPOINT="https://rpc.nextnet-20250626.teztnets.com"
+ENDPOINT="https://rpc.nextnet-u-20260320.teztnets.com"
 
 echo "Switching to $PROTO"
 echo "CTRL+C now if wrong"
