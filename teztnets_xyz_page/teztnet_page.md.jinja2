@@ -9,8 +9,12 @@ permalink: /{{ v["human_name"] | lower }}-about
 | | |
 |-------|---------------------|
 | Public RPC endpoints | {% for r in v["rpc_urls"] -%}[{{ r }}]({{ r }}/chains/main/chain_id)<br/> {%- endfor %} |
+{% if "faucet_url" %}
 | Faucet | [{{ v["human_name"] }} faucet]({{ v["faucet_url"] }}) |
+{% endif %}
+{% if "snapshot_url" %}
 | Rolling Snapshot | [{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }}) |
+{% endif %}
 | Full network name | `{{ v["chain_name"] }}` |
 | Tezos docker build | {{ v["docker_build_hyperlinked"] }} |
 | Activated on | {{ network_params["genesis"]["timestamp"] }} |
