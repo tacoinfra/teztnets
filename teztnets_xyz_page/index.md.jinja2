@@ -6,7 +6,7 @@
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
 {% for k, v in  cat_teztnets.items() -%}
-| [{{ v["human_name"] }}](/{{ v["human_name"] | lower }}-about) | `{{ v["activated_on"] }}` | {% if faucet %} [Faucet]({{ v["faucet_url"]}}) {% endif %} | {% if snapshot %} [Snapshot]({{ v["snapshot_url"]}}) {% endif %}|
+| [{{ v["human_name"] }}](/{{ v["human_name"] | lower }}-about) | `{{ v["activated_on"] }}` | [Faucet]({{ v["faucet_url"]}}) | [Snapshot]({{ v["snapshot_url"]}}) |
 {% endfor %}
 
 {% endfor %}
