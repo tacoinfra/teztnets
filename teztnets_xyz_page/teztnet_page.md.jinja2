@@ -9,11 +9,11 @@ permalink: /{{ v["human_name"] | lower }}-about
 | | |
 |-------|---------------------|
 | Public RPC endpoints | {% for r in v["rpc_urls"] -%}[{{ r }}]({{ r }}/chains/main/chain_id)<br/> {%- endfor %} |
-| Faucet | [{{ v["human_name"] }} faucet]({{ v["faucet_url"] }}) | 
-| Rolling Snapshot | [{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }}) |
 | Full network name | `{{ v["chain_name"] }}` |
 | Tezos docker build | {{ v["docker_build_hyperlinked"] }} |
 | Activated on | {{ network_params["genesis"]["timestamp"] }} |
+{% if v["faucet_url"] | length > 0 %}| Faucet | [{{ v["human_name"] }} faucet]({{ v["faucet_url"] }}) | {% endif %}
+{% if v["snapshot_url"] | length > 0 %} | Rolling Snapshot | [{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }}) |{% endif %}
 {% if "indexers" in v and v["indexers"] | length >0 -%}
 | Block Explorers | {% for i in v["indexers"] -%}[{{ i["name"]}}]({{ i["url"]}}){% if not loop.last %} - {% endif %}
 {%- endfor %} |
