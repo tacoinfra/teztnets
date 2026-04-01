@@ -9,11 +9,11 @@ Test Chain for Next (U) protocol
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.nextnet-u-20260320.teztnets.com](https://rpc.nextnet-u-20260320.teztnets.com/chains/main/chain_id)<br/> |
-| Faucet | [Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com) | 
-| Rolling Snapshot | [Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
 | Full network name | `TEZOS_NEXTUNET_2026-03-20T14:00:00Z` |
 | Tezos docker build | [tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418) |
 | Activated on | 2026-03-20T14:00:00Z |
+| Faucet | [Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com) | 
+ | Rolling Snapshot | [Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
 
 
 
