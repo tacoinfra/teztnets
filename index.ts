@@ -372,7 +372,9 @@ interface NetworkInfo {
   docker_build: string;
   git_ref: any;
   faucet_url: string;
+  faucet: boolean;
   snapshot_url: string;
+  snapshot: boolean;
   category: string;
   rpc_url: string;
   rollup_urls: any;
@@ -400,6 +402,8 @@ function getTeztnets(chains: TezosChain[]): object {
       docker_build: chain.getDockerBuild(),
       git_ref: chain.getGitRef(),
       faucet_url: faucetUrl,
+      faucet: true,
+      snapshot: true,
       snapshot_url: `https://snapshots.tzinit.org/${chain.snap}/rolling`,
       category: chain.params.category,
       rpc_url: chain.getRpcUrl(),
@@ -478,7 +482,9 @@ const ghostnetTeztnet = {
   description: "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
   faucet_url: `https://faucet.ghostnet.${domainNameCom}`,
-//  snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
+  snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
+  faucet: false,  
+  snapshot: false,
   git_ref: ghostnetRollingVersion,
   human_name: "Ghostnet",
   indexers: [],
