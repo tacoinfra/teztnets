@@ -1,4 +1,37 @@
 {
+  "bakingtest": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_BAKINGNET_2026-04-01T00:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.bakingtest.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.bakingtest.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.bakingtest.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.bakingtest.teztnets.com"
+      }
+    },
+    "description": "Don't use unless you are a core engineer!!",
+    "docker_build": "tezos/tezos:octez-v24.2",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.bakingtest.teztnets.com",
+    "git_ref": "octez-v24.2",
+    "human_name": "Bakingtest",
+    "indexers": [],
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/bakingtest",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.bakingtest.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.bakingtest.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/bakingtest/rolling",
+    "activated_on": "2026-04-01"
+  },
   "currentnet": {
     "aliasOf": "tallinnnet",
     "category": "Protocol Teztnets",

@@ -25,6 +25,7 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
+| [Bakingtest](/bakingtest-about) | `2026-04-01` | [Faucet](https://faucet.bakingtest.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/bakingtest/rolling) |
 | [Foolsnet-2026](/foolsnet-2026-about) | `2026-04-01` | [Faucet](https://faucet.foolsnet-2026.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling) |
 | [Nextnet-U-20260320](/nextnet-u-20260320-about) | `2026-03-20` | [Faucet](https://faucet.nextnet-u-20260320.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
 | [Tallinnnet](/tallinnnet-about) | `2025-11-18` | [Faucet](https://faucet.tallinnnet.teztnets.com) | [Snapshot](https://snapshots.tzinit.org/tallinnnet/rolling) |
