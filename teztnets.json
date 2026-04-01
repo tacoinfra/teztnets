@@ -17,6 +17,7 @@
     "description": "Don't use unless you are a core engineer!!",
     "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.bakingtest.teztnets.com",
     "git_ref": "octez-v24.2",
     "human_name": "Bakingtest",
@@ -29,6 +30,7 @@
     "rpc_urls": [
       "https://rpc.bakingtest.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/bakingtest/rolling",
     "activated_on": "2026-04-01"
   },
@@ -51,6 +53,7 @@
     "description": "Test Chain for Tallinn protocol",
     "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.currentnet.teztnets.com",
     "git_ref": "octez-v24.2",
     "human_name": "Tallinnnet",
@@ -63,6 +66,7 @@
     "rpc_urls": [
       "https://rpc.tallinnnet.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling"
   },
   "foolsnet-2026": {
@@ -71,6 +75,7 @@
     "description": "I'm testing something - don't worry!",
     "docker_build": "tezos/tezos:v15.1",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.foolsnet-2026.teztnets.com",
     "git_ref": "v15.1",
     "human_name": "Foolsnet-2026",
@@ -83,6 +88,7 @@
     "rpc_urls": [
       "https://rpc.foolsnet-2026.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/foolsnet-2026/rolling",
     "activated_on": "2026-04-01"
   },
@@ -91,6 +97,7 @@
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
     "docker_build": "tezos/tezos:octez-v24.2",
+    "faucet": false,
     "faucet_url": "https://faucet.ghostnet.teztnets.com",
     "git_ref": "octez-v24.2",
     "human_name": "Ghostnet",
@@ -101,6 +108,8 @@
     "rpc_urls": [
       "https://rpc.ghostnet.teztnets.com"
     ],
+    "snapshot": false,
+    "snapshot_url": "https://snapshots.tzinit.org/ghostnet/rolling",
     "activated_on": "2022-01-25"
   },
   "mainnet": {
@@ -141,6 +150,7 @@
     "description": "Test Chain for Next (U) protocol",
     "docker_build": "tezos/tezos:master_aa1d7358_20260320111418",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.nextnet.teztnets.com",
     "git_ref": "aa1d7358",
     "human_name": "Nextnet-U-20260320",
@@ -153,6 +163,7 @@
     "rpc_urls": [
       "https://rpc.nextnet-u-20260320.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling"
   },
   "nextnet-u-20260320": {
@@ -173,6 +184,7 @@
     "description": "Test Chain for Next (U) protocol",
     "docker_build": "tezos/tezos:master_aa1d7358_20260320111418",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.nextnet-u-20260320.teztnets.com",
     "git_ref": "aa1d7358",
     "human_name": "Nextnet-U-20260320",
@@ -185,6 +197,7 @@
     "rpc_urls": [
       "https://rpc.nextnet-u-20260320.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/nextnet/rolling",
     "activated_on": "2026-03-20"
   },
@@ -206,6 +219,7 @@
     "description": "Shadownet - long term testnet",
     "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.shadownet.teztnets.com",
     "git_ref": "octez-v24.2",
     "human_name": "Shadownet",
@@ -218,6 +232,7 @@
     "rpc_urls": [
       "https://rpc.shadownet.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/shadownet/rolling",
     "activated_on": "2025-08-07"
   },
@@ -239,6 +254,7 @@
     "description": "Test Chain for Tallinn protocol",
     "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.tallinnnet.teztnets.com",
     "git_ref": "octez-v24.2",
     "human_name": "Tallinnnet",
@@ -251,6 +267,7 @@
     "rpc_urls": [
       "https://rpc.tallinnnet.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling",
     "activated_on": "2025-11-18"
   },
@@ -272,6 +289,7 @@
     "description": "A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.",
     "docker_build": "tezos/tezos:master_4c1d65b6_20260331195820",
     "evm_proxy_urls": [],
+    "faucet": true,
     "faucet_url": "https://faucet.weeklynet-2026-04-01.teztnets.com",
     "git_ref": "4c1d65b6",
     "human_name": "Weeklynet",
@@ -284,6 +302,7 @@
     "rpc_urls": [
       "https://rpc.weeklynet-2026-04-01.teztnets.com"
     ],
+    "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/weeklynet/rolling",
     "activated_on": "2026-04-01"
   }
