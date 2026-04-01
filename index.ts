@@ -153,6 +153,25 @@ new TezosFaucet(
   provider
 )
 
+// April Fools
+
+const foolsnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Foolsnet-2026",
+    description: "I'm testing something - don't worry!",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/foolsnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "7.2.0",
+    networkStakes: true,
+  },
+  provider
+)
+
 // Nextnet test network - use pre-protocol proposal
 //
 
@@ -409,6 +428,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([nextnet_chain]),
+  ...getNetworks([foolsnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
@@ -458,6 +478,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
+  ...getTeztnets([foolsnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),

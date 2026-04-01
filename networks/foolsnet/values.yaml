@@ -1,9 +1,4 @@
-accounts:
-  teztnetsbaker:
-    # tz1foXHgRzdYdaLgX6XhpZGxbBv42LZ6ubvE
-    bootstrap_balance: "9700000000000"
-    is_bootstrap_baker_account: true
-    # key injected by pulumi
+
 
 node_config_network:
   activation_account_name: teztnetsbaker
@@ -95,7 +90,7 @@ nodes:
   tezos-baking-node:
     instances:
       - bake_using_accounts:
-          - oxheadbaker
+          - teztnetsbaker
         config:
           shell:
             history_mode: archive
@@ -121,7 +116,20 @@ archive_tarball_url: null
 images:
   octez: tezos/tezos:v15.1
 
+votes:
+  liquidity_baking_toggle_vote: "pass"
+
+accounts:
+  teztnetsbaker:
+    # tz1foXHgRzdYdaLgX6XhpZGxbBv42LZ6ubvE
+    bootstrap_balance: "9700000000000"
+    is_bootstrap_baker_account: true
+    # key injected by pulumi
+
 protocols:
+  - command: PtKathma
+    vote:
+      liquidity_baking_toggle_vote: "pass"
   - command: PtLimaPt
     vote:
       liquidity_baking_toggle_vote: "pass"
