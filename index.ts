@@ -172,6 +172,39 @@ const foolsnet_chain = new TezosChain(
   provider
 )
 
+// Baking Test
+
+const bakingtestnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Bakingtest",
+    description: "Don't use unless you are a core engineer!!",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/bakingnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "8.0.3",
+    networkStakes: true,
+  },
+  provider
+)
+
+new TezosFaucet(
+  bakingtestnet_chain.name,
+  {
+    namespace: bakingtestnet_chain.namespace,
+    humanName: "Bakingtest",
+    helmValuesFile: "networks/bakingnet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "8.0.2",
+  },
+  provider
+)
+
 // Nextnet test network - use pre-protocol proposal
 //
 
@@ -429,6 +462,7 @@ const ghostnetNetwork = {
 export const networks = {
   ...getNetworks([nextnet_chain]),
   ...getNetworks([foolsnet_chain]),
+  ...getNetworks([bakingtestnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
@@ -479,6 +513,7 @@ const mainnetMetadata = {
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
   ...getTeztnets([foolsnet_chain]),
+  ...getTeztnets([bakingtestnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),
