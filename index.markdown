@@ -14,7 +14,8 @@ These networks are long-running test networks that are similar to mainnet. They 
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Ghostnet](/ghostnet-about) | `2022-01-25` |  [Faucet](https://faucet.ghostnet.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/ghostnet/rolling) |
+| [Bakingtest](/bakingtest-about) | `2026-04-01` |  [Faucet](https://faucet.bakingtest.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/bakingtest/rolling) |
+| [Ghostnet](/ghostnet-about) | `2022-01-25` |  [Faucet](https://faucet.ghostnet.teztnets.com)  |  [Snapshot]() |
 | [Shadownet](/shadownet-about) | `2025-08-07` |  [Faucet](https://faucet.shadownet.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
 
 
@@ -25,7 +26,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Bakingtest](/bakingtest-about) | `2026-04-01` |  [Faucet](https://faucet.bakingtest.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/bakingtest/rolling) |
 | [Foolsnet-2026](/foolsnet-2026-about) | `2026-04-01` |  [Faucet](https://faucet.foolsnet-2026.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling) |
 | [Nextnet-U-20260320](/nextnet-u-20260320-about) | `2026-03-20` |  [Faucet](https://faucet.nextnet-u-20260320.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
 | [Tallinnnet](/tallinnnet-about) | `2025-11-18` |  [Faucet](https://faucet.tallinnnet.teztnets.com)  |  [Snapshot](https://snapshots.tzinit.org/tallinnnet/rolling) |

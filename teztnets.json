@@ -1,6 +1,6 @@
 {
   "bakingtest": {
-    "category": "Protocol Teztnets",
+    "category": "Long-running Teztnets",
     "chain_name": "TEZOS_BAKINGNET_2026-04-01T00:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
@@ -101,7 +101,7 @@
     "rpc_urls": [
       "https://rpc.ghostnet.teztnets.com"
     ],
-    "snapshot_url": "https://snapshots.tzinit.org/ghostnet/rolling",
+    "snapshot_url": "",
     "activated_on": "2022-01-25"
   },
   "mainnet": {

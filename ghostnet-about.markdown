@@ -13,7 +13,7 @@ Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadow
 | Faucet | [Ghostnet faucet](https://faucet.ghostnet.teztnets.com) |
 
 
-| Rolling Snapshot | [Ghostnet snapshot](https://snapshots.tzinit.org/ghostnet/rolling) |
+| Rolling Snapshot | [Ghostnet snapshot]() |
 
 | Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
@@ -63,13 +63,6 @@ octez-node config init --network ghostnet
 
 ```
 
-
-### Recover from a snapshot
-
-```
-wget -O snapshot_file https://snapshots.tzinit.org/ghostnet/rolling
-octez-node snapshot import snapshot_file
-```
 
 
 ### Run the node
