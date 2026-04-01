@@ -9,8 +9,8 @@ Don't use unless you are a core engineer!!
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.bakingtest.teztnets.com](https://rpc.bakingtest.teztnets.com/chains/main/chain_id)<br/> |
- | Faucet | [Bakingtest faucet](https://faucet.bakingtest.teztnets.com) | 
-| Rolling Snapshot | [Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling) |
+
+
 | Full network name | `TEZOS_BAKINGNET_2026-04-01T00:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
 | Activated on | 2026-04-01T00:00:00Z |

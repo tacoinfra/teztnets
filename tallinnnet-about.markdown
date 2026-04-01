@@ -9,8 +9,8 @@ Test Chain for Tallinn protocol
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.tallinnnet.teztnets.com](https://rpc.tallinnnet.teztnets.com/chains/main/chain_id)<br/> |
- | Faucet | [Tallinnnet faucet](https://faucet.tallinnnet.teztnets.com) | 
-| Rolling Snapshot | [Tallinnnet snapshot](https://snapshots.tzinit.org/tallinnnet/rolling) |
+
+
 | Full network name | `TEZOS_TALLINNNET_2025-11-18T21:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
 | Activated on | 2025-11-18T21:00:00Z |

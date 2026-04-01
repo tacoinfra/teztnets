@@ -9,8 +9,8 @@ Shadownet - long term testnet
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.shadownet.teztnets.com](https://rpc.shadownet.teztnets.com/chains/main/chain_id)<br/> |
- | Faucet | [Shadownet faucet](https://faucet.shadownet.teztnets.com) | 
-| Rolling Snapshot | [Shadownet snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
+
+
 | Full network name | `TEZOS_SHADOWNET_2025-08-07T20:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
 | Activated on | 2025-08-07T20:00:00Z |

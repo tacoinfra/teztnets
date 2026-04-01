@@ -9,8 +9,8 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.weeklynet-2026-04-01.teztnets.com](https://rpc.weeklynet-2026-04-01.teztnets.com/chains/main/chain_id)<br/> |
- | Faucet | [Weeklynet faucet](https://faucet.weeklynet-2026-04-01.teztnets.com) | 
-| Rolling Snapshot | [Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
+
+
 | Full network name | `TEZOS-WEEKLYNET-2026-04-01T00:00:00.000Z` |
 | Tezos docker build | [tezos/tezos:master_4c1d65b6_20260331195820](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_4c1d65b6_20260331195820) |
 | Activated on | 2026-04-01T00:00:00.000Z |
