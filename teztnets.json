@@ -101,7 +101,6 @@
     "rpc_urls": [
       "https://rpc.ghostnet.teztnets.com"
     ],
-    "snapshot_url": "",
     "activated_on": "2022-01-25"
   },
   "mainnet": {
