@@ -32,6 +32,27 @@
     ],
     "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling"
   },
+  "foolsnet-2026": {
+    "category": "Protocol Teztnets",
+    "chain_name": "TEZOS_FOOLSNET_2026-04-01T00:00:00Z",
+    "description": "I'm testing something - don't worry!",
+    "docker_build": "tezos/tezos:v15.1",
+    "evm_proxy_urls": [],
+    "faucet_url": "https://faucet.foolsnet-2026.teztnets.com",
+    "git_ref": "v15.1",
+    "human_name": "Foolsnet-2026",
+    "indexers": [],
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/foolsnet-2026",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.foolsnet-2026.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.foolsnet-2026.teztnets.com"
+    ],
+    "snapshot_url": "https://snapshots.tzinit.org/foolsnet-2026/rolling",
+    "activated_on": "2026-04-01"
+  },
   "ghostnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
