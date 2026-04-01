@@ -139,6 +139,8 @@ const ghostnet_chain = new TezosNodes(
   },
   provider,
 )
+
+/* Bye bye faucet
 new TezosFaucet(
   "ghostnet",
   {
@@ -152,6 +154,7 @@ new TezosFaucet(
   },
   provider
 )
+*/
 
 // April Fools
 
