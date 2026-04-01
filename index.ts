@@ -179,7 +179,7 @@ const foolsnet_chain = new TezosChain(
 
 const bakingtestnet_chain = new TezosChain(
   {
-    category: protocolCategory,
+    category: longCategory,
     humanName: "Bakingtest",
     description: "Don't use unless you are a core engineer!!",
     activationBucket: activationBucket,
@@ -478,7 +478,7 @@ const ghostnetTeztnet = {
   description: "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
   faucet_url: `https://faucet.ghostnet.${domainNameCom}`,
-  snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
+  snapshot_url: ``,
   git_ref: ghostnetRollingVersion,
   human_name: "Ghostnet",
   indexers: [],
