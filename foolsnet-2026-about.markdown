@@ -9,8 +9,12 @@ I'm testing something - don't worry!
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.foolsnet-2026.teztnets.com](https://rpc.foolsnet-2026.teztnets.com/chains/main/chain_id)<br/> |
+
 | Faucet | [Foolsnet-2026 faucet](https://faucet.foolsnet-2026.teztnets.com) |
+
+
 | Rolling Snapshot | [Foolsnet-2026 snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling) |
+
 | Full network name | `TEZOS_FOOLSNET_2026-04-01T00:00:00Z` |
 | Tezos docker build | [tezos/tezos:v15.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=v15.1) |
 | Activated on | 2026-04-01T00:00:00Z |
