@@ -481,7 +481,7 @@ const ghostnetTeztnet = {
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   description: "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
-  faucet_url: `https://faucet.ghostnet.${domainNameCom}`,
+  faucet_url: ``,
   snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
   faucet: false,  
   snapshot: false,
