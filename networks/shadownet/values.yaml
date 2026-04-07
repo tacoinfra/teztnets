@@ -174,7 +174,7 @@ nodes:
       - accuser
       - vdf
     bootstrapped_readiness_probe: false
-    storage_size: 250Gi
+    storage_size: 500Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
@@ -230,7 +230,7 @@ images:
 
 votes:
   liquidity_baking_toggle_vote: "pass"
-    
+
 # Initial balances section
 #
 
@@ -332,7 +332,7 @@ accounts:
   # Baker 14 - Capt Stake
   #
   captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
     is_bootstrap_baker_account: true
     bootstrap_balance: "936000000000"
@@ -524,7 +524,3 @@ accounts:
     key: edpkuzzJcZDjXL7hWMnyC1y3joyrGgBiDVVRJUqnG3LKgPvZrpNWxT
     is_bootstrap_baker_account: false
     bootstrap_balance: "200000000000"
-
-
-
-
