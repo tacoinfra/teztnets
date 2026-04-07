@@ -98,7 +98,7 @@
     "description": "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
     "docker_build": "tezos/tezos:octez-v24.2",
     "faucet": false,
-    "faucet_url": "https://faucet.ghostnet.teztnets.com",
+    "faucet_url": "",
     "git_ref": "octez-v24.2",
     "human_name": "Ghostnet",
     "indexers": [],
