@@ -31,12 +31,16 @@ I'm testing something - don't worry!
 
 <tr>
 <td>Faucet</td>
-<td markdown="1">[Foolsnet-2026 faucet](https://faucet.foolsnet-2026.teztnets.com)</td>
+<td>
+<div markdown="1">[Foolsnet-2026 faucet](https://faucet.foolsnet-2026.teztnets.com)</div>
+</td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Foolsnet-2026 snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling)</td>
+<td>
+<div markdown="1">[Foolsnet-2026 snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling)</div>
+</td>
 </tr>
 
 

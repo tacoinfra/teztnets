@@ -31,12 +31,16 @@ Don't use unless you are a core engineer!!
 
 <tr>
 <td>Faucet</td>
-<td markdown="1">[Bakingtest faucet](https://faucet.bakingtest.teztnets.com)</td>
+<td>
+<div markdown="1">[Bakingtest faucet](https://faucet.bakingtest.teztnets.com)</div>
+</td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling)</td>
+<td>
+<div markdown="1">[Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling)</div>
+</td>
 </tr>
 
 

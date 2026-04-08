@@ -31,12 +31,16 @@ Test Chain for Next (U) protocol
 
 <tr>
 <td>Faucet</td>
-<td markdown="1">[Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com)</td>
+<td>
+<div markdown="1">[Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com)</div>
+</td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling)</td>
+<td>
+<div markdown="1">[Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling)</div>
+</td>
 </tr>
 
 

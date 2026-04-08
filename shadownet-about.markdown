@@ -31,12 +31,16 @@ Shadownet - long term testnet
 
 <tr>
 <td>Faucet</td>
-<td markdown="1">[Shadownet faucet](https://faucet.shadownet.teztnets.com)</td>
+<td>
+<div markdown="1">[Shadownet faucet](https://faucet.shadownet.teztnets.com)</div>
+</td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Shadownet snapshot](https://snapshots.tzinit.org/shadownet/rolling)</td>
+<td>
+<div markdown="1">[Shadownet snapshot](https://snapshots.tzinit.org/shadownet/rolling)</div>
+</td>
 </tr>
 
 

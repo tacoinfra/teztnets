@@ -31,12 +31,16 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 
 <tr>
 <td>Faucet</td>
-<td markdown="1">[Weeklynet faucet](https://faucet.weeklynet-2026-04-08.teztnets.com)</td>
+<td>
+<div markdown="1">[Weeklynet faucet](https://faucet.weeklynet-2026-04-08.teztnets.com)</div>
+</td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling)</td>
+<td>
+<div markdown="1">[Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling)</div>
+</td>
 </tr>
 
 

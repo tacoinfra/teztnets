@@ -33,7 +33,9 @@ Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadow
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Ghostnet snapshot](https://snapshots.tzinit.org/ghostnet/rolling)</td>
+<td>
+<div markdown="1">[Ghostnet snapshot](https://snapshots.tzinit.org/ghostnet/rolling)</div>
+</td>
 </tr>
 
 

@@ -31,12 +31,16 @@ Test Chain for Tallinn protocol
 
 <tr>
 <td>Faucet</td>
-<td markdown="1">[Tallinnnet faucet](https://faucet.tallinnnet.teztnets.com)</td>
+<td>
+<div markdown="1">[Tallinnnet faucet](https://faucet.tallinnnet.teztnets.com)</div>
+</td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[Tallinnnet snapshot](https://snapshots.tzinit.org/tallinnnet/rolling)</td>
+<td>
+<div markdown="1">[Tallinnnet snapshot](https://snapshots.tzinit.org/tallinnnet/rolling)</div>
+</td>
 </tr>
 
 
