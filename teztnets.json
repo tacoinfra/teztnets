@@ -1,4 +1,39 @@
 {
+  "bakingnet": {
+    "category": "Long-running Teztnets",
+    "chain_name": "TEZOS_BAKINGNET_2026-04-08T20:00:00Z",
+    "dal_nodes": {
+      "dal-bootstrap": {
+        "humanName": "DAL Bootstrap",
+        "p2p": "dal.bakingnet.teztnets.com:11732",
+        "rpc": "https://dal-bootstrap-rpc.bakingnet.teztnets.com"
+      },
+      "dal-dal1": {
+        "humanName": "DAL Teztnets Attester",
+        "p2p": "dal1.bakingnet.teztnets.com:11732",
+        "rpc": "https://dal-attester-rpc.bakingnet.teztnets.com"
+      }
+    },
+    "description": "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
+    "docker_build": "tezos/tezos:octez-v24.3",
+    "evm_proxy_urls": [],
+    "faucet": true,
+    "faucet_url": "https://faucet.bakingnet.teztnets.com",
+    "git_ref": "octez-v24.3",
+    "human_name": "Bakingnet",
+    "indexers": [],
+    "masked_from_main_page": false,
+    "network_stakes": true,
+    "network_url": "https://teztnets.com/bakingnet",
+    "rollup_urls": [],
+    "rpc_url": "https://rpc.bakingnet.teztnets.com",
+    "rpc_urls": [
+      "https://rpc.bakingnet.teztnets.com"
+    ],
+    "snapshot": true,
+    "snapshot_url": "https://snapshots.tzinit.org/bakingnet/rolling",
+    "activated_on": "2026-04-08"
+  },
   "currentnet": {
     "aliasOf": "tallinnnet",
     "category": "Protocol Teztnets",
