@@ -6,18 +6,47 @@ permalink: /{{ v["human_name"] | lower }}-about
 
 {{ v["description"] }}
 
-| | |
-|-------|---------------------|
-| Public RPC endpoints | {% for r in v["rpc_urls"] -%}[{{ r }}]({{ r }}/chains/main/chain_id)<br/> {%- endfor %} |
-| Full network name | `{{ v["chain_name"] }}` |
-| Tezos docker build | {{ v["docker_build_hyperlinked"] }} |
-| Activated on | {{ network_params["genesis"]["timestamp"] }} |
-{% if v["faucet_url"] | length > 0 %}| Faucet | [{{ v["human_name"] }} faucet]({{ v["faucet_url"] }}) | {% endif %}
-{% if v["snapshot_url"] | length > 0 %} | Rolling Snapshot | [{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }}) |{% endif %}
-{% if "indexers" in v and v["indexers"] | length >0 -%}
-| Block Explorers | {% for i in v["indexers"] -%}[{{ i["name"]}}]({{ i["url"]}}){% if not loop.last %} - {% endif %}
-{%- endfor %} |
-{%- endif %}
+<table>
+<tbody>
+
+<tr>
+<td>Public RPC endpoints</td>
+<td>{% for r in v["rpc_urls"] -%}<a href="{{ r }}/chains/main/chain_id">{{ r }}</a><br> {%- endfor %}</td>
+</tr>
+
+<tr>
+<td>Full network name</td>
+<td><code class="language-plaintext highlighter-rouge">{{ v["chain_name"] }}</code></td>
+</tr>
+
+<tr>
+<td>Tezos docker build</td>
+<td markdown="1">{{ v["docker_build_hyperlinked"] }}</td>
+</tr>
+
+<tr>
+<td>Activated on</td>
+<td>{{ network_params["genesis"]["timestamp"] }}</td>
+</tr>
+
+{% if v["faucet_url"] | length > 0 %}<tr>
+<td>Faucet</td>
+<td markdown="1">[{{ v["human_name"] }} faucet]({{ v["faucet_url"] }})</td>
+</tr>{% endif %}
+
+{% if v["snapshot_url"] | length > 0 %}<tr>
+<td>Rolling Snapshot</td>
+<td markdown="1">[{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }})</td>
+</tr>{% endif %}
+
+{% if "indexers" in v and v["indexers"] | length >0 -%}<tr>
+<td>Block Explorers</td>
+<td markdown="1">{% for i in v["indexers"] -%}[{{ i["name"]}}]({{ i["url"]}}){% if not loop.last %} - {% endif %}
+{%- endfor %}</td>
+</tr>{%- endif %}
+
+</tbody>
+</table>
 
 
 {{ readme }}
@@ -122,7 +151,7 @@ For more info, read this [blog post from Nomadic Labs](https://research-developm
 {% if v["category"] in [ "Protocol Teztnets", "Long-running Teztnets" ] %}
 ### Bake on the {{ v["human_name"] }} network
 
-To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet]({{ v["faucet_url"] }}).
+To improve reliability of the chain, you can take part in the consensus by becoming a baker. {% if v["faucet_url"] | length > 0 %}In that case, you will need some test tokens from the [faucet]({{ v["faucet_url"] }}).{% endif %}
 
 If you are not a bootstrap baker, you need to register your key as a delegate using your alias or `pkh`. For instance:
 ```bash=2
@@ -132,7 +161,7 @@ octez-client register key mykey as delegate
 On a modern Tezos network, you will need to stake to declare your security bond.  You will need to have access to at least 6000tz of stake to get baking rights. For instance:
 ```
 octez-client stake <amount> for mykey
-```	
+```
 
 Ideally you should run a DAL node.
 ```
