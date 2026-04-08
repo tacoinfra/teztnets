@@ -6,15 +6,43 @@ permalink: /nextnet-u-20260320-about
 
 Test Chain for Next (U) protocol
 
-| | |
-|-------|---------------------|
-| Public RPC endpoints | [https://rpc.nextnet-u-20260320.teztnets.com](https://rpc.nextnet-u-20260320.teztnets.com/chains/main/chain_id)<br/> |
-| Full network name | `TEZOS_NEXTUNET_2026-03-20T14:00:00Z` |
-| Tezos docker build | [tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418) |
-| Activated on | 2026-03-20T14:00:00Z |
-| Faucet | [Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com) | 
- | Rolling Snapshot | [Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
+<table>
+<tbody>
 
+<tr>
+<td>Public RPC endpoints</td>
+<td><a href="https://rpc.nextnet-u-20260320.teztnets.com/chains/main/chain_id">https://rpc.nextnet-u-20260320.teztnets.com</a><br></td>
+</tr>
+
+<tr>
+<td>Full network name</td>
+<td><code class="language-plaintext highlighter-rouge">TEZOS_NEXTUNET_2026-03-20T14:00:00Z</code></td>
+</tr>
+
+<tr>
+<td>Tezos docker build</td>
+<td markdown="1">[tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418)</td>
+</tr>
+
+<tr>
+<td>Activated on</td>
+<td>2026-03-20T14:00:00Z</td>
+</tr>
+
+<tr>
+<td>Faucet</td>
+<td markdown="1">[Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com)</td>
+</tr>
+
+<tr>
+<td>Rolling Snapshot</td>
+<td markdown="1">[Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling)</td>
+</tr>
+
+
+
+</tbody>
+</table>
 
 
 
@@ -108,7 +136,7 @@ octez-client register key mykey as delegate
 On a modern Tezos network, you will need to stake to declare your security bond.  You will need to have access to at least 6000tz of stake to get baking rights. For instance:
 ```
 octez-client stake <amount> for mykey
-```	
+```
 
 Ideally you should run a DAL node.
 ```

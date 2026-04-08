@@ -6,15 +6,43 @@ permalink: /bakingtest-about
 
 Don't use unless you are a core engineer!!
 
-| | |
-|-------|---------------------|
-| Public RPC endpoints | [https://rpc.bakingtest.teztnets.com](https://rpc.bakingtest.teztnets.com/chains/main/chain_id)<br/> |
-| Full network name | `TEZOS_BAKINGNET_2026-04-01T00:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
-| Activated on | 2026-04-01T00:00:00Z |
-| Faucet | [Bakingtest faucet](https://faucet.bakingtest.teztnets.com) | 
- | Rolling Snapshot | [Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling) |
+<table>
+<tbody>
 
+<tr>
+<td>Public RPC endpoints</td>
+<td><a href="https://rpc.bakingtest.teztnets.com/chains/main/chain_id">https://rpc.bakingtest.teztnets.com</a><br></td>
+</tr>
+
+<tr>
+<td>Full network name</td>
+<td><code class="language-plaintext highlighter-rouge">TEZOS_BAKINGNET_2026-04-01T00:00:00Z</code></td>
+</tr>
+
+<tr>
+<td>Tezos docker build</td>
+<td markdown="1">[tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2)</td>
+</tr>
+
+<tr>
+<td>Activated on</td>
+<td>2026-04-01T00:00:00Z</td>
+</tr>
+
+<tr>
+<td>Faucet</td>
+<td markdown="1">[Bakingtest faucet](https://faucet.bakingtest.teztnets.com)</td>
+</tr>
+
+<tr>
+<td>Rolling Snapshot</td>
+<td markdown="1">[Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling)</td>
+</tr>
+
+
+
+</tbody>
+</table>
 
 
 
@@ -108,7 +136,7 @@ octez-client register key mykey as delegate
 On a modern Tezos network, you will need to stake to declare your security bond.  You will need to have access to at least 6000tz of stake to get baking rights. For instance:
 ```
 octez-client stake <amount> for mykey
-```	
+```
 
 Ideally you should run a DAL node.
 ```

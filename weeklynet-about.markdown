@@ -6,15 +6,43 @@ permalink: /weeklynet-about
 
 A testnet that restarts every Wednesday launched from tezos/tezos master branch. It runs Next for 4 cycles then upgrades to proto Alpha.
 
-| | |
-|-------|---------------------|
-| Public RPC endpoints | [https://rpc.weeklynet-2026-04-08.teztnets.com](https://rpc.weeklynet-2026-04-08.teztnets.com/chains/main/chain_id)<br/> |
-| Full network name | `TEZOS-WEEKLYNET-2026-04-08T00:00:00.000Z` |
-| Tezos docker build | [tezos/tezos:master_ef7e2a5b_20260407155711](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_ef7e2a5b_20260407155711) |
-| Activated on | 2026-04-08T00:00:00.000Z |
-| Faucet | [Weeklynet faucet](https://faucet.weeklynet-2026-04-08.teztnets.com) | 
- | Rolling Snapshot | [Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
+<table>
+<tbody>
 
+<tr>
+<td>Public RPC endpoints</td>
+<td><a href="https://rpc.weeklynet-2026-04-08.teztnets.com/chains/main/chain_id">https://rpc.weeklynet-2026-04-08.teztnets.com</a><br></td>
+</tr>
+
+<tr>
+<td>Full network name</td>
+<td><code class="language-plaintext highlighter-rouge">TEZOS-WEEKLYNET-2026-04-08T00:00:00.000Z</code></td>
+</tr>
+
+<tr>
+<td>Tezos docker build</td>
+<td markdown="1">[tezos/tezos:master_ef7e2a5b_20260407155711](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_ef7e2a5b_20260407155711)</td>
+</tr>
+
+<tr>
+<td>Activated on</td>
+<td>2026-04-08T00:00:00.000Z</td>
+</tr>
+
+<tr>
+<td>Faucet</td>
+<td markdown="1">[Weeklynet faucet](https://faucet.weeklynet-2026-04-08.teztnets.com)</td>
+</tr>
+
+<tr>
+<td>Rolling Snapshot</td>
+<td markdown="1">[Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling)</td>
+</tr>
+
+
+
+</tbody>
+</table>
 
 
 
