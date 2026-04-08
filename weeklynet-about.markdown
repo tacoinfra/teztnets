@@ -21,7 +21,9 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 
 <tr>
 <td>Tezos docker build</td>
-<td markdown="1">[tezos/tezos:master_ef7e2a5b_20260407155711](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_ef7e2a5b_20260407155711)</td>
+<td>
+  <div markdown="1">[tezos/tezos:master_ef7e2a5b_20260407155711](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_ef7e2a5b_20260407155711)</div>
+</td>
 </tr>
 
 <tr>
@@ -32,14 +34,14 @@ A testnet that restarts every Wednesday launched from tezos/tezos master branch.
 <tr>
 <td>Faucet</td>
 <td>
-<div markdown="1">[Weeklynet faucet](https://faucet.weeklynet-2026-04-08.teztnets.com)</div>
+  <div markdown="1">[Weeklynet faucet](https://faucet.weeklynet-2026-04-08.teztnets.com)</div>
 </td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
 <td>
-<div markdown="1">[Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling)</div>
+  <div markdown="1">[Weeklynet snapshot](https://snapshots.tzinit.org/weeklynet/rolling)</div>
 </td>
 </tr>
 

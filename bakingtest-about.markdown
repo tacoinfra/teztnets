@@ -21,7 +21,9 @@ Don't use unless you are a core engineer!!
 
 <tr>
 <td>Tezos docker build</td>
-<td markdown="1">[tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2)</td>
+<td>
+  <div markdown="1">[tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2)</div>
+</td>
 </tr>
 
 <tr>
@@ -32,14 +34,14 @@ Don't use unless you are a core engineer!!
 <tr>
 <td>Faucet</td>
 <td>
-<div markdown="1">[Bakingtest faucet](https://faucet.bakingtest.teztnets.com)</div>
+  <div markdown="1">[Bakingtest faucet](https://faucet.bakingtest.teztnets.com)</div>
 </td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
 <td>
-<div markdown="1">[Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling)</div>
+  <div markdown="1">[Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling)</div>
 </td>
 </tr>
 

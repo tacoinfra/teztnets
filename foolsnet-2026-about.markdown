@@ -21,7 +21,9 @@ I'm testing something - don't worry!
 
 <tr>
 <td>Tezos docker build</td>
-<td markdown="1">[tezos/tezos:v15.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=v15.1)</td>
+<td>
+  <div markdown="1">[tezos/tezos:v15.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=v15.1)</div>
+</td>
 </tr>
 
 <tr>
@@ -32,14 +34,14 @@ I'm testing something - don't worry!
 <tr>
 <td>Faucet</td>
 <td>
-<div markdown="1">[Foolsnet-2026 faucet](https://faucet.foolsnet-2026.teztnets.com)</div>
+  <div markdown="1">[Foolsnet-2026 faucet](https://faucet.foolsnet-2026.teztnets.com)</div>
 </td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
 <td>
-<div markdown="1">[Foolsnet-2026 snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling)</div>
+  <div markdown="1">[Foolsnet-2026 snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling)</div>
 </td>
 </tr>
 

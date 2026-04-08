@@ -21,7 +21,9 @@ Test Chain for Next (U) protocol
 
 <tr>
 <td>Tezos docker build</td>
-<td markdown="1">[tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418)</td>
+<td>
+  <div markdown="1">[tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418)</div>
+</td>
 </tr>
 
 <tr>
@@ -32,14 +34,14 @@ Test Chain for Next (U) protocol
 <tr>
 <td>Faucet</td>
 <td>
-<div markdown="1">[Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com)</div>
+  <div markdown="1">[Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com)</div>
 </td>
 </tr>
 
 <tr>
 <td>Rolling Snapshot</td>
 <td>
-<div markdown="1">[Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling)</div>
+  <div markdown="1">[Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling)</div>
 </td>
 </tr>
 
