@@ -12,7 +12,6 @@ These networks are long-running test networks that are similar to mainnet. They 
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Bakingtest](/bakingtest-about) | `2026-04-08` |  [Faucet](https://faucet.bakingtest.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/bakingtest/rolling) | 
 | [Shadownet](/shadownet-about) | `2025-08-07` |  [Faucet](https://faucet.shadownet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) | 
 
 

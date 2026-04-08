@@ -1,39 +1,4 @@
 {
-  "bakingtest": {
-    "category": "Long-running Teztnets",
-    "chain_name": "TEZOS_BAKINGNET_2026-04-08T14:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.bakingtest.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.bakingtest.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.bakingtest.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.bakingtest.teztnets.com"
-      }
-    },
-    "description": "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
-    "docker_build": "tezos/tezos:octez-v24.2",
-    "evm_proxy_urls": [],
-    "faucet": true,
-    "faucet_url": "https://faucet.bakingtest.teztnets.com",
-    "git_ref": "octez-v24.2",
-    "human_name": "Bakingtest",
-    "indexers": [],
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/bakingtest",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.bakingtest.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.bakingtest.teztnets.com"
-    ],
-    "snapshot": true,
-    "snapshot_url": "https://snapshots.tzinit.org/bakingtest/rolling",
-    "activated_on": "2026-04-08"
-  },
   "currentnet": {
     "aliasOf": "tallinnnet",
     "category": "Protocol Teztnets",
@@ -51,11 +16,11 @@
       }
     },
     "description": "Test Chain for Tallinn protocol",
-    "docker_build": "tezos/tezos:octez-v24.2",
+    "docker_build": "tezos/tezos:octez-v24.3",
     "evm_proxy_urls": [],
     "faucet": true,
     "faucet_url": "https://faucet.currentnet.teztnets.com",
-    "git_ref": "octez-v24.2",
+    "git_ref": "octez-v24.3",
     "human_name": "Tallinnnet",
     "indexers": [],
     "masked_from_main_page": false,
@@ -73,10 +38,10 @@
     "category": "Deprecated Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
-    "docker_build": "tezos/tezos:octez-v24.2",
+    "docker_build": "tezos/tezos:octez-v24.3",
     "faucet": false,
     "faucet_url": "",
-    "git_ref": "octez-v24.2",
+    "git_ref": "octez-v24.3",
     "human_name": "Ghostnet",
     "indexers": [],
     "masked_from_main_page": false,
@@ -93,8 +58,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v24.2",
-    "git_ref": "octez-v24.2",
+    "docker_build": "tezos/tezos:octez-v24.3",
+    "git_ref": "octez-v24.3",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -194,11 +159,11 @@
       }
     },
     "description": "A long-term test network for Tezos. It shadows mainnet. We will treat it as near production, switching it over to the next protocol shortly after mainnet.\nWe prefer that you don't test bakers on this network - please use bakingnet or one of the protocol networks.",
-    "docker_build": "tezos/tezos:octez-v24.2",
+    "docker_build": "tezos/tezos:octez-v24.3",
     "evm_proxy_urls": [],
     "faucet": true,
     "faucet_url": "https://faucet.shadownet.teztnets.com",
-    "git_ref": "octez-v24.2",
+    "git_ref": "octez-v24.3",
     "human_name": "Shadownet",
     "indexers": [],
     "masked_from_main_page": false,
@@ -229,11 +194,11 @@
       }
     },
     "description": "Test Chain for Tallinn protocol",
-    "docker_build": "tezos/tezos:octez-v24.2",
+    "docker_build": "tezos/tezos:octez-v24.3",
     "evm_proxy_urls": [],
     "faucet": true,
     "faucet_url": "https://faucet.tallinnnet.teztnets.com",
-    "git_ref": "octez-v24.2",
+    "git_ref": "octez-v24.3",
     "human_name": "Tallinnnet",
     "indexers": [],
     "masked_from_main_page": false,
