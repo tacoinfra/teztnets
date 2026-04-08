@@ -37,6 +37,7 @@ const protocolCategory = "Protocol Teztnets"
 const featureCategory = "Feature Teztnets"
 const otherCategory = "Other Teztnets"
 const longCategory = "Long-running Teztnets"
+const deprecatedCategory = "Deprecated Teztnets"
 
 // Create a GCP resource (Storage Bucket) for Bootstrap Smart Contracts
 const activationBucket = new gcp.storage.Bucket("testnets-global-activation-bucket", {
@@ -178,11 +179,11 @@ const foolsnet_chain = new TezosChain(
 
 // Baking Test
 
-const bakingtestnet_chain = new TezosChain(
+const bakingnet_chain = new TezosChain(
   {
     category: longCategory,
     humanName: "Bakingtest",
-    description: "Don't use unless you are a core engineer!!",
+    description: "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
     activationBucket: activationBucket,
     helmValuesFile: "networks/bakingnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
@@ -196,10 +197,10 @@ const bakingtestnet_chain = new TezosChain(
 )
 
 new TezosFaucet(
-  bakingtestnet_chain.name,
+  bakingnet_chain.name,
   {
-    namespace: bakingtestnet_chain.namespace,
-    humanName: "Bakingtest",
+    namespace: bakingnet_chain.namespace,
+    humanName: "Bakingnet",
     helmValuesFile: "networks/bakingnet/faucet_values.yaml",
     faucetPrivateKey: faucetPrivateKey,
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
@@ -291,7 +292,7 @@ const shadownet_chain = new TezosChain(
   {
     category: longCategory,
     humanName: "Shadownet",
-    description: "Shadownet - long term testnet",
+    description: "A long-term test network for Tezos. It shadows mainnet. We will treat it as near production, switching it over to the next protocol shortly after mainnet.\nWe prefer that you don't test bakers on this network - please use bakingnet or one of the protocol networks.",
     activationBucket: activationBucket,
     helmValuesFile: "networks/shadownet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
@@ -469,7 +470,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([nextnet_chain]),
-  ...getNetworks([bakingtestnet_chain]),
+  ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
@@ -477,7 +478,7 @@ export const networks = {
 }
 
 const ghostnetTeztnet = {
-  category: "Long-running Teztnets",
+  category: "Deprecated Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   description: "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
@@ -521,7 +522,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
-  ...getTeztnets([bakingtestnet_chain]),
+  ...getTeztnets([bakingnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),

@@ -4,10 +4,10 @@
 
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_BAKINGNET_2026-04-01T00:00:00Z
+  chain_name: TEZOS_BAKINGNET_2026-04-08T14:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2026-04-01T00:00:00Z"
+    timestamp: "2026-04-08T14:00:00Z"
   dal_config:
     activated: true
 
@@ -176,7 +176,7 @@ nodes:
       - accuser
       - vdf
     bootstrapped_readiness_probe: false
-    storage_size: 250Gi
+    storage_size: 300Gi
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
