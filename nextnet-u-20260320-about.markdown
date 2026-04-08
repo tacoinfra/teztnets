@@ -6,49 +6,15 @@ permalink: /nextnet-u-20260320-about
 
 Test Chain for Next (U) protocol
 
-<table>
-<tbody>
+| | |
+|-------|---------------------|
+| Public RPC endpoints | [https://rpc.nextnet-u-20260320.teztnets.com](https://rpc.nextnet-u-20260320.teztnets.com/chains/main/chain_id)<br/> |
+| Full network name | `TEZOS_NEXTUNET_2026-03-20T14:00:00Z` |
+| Tezos docker build | [tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418) |
+| Activated on | 2026-03-20T14:00:00Z |
+| Rolling Snapshot | [Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling) |
+| Faucet | [Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com) |
 
-<tr>
-<td>Public RPC endpoints</td>
-<td><a href="https://rpc.nextnet-u-20260320.teztnets.com/chains/main/chain_id">https://rpc.nextnet-u-20260320.teztnets.com</a><br></td>
-</tr>
-
-<tr>
-<td>Full network name</td>
-<td><code class="language-plaintext highlighter-rouge">TEZOS_NEXTUNET_2026-03-20T14:00:00Z</code></td>
-</tr>
-
-<tr>
-<td>Tezos docker build</td>
-<td>
-  <div markdown="1">[tezos/tezos:master_aa1d7358_20260320111418](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_aa1d7358_20260320111418)</div>
-</td>
-</tr>
-
-<tr>
-<td>Activated on</td>
-<td>2026-03-20T14:00:00Z</td>
-</tr>
-
-<tr>
-<td>Faucet</td>
-<td>
-  <div markdown="1">[Nextnet-U-20260320 faucet](https://faucet.nextnet-u-20260320.teztnets.com)</div>
-</td>
-</tr>
-
-<tr>
-<td>Rolling Snapshot</td>
-<td>
-  <div markdown="1">[Nextnet-U-20260320 snapshot](https://snapshots.tzinit.org/nextnet/rolling)</div>
-</td>
-</tr>
-
-
-
-</tbody>
-</table>
 
 
 

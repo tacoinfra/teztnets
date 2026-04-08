@@ -6,44 +6,15 @@ permalink: /ghostnet-about
 
 Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**
 
-<table>
-<tbody>
-
-<tr>
-<td>Public RPC endpoints</td>
-<td><a href="https://rpc.ghostnet.teztnets.com/chains/main/chain_id">https://rpc.ghostnet.teztnets.com</a><br></td>
-</tr>
-
-<tr>
-<td>Full network name</td>
-<td><code class="language-plaintext highlighter-rouge">TEZOS_ITHACANET_2022-01-25T15:00:00Z</code></td>
-</tr>
-
-<tr>
-<td>Tezos docker build</td>
-<td>
-  <div markdown="1">[tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2)</div>
-</td>
-</tr>
-
-<tr>
-<td>Activated on</td>
-<td>2022-01-25T15:00:00Z</td>
-</tr>
+| | |
+|-------|---------------------|
+| Public RPC endpoints | [https://rpc.ghostnet.teztnets.com](https://rpc.ghostnet.teztnets.com/chains/main/chain_id)<br/> |
+| Full network name | `TEZOS_ITHACANET_2022-01-25T15:00:00Z` |
+| Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
+| Activated on | 2022-01-25T15:00:00Z |
+| Rolling Snapshot | [Ghostnet snapshot](https://snapshots.tzinit.org/ghostnet/rolling) |
 
 
-
-<tr>
-<td>Rolling Snapshot</td>
-<td>
-  <div markdown="1">[Ghostnet snapshot](https://snapshots.tzinit.org/ghostnet/rolling)</div>
-</td>
-</tr>
-
-
-
-</tbody>
-</table>
 
 
 

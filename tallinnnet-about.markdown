@@ -6,49 +6,15 @@ permalink: /tallinnnet-about
 
 Test Chain for Tallinn protocol
 
-<table>
-<tbody>
+| | |
+|-------|---------------------|
+| Public RPC endpoints | [https://rpc.tallinnnet.teztnets.com](https://rpc.tallinnnet.teztnets.com/chains/main/chain_id)<br/> |
+| Full network name | `TEZOS_TALLINNNET_2025-11-18T21:00:00Z` |
+| Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
+| Activated on | 2025-11-18T21:00:00Z |
+| Rolling Snapshot | [Tallinnnet snapshot](https://snapshots.tzinit.org/tallinnnet/rolling) |
+| Faucet | [Tallinnnet faucet](https://faucet.tallinnnet.teztnets.com) |
 
-<tr>
-<td>Public RPC endpoints</td>
-<td><a href="https://rpc.tallinnnet.teztnets.com/chains/main/chain_id">https://rpc.tallinnnet.teztnets.com</a><br></td>
-</tr>
-
-<tr>
-<td>Full network name</td>
-<td><code class="language-plaintext highlighter-rouge">TEZOS_TALLINNNET_2025-11-18T21:00:00Z</code></td>
-</tr>
-
-<tr>
-<td>Tezos docker build</td>
-<td>
-  <div markdown="1">[tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2)</div>
-</td>
-</tr>
-
-<tr>
-<td>Activated on</td>
-<td>2025-11-18T21:00:00Z</td>
-</tr>
-
-<tr>
-<td>Faucet</td>
-<td>
-  <div markdown="1">[Tallinnnet faucet](https://faucet.tallinnnet.teztnets.com)</div>
-</td>
-</tr>
-
-<tr>
-<td>Rolling Snapshot</td>
-<td>
-  <div markdown="1">[Tallinnnet snapshot](https://snapshots.tzinit.org/tallinnnet/rolling)</div>
-</td>
-</tr>
-
-
-
-</tbody>
-</table>
 
 
 
