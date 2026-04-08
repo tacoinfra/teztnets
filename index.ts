@@ -156,8 +156,8 @@ new TezosFaucet(
 )
 */
 
-// April Fools
-
+// April Fools 2026 - no-one paid any attention of course
+/*
 const foolsnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -174,6 +174,7 @@ const foolsnet_chain = new TezosChain(
   },
   provider
 )
+*/
 
 // Baking Test
 
@@ -468,7 +469,6 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([nextnet_chain]),
-  ...getNetworks([foolsnet_chain]),
   ...getNetworks([bakingtestnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
@@ -521,7 +521,6 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
-  ...getTeztnets([foolsnet_chain]),
   ...getTeztnets([bakingtestnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
