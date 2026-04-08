@@ -178,11 +178,11 @@ const foolsnet_chain = new TezosChain(
 */
 
 // Baking Test
-
+/*
 const bakingnet_chain = new TezosChain(
   {
     category: longCategory,
-    humanName: "Bakingtest",
+    humanName: "Bakingnet",
     description: "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
     activationBucket: activationBucket,
     helmValuesFile: "networks/bakingnet/values.yaml",
@@ -209,7 +209,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // Nextnet test network - use pre-protocol proposal
 //
 
@@ -470,7 +470,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([nextnet_chain]),
-  ...getNetworks([bakingnet_chain]),
+//  ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
@@ -522,7 +522,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
-  ...getTeztnets([bakingnet_chain]),
+//  ...getTeztnets([bakingnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),
