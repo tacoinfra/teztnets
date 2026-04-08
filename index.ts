@@ -178,7 +178,7 @@ const foolsnet_chain = new TezosChain(
 */
 
 // Baking Test
-/*
+
 const bakingnet_chain = new TezosChain(
   {
     category: longCategory,
@@ -209,7 +209,7 @@ new TezosFaucet(
   },
   provider
 )
-  */
+
 
 // Nextnet test network - use pre-protocol proposal
 //
@@ -471,7 +471,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([nextnet_chain]),
-//  ...getNetworks([bakingnet_chain]),
+  ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
@@ -523,7 +523,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
-//  ...getTeztnets([bakingnet_chain]),
+  ...getTeztnets([bakingnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),
