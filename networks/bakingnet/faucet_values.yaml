@@ -15,7 +15,7 @@ config:
     name: custom
     rpcUrl: "" # filled in by pulumi
     faucetAddress: tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
-    viewer: https://shadownet.tzkt.io
+    viewer: https://bakingnet.tzkt.io
 
 # Value the server sets for the "Access-Control-Allow-Origin" header for CORS.
 authorizedHost: "" # filled in by pulumi
@@ -26,7 +26,7 @@ backendRpcUrl: http://tezos-node-rpc:8732
 enableCaptcha: true
 
 # Faucet won't dispense to an address if its balance exceeds this.
-maxBalance: 24000
+maxBalance: 48000
 
 # The minimum Tez allowed per request.
 minTez: 1

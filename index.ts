@@ -209,7 +209,8 @@ new TezosFaucet(
   },
   provider
 )
-*/
+  */
+
 // Nextnet test network - use pre-protocol proposal
 //
 

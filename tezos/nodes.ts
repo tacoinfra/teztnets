@@ -220,7 +220,7 @@ location ~ ^/chains/([a-zA-Z]+)/(checkpoint|levels) {
               protocol: "TCP",
             },
           ],
-          selector: { node_class: "rolling-node" },
+          selector: { node_class: "rolling-node" },     
           type: "LoadBalancer",
         },
       },
