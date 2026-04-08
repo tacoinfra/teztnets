@@ -31,18 +31,23 @@ permalink: /{{ v["human_name"] | lower }}-about
 
 {% if v["faucet_url"] | length > 0 %}<tr>
 <td>Faucet</td>
-<td markdown="1">[{{ v["human_name"] }} faucet]({{ v["faucet_url"] }})</td>
+<td>
+<div markdown="1">[{{ v["human_name"] }} faucet]({{ v["faucet_url"] }})</div>
+</td>
 </tr>{% endif %}
 
 {% if v["snapshot_url"] | length > 0 %}<tr>
 <td>Rolling Snapshot</td>
-<td markdown="1">[{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }})</td>
+<td>
+<div markdown="1">[{{ v["human_name"] }} snapshot]({{ v["snapshot_url"] }})</div>
+</td>
 </tr>{% endif %}
 
 {% if "indexers" in v and v["indexers"] | length >0 -%}<tr>
 <td>Block Explorers</td>
-<td markdown="1">{% for i in v["indexers"] -%}[{{ i["name"]}}]({{ i["url"]}}){% if not loop.last %} - {% endif %}
-{%- endfor %}</td>
+<td>
+<div markdown="1">{% for i in v["indexers"] -%}[{{ i["name"]}}]({{ i["url"]}}){% if not loop.last %} - {% endif %}{%- endfor %}</div>
+</td>
 </tr>{%- endif %}
 
 </tbody>
