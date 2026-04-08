@@ -8,14 +8,11 @@ This list of Teztnets is also available in [json format](https://teztnets.com/te
 
 # Long-running Teztnets
 
-These networks are long-running test networks that are similar to mainnet. They run the same protocol as mainnet but switch over to the next protocol earlier than mainnet for testing. If you are developing applications, you probably want to develop on these networks. 
-
-**Ghostnet is deprecated, please use Shadownet!**
+These networks are long-running test networks that are similar to mainnet. They run the same protocol as mainnet but switch over to the next protocol earlier than mainnet for testing. If you are testing bakers, use bakingnet. If you are developing applications, use shadownet.
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Bakingtest](/bakingtest-about) | `2026-04-01` |  [Faucet](https://faucet.bakingtest.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/bakingtest/rolling) | 
-| [Ghostnet](/ghostnet-about) | `2022-01-25` | |  [Snapshot](https://snapshots.tzinit.org/ghostnet/rolling) | 
+| [Bakingtest](/bakingtest-about) | `2026-04-08` |  [Faucet](https://faucet.bakingtest.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/bakingtest/rolling) | 
 | [Shadownet](/shadownet-about) | `2025-08-07` |  [Faucet](https://faucet.shadownet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) | 
 
 
@@ -26,7 +23,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Foolsnet-2026](/foolsnet-2026-about) | `2026-04-01` |  [Faucet](https://faucet.foolsnet-2026.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/foolsnet-2026/rolling) | 
 | [Nextnet-U-20260320](/nextnet-u-20260320-about) | `2026-03-20` |  [Faucet](https://faucet.nextnet-u-20260320.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/nextnet/rolling) | 
 | [Tallinnnet](/tallinnnet-about) | `2025-11-18` |  [Faucet](https://faucet.tallinnnet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/tallinnnet/rolling) | 
 
@@ -41,6 +37,16 @@ These test networks restart regularly and track the development of the master br
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
 | [Weeklynet](/weeklynet-about) | `2026-04-08` |  [Faucet](https://faucet.weeklynet-2026-04-08.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) | 
+
+
+
+# Deprecated Teztnets
+
+These are networks for which the supporting infra will disappear soon
+
+| | Activated on | Faucet | Rolling Snapshot |
+|-------|---------------------|--|-----|
+| [Ghostnet](/ghostnet-about) | `2022-01-25` | |  [Snapshot](https://snapshots.tzinit.org/ghostnet/rolling) | 
 
 
 

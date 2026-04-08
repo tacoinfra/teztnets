@@ -1,7 +1,7 @@
 {
   "bakingtest": {
     "category": "Long-running Teztnets",
-    "chain_name": "TEZOS_BAKINGNET_2026-04-01T00:00:00Z",
+    "chain_name": "TEZOS_BAKINGNET_2026-04-08T14:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -14,7 +14,7 @@
         "rpc": "https://dal-attester-rpc.bakingtest.teztnets.com"
       }
     },
-    "description": "Don't use unless you are a core engineer!!",
+    "description": "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
     "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
     "faucet": true,
@@ -32,7 +32,7 @@
     ],
     "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/bakingtest/rolling",
-    "activated_on": "2026-04-01"
+    "activated_on": "2026-04-08"
   },
   "currentnet": {
     "aliasOf": "tallinnnet",
@@ -69,31 +69,8 @@
     "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/tallinnnet/rolling"
   },
-  "foolsnet-2026": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_FOOLSNET_2026-04-01T00:00:00Z",
-    "description": "I'm testing something - don't worry!",
-    "docker_build": "tezos/tezos:v15.1",
-    "evm_proxy_urls": [],
-    "faucet": true,
-    "faucet_url": "https://faucet.foolsnet-2026.teztnets.com",
-    "git_ref": "v15.1",
-    "human_name": "Foolsnet-2026",
-    "indexers": [],
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/foolsnet-2026",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.foolsnet-2026.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.foolsnet-2026.teztnets.com"
-    ],
-    "snapshot": true,
-    "snapshot_url": "https://snapshots.tzinit.org/foolsnet-2026/rolling",
-    "activated_on": "2026-04-01"
-  },
   "ghostnet": {
-    "category": "Long-running Teztnets",
+    "category": "Deprecated Teztnets",
     "chain_name": "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
     "description": "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
     "docker_build": "tezos/tezos:octez-v24.2",
@@ -216,7 +193,7 @@
         "rpc": "https://dal-attester-rpc.shadownet.teztnets.com"
       }
     },
-    "description": "Shadownet - long term testnet",
+    "description": "A long-term test network for Tezos. It shadows mainnet. We will treat it as near production, switching it over to the next protocol shortly after mainnet.\nWe prefer that you don't test bakers on this network - please use bakingnet or one of the protocol networks.",
     "docker_build": "tezos/tezos:octez-v24.2",
     "evm_proxy_urls": [],
     "faucet": true,

@@ -4,14 +4,16 @@ title: Bakingtest
 permalink: /bakingtest-about
 ---
 
-Don't use unless you are a core engineer!!
+A long-term test network for bakers. It will switch protocols approximately one week before mainnet.
+However we reserve the right to restart it if it breaks. Fingers crossed.
+For applications testing, you will be best off on shadownet.
 
 | | |
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.bakingtest.teztnets.com](https://rpc.bakingtest.teztnets.com/chains/main/chain_id)<br/> |
-| Full network name | `TEZOS_BAKINGNET_2026-04-01T00:00:00Z` |
+| Full network name | `TEZOS_BAKINGNET_2026-04-08T14:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
-| Activated on | 2026-04-01T00:00:00Z |
+| Activated on | 2026-04-08T14:00:00Z |
 | Rolling Snapshot | [Bakingtest snapshot](https://snapshots.tzinit.org/bakingtest/rolling) |
 | Faucet | [Bakingtest faucet](https://faucet.bakingtest.teztnets.com) |
 

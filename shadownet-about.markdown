@@ -4,7 +4,8 @@ title: Shadownet
 permalink: /shadownet-about
 ---
 
-Shadownet - long term testnet
+A long-term test network for Tezos. It shadows mainnet. We will treat it as near production, switching it over to the next protocol shortly after mainnet.
+We prefer that you don't test bakers on this network - please use bakingnet or one of the protocol networks.
 
 | | |
 |-------|---------------------|
