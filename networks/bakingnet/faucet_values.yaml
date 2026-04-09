@@ -31,7 +31,7 @@ maxBalance: 24000
 # The minimum Tez allowed per request.
 minTez: 1
 # The maximum Tez allowed per request.
-maxTez: 6001
+maxTez: 24000
 
 disableChallenges: false
 # Minimum number of challenges required for the minimum Tez request.
@@ -46,7 +46,7 @@ maxChallengesWithCaptcha: 53
 # How many bytes the challenge string should be.
 challengeSize: 2048
 # Difficulty level for challenges.
-difficulty: 4
+difficulty: 3
 
 redis:
   url: redis://redis-master:6379
