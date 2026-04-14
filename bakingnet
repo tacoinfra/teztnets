@@ -8,7 +8,8 @@
     ]
   },
   "default_bootstrap_peers": [
-    "bakingnet.teztnets.com"
+    "bakingnet.teztnets.com",
+    "bakingnet.tzinit.org"
   ],
   "genesis": {
     "block": "BMKHqWxBQ3WD2H3D5fyjxbnfxEX9FdqXvxPmXfhwjCFmjG6Wuxh",
