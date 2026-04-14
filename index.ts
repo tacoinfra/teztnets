@@ -187,7 +187,7 @@ const bakingnet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/bakingnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
+    bootstrapPeers: ["bakingnet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "8.0.3",

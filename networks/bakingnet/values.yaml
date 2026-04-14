@@ -180,7 +180,8 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: []
+bootstrap_peers:
+  - bakingnet.tzinit.org
 
 dalNodes:
 # XXX Don't run a bootstrap here if NAT is a problem?
@@ -227,7 +228,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v24.3
+  octez: tezos/tezos:octez-v24.2
 
 votes:
   liquidity_baking_toggle_vote: "pass"
