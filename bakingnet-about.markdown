@@ -12,7 +12,7 @@ For applications testing, you will be best off on shadownet.
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.bakingnet.teztnets.com](https://rpc.bakingnet.teztnets.com/chains/main/chain_id)<br/> |
 | Full network name | `TEZOS_BAKINGNET_2026-04-08T20:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v24.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.2) |
+| Tezos docker build | [tezos/tezos:octez-v24.4](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v24.4) |
 | Activated on | 2026-04-08T20:00:00Z |
 | Rolling Snapshot | [Bakingnet snapshot](https://snapshots.tzinit.org/bakingnet/rolling) |
 | Faucet | [Bakingnet faucet](https://faucet.bakingnet.teztnets.com) |
@@ -32,7 +32,7 @@ For applications testing, you will be best off on shadownet.
 To join Bakingnet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v24.2
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v24.4
 ```
 
 
@@ -44,7 +44,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v24.2
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v24.2
+git checkout octez-v24.4
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
