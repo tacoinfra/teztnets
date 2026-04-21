@@ -210,7 +210,7 @@ new TezosFaucet(
   provider
 )
 
-// END of Nextnet
+// END of U
 
 
 // Nextnet test network - use pre-protocol proposal
@@ -218,7 +218,7 @@ new TezosFaucet(
 
 const nextnet_chain = new TezosChain(
   {
-    category: protocolCategory,
+    category: deprecatedCategory,
     humanName: "Nextnet-U-20260320",
     description: "Test Chain for Next (U) protocol",
     activationBucket: activationBucket,
@@ -473,6 +473,7 @@ const ghostnetNetwork = {
 
 export const networks = {
   ...getNetworks([nextnet_chain]),
+  ...getNetworks([ushuaianet_chain]),
   ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
@@ -525,6 +526,7 @@ const mainnetMetadata = {
 
 export const teztnets = {
   ...getTeztnets([nextnet_chain]),
+  ...getTeztnets([ushuaianet_chain]),
   ...getTeztnets([bakingnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
