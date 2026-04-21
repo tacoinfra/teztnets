@@ -141,42 +141,6 @@ const ghostnet_chain = new TezosNodes(
   provider,
 )
 
-/* Bye bye faucet
-new TezosFaucet(
-  "ghostnet",
-  {
-    humanName: "Ghostnet",
-    namespace: ghostnet_chain.namespace,
-    helmValuesFile: "networks/ghostnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.2",
-  },
-  provider
-)
-*/
-
-// April Fools 2026 - no-one paid any attention of course
-/*
-const foolsnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Foolsnet-2026",
-    description: "I'm testing something - don't worry!",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/foolsnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "7.2.0",
-    networkStakes: true,
-  },
-  provider
-)
-*/
-
 // Baking Test
 
 const bakingnet_chain = new TezosChain(
@@ -209,6 +173,44 @@ new TezosFaucet(
   },
   provider
 )
+
+// Ushuaia
+//
+
+const ushuaianet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Ushuaianet",
+    description: "Test Chain for Ushuaia protocol proposal",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/ushuaianet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "8.0.3",
+    networkStakes: true,
+    alias: "proposednet", // Add alias
+  },
+  provider
+)
+
+new TezosFaucet(
+  ushuaianet_chain.name,
+  {
+    namespace: ushuaianet_chain.namespace,
+    humanName: "Ushuaianet",
+    helmValuesFile: "networks/ushuaianet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "8.0.2",
+    alias: "proposednet", // Add alias
+  },
+  provider
+)
+
+// END of Nextnet
 
 
 // Nextnet test network - use pre-protocol proposal
