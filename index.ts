@@ -472,7 +472,6 @@ const ghostnetNetwork = {
 }
 
 export const networks = {
-  ...getNetworks([nextnet_chain]),
   ...getNetworks([ushuaianet_chain]),
   ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
@@ -525,7 +524,6 @@ const mainnetMetadata = {
 }
 
 export const teztnets = {
-  ...getTeztnets([nextnet_chain]),
   ...getTeztnets([ushuaianet_chain]),
   ...getTeztnets([bakingnet_chain]),
   ...getTeztnets([weeklynet_chain]),
