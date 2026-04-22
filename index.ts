@@ -215,7 +215,7 @@ new TezosFaucet(
 
 // Nextnet test network - use pre-protocol proposal
 //
-
+/*
 const nextnet_chain = new TezosChain(
   {
     category: deprecatedCategory,
@@ -249,7 +249,7 @@ new TezosFaucet(
   },
   provider
 )
-
+*/
 // END of Nextnet
 
 // Tallinnnet test network 
