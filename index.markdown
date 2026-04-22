@@ -47,7 +47,6 @@ These are networks for which the supporting infra will disappear soon
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
 | [Ghostnet](/ghostnet-about) | `2022-01-25` | |  [Snapshot](https://snapshots.tzinit.org/ghostnet/rolling) | 
-| [Nextnet-U-20260320](/nextnet-u-20260320-about) | `2026-03-20` |  [Faucet](https://faucet.nextnet-u-20260320.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/nextnet/rolling) | 
 
 
 
