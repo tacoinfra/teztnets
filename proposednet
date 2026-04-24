@@ -8,7 +8,8 @@
     ]
   },
   "default_bootstrap_peers": [
-    "ushuaianet.teztnets.com"
+    "ushuaianet.teztnets.com",
+    "ushuaianet.tzinit.org"
   ],
   "genesis": {
     "block": "BLTL5xNANUbfrdHsVzdbpYfccoqE3mPuNZjumQiaFAJJpL5taZr",
