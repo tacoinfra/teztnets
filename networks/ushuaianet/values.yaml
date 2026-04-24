@@ -177,7 +177,8 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: []
+bootstrap_peers: 
+  - ushuaianet.tzinit.org
 
 dalNodes:
   dal-bootstrap:

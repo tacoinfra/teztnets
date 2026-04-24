@@ -185,7 +185,7 @@ const ushuaianet_chain = new TezosChain(
     activationBucket: activationBucket,
     helmValuesFile: "networks/ushuaianet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: [],
+    bootstrapPeers: ["ushuaianet.tzinit.org"],
     rpcUrls: [],
     indexers: [],
     chartRepoVersion: "8.0.3",
