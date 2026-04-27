@@ -1,5 +1,5 @@
 images:
-  tezosFaucet: ghcr.io/tacoinfra/tezos-faucet:3.0.6
+  tezosFaucet: ghcr.io/tacoinfra/tezos-faucet:3.0.7
   tezosFaucetBackend: ghcr.io/tacoinfra/tezos-faucet-backend:3.0.4
 
 config:
