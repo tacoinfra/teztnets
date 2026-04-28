@@ -10,7 +10,7 @@ Test Chain for Ushuaia protocol proposal
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.ushuaianet.teztnets.com](https://rpc.ushuaianet.teztnets.com/chains/main/chain_id)<br/> |
 | Full network name | `TEZOS_USHUAIANET_2026-04-21T14:00:00Z` |
-| Tezos docker build | [tezos/tezos:master_43dd36f3_20260421091111](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=master_43dd36f3_20260421091111) |
+| Tezos docker build | [tezos/tezos:octez-v25.0-beta1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v25.0-beta1) |
 | Activated on | 2026-04-21T14:00:00Z |
 | Rolling Snapshot | [Ushuaianet snapshot](https://snapshots.tzinit.org/ushuaianet/rolling) |
 | Faucet | [Ushuaianet faucet](https://faucet.ushuaianet.teztnets.com) |
@@ -30,7 +30,7 @@ Test Chain for Ushuaia protocol proposal
 To join Ushuaianet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:master_43dd36f3_20260421091111
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v25.0-beta1
 ```
 
 
@@ -42,7 +42,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:master_43dd36f3_20260421091111
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout 43dd36f3
+git checkout octez-v25.0-beta1
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
