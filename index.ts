@@ -156,7 +156,7 @@ const bakingnet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.3",
     networkStakes: true,
-    rpcBlockDangerous: true,
+    // rpcBlockDangerous: true, // block /config* and /network* RPC endpoints
   },
   provider
 )
