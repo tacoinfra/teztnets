@@ -156,6 +156,7 @@ const bakingnet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.3",
     networkStakes: true,
+    rpcBlockDangerous: true,
   },
   provider
 )
@@ -252,7 +253,7 @@ new TezosFaucet(
 */
 // END of Nextnet
 
-// Tallinnnet test network 
+// Tallinnnet test network
 //
 const tallinnnet_chain = new TezosChain(
   {
@@ -487,7 +488,7 @@ const ghostnetTeztnet = {
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
   faucet_url: ``,
   snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
-  faucet: false,  
+  faucet: false,
   snapshot: false,
   git_ref: ghostnetRollingVersion,
   human_name: "Ghostnet",
