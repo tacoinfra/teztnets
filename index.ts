@@ -478,7 +478,7 @@ export const networks = {
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
-  ...{ ghostnet: ghostnetNetwork },
+//  ...{ ghostnet: ghostnetNetwork },
 }
 
 const ghostnetTeztnet = {
@@ -530,7 +530,8 @@ export const teztnets = {
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),
-  ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
+  ...{ mainnet: mainnetMetadata },
+//  ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
 deployStatusPage(provider, {
