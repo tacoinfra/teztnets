@@ -37,7 +37,7 @@ const protocolCategory = "Protocol Teztnets"
 const featureCategory = "Feature Teztnets"
 const otherCategory = "Other Teztnets"
 const longCategory = "Long-running Teztnets"
-const deprecatedCategory = "Deprecated Teztnets"
+//const deprecatedCategory = "Deprecated Teztnets"
 
 // Create a GCP resource (Storage Bucket) for Bootstrap Smart Contracts
 const activationBucket = new gcp.storage.Bucket("testnets-global-activation-bucket", {
