@@ -31,7 +31,7 @@ category_desc = {
     "Long-running Teztnets": "These networks are long-running test networks that are similar to mainnet. They run the same protocol as mainnet but switch over to the next protocol earlier than mainnet for testing. If you are testing bakers, use bakingnet. If you are developing applications, use shadownet.",
     "Protocol Teztnets": "These test networks are deployed specifically to test individual Tezos protocols. There is usually one for the currently deployed protocol and one for the next protocol. If you are developing your application for the next protocol, you will want to use that test network.",
     "Periodic/Internal Teztnets": "These test networks restart regularly and track the development of the master branch of [Octez repo](https://gitlab.com/tezos/tezos/).\n \n☠️ You probably don't want to use these unless you are a core protocol developer.",
-    "Deprecated Teztnets": "These are networks for which the supporting infra will disappear soon",
+#    "Deprecated Teztnets": "These are networks for which the supporting infra will disappear soon",
 }
 #    "Feature Teztnets": "Testnets deployed specifically to test specific Tezos features.",
 
@@ -40,7 +40,7 @@ nested_teztnets = {
     "Protocol Teztnets": {},
     #    "Feature Teztnets": {},
     "Periodic/Internal Teztnets": {},
-    "Deprecated Teztnets": {},
+    # "Deprecated Teztnets": {},
 }
 
 for k, v in teztnets.items():
