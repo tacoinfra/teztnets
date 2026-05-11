@@ -482,7 +482,7 @@ export const networks = {
 }
 
 const ghostnetTeztnet = {
-  category: "Deprecated Teztnets",
+  category: "Protocol Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   description: "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
   docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
