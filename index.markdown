@@ -40,12 +40,3 @@ These test networks restart regularly and track the development of the master br
 
 
 
-# Deprecated Teztnets
-
-These are networks for which the supporting infra will disappear soon
-
-| | Activated on | Faucet | Rolling Snapshot |
-|-------|---------------------|--|-----|
-
-
-
