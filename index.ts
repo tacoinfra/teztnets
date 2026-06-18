@@ -126,6 +126,7 @@ new TezosFaucet(
 // Consequently, we made a special class "TezosNodes" for the purpose.
 const ghostnetRollingVersion = "octez-v24.4";
 const ghostnetArchiveVersion = "octez-v24.4";
+/*
 const ghostnet_chain = new TezosNodes(
   "ghostnet-nodes",
   {
@@ -140,7 +141,7 @@ const ghostnet_chain = new TezosNodes(
   },
   provider,
 )
-
+*/
 // Baking Test
 
 const bakingnet_chain = new TezosChain(
@@ -453,6 +454,7 @@ function getTeztnets(chains: TezosChain[]): object {
 // Oxhead Alpha hosts a ghostnet RPC service and baker in the
 // sensitive infra cluster.
 // Instead, we hardcode the values to be displayed on the webpage.
+/*
 const ghostnetNetwork = {
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
   default_bootstrap_peers: [
@@ -471,16 +473,15 @@ const ghostnetNetwork = {
   },
   sandboxed_chain_name: "SANDBOXED_TEZOS",
 }
-
+*/
 export const networks = {
   ...getNetworks([ushuaianet_chain]),
   ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
-//  ...{ ghostnet: ghostnetNetwork },
 }
-
+/*
 const ghostnetTeztnet = {
   category: "Protocol Teztnets",
   chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
@@ -500,7 +501,7 @@ const ghostnetTeztnet = {
     `https://rpc.ghostnet.${domainNameCom}`
   ],
 }
-
+*/
 // We also add mainnet to the teztnets metadata.
 // Some systems rely on this to provide lists of third-party RPC services
 // to their users. For example, umami wallet.
@@ -531,7 +532,6 @@ export const teztnets = {
   ...getTeztnets([shadownet_chain]),
   ...getTeztnets([tallinnnet_chain]),
   ...{ mainnet: mainnetMetadata },
-//  ...{ ghostnet: ghostnetTeztnet, mainnet: mainnetMetadata },
 }
 
 deployStatusPage(provider, {

@@ -226,7 +226,7 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v24.4
+  octez: tezos/tezos:octez-v25.0
 
 votes:
   liquidity_baking_toggle_vote: "pass"
