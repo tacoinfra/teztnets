@@ -73,8 +73,8 @@
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
     "description": "Tezos Mainnet",
-    "docker_build": "tezos/tezos:octez-v24.4",
-    "git_ref": "octez-v24.4",
+    "docker_build": "tezos/tezos:latest",
+    "git_ref": "latest-release",
     "human_name": "Mainnet",
     "indexers": [
       {
@@ -83,9 +83,9 @@
       }
     ],
     "masked_from_main_page": true,
-    "rpc_url": "https://rpc.ghostnet.teztnets.com",
+    "rpc_url": "https://rpc.tzbeta.net",
     "rpc_urls": [
-      "https://rpc.ghostnet.teztnets.com"
+      "https://rpc.tzbeta.net"
     ]
   },
   "proposednet": {
