@@ -118,30 +118,6 @@ new TezosFaucet(
   provider
 )
 
-
-// Ghostnet is different from the other testnets:
-// * launched long time ago, launch code is not in the active code path
-// * heavy usage on the RPC endpoint requires a more elaborate setup
-//   with archive/rolling nodes, NGINX path filtering and rate limiting.
-// Consequently, we made a special class "TezosNodes" for the purpose.
-const ghostnetRollingVersion = "octez-v24.4";
-const ghostnetArchiveVersion = "octez-v24.4";
-/*
-const ghostnet_chain = new TezosNodes(
-  "ghostnet-nodes",
-  {
-    chainName: "ghostnet",
-    rpcFqdn: `rpc.ghostnet.${domainNameCom}`,
-    p2pFqdn: `ghostnet.${domainNameCom}`,
-    octezRollingVersion: ghostnetRollingVersion,
-    octezArchiveVersion: ghostnetArchiveVersion,
-    chartRepoVersion: "8.0.3",
-    rollingPvcSize: "50Gi",
-    archivePvcSize: "3000Gi"
-  },
-  provider,
-)
-*/
 // Baking Test
 
 const bakingnet_chain = new TezosChain(
@@ -450,30 +426,6 @@ function getTeztnets(chains: TezosChain[]): object {
   return teztnets
 }
 
-// We do not host a ghostnet node here.
-// Oxhead Alpha hosts a ghostnet RPC service and baker in the
-// sensitive infra cluster.
-// Instead, we hardcode the values to be displayed on the webpage.
-/*
-const ghostnetNetwork = {
-  chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
-  default_bootstrap_peers: [
-    `ghostnet.${domainNameCom}`,
-    "ghostnet.stakenow.de:9733",
-  ],
-  genesis: {
-    block: "BLockGenesisGenesisGenesisGenesisGenesis1db77eJNeJ9",
-    protocol: "Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P",
-    timestamp: "2022-01-25T15:00:00Z",
-  },
-  genesis_parameters: {
-    values: {
-      genesis_pubkey: "edpkuYLienS3Xdt5c1vfRX1ibMxQuvfM67ByhJ9nmRYYKGAAoTq1UC",
-    },
-  },
-  sandboxed_chain_name: "SANDBOXED_TEZOS",
-}
-*/
 export const networks = {
   ...getNetworks([ushuaianet_chain]),
   ...getNetworks([bakingnet_chain]),
@@ -481,27 +433,7 @@ export const networks = {
   ...getNetworks([shadownet_chain]),
   ...getNetworks([tallinnnet_chain]),
 }
-/*
-const ghostnetTeztnet = {
-  category: "Protocol Teztnets",
-  chain_name: "TEZOS_ITHACANET_2022-01-25T15:00:00Z",
-  description: "Ghostnet is the long-running testnet for Tezos, **but is deprecated - use Shadownet.**",
-  docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
-  faucet_url: ``,
-  snapshot_url: `https://snapshots.tzinit.org/ghostnet/rolling`,
-  faucet: false,
-  snapshot: false,
-  git_ref: ghostnetRollingVersion,
-  human_name: "Ghostnet",
-  indexers: [],
-  masked_from_main_page: false,
-  network_url: `https://${domainNameCom}/ghostnet`,
-  rpc_url: `https://rpc.ghostnet.${domainNameCom}`,
-  rpc_urls: [
-    `https://rpc.ghostnet.${domainNameCom}`
-  ],
-}
-*/
+
 // We also add mainnet to the teztnets metadata.
 // Some systems rely on this to provide lists of third-party RPC services
 // to their users. For example, umami wallet.
@@ -509,8 +441,8 @@ const mainnetMetadata = {
   category: "Long-running Teztnets",
   chain_name: "TEZOS_MAINNET",
   description: "Tezos Mainnet",
-  docker_build: `tezos/tezos:${ghostnetRollingVersion}`,
-  git_ref: ghostnetRollingVersion,
+  docker_build: `tezos/tezos:latest`,
+  git_ref: "latest-release",
   human_name: "Mainnet",
   indexers: [
     {
@@ -519,9 +451,9 @@ const mainnetMetadata = {
     },
   ],
   masked_from_main_page: true,
-  rpc_url: `https://rpc.ghostnet.${domainNameCom}`,
+  rpc_url: `https://rpc.tzbeta.net`,
   rpc_urls: [
-    `https://rpc.ghostnet.${domainNameCom}`
+    `https://rpc.tzbeta.net`
   ],
 }
 
