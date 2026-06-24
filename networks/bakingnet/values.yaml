@@ -154,7 +154,7 @@ nodes:
           - teztnetsbaker
         config:
           shell:
-            history_mode: archive
+            history_mode: full
           rpc:
             cors-headers: [ "content-type" ]
             cors-origin: [ "*" ]
