@@ -221,8 +221,8 @@ dal_deploy_slot_injector:
   dal_node_rpc_url: http://dal-dal1:10732
   slot_size: 65536
 
-full_snapshot_url: null
-rolling_snapshot_url: null
+full_snapshot_url: https://snapshots.tzinit.org/bakingnet/full
+rolling_snapshot_url: https://snapshots.tzinit.org/bakingnet/rolling
 rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: null
