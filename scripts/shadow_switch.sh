@@ -1,5 +1,5 @@
 
-PROTO=PtTALLiNtPec7mE7yY4m3k26J8Qukef3E3ehzhfXgFZKGtDdAXu
+PROTO=PsUshuai9QapM5TGj1JpuVGkdxz5GykdnEvS6Rh8SUVrARvZLCY
 KEY=qdictator
 FAUCET=farrah
 ENDPOINT="https://rpc.shadownet.teztnets.com"
