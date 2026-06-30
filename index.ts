@@ -1,50 +1,50 @@
-import * as pulumi from "@pulumi/pulumi"
-import * as gcp from "@pulumi/gcp"
-import * as k8s from "@pulumi/kubernetes"
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as k8s from "@pulumi/kubernetes";
 
-import * as blake2b from "blake2b"
-import * as bs58check from "bs58check"
+import * as blake2b from "blake2b";
+import * as bs58check from "bs58check";
 
+import deployStatusPage from "./tezos/statusPage";
+import deployMetricsPage from "./tezos/metricsPage";
+import { TezosChain } from "./tezos/chain";
+import { TezosNodes } from "./tezos/nodes";
+import { TezosFaucet } from "./tezos/faucet";
+import getPublicKeyFromPrivateKey from "./tezos/keys";
 
-import deployStatusPage from "./tezos/statusPage"
-import deployMetricsPage from "./tezos/metricsPage"
-import { TezosChain } from "./tezos/chain"
-import { TezosNodes } from "./tezos/nodes"
-import { TezosFaucet } from "./tezos/faucet"
-import getPublicKeyFromPrivateKey from './tezos/keys'
-
-const cfg = new pulumi.Config()
-const faucetPrivateKey = cfg.requireSecret("faucet-private-key")
-const faucetRecaptchaSiteKey = cfg.requireSecret("faucet-recaptcha-site-key")
+const cfg = new pulumi.Config();
+const faucetPrivateKey = cfg.requireSecret("faucet-private-key");
+const faucetRecaptchaSiteKey = cfg.requireSecret("faucet-recaptcha-site-key");
 const faucetRecaptchaSecretKey = cfg.requireSecret(
-  "faucet-recaptcha-secret-key"
-)
-const private_teztnets_baking_key = cfg.requireSecret(
-  "tf-teztnets-baking-key"
-)
+  "faucet-recaptcha-secret-key",
+);
+const private_teztnets_baking_key = cfg.requireSecret("tf-teztnets-baking-key");
 
-const stackname = cfg.require("infra_stack")
-const stackRef = new pulumi.StackReference(stackname)
+const stackname = cfg.require("infra_stack");
+const stackRef = new pulumi.StackReference(stackname);
 
-const kubeconfig = stackRef.requireOutput("kubeconfig")
+const kubeconfig = stackRef.requireOutput("kubeconfig");
 
 const provider = new k8s.Provider("do-k8s-provider", {
   kubeconfig,
-})
+});
 
-const periodicCategory = "Periodic/Internal Teztnets"
-const protocolCategory = "Protocol Teztnets"
-const featureCategory = "Feature Teztnets"
-const otherCategory = "Other Teztnets"
-const longCategory = "Long-running Teztnets"
+const periodicCategory = "Periodic/Internal Teztnets";
+const protocolCategory = "Protocol Teztnets";
+const featureCategory = "Feature Teztnets";
+const otherCategory = "Other Teztnets";
+const longCategory = "Long-running Teztnets";
 //const deprecatedCategory = "Deprecated Teztnets"
 
 // Create a GCP resource (Storage Bucket) for Bootstrap Smart Contracts
-const activationBucket = new gcp.storage.Bucket("testnets-global-activation-bucket", {
-  location: "US", // You can choose the appropriate location
-  uniformBucketLevelAccess: true,
-  storageClass: "STANDARD",
-});
+const activationBucket = new gcp.storage.Bucket(
+  "testnets-global-activation-bucket",
+  {
+    location: "US", // You can choose the appropriate location
+    uniformBucketLevelAccess: true,
+    storageClass: "STANDARD",
+  },
+);
 
 // Set the bucket to be publicly readable
 new gcp.storage.BucketIAMMember("publicRead", {
@@ -52,7 +52,6 @@ new gcp.storage.BucketIAMMember("publicRead", {
   role: "roles/storage.objectViewer",
   member: "allUsers",
 });
-
 
 // Define another domain name and a suitable name for the managed zone
 const domainNameCom = "teztnets.com";
@@ -64,7 +63,6 @@ const dnsZoneCom = new gcp.dns.ManagedZone(managedZoneNameCom, {
   dnsName: domainNameCom + ".",
   description: "Managed zone for " + domainNameCom,
 });
-
 
 // GitHub Pages IP addresses
 
@@ -79,7 +77,7 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
     "185.199.109.153",
     "185.199.110.153",
     "185.199.111.153",
-  ]
+  ],
 });
 
 // Weeklynet - restarts Wednesdays
@@ -102,8 +100,8 @@ const weeklynet_chain = new TezosChain(
     bootstrapPeers: ["weeklynet.tzinit.org"],
     //    alias: "weeklynet",
   },
-  provider
-)
+  provider,
+);
 new TezosFaucet(
   weeklynet_chain.name,
   {
@@ -115,8 +113,8 @@ new TezosFaucet(
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
   },
-  provider
-)
+  provider,
+);
 
 // Baking Test
 
@@ -124,7 +122,8 @@ const bakingnet_chain = new TezosChain(
   {
     category: longCategory,
     humanName: "Bakingnet",
-    description: "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
+    description:
+      "A long-term test network for bakers. It will switch protocols approximately one week before mainnet.\nHowever we reserve the right to restart it if it breaks. Fingers crossed.\nFor applications testing, you will be best off on shadownet.",
     activationBucket: activationBucket,
     helmValuesFile: "networks/bakingnet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
@@ -135,8 +134,8 @@ const bakingnet_chain = new TezosChain(
     networkStakes: true,
     // rpcBlockDangerous: true, // block /config* and /network* RPC endpoints
   },
-  provider
-)
+  provider,
+);
 
 new TezosFaucet(
   bakingnet_chain.name,
@@ -149,8 +148,8 @@ new TezosFaucet(
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
   },
-  provider
-)
+  provider,
+);
 
 // Ushuaia
 //
@@ -168,10 +167,10 @@ const ushuaianet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.3",
     networkStakes: true,
-    alias: "proposednet", // Add alias
+    //
   },
-  provider
-)
+  provider,
+);
 
 new TezosFaucet(
   ushuaianet_chain.name,
@@ -183,13 +182,12 @@ new TezosFaucet(
     faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
-    alias: "proposednet", // Add alias
+    //    alias: "currentnet", // Add alias
   },
-  provider
-)
+  provider,
+);
 
 // END of U
-
 
 // Nextnet test network - use pre-protocol proposal
 //
@@ -230,50 +228,14 @@ new TezosFaucet(
 */
 // END of Nextnet
 
-// Tallinnnet test network
-//
-const tallinnnet_chain = new TezosChain(
-  {
-    category: protocolCategory,
-    humanName: "Tallinnnet",
-    description: "Test Chain for Tallinn protocol",
-    activationBucket: activationBucket,
-    helmValuesFile: "networks/tallinnnet/values.yaml",
-    bakingPrivateKey: private_teztnets_baking_key,
-    bootstrapPeers: ["tallinnnet.tzinit.org"],
-    rpcUrls: [],
-    indexers: [],
-    chartRepoVersion: "8.0.3",
-    networkStakes: true,
-    alias: "currentnet", // Add alias
-  },
-  provider
-)
-
-new TezosFaucet(
-  tallinnnet_chain.name,
-  {
-    namespace: tallinnnet_chain.namespace,
-    humanName: "Tallinnnet",
-    helmValuesFile: "networks/tallinnnet/faucet_values.yaml",
-    faucetPrivateKey: faucetPrivateKey,
-    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
-    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
-    chartRepoVersion: "8.0.2",
-    alias: "currentnet", // Add alias
-  },
-  provider
-)
-
-// END of Tallinnnet
-
 // Shadownet testing
 //
 const shadownet_chain = new TezosChain(
   {
     category: longCategory,
     humanName: "Shadownet",
-    description: "A long-term test network for Tezos. It shadows mainnet. We will treat it as near production, switching it over to the next protocol shortly after mainnet.\nWe prefer that you don't test bakers on this network - please use bakingnet or one of the protocol networks.",
+    description:
+      "A long-term test network for Tezos. It shadows mainnet. We will treat it as near production, switching it over to the next protocol shortly after mainnet.\nWe prefer that you don't test bakers on this network - please use bakingnet or one of the protocol networks.",
     activationBucket: activationBucket,
     helmValuesFile: "networks/shadownet/values.yaml",
     bakingPrivateKey: private_teztnets_baking_key,
@@ -283,8 +245,8 @@ const shadownet_chain = new TezosChain(
     chartRepoVersion: "8.0.3",
     networkStakes: true,
   },
-  provider
-)
+  provider,
+);
 
 new TezosFaucet(
   shadownet_chain.name,
@@ -297,53 +259,58 @@ new TezosFaucet(
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
   },
-  provider
-)
+  provider,
+);
 
 // End of Shadownet
 
 function getNetworks(chains: TezosChain[]): object {
-  const networks: { [name: string]: object } = {}
+  const networks: { [name: string]: object } = {};
 
   chains.forEach(function (chain) {
-    const bootstrapPeers: string[] = Object.assign([], chain.params.bootstrapPeers) // clone
-    bootstrapPeers.splice(0, 0, `${chain.name}.${domainNameCom}`)
+    const bootstrapPeers: string[] = Object.assign(
+      [],
+      chain.params.bootstrapPeers,
+    ); // clone
+    bootstrapPeers.splice(0, 0, `${chain.name}.${domainNameCom}`);
 
     // genesis_pubkey is the public key associated with the $TEZOS_OXHEAD_BAKING_KEY private key in github secrets
-    let genesisPubkey = getPublicKeyFromPrivateKey(chain.params.bakingPrivateKey)
+    let genesisPubkey = getPublicKeyFromPrivateKey(
+      chain.params.bakingPrivateKey,
+    );
     const network = Object.assign(
       {},
-      chain.tezosHelmValues["node_config_network"]
-    ) // clone
-    network["sandboxed_chain_name"] = "SANDBOXED_TEZOS"
-    network["default_bootstrap_peers"] = bootstrapPeers
+      chain.tezosHelmValues["node_config_network"],
+    ); // clone
+    network["sandboxed_chain_name"] = "SANDBOXED_TEZOS";
+    network["default_bootstrap_peers"] = bootstrapPeers;
     network["genesis_parameters"] = {
       values: {
         genesis_pubkey: genesisPubkey,
       },
-    }
+    };
     if ("activation_account_name" in network) {
-      delete network["activation_account_name"]
+      delete network["activation_account_name"];
     }
     if ("genesis" in network && "block" in network["genesis"] === false) {
       // If block hash not passed, use tezos-k8s convention:
       // deterministically derive it from chain name.
-      var input = Buffer.from(network["chain_name"])
-      var gbk = blake2b(32).update(input).digest("hex")
-      var bytes = Buffer.from("0134" + gbk, "hex")
-      network["genesis"]["block"] = bs58check.encode(bytes)
+      var input = Buffer.from(network["chain_name"]);
+      var gbk = blake2b(32).update(input).digest("hex");
+      var bytes = Buffer.from("0134" + gbk, "hex");
+      network["genesis"]["block"] = bs58check.encode(bytes);
     }
     if ("dal_config" in network) {
       network["dal_config"]["bootstrap_peers"] = [
         `dal.${chain.name}.${domainNameCom}:11732`,
         `${chain.name}.bootstrap.dal.nomadic-labs.com:11732`,
-      ]
+      ];
     }
 
-    networks[chain.name] = network
-  })
+    networks[chain.name] = network;
+  });
 
-  return networks
+  return networks;
 }
 
 // Define the network info interface
@@ -371,10 +338,10 @@ interface NetworkInfo {
 }
 
 function getTeztnets(chains: TezosChain[]): object {
-  const teztnets: { [name: string]: NetworkInfo } = {}
+  const teztnets: { [name: string]: NetworkInfo } = {};
 
   chains.forEach(function (chain) {
-    let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`
+    let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`;
 
     // Create the base network information
     const networkInfo: NetworkInfo = {
@@ -395,35 +362,35 @@ function getTeztnets(chains: TezosChain[]): object {
       rpc_urls: chain.getRpcUrls(),
       masked_from_main_page: false,
       indexers: chain.params.indexers || [],
-      network_stakes: chain.params.networkStakes || false
-    }
+      network_stakes: chain.params.networkStakes || false,
+    };
 
     // Add DAL nodes if present
     if (Object.keys(chain.dalNodes).length > 0) {
-      (networkInfo as any)['dal_nodes'] = chain.dalNodes;
+      (networkInfo as any)["dal_nodes"] = chain.dalNodes;
     }
 
     // Add the network to teztnets
-    teztnets[chain.name] = networkInfo
+    teztnets[chain.name] = networkInfo;
 
     // If an alias is defined, create an alias entry that points to the same network
     if (chain.params.alias) {
       // Create a copy of the network info for the alias
-      const aliasNetworkInfo: NetworkInfo = { ...networkInfo }
+      const aliasNetworkInfo: NetworkInfo = { ...networkInfo };
 
       // Update URLs to use the alias domain
-      aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`
-      aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`
+      aliasNetworkInfo.faucet_url = `https://faucet.${chain.params.alias}.${domainNameCom}`;
+      aliasNetworkInfo.rpc_url = `https://rpc.${chain.params.alias}.${domainNameCom}`;
 
       // Mark as an alias
-      aliasNetworkInfo.aliasOf = chain.name
+      aliasNetworkInfo.aliasOf = chain.name;
 
       // Add the network alias to teztnets
-      teztnets[chain.params.alias] = aliasNetworkInfo
+      teztnets[chain.params.alias] = aliasNetworkInfo;
     }
-  })
+  });
 
-  return teztnets
+  return teztnets;
 }
 
 export const networks = {
@@ -431,8 +398,7 @@ export const networks = {
   ...getNetworks([bakingnet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
-  ...getNetworks([tallinnnet_chain]),
-}
+};
 
 // We also add mainnet to the teztnets metadata.
 // Some systems rely on this to provide lists of third-party RPC services
@@ -452,25 +418,22 @@ const mainnetMetadata = {
   ],
   masked_from_main_page: true,
   rpc_url: `https://rpc.tzbeta.net`,
-  rpc_urls: [
-    `https://rpc.tzbeta.net`
-  ],
-}
+  rpc_urls: [`https://rpc.tzbeta.net`],
+};
 
 export const teztnets = {
   ...getTeztnets([ushuaianet_chain]),
   ...getTeztnets([bakingnet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
-  ...getTeztnets([tallinnnet_chain]),
   ...{ mainnet: mainnetMetadata },
-}
+};
 
 deployStatusPage(provider, {
   networks: networks,
   teztnets: teztnets,
   statusPageFqdn: `status.${domainNameCom}`,
-  chartRepoVersion: "7.0.9"
+  chartRepoVersion: "7.0.9",
 });
 deployMetricsPage(provider, {
   metricsPageFqdn: `metrics.${domainNameCom}`,
@@ -478,27 +441,38 @@ deployMetricsPage(provider, {
 
 // Redirects .xyz to .com
 
-function createDomainRedirectIngress(srcDomain: string, destDomain: string): k8s.networking.v1.Ingress {
-  return new k8s.networking.v1.Ingress(`ingress-redirect-${srcDomain}`, {
-    metadata: {
-      annotations: {
-        "kubernetes.io/ingress.class": "nginx",
-        "cert-manager.io/cluster-issuer": "letsencrypt-prod",
-        "nginx.ingress.kubernetes.io/enable-cors": "true",
-        "nginx.ingress.kubernetes.io/cors-allow-origin": "*",
-        "nginx.ingress.kubernetes.io/server-snippet": `return 301 $scheme://${destDomain}$request_uri;`
+function createDomainRedirectIngress(
+  srcDomain: string,
+  destDomain: string,
+): k8s.networking.v1.Ingress {
+  return new k8s.networking.v1.Ingress(
+    `ingress-redirect-${srcDomain}`,
+    {
+      metadata: {
+        annotations: {
+          "kubernetes.io/ingress.class": "nginx",
+          "cert-manager.io/cluster-issuer": "letsencrypt-prod",
+          "nginx.ingress.kubernetes.io/enable-cors": "true",
+          "nginx.ingress.kubernetes.io/cors-allow-origin": "*",
+          "nginx.ingress.kubernetes.io/server-snippet": `return 301 $scheme://${destDomain}$request_uri;`,
+        },
+      },
+      spec: {
+        tls: [
+          {
+            hosts: [srcDomain],
+            secretName: `${srcDomain}-secret`,
+          },
+        ],
+        rules: [
+          {
+            host: srcDomain,
+          },
+        ],
       },
     },
-    spec: {
-      tls: [{
-        hosts: [srcDomain],
-        secretName: `${srcDomain}-secret`,
-      }],
-      rules: [{
-        host: srcDomain
-      }]
-    },
-  }, { provider });
+    { provider },
+  );
 }
 
 // Define your domain name and a suitable name for the managed zone
