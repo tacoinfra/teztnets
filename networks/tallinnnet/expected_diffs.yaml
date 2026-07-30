@@ -1,0 +1,44 @@
+# Expected parameter differences between Tallinnnet and mainnet.
+# Each key documents an intentional deviation. Any diff NOT listed here
+# will cause CI to fail.
+
+# --- Block timing (faster for testing) ---
+minimal_block_delay: "4s blocks (mainnet 6s) for faster test iterations"
+delay_increment_per_round: "scaled with minimal_block_delay"
+max_operations_time_to_live: "scaled with block time"
+nonce_revelation_threshold: "scaled with blocks_per_cycle"
+
+# --- Cycle/voting (shorter for testing) ---
+blocks_per_cycle: "short cycles for faster testing"
+blocks_per_commitment: "scaled with blocks_per_cycle"
+cycles_per_voting_period: "single cycle voting for fast governance testing"
+delegate_parameters_activation_delay: "shorter for testing"
+
+# --- Proof of work / VDF (relaxed for testnet) ---
+proof_of_work_threshold: "disabled for testnet"
+vdf_difficulty: "reduced for testnet"
+
+# --- Issuance ---
+issuance_weights.base_total_issued_per_minute: "adjusted for testnet economics"
+liquidity_baking_toggle_ema_threshold: "lower threshold for testnet"
+
+# --- Smart rollups (accelerated for testing) ---
+smart_rollup_arith_pvm_enable: "enabled for testing"
+smart_rollup_riscv_pvm_enable: "enabled for testing"
+smart_rollup_challenge_window_in_blocks: "scaled with block time"
+smart_rollup_commitment_period_in_blocks: "scaled with block time"
+smart_rollup_max_active_outbox_levels: "scaled with block time"
+smart_rollup_max_lookahead_in_blocks: "scaled with block time"
+smart_rollup_timeout_period_in_blocks: "scaled with block time"
+smart_rollup_stake_amount: "lower stake for testnet"
+smart_rollup_reveal_activation_level.dal_page: "activated from genesis"
+smart_rollup_reveal_activation_level.dal_parameters: "activated from genesis"
+
+# --- Testnet-only features ---
+testnet_dictator: "testnet dictator for emergency protocol changes"
+zk_rollup_enable: "enabled for testing"
+
+# --- KNOWN ISSUE ---
+# This value was carried over from proto_023 genesis params and does not
+# match mainnet's proto_024 value (1,040,000). See PR #44.
+hard_gas_limit_per_block: "KNOWN ISSUE: stale proto_023 value (1,386,666 vs mainnet 1,040,000)"
