@@ -396,7 +396,7 @@ function getTeztnets(chains: TezosChain[]): object {
 export const networks = {
   ...getNetworks([ushuaianet_chain]),
   ...getNetworks([bakingnet_chain]),
-//  ...getNetworks([weeklynet_chain]),
+  ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
 };
 
@@ -424,7 +424,7 @@ const mainnetMetadata = {
 export const teztnets = {
   ...getTeztnets([ushuaianet_chain]),
   ...getTeztnets([bakingnet_chain]),
-//  ...getTeztnets([weeklynet_chain]),
+  ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...{ mainnet: mainnetMetadata },
 };

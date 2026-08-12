@@ -45,6 +45,8 @@ activation:
     blocks_per_cycle: 200
     blocks_preservation_cycles: 1
     cache_sampler_state_cycles: 5
+    cache_stake_info_cycles: 5                    # new in Ushuaia — must equal cache_stake_distribution_cycles
+    cache_swrr_selected_distribution_cycles: 5    # new in Ushuaia — must equal cache_stake_distribution_cycles
     cache_script_size: 100000000
     cache_stake_distribution_cycles: 5
     consensus_committee_size: 7000
@@ -55,11 +57,13 @@ activation:
     dal_parametric:
       feature_enable: true
       incentives_enable: true
+      dynamic_lag_enable: true                    # new in Ushuaia (enabled on mainnet too)
       number_of_slots: 32
       number_of_shards: 512
       attestation_lag: 8
+      attestation_lags: [1, 2, 3, 4, 5, 6, 7, 8]            # new in Ushuaia — increasing, last element == attestation_lag
       attestation_threshold: 66
-      slot_size: 126944
+      slot_size: 380832
       redundancy_factor: 8
       page_size: 3967
       minimal_participation_ratio:
@@ -92,7 +96,7 @@ activation:
     liquidity_baking_toggle_ema_threshold: 100000
     max_operations_time_to_live: 120
     max_slashing_per_block: 10000
-    max_slashing_threshold: 
+    max_slashing_threshold:
       numerator: 1
       denominator: 3
     minimal_block_delay: "4"
@@ -121,6 +125,7 @@ activation:
     smart_rollup_origination_size: 6314
     smart_rollup_private_enable: true
     smart_rollup_riscv_pvm_enable: true
+#    smart_rollup_canonical_rollup_address: null
     smart_rollup_stake_amount: "32000000"
     smart_rollup_timeout_period_in_blocks: 781
     smart_rollup_reveal_activation_level:
@@ -136,6 +141,10 @@ activation:
     zk_rollup_origination_size: 4000
     zk_rollup_min_pending_to_process: 10
     zk_rollup_max_ticket_payload_size: 2048
+
+    native_contracts_enable: true                 # new in Ushuaia — override: true for testnet dogfooding (false on mainnet)
+    swrr_new_baker_lottery_enable: false          # new in Ushuaia — kept false, still experimental even in sandbox/test
+    tz5_account_enable: true                      # new in Ushuaia — override: true for testnet dogfooding (false on mainnet)
   bootstrap_parameters:
     bootstrap_smart_rollups:
     - address: "sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf"
