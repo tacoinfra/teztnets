@@ -148,6 +148,9 @@ new TezosFaucet(
     faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
     chartRepoVersion: "8.0.2",
   },
+  provider,
+);
+
 // Baking Test
 
 const bakingnet_chain = new TezosChain(
