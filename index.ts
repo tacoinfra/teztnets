@@ -81,7 +81,6 @@ new gcp.dns.RecordSet("teztnetsComSiteRecord", {
 });
 
 // Weeklynet - restarts Wednesdays
-/*
 const weeklynet_chain = new TezosChain(
   {
     category: periodicCategory,
@@ -116,7 +115,6 @@ new TezosFaucet(
   },
   provider,
 );
-*/
 
 // Baking Test
 
