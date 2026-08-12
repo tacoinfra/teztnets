@@ -116,6 +116,38 @@ new TezosFaucet(
   provider,
 );
 
+// Snet - for Kevin
+
+const snet_chain = new TezosChain(
+  {
+    category: longCategory,
+    humanName: "Snet",
+    description:
+      "A longer-term test network for stez testing.",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/snet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "8.0.3",
+    networkStakes: true,
+    // rpcBlockDangerous: true, // block /config* and /network* RPC endpoints
+  },
+  provider,
+);
+
+new TezosFaucet(
+  snet_chain.name,
+  {
+    namespace: snet_chain.namespace,
+    humanName: "Snet",
+    helmValuesFile: "networks/snet/faucet_values.yaml",
+    faucetPrivateKey: faucetPrivateKey,
+    faucetRecaptchaSiteKey: faucetRecaptchaSiteKey,
+    faucetRecaptchaSecretKey: faucetRecaptchaSecretKey,
+    chartRepoVersion: "8.0.2",
+  },
 // Baking Test
 
 const bakingnet_chain = new TezosChain(
@@ -396,6 +428,7 @@ function getTeztnets(chains: TezosChain[]): object {
 export const networks = {
   ...getNetworks([ushuaianet_chain]),
   ...getNetworks([bakingnet_chain]),
+  ...getNetworks([snet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
 };
@@ -424,6 +457,7 @@ const mainnetMetadata = {
 export const teztnets = {
   ...getTeztnets([ushuaianet_chain]),
   ...getTeztnets([bakingnet_chain]),
+  ...getTeztnets([snet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
   ...{ mainnet: mainnetMetadata },
