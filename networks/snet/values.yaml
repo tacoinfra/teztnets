@@ -1,12 +1,12 @@
 node_config_network:
   activation_account_name: teztnetsbaker
-  chain_name: TEZOS_SNET_2026-08-12T11:00:00Z
+  chain_name: TEZOS_SNET_2026-08-14T11:00:00Z
   genesis:
     protocol: Ps9mPmXaRzmzk35gbAYNCAw6UXdE2qoABTHbN2oEEc1qM7CwT9P
-    timestamp: "2026-08-12T11:00:00Z"
-  user_activated_upgrades:
-    - level: 1600
-      replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
+    timestamp: "2026-08-14T11:00:00Z"
+#  user_activated_upgrades:
+#    - level: 1600
+#      replacement_protocol: ProtoALphaALphaALphaALphaALphaALphaALphaALphaDdp3zK
   dal_config:
     activated: true
 
@@ -147,24 +147,6 @@ activation:
     native_contracts_enable: true                 # new in Ushuaia — override: true for testnet dogfooding (false on mainnet)
     swrr_new_baker_lottery_enable: false          # new in Ushuaia — kept false, still experimental even in sandbox/test
     tz5_account_enable: true                      # new in Ushuaia — override: true for testnet dogfooding (false on mainnet)
-  bootstrap_parameters:
-    bootstrap_smart_rollups:
-    - address: "sr1RYurGZtN8KNSpkMcCt9CgWeUaNkzsAfXf"
-      pvm_kind: "wasm_2_0_0"
-      kernel: "fromfile#/usr/local/share/tezos/evm_kernel/evm_installer.wasm"
-      parameters_ty:
-        prim: pair
-        args:
-        - prim: pair
-          args:
-          - prim: bytes
-          - prim: ticket
-            args:
-            - prim: unit
-        - prim: pair
-          args:
-          - prim: nat
-          - prim: bytes
 
 nodes:
   tezos-baking-node:
@@ -263,13 +245,13 @@ dal_deploy_slot_injector:
 
 bootstrap_peers: []
 full_snapshot_url: null
-rolling_snapshot_url: https://snapshots.tzinit.org/weeklynet/rolling
+rolling_snapshot_url: null
 rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:master
+  octez: tezos/tezos:octez-v25.1
 
 serviceMonitor:
   enabled: true
@@ -301,3 +283,4 @@ accounts:
     # tz1a4GT7THHaGDiTxgXoatDWcZfJ5j29z5RC
     key: edpkvGYHoY5kwq13Ak6r4fLa1GGSHKJZVe7xJFV6ZgHwdZeaHy3WZj
     bootstrap_balance: "200000000000000"
+    is_bootstrap_baker_account: false
