@@ -125,7 +125,7 @@
   },
   "snet": {
     "category": "Long-running Teztnets",
-    "chain_name": "TEZOS_SNET_2026-08-12T11:00:00Z",
+    "chain_name": "TEZOS_SNET_2026-08-14T11:00:00Z",
     "dal_nodes": {
       "dal-bootstrap": {
         "humanName": "DAL Bootstrap",
@@ -139,11 +139,11 @@
       }
     },
     "description": "A longer-term test network for stez testing.",
-    "docker_build": "tezos/tezos:master",
+    "docker_build": "tezos/tezos:octez-v25.1",
     "evm_proxy_urls": [],
     "faucet": true,
     "faucet_url": "https://faucet.snet.teztnets.com",
-    "git_ref": "master",
+    "git_ref": "octez-v25.1",
     "human_name": "Snet",
     "indexers": [],
     "masked_from_main_page": false,
@@ -156,7 +156,7 @@
     ],
     "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/snet/rolling",
-    "activated_on": "2026-08-12"
+    "activated_on": "2026-08-14"
   },
   "ushuaianet": {
     "category": "Protocol Teztnets",
