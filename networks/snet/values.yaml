@@ -250,6 +250,9 @@ rolling_tarball_url: null
 archive_tarball_url: null
 snapshot_source: null
 
+faucet: false
+snapshot: false
+
 images:
   octez: tezos/tezos:octez-v25.1
 
