@@ -135,6 +135,7 @@ const snet_chain = new TezosChain(
   },
   provider,
 );
+/*
 new TezosFaucet(
   snet_chain.name,
   {
@@ -148,6 +149,7 @@ new TezosFaucet(
   },
   provider,
 );
+*/
 // Baking Test
 
 const bakingnet_chain = new TezosChain(
