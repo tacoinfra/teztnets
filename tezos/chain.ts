@@ -24,6 +24,8 @@ export interface TezosParameters {
   readonly helmValuesFile: string
   readonly schedule?: string
   readonly networkStakes?: boolean
+  readonly hideSnapshot?: boolean
+  readonly hideFaucet?: boolean
   readonly rpcBlockDangerous?: boolean
 }
 
