@@ -12,9 +12,9 @@ These networks are long-running test networks that are similar to mainnet. They 
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Bakingnet](/bakingnet-about) | `2026-04-08` |  [Faucet](https://faucet.bakingnet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/bakingnet/rolling) | 
-| [Shadownet](/shadownet-about) | `2025-08-07` |  [Faucet](https://faucet.shadownet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) | 
-| [Snet](/snet-about) | `2026-08-14` |  [Faucet](https://faucet.snet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/snet/rolling) | 
+| [Bakingnet](/bakingnet-about) | `2026-04-08` |  [Faucet](https://faucet.bakingnet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/bakingnet/rolling) |
+| [Shadownet](/shadownet-about) | `2025-08-07` |  [Faucet](https://faucet.shadownet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/shadownet/rolling) |
+| [Snet](/snet-about) | `2026-08-14` | | |
 
 
 
@@ -24,7 +24,7 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Ushuaianet](/ushuaianet-about) | `2026-04-21` |  [Faucet](https://faucet.ushuaianet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/ushuaianet/rolling) | 
+| [Ushuaianet](/ushuaianet-about) | `2026-04-21` |  [Faucet](https://faucet.ushuaianet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/ushuaianet/rolling) |
 
 
 
@@ -36,7 +36,7 @@ These test networks restart regularly and track the development of the master br
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Weeklynet](/weeklynet-about) | `2026-08-12` |  [Faucet](https://faucet.weeklynet-2026-08-12.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) | 
+| [Weeklynet](/weeklynet-about) | `2026-08-12` |  [Faucet](https://faucet.weeklynet-2026-08-12.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/weeklynet/rolling) |
 
 
 

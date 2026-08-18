@@ -141,8 +141,8 @@
     "description": "A longer-term test network for stez testing.",
     "docker_build": "tezos/tezos:octez-v25.1",
     "evm_proxy_urls": [],
-    "faucet": true,
-    "faucet_url": "https://faucet.snet.teztnets.com",
+    "faucet": false,
+    "faucet_url": "",
     "git_ref": "octez-v25.1",
     "human_name": "Snet",
     "indexers": [],
@@ -154,8 +154,8 @@
     "rpc_urls": [
       "https://rpc.snet.teztnets.com"
     ],
-    "snapshot": true,
-    "snapshot_url": "https://snapshots.tzinit.org/snet/rolling",
+    "snapshot": false,
+    "snapshot_url": "",
     "activated_on": "2026-08-14"
   },
   "ushuaianet": {

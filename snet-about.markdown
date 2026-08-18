@@ -12,8 +12,6 @@ A longer-term test network for stez testing.
 | Full network name | `TEZOS_SNET_2026-08-14T11:00:00Z` |
 | Tezos docker build | [tezos/tezos:octez-v25.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v25.1) |
 | Activated on | 2026-08-14T11:00:00Z |
-| Rolling Snapshot | [Snet snapshot](https://snapshots.tzinit.org/snet/rolling) |
-| Faucet | [Snet faucet](https://faucet.snet.teztnets.com) |
 
 
 
@@ -60,13 +58,6 @@ octez-node config init --network https://teztnets.com/snet
 ```
 
 
-### Recover from a snapshot
-
-```
-wget -O snapshot_file https://snapshots.tzinit.org/snet/rolling
-octez-node snapshot import snapshot_file
-```
-
 
 ### Run the node
 
@@ -98,7 +89,7 @@ For more info, read this [blog post from Nomadic Labs](https://research-developm
 
 ### Bake on the Snet network
 
-To improve reliability of the chain, you can take part in the consensus by becoming a baker. In that case, you will need some test tokens from the [faucet](https://faucet.snet.teztnets.com).
+To improve reliability of the chain, you can take part in the consensus by becoming a baker. 
 
 If you are not a bootstrap baker, you need to register your key as a delegate using your alias or `pkh`. For instance:
 ```bash=2
