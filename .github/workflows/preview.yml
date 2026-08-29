@@ -23,3 +23,21 @@ jobs:
       - name: Validate YAML Files
         run: |
           python -c "import yaml, glob; [yaml.safe_load(open(file)) for file in glob.glob('networks/*/*.yaml')]"
+
+  check-testnet-params:
+    name: Check Testnet Parameters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Check testnet parameters against mainnet
+        run: python scripts/check_testnet_params.py
