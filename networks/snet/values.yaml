@@ -252,6 +252,8 @@ snapshot_source: null
 
 faucet: false
 snapshot: false
+snapshot_url: null
+faucet_url: null
 
 images:
   octez: tezos/tezos:octez-v25.1
