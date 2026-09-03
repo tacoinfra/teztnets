@@ -10,7 +10,7 @@ A longer-term test network for stez testing.
 |-------|---------------------|
 | Public RPC endpoints | [https://rpc.snet.teztnets.com](https://rpc.snet.teztnets.com/chains/main/chain_id)<br/> |
 | Full network name | `TEZOS_SNET_2026-08-14T11:00:00Z` |
-| Tezos docker build | [tezos/tezos:octez-v25.1](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v25.1) |
+| Tezos docker build | [tezos/tezos:octez-v25.2](https://hub.docker.com/r/tezos/tezos/tags?page=1&ordering=last_updated&name=octez-v25.2) |
 | Activated on | 2026-08-14T11:00:00Z |
 
 
@@ -28,7 +28,7 @@ A longer-term test network for stez testing.
 To join Snet with docker, open a shell in the container:
 
 ```
-docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v25.1
+docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v25.2
 ```
 
 
@@ -40,7 +40,7 @@ docker run -it --entrypoint=/bin/sh tezos/tezos:octez-v25.1
 cd
 git clone git@gitlab.com:tezos/tezos.git
 cd tezos
-git checkout octez-v25.1
+git checkout octez-v25.2
 opam init # if this is your first time using OPAM
 make build-deps
 eval $(opam env)
