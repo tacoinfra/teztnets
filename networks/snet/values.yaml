@@ -256,7 +256,7 @@ snapshot_url: null
 faucet_url: null
 
 images:
-  octez: tezos/tezos:octez-v25.1
+  octez: tezos/tezos:octez-v25.2
 
 serviceMonitor:
   enabled: true

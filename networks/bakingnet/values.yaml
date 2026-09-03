@@ -18,7 +18,7 @@ node_config_network:
 #     protocol_parameters:
 #       aggregate_attestation: true
 #       allow_tz4_delegate_enable: true
-#       all_bakers_attest_activation_threshold: 
+#       all_bakers_attest_activation_threshold:
 #         numerator: 1
 #         denominator: 2
 #       consensus_rights_delay: 2
@@ -228,11 +228,11 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v25.1
+  octez: tezos/tezos:octez-v25.2
 
 votes:
   liquidity_baking_toggle_vote: "pass"
-    
+
 # Initial balances section
 #
 
@@ -271,12 +271,12 @@ accounts:
   # Baker 14 - Capt Stake
   #
   captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
     is_bootstrap_baker_account: false
     bootstrap_balance: "936000000000"
 
-  
+
 
 # Faucets
 #
@@ -320,7 +320,3 @@ accounts:
     key: edpkuzzJcZDjXL7hWMnyC1y3joyrGgBiDVVRJUqnG3LKgPvZrpNWxT
     is_bootstrap_baker_account: false
     bootstrap_balance: "200000000000"
-
-
-
-

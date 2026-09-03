@@ -177,7 +177,7 @@ nodes:
   # Overwrite default values.yaml rolling-node
   rolling-node: null
 
-bootstrap_peers: 
+bootstrap_peers:
   - ushuaianet.tzinit.org
 
 dalNodes:
@@ -224,11 +224,11 @@ archive_tarball_url: null
 snapshot_source: null
 
 images:
-  octez: tezos/tezos:octez-v25.1
+  octez: tezos/tezos:octez-v25.2
 
 votes:
   liquidity_baking_toggle_vote: "pass"
-    
+
 accounts:
   teztnetsbaker:
     # tz1TnEtqDV9mZyts2pfMy6Jw1BTPs4LMjL8M
@@ -247,14 +247,14 @@ accounts:
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   captstake:
-    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof 
+    # tz1N29q5T3jJ2i1JEWHax7q1NRkDMADj6fof
     key: edpkvV1FvrCmd68k6yMCfhiW6WNXSb1kZPWJhkr9KZPTtW7ukBs8dj
     is_bootstrap_baker_account: false
     bootstrap_balance: "1000000000000"
   german:
     # tz1TGKSrZrBpND3PELJ43nVdyadoeiM1WMzb
     # Germán Delbianco
-    # german.delbianco@trili.tech 
+    # german.delbianco@trili.tech
     key: edpkvG8RpyhnPi3ugWWvavsKwR79rb7iMvedeFNxBdyCvenTDZeC9n
     type: public
     is_bootstrap_baker_account: false
@@ -323,12 +323,12 @@ accounts:
     key: edpkvaKebJW8Y871pHq3sbNq8vre2Gyk9pxZ9mc3TTqYEP2LGWZhX9
     bootstrap_balance: "1000000000000"
     is_bootstrap_baker_account: false
-  # "Zir0h's Testnet bakery" 
+  # "Zir0h's Testnet bakery"
   # tz1NNT9EERmcKekRq2vdv6e8TL3WQpY8AXSF
   zir0h:
     key: edpkvGTRQwdJ11QENyYifpnnNxthH6KzQsFtD5FKtEJj3MaijAUkof
     bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false  
+    is_bootstrap_baker_account: false
   # tz1iHq8QLYf3CvPV23UVkhk6WG74psJ4WpWp (Barry Manilow)
   barry_manilow:
     key: edpkvKpSMUDaKZKCLwE69XDiijZcAuuFH2h2NcRiTQD4W3FLGAzxei
@@ -340,7 +340,7 @@ accounts:
   poulet:
     key: p2pk67wXWykNWau9DpoAqGBuGdo7ke8TkF32D6PJt5QEx4P9b27MKbK
     bootstrap_balance: "1000000000000"
-    is_bootstrap_baker_account: false  
+    is_bootstrap_baker_account: false
    # tz4P1CLxknigJT5HF2RDGJxuzjiNLE3Gs2bf
    #  key: BLpk1rk1rAKPMtLDUbxoPmjyi9axuSQZUxdYArzeahFTP4Z4FNvboXxbvsAod8cecUmqrtnjfFdn
 
@@ -393,4 +393,3 @@ accounts:
     key: sppk7ZkJrt5MHHFUsQ8ePEqTgchiWLuJERHzneoUV2bVau8nkodXXs7
     is_bootstrap_baker_account: false
     bootstrap_balance: "50000000000000000"
-
