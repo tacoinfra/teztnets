@@ -131,6 +131,8 @@ const snet_chain = new TezosChain(
     indexers: [],
     chartRepoVersion: "8.0.3",
     networkStakes: true,
+    hideSnapshot: true,
+    hideFaucet: true,
     // rpcBlockDangerous: true, // block /config* and /network* RPC endpoints
   },
   provider,
@@ -375,7 +377,6 @@ function getTeztnets(chains: TezosChain[]): object {
   const teztnets: { [name: string]: NetworkInfo } = {};
 
   chains.forEach(function (chain) {
-    let faucetUrl = `https://faucet.${chain.name}.${domainNameCom}`;
 
     // Create the base network information
     const networkInfo: NetworkInfo = {
@@ -385,10 +386,10 @@ function getTeztnets(chains: TezosChain[]): object {
       description: chain.params.description,
       docker_build: chain.getDockerBuild(),
       git_ref: chain.getGitRef(),
-      faucet_url: faucetUrl,
-      faucet: true,
-      snapshot: true,
-      snapshot_url: `https://snapshots.tzinit.org/${chain.snap}/rolling`,
+      faucet: !chain.params.hideFaucet,
+      faucet_url: chain.params.hideFaucet ? '' : `https://faucet.${chain.name}.${domainNameCom}`,
+      snapshot: !chain.params.hideSnapshot,
+      snapshot_url: chain.params.hideSnapshot ? '': `https://snapshots.tzinit.org/${chain.snap}/rolling`,
       category: chain.params.category,
       rpc_url: chain.getRpcUrl(),
       rollup_urls: chain.getRollupUrls(),
