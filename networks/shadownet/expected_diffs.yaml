@@ -1,0 +1,6 @@
+# Expected parameter differences between Shadownet and mainnet.
+# Each key documents an intentional deviation. Any diff NOT listed here
+# will cause CI to fail.
+
+cycles_per_voting_period: "single cycle voting for fast governance testing"
+testnet_dictator: "testnet dictator for emergency protocol changes"
