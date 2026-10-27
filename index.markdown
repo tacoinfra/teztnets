@@ -24,7 +24,6 @@ These test networks are deployed specifically to test individual Tezos protocols
 
 | | Activated on | Faucet | Rolling Snapshot |
 |-------|---------------------|--|-----|
-| [Gnet](/gnet-about) | `2026-10-26` |  [Faucet](https://faucet.gnet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/gnet/rolling) |
 | [Ushuaianet](/ushuaianet-about) | `2026-04-21` |  [Faucet](https://faucet.ushuaianet.teztnets.com) |  [Snapshot](https://snapshots.tzinit.org/ushuaianet/rolling) |
 
 

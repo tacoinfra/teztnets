@@ -69,41 +69,6 @@
     "snapshot": true,
     "snapshot_url": "https://snapshots.tzinit.org/ushuaianet/rolling"
   },
-  "gnet": {
-    "category": "Protocol Teztnets",
-    "chain_name": "TEZOS_GNET-10-26T12:00:00Z",
-    "dal_nodes": {
-      "dal-bootstrap": {
-        "humanName": "DAL Bootstrap",
-        "p2p": "dal.gnet.teztnets.com:11732",
-        "rpc": "https://dal-bootstrap-rpc.gnet.teztnets.com"
-      },
-      "dal-dal1": {
-        "humanName": "DAL Teztnets Attester",
-        "p2p": "dal1.gnet.teztnets.com:11732",
-        "rpc": "https://dal-attester-rpc.gnet.teztnets.com"
-      }
-    },
-    "description": "Test Chain for a quick governance test",
-    "docker_build": "tezos/tezos:octez-v24.3",
-    "evm_proxy_urls": [],
-    "faucet": true,
-    "faucet_url": "https://faucet.gnet.teztnets.com",
-    "git_ref": "octez-v24.3",
-    "human_name": "Gnet",
-    "indexers": [],
-    "masked_from_main_page": false,
-    "network_stakes": true,
-    "network_url": "https://teztnets.com/gnet",
-    "rollup_urls": [],
-    "rpc_url": "https://rpc.gnet.teztnets.com",
-    "rpc_urls": [
-      "https://rpc.gnet.teztnets.com"
-    ],
-    "snapshot": true,
-    "snapshot_url": "https://snapshots.tzinit.org/gnet/rolling",
-    "activated_on": "2026-10-26"
-  },
   "mainnet": {
     "category": "Long-running Teztnets",
     "chain_name": "TEZOS_MAINNET",
