@@ -225,6 +225,28 @@ new TezosFaucet(
 
 // END of U
 
+// GNET
+//
+
+const gnet_chain = new TezosChain(
+  {
+    category: protocolCategory,
+    humanName: "Gnet",
+    description: "Test Chain for a quick governance test",
+    activationBucket: activationBucket,
+    helmValuesFile: "networks/gnet/values.yaml",
+    bakingPrivateKey: private_teztnets_baking_key,
+    bootstrapPeers: [],
+    rpcUrls: [],
+    indexers: [],
+    chartRepoVersion: "8.0.3",
+    networkStakes: true,
+  },
+  provider,
+);
+
+// END of GNET
+
 // Nextnet test network - use pre-protocol proposal
 //
 /*
