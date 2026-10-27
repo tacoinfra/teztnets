@@ -227,7 +227,7 @@ new TezosFaucet(
 
 // GNET
 //
-
+/*
 const gnet_chain = new TezosChain(
   {
     category: protocolCategory,
@@ -244,7 +244,7 @@ const gnet_chain = new TezosChain(
   },
   provider,
 );
-
+*/
 // END of GNET
 
 // Nextnet test network - use pre-protocol proposal
@@ -456,7 +456,7 @@ export const networks = {
   ...getNetworks([snet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
-  ...getNetworks([gnet_chain]),
+//  ...getNetworks([gnet_chain]),
 };
 
 // We also add mainnet to the teztnets metadata.
@@ -486,7 +486,7 @@ export const teztnets = {
   ...getTeztnets([snet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
-  ...getTeztnets([gnet_chain]),
+//  ...getTeztnets([gnet_chain]),
   ...{ mainnet: mainnetMetadata },
 };
 
