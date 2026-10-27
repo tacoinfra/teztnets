@@ -456,6 +456,7 @@ export const networks = {
   ...getNetworks([snet_chain]),
   ...getNetworks([weeklynet_chain]),
   ...getNetworks([shadownet_chain]),
+  ...getNetworks([gnet_chain]),
 };
 
 // We also add mainnet to the teztnets metadata.
@@ -485,6 +486,7 @@ export const teztnets = {
   ...getTeztnets([snet_chain]),
   ...getTeztnets([weeklynet_chain]),
   ...getTeztnets([shadownet_chain]),
+  ...getTeztnets([gnet_chain]),
   ...{ mainnet: mainnetMetadata },
 };
 
