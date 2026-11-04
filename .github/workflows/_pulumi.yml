@@ -45,7 +45,9 @@ jobs:
         run: gcloud components install gke-gcloud-auth-plugin
 
       - name: Activate service account for gcloud
-        run: gcloud auth activate-service-account --key-file="$GOOGLE_APPLICATION_CREDENTIALS"
+        run: |
+          gcloud auth activate-service-account --key-file="$GOOGLE_APPLICATION_CREDENTIALS"
+          echo "CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE=" >> "$GITHUB_ENV"
 
       - uses: pulumi/actions@v4
         id: pup
