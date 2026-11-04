@@ -1,6 +1,6 @@
 images:
-  tezosFaucet: ghcr.io/tacoinfra/tezos-faucet:3.0.8
-  tezosFaucetBackend: ghcr.io/tacoinfra/tezos-faucet-backend:3.0.4
+  tezosFaucet: ghcr.io/tacoinfra/tezos-faucet:3.0.9
+  tezosFaucetBackend: ghcr.io/tacoinfra/tezos-faucet-backend:3.0.5
 
 
 # Frontend app configuration. You can optionally deploy only the faucet backend.
