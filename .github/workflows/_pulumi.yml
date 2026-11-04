@@ -40,9 +40,12 @@ jobs:
         uses: google-github-actions/setup-gcloud@v1
         with:
           project_id: tf-teztnets
-            
+
       - name: Install gke-gcloud-auth-plugin
         run: gcloud components install gke-gcloud-auth-plugin
+
+      - name: Activate service account for gcloud
+        run: gcloud auth activate-service-account --key-file="$GOOGLE_APPLICATION_CREDENTIALS"
 
       - uses: pulumi/actions@v4
         id: pup
